@@ -2,8 +2,8 @@
 
 **Aaron (Tripp) Josserand-Austin** | EntroMorphic Research Team
 
-📄 **Paper:** [ArXiv preprint arXiv:2601.XXXXX](https://arxiv.org/abs/2601.XXXXX) (coming soon)  
-🔗 **Website:** [entromorphic.ai](https://entromorphic.ai)  
+📄 **Paper:** [ArXiv preprint arXiv:2601.XXXXX](https://arxiv.org/abs/2601.XXXXX)
+🔗 **Website:** [entromorphic.ai](https://entromorphic.com)
 📧 **Contact:** tripp@anjaustin.com
 
 ---
@@ -21,7 +21,7 @@ This repository contains code, data, and trained models for our paper "Delta Obs
 ## Repository Structure
 
 ```
-delta-observer-repo/
+delta-observer/
 ├── models/                          # Model architectures and training scripts
 │   ├── train_4bit_monolithic.py    # Train monolithic MLP
 │   ├── train_4bit_compositional.py # Train compositional modular network
@@ -217,9 +217,9 @@ We thank the EntroMorphic team and Manus platform for computational resources an
 
 ## Contact
 
-**Aaron (Tripp) Josserand-Austin**  
-EntroMorphic Research Team  
-📧 tripp@anjaustin.com  
+**Aaron (Tripp) Josserand-Austin**
+EntroMorphic Research Team
+📧 tripp@anjaustin.com
 🔗 [entromorphic.ai](https://entromorphic.ai)
 
 For questions about the paper or code, please open an issue or contact us directly.
