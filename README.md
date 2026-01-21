@@ -3,7 +3,7 @@
 **Aaron (Tripp) Josserand-Austin** | EntroMorphic Research Team
 
 📄 **Paper:** [ArXiv preprint arXiv:2601.XXXXX](https://arxiv.org/abs/2601.XXXXX)
-🔗 **Website:** [entromorphic.ai](https://entromorphic.com)
+🔗 **Website:** [entromorphic.com](https://entromorphic.com)
 📧 **Contact:** tripp@anjaustin.com
 
 ---
@@ -220,6 +220,6 @@ We thank the EntroMorphic team and Manus platform for computational resources an
 **Aaron (Tripp) Josserand-Austin**
 EntroMorphic Research Team
 📧 tripp@anjaustin.com
-🔗 [entromorphic.ai](https://entromorphic.ai)
+🔗 [entromorphic.com](https://entromorphic.com)
 
 For questions about the paper or code, please open an issue or contact us directly.
