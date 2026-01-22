@@ -4,7 +4,7 @@
 
 📄 **Paper:** [ArXiv preprint arXiv:2601.XXXXX](https://arxiv.org/abs/2601.XXXXX)
 🔗 **Website:** [entromorphic.com](https://entromorphic.com)
-📧 **Contact:** tripp@anjaustin.com
+📧 **Contact:** tripp@entromorphic.com
 
 ---
 
@@ -219,7 +219,7 @@ EntroMorphic Research Team thanks the specific Manus instance for computational 
 
 **Aaron (Tripp) Josserand-Austin**
 EntroMorphic Research Team
-📧 tripp@anjaustin.com
+📧 tripp@entromorphic.com
 🔗 [entromorphic.com](https://entromorphic.com)
 
 For questions about the paper or code, please open an issue or contact us directly.
