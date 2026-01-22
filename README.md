@@ -2,7 +2,7 @@
 
 **Aaron (Tripp) Josserand-Austin** | EntroMorphic Research Team
 
-📄 **Paper:** [ArXiv preprint arXiv:2601.XXXXX](https://arxiv.org/abs/2601.XXXXX)
+📄 **Paper:** [OSF MetaArXiv Preprint](https://doi.org/10.17605/OSF.IO/CNJTP)
 🔗 **Website:** [entromorphic.com](https://entromorphic.com)
 📧 **Contact:** tripp@entromorphic.com
 
@@ -196,7 +196,7 @@ If you use this code or findings in your research, please cite:
 @article{josserandaustin2026deltaobserver,
   title={Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations},
   author={Josserand-Austin, Aaron and EntroMorphic Research Team},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={OSF MetaArXiv preprint: https://doi.org/10.17605/OSF.IO/CNJTP},
   year={2026}
 }
 ```
