@@ -211,7 +211,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-EntroMorphic Reasearch Team thanks the specific Manus instance for computational resources, web research, coding, and feedback. We thank the specific Claude instance hosted by Antrhopic for coding and providing detailed feedback on the Delta Observer methodology during the design phase.
+EntroMorphic Research Team thanks the specific Manus instance for computational resources, web research, coding, and feedback. We thank the specific Claude instance hosted by Anthropic for coding and providing detailed feedback on the Delta Observer methodology during the design phase.
 
 ---
 
