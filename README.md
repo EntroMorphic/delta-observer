@@ -23,13 +23,13 @@ This repository contains code, data, and trained models for our paper "Delta Obs
 ```
 delta-observer/
 ├── models/                          # Model architectures and training scripts
-│   ├── train_4bit_monolithic.py    # Train monolithic MLP
-│   ├── train_4bit_compositional.py # Train compositional modular network
-│   └── delta_observer.py           # Delta Observer architecture
+│   ├── train_4bit_monolithic.py     # Train monolithic MLP
+│   ├── train_4bit_compositional.py  # Train compositional modular network
+│   └── delta_observer.py            # Delta Observer architecture
 ├── analysis/                        # Analysis scripts
-│   ├── prepare_delta_dataset.py    # Extract activations and prepare dataset
-│   ├── analyze_delta_latent.py     # Analyze Delta Observer latent space
-│   └── geometric_analysis.py       # Geometric analysis of representations
+│   ├── prepare_delta_dataset.py     # Extract activations and prepare dataset
+│   ├── analyze_delta_latent.py      # Analyze Delta Observer latent space
+│   └── geometric_analysis.py        # Geometric analysis of representations
 ├── data/                            # Datasets and activations
 │   ├── monolithic_activations.npz
 │   ├── compositional_activations.npz
