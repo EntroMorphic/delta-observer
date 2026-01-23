@@ -263,11 +263,15 @@ See [notebooks/README.md](notebooks/README.md) for detailed documentation.
 If you use this code or findings in your research, please cite:
 
 ```bibtex
-@article{josserandaustin2026deltaobserver,
-  title={Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations},
-  author={Josserand-Austin, Aaron and EntroMorphic Research Team},
-  journal={OSF MetaArXiv preprint: https://doi.org/10.17605/OSF.IO/CNJTP},
-  year={2026}
+@misc{josserandaustin2026deltaobserver,
+  title={The Delta Observer},
+  author={Josserand-Austin, Aaron N.},
+  year={2026},
+  month={January},
+  day={22},
+  publisher={OSF},
+  doi={10.17605/OSF.IO/CNJTP},
+  url={https://doi.org/10.17605/OSF.IO/CNJTP}
 }
 ```
 
