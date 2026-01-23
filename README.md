@@ -35,6 +35,13 @@ delta-observer/
 │   ├── compositional_activations.npz
 │   ├── delta_observer_dataset.npz
 │   └── delta_latent_umap.npz
+├── notebooks/                       # Jupyter notebooks for interactive exploration
+│   ├── 00_quickstart_demo.ipynb     # Quick demo with pre-computed results (5 min)
+│   ├── 01_training_models.ipynb     # Train source models from scratch
+│   ├── 02_delta_observer_training.ipynb  # Train Delta Observer
+│   ├── 03_analysis_visualization.ipynb   # Geometric analysis & paper figures
+│   ├── 99_full_reproduction.ipynb   # Complete end-to-end reproduction (30 min)
+│   └── README.md                    # Notebook documentation
 ├── figures/                         # Generated figures from paper
 │   ├── figure1_model_geometries.png
 │   ├── figure2_delta_latent_space.png
@@ -62,6 +69,7 @@ delta-observer/
 - Matplotlib
 - scikit-learn
 - UMAP-learn
+- Jupyter (for interactive notebooks)
 
 ### Setup
 
@@ -162,6 +170,68 @@ python analysis/analyze_delta_latent.py
 ```
 
 All figures will be saved to `figures/`.
+
+---
+
+## Jupyter Notebooks
+
+We provide interactive Jupyter notebooks for exploration and reproduction:
+
+### Quick Start (5 minutes)
+
+**[00_quickstart_demo.ipynb](notebooks/00_quickstart_demo.ipynb)** - Fast demonstration with pre-computed results
+
+```bash
+jupyter notebook notebooks/00_quickstart_demo.ipynb
+```
+
+This notebook:
+- Loads pre-computed Delta Observer latent space
+- Visualizes 2D projections (PCA & UMAP)
+- Computes R² (linear accessibility) = 0.9384
+- Computes Silhouette (clustering) = 0.0320
+- **Demonstrates the accessibility-clustering paradox**
+
+### Step-by-Step Workflow
+
+For a detailed walkthrough of the entire pipeline:
+
+1. **[01_training_models.ipynb](notebooks/01_training_models.ipynb)** - Train source models
+   - Generate 4-bit addition dataset
+   - Train monolithic MLP
+   - Train compositional network
+   - Extract activations
+   - Compare architectures
+
+2. **[02_delta_observer_training.ipynb](notebooks/02_delta_observer_training.ipynb)** - Train Delta Observer
+   - Prepare dataset with semantic labels
+   - Define dual-encoder architecture
+   - Train with multi-objective loss
+   - Extract 16D latent space
+
+3. **[03_analysis_visualization.ipynb](notebooks/03_analysis_visualization.ipynb)** - Analysis & figures
+   - PCA variance analysis
+   - Linear probe analysis (R²)
+   - Clustering analysis (Silhouette)
+   - Generate all paper figures
+   - Perturbation stability testing
+
+### Complete Reproduction (30 minutes)
+
+**[99_full_reproduction.ipynb](notebooks/99_full_reproduction.ipynb)** - End-to-end reproduction
+
+```bash
+jupyter notebook notebooks/99_full_reproduction.ipynb
+```
+
+This notebook:
+- Trains all models from scratch
+- Generates all data files
+- Creates all figures
+- Validates paper findings
+- **Fully self-contained reproduction**
+
+See [notebooks/README.md](notebooks/README.md) for detailed documentation.
 
 ---
 
