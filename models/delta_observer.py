@@ -1,152 +1,239 @@
 #!/usr/bin/env python3
 """
-Delta Observer: Learning the semantic primitive between monolithic and compositional representations.
+Phase 1: Minimal Online Delta Observer
+======================================
+Trains the Delta Observer concurrently with both task models.
 
-Architecture:
-- Dual encoders (mono 64→32, comp 64→32)
-- Shared latent space (64→16)
-- Three decoders (mono reconstruction, comp reconstruction, bit position classification)
+The observer sees activations at each batch, learning from the full
+training trajectory rather than just the final state.
 
-Loss:
-- Reconstruction (both directions)
-- Contrastive (same input → close, different → far)
-- Classification (predict bit position)
+Key insight from curriculum test: Learning happens in epochs 1-20.
+The observer must capture these early dynamics.
 """
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
 import numpy as np
-from torch.utils.data import Dataset, DataLoader, random_split
 import json
+import math
 from datetime import datetime
 
 
-class DeltaObserverDataset(Dataset):
-    """Dataset for Delta Observer training."""
-    
-    def __init__(self, data_path):
-        data = np.load(data_path)
-        
-        self.mono_act = torch.tensor(data['mono_activations'], dtype=torch.float32)
-        self.comp_act = torch.tensor(data['comp_activations'], dtype=torch.float32)
-        self.carry_counts = torch.tensor(data['carry_counts'], dtype=torch.long)
-        self.bit_positions = torch.tensor(data['bit_positions'], dtype=torch.long)
-        self.inputs = torch.tensor(data['inputs'], dtype=torch.float32)
-    
-    def __len__(self):
-        return len(self.mono_act)
-    
-    def __getitem__(self, idx):
-        return {
-            'mono_act': self.mono_act[idx],
-            'comp_act': self.comp_act[idx],
-            'carry_count': self.carry_counts[idx],
-            'bit_position': self.bit_positions[idx],
-            'input': self.inputs[idx],
-        }
+ALPHA = 1.0 / 137.0
 
 
-class DeltaObserver(nn.Module):
+def compute_carry_count(a_bits, b_bits, carry_in):
+    """Count carry operations during addition."""
+    carries = 0
+    carry = carry_in
+    for i in range(4):
+        bit_sum = a_bits[i] + b_bits[i] + carry
+        if bit_sum >= 2:
+            carries += 1
+            carry = 1
+        else:
+            carry = 0
+    return carries
+
+
+def generate_dataset():
+    """Generate all 512 4-bit addition cases."""
+    inputs = []
+    outputs = []
+    carry_counts = []
+    bit_positions = []
+
+    for a in range(16):
+        for b in range(16):
+            for carry_in in [0, 1]:
+                a_bits = [(a >> i) & 1 for i in range(4)]
+                b_bits = [(b >> i) & 1 for i in range(4)]
+
+                total = a + b + carry_in
+                s_bits = [(total >> i) & 1 for i in range(4)]
+                carry_out = (total >> 4) & 1
+
+                inputs.append(a_bits + b_bits + [carry_in])
+                outputs.append(s_bits + [carry_out])
+                carry_counts.append(compute_carry_count(a_bits, b_bits, carry_in))
+
+                # Bit position: which bit has most "activity" (crude approximation)
+                bit_positions.append(sum(s_bits[:4]) % 4)
+
+    return (
+        torch.tensor(inputs, dtype=torch.float32),
+        torch.tensor(outputs, dtype=torch.float32),
+        torch.tensor(carry_counts, dtype=torch.long),
+        torch.tensor(bit_positions, dtype=torch.long),
+    )
+
+
+# =============================================================================
+# Models
+# =============================================================================
+
+class Monolithic4BitAdder(nn.Module):
+    """Monolithic architecture with activation extraction."""
+
+    def __init__(self, hidden_size=64):
+        super().__init__()
+        self.fc1 = nn.Linear(9, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, hidden_size)
+        self.fc4 = nn.Linear(hidden_size, 5)
+        self.hidden_size = hidden_size
+
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        return self.fc4(x)
+
+    def get_activations(self, x):
+        """Return first hidden layer activations."""
+        return F.relu(self.fc1(x))
+
+
+class FullAdderBit(nn.Module):
+    def __init__(self, hidden_size=16):
+        super().__init__()
+        self.fc1 = nn.Linear(3, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, 2)
+
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        return self.fc3(x)
+
+    def get_activations(self, x):
+        return F.relu(self.fc1(x))
+
+
+class Compositional4BitAdder(nn.Module):
+    """Compositional architecture with activation extraction."""
+
+    def __init__(self, hidden_size=16):
+        super().__init__()
+        self.bit0 = FullAdderBit(hidden_size)
+        self.bit1 = FullAdderBit(hidden_size)
+        self.bit2 = FullAdderBit(hidden_size)
+        self.bit3 = FullAdderBit(hidden_size)
+        self.hidden_size = hidden_size
+
+    def forward(self, x):
+        a, b, cin = x[:, 0:4], x[:, 4:8], x[:, 8:9]
+
+        out0 = self.bit0(torch.cat([a[:, 0:1], b[:, 0:1], cin], dim=1))
+        s0, c0 = out0[:, 0:1], out0[:, 1:2]
+
+        out1 = self.bit1(torch.cat([a[:, 1:2], b[:, 1:2], c0], dim=1))
+        s1, c1 = out1[:, 0:1], out1[:, 1:2]
+
+        out2 = self.bit2(torch.cat([a[:, 2:3], b[:, 2:3], c1], dim=1))
+        s2, c2 = out2[:, 0:1], out2[:, 1:2]
+
+        out3 = self.bit3(torch.cat([a[:, 3:4], b[:, 3:4], c2], dim=1))
+        s3, c3 = out3[:, 0:1], out3[:, 1:2]
+
+        return torch.cat([s0, s1, s2, s3, c3], dim=1)
+
+    def get_activations(self, x):
+        """Return concatenated activations from all bit adders."""
+        a, b, cin = x[:, 0:4], x[:, 4:8], x[:, 8:9]
+
+        # Bit 0
+        act0 = self.bit0.get_activations(torch.cat([a[:, 0:1], b[:, 0:1], cin], dim=1))
+        out0 = self.bit0(torch.cat([a[:, 0:1], b[:, 0:1], cin], dim=1))
+        c0 = out0[:, 1:2]
+
+        # Bit 1
+        act1 = self.bit1.get_activations(torch.cat([a[:, 1:2], b[:, 1:2], c0], dim=1))
+        out1 = self.bit1(torch.cat([a[:, 1:2], b[:, 1:2], c0], dim=1))
+        c1 = out1[:, 1:2]
+
+        # Bit 2
+        act2 = self.bit2.get_activations(torch.cat([a[:, 2:3], b[:, 2:3], c1], dim=1))
+        out2 = self.bit2(torch.cat([a[:, 2:3], b[:, 2:3], c1], dim=1))
+        c2 = out2[:, 1:2]
+
+        # Bit 3
+        act3 = self.bit3.get_activations(torch.cat([a[:, 3:4], b[:, 3:4], c2], dim=1))
+
+        return torch.cat([act0, act1, act2, act3], dim=1)  # (batch, 64)
+
+
+class OnlineDeltaObserver(nn.Module):
     """
-    Delta Observer network.
-    
-    Learns the semantic primitive that distinguishes monolithic and compositional
-    representations of the same computation.
+    Delta Observer that trains concurrently with task models.
+
+    Same architecture as original, but trained online.
     """
-    
+
     def __init__(self, mono_dim=64, comp_dim=64, latent_dim=16):
         super().__init__()
-        
-        # Dual encoders
+
         self.mono_encoder = nn.Sequential(
             nn.Linear(mono_dim, 32),
             nn.ReLU(),
             nn.Dropout(0.1),
         )
-        
+
         self.comp_encoder = nn.Sequential(
             nn.Linear(comp_dim, 32),
             nn.ReLU(),
             nn.Dropout(0.1),
         )
-        
-        # Shared latent space encoder
+
         self.shared_encoder = nn.Sequential(
-            nn.Linear(64, 32),  # Concatenated encodings
+            nn.Linear(64, 32),
             nn.ReLU(),
             nn.Dropout(0.1),
-            nn.Linear(32, latent_dim),  # Semantic bottleneck
+            nn.Linear(32, latent_dim),
         )
-        
-        # Decoders
+
         self.mono_decoder = nn.Sequential(
             nn.Linear(latent_dim, 32),
             nn.ReLU(),
             nn.Linear(32, mono_dim),
         )
-        
+
         self.comp_decoder = nn.Sequential(
             nn.Linear(latent_dim, 32),
             nn.ReLU(),
             nn.Linear(32, comp_dim),
         )
-        
-        # Bit position classifier
+
         self.bit_classifier = nn.Sequential(
             nn.Linear(latent_dim, 8),
             nn.ReLU(),
-            nn.Linear(8, 4),  # 4 bit positions
+            nn.Linear(8, 4),
         )
-        
-        # Carry count regressor (for analysis)
+
         self.carry_regressor = nn.Sequential(
             nn.Linear(latent_dim, 8),
             nn.ReLU(),
             nn.Linear(8, 1),
         )
-        
+
         self.latent_dim = latent_dim
-    
+
     def encode(self, mono_act, comp_act):
-        """Encode both activations to shared latent space."""
         mono_enc = self.mono_encoder(mono_act)
         comp_enc = self.comp_encoder(comp_act)
-        
-        # Concatenate and encode to latent
         joint = torch.cat([mono_enc, comp_enc], dim=-1)
-        latent = self.shared_encoder(joint)
-        
-        return latent
-    
-    def decode(self, latent):
-        """Decode latent to both representations."""
+        return self.shared_encoder(joint)
+
+    def forward(self, mono_act, comp_act):
+        latent = self.encode(mono_act, comp_act)
+
         mono_recon = self.mono_decoder(latent)
         comp_recon = self.comp_decoder(latent)
-        return mono_recon, comp_recon
-    
-    def classify(self, latent):
-        """Classify bit position from latent."""
-        return self.bit_classifier(latent)
-    
-    def predict_carry(self, latent):
-        """Predict carry count from latent (for analysis)."""
-        return self.carry_regressor(latent)
-    
-    def forward(self, mono_act, comp_act):
-        """Full forward pass."""
-        # Encode
-        latent = self.encode(mono_act, comp_act)
-        
-        # Decode
-        mono_recon, comp_recon = self.decode(latent)
-        
-        # Classify
-        bit_logits = self.classify(latent)
-        
-        # Predict carry
-        carry_pred = self.predict_carry(latent)
-        
+        bit_logits = self.bit_classifier(latent)
+        carry_pred = self.carry_regressor(latent)
+
         return {
             'latent': latent,
             'mono_recon': mono_recon,
@@ -156,218 +243,296 @@ class DeltaObserver(nn.Module):
         }
 
 
-class ContrastiveLoss(nn.Module):
-    """
-    Contrastive loss: same input → close embeddings, different input → far embeddings.
-    """
-    
-    def __init__(self, temperature=0.5):
-        super().__init__()
-        self.temperature = temperature
-    
-    def forward(self, embeddings, inputs):
-        """
-        embeddings: [batch, latent_dim]
-        inputs: [batch, input_dim] - original inputs to check if same
-        """
-        batch_size = embeddings.size(0)
-        
-        # Compute pairwise similarity
-        embeddings_norm = F.normalize(embeddings, dim=1)
-        similarity = torch.matmul(embeddings_norm, embeddings_norm.t()) / self.temperature
-        
-        # Create labels: 1 if same input, 0 if different
-        # For 4-bit adder, inputs are unique, so this is always 0 except diagonal
-        # But we can use approximate similarity based on input distance
-        input_dist = torch.cdist(inputs, inputs, p=2)
-        labels = (input_dist < 1.0).float()  # Close inputs should have close embeddings
-        
-        # Contrastive loss: maximize similarity for similar inputs
-        loss = F.binary_cross_entropy_with_logits(similarity, labels)
-        
-        return loss
+# =============================================================================
+# Training
+# =============================================================================
+
+def get_scheduler(optimizer, warmup_steps, total_steps, peak_lr, min_lr):
+    def lr_lambda(step):
+        if step < warmup_steps:
+            return float(step) / float(max(1, warmup_steps))
+        progress = float(step - warmup_steps) / float(max(1, total_steps - warmup_steps))
+        cosine = 0.5 * (1.0 + math.cos(math.pi * progress))
+        return max(min_lr / peak_lr, cosine)
+    return optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
 
-def train_delta_observer(
-    model,
-    train_loader,
-    val_loader,
-    epochs=100,
-    lr=0.001,
-    device='cpu',
-    save_path='models/delta_observer_best.pt',
-):
-    """Train the Delta Observer."""
-    
-    model = model.to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, epochs)
-    
-    contrastive_loss_fn = ContrastiveLoss(temperature=0.5)
-    
-    best_val_loss = float('inf')
-    history = {
-        'train_loss': [],
-        'val_loss': [],
-        'train_acc': [],
-        'val_acc': [],
-    }
-    
-    print("="*80)
-    print("DELTA OBSERVER TRAINING")
-    print("="*80)
+def train_online(epochs=200, batch_size=32):
+    """Train all three models concurrently."""
+
+    print("=" * 80)
+    print("PHASE 1: ONLINE DELTA OBSERVER TRAINING")
+    print("=" * 80)
+
+    # Generate data
+    inputs, outputs, carry_counts, bit_positions = generate_dataset()
+    n_samples = len(inputs)
+    n_batches = n_samples // batch_size
+
+    print(f"\nDataset: {n_samples} samples")
+    print(f"Batch size: {batch_size}")
     print(f"Epochs: {epochs}")
-    print(f"Learning rate: {lr}")
-    print(f"Device: {device}")
-    print("="*80)
-    
+
+    # Create models
+    mono_model = Monolithic4BitAdder(hidden_size=64)
+    comp_model = Compositional4BitAdder(hidden_size=16)
+    observer = OnlineDeltaObserver(mono_dim=64, comp_dim=64, latent_dim=16)
+
+    print(f"\nModels created:")
+    print(f"  Mono params: {sum(p.numel() for p in mono_model.parameters()):,}")
+    print(f"  Comp params: {sum(p.numel() for p in comp_model.parameters()):,}")
+    print(f"  Observer params: {sum(p.numel() for p in observer.parameters()):,}")
+
+    # Optimizers
+    mono_opt = optim.Adam(mono_model.parameters(), lr=ALPHA)
+    comp_opt = optim.Adam(comp_model.parameters(), lr=ALPHA)
+    obs_opt = optim.Adam(observer.parameters(), lr=0.001)
+
+    total_steps = n_batches * epochs
+    warmup_steps = n_batches * 10
+
+    mono_sched = get_scheduler(mono_opt, warmup_steps, total_steps, ALPHA, ALPHA/1000)
+    comp_sched = get_scheduler(comp_opt, warmup_steps, total_steps, ALPHA, ALPHA/1000)
+    obs_sched = optim.lr_scheduler.CosineAnnealingLR(obs_opt, epochs)
+
+    # Training log
+    log = {
+        'epochs': [],
+        'start_time': datetime.now().isoformat(),
+    }
+
+    # Activation history (for trajectory analysis)
+    activation_snapshots = []
+
+    print("\n" + "-" * 80)
+    print("Training...")
+    print("-" * 80)
+
     for epoch in range(epochs):
-        # Training
-        model.train()
-        train_loss = 0
-        train_correct = 0
-        train_total = 0
-        
-        for batch in train_loader:
-            mono_act = batch['mono_act'].to(device)
-            comp_act = batch['comp_act'].to(device)
-            bit_position = batch['bit_position'].to(device)
-            inputs = batch['input'].to(device)
-            carry_count = batch['carry_count'].to(device).float()
-            
-            optimizer.zero_grad()
-            
-            # Forward pass
-            outputs = model(mono_act, comp_act)
-            
-            # Reconstruction loss
+        mono_model.train()
+        comp_model.train()
+        observer.train()
+
+        indices = torch.randperm(n_samples)
+
+        epoch_mono_loss = 0
+        epoch_comp_loss = 0
+        epoch_obs_loss = 0
+        mono_correct = 0
+        comp_correct = 0
+
+        for i in range(0, n_samples, batch_size):
+            batch_idx = indices[i:i+batch_size]
+            batch_x = inputs[batch_idx]
+            batch_y = outputs[batch_idx]
+            batch_carry = carry_counts[batch_idx]
+            batch_bit = bit_positions[batch_idx]
+
+            # === Task Models Forward ===
+            mono_out = mono_model(batch_x)
+            comp_out = comp_model(batch_x)
+
+            # Task losses
+            mono_loss = F.mse_loss(mono_out, batch_y)
+            comp_loss = F.mse_loss(comp_out, batch_y)
+
+            # Task backward (before getting activations to avoid graph issues)
+            mono_opt.zero_grad()
+            mono_loss.backward()
+            mono_opt.step()
+            mono_sched.step()
+
+            comp_opt.zero_grad()
+            comp_loss.backward()
+            comp_opt.step()
+            comp_sched.step()
+
+            # === Observer Forward (with detached activations) ===
+            with torch.no_grad():
+                mono_act = mono_model.get_activations(batch_x)
+                comp_act = comp_model.get_activations(batch_x)
+
+            obs_out = observer(mono_act, comp_act)
+
+            # Observer losses
             recon_loss = (
-                F.mse_loss(outputs['mono_recon'], mono_act) +
-                F.mse_loss(outputs['comp_recon'], comp_act)
+                F.mse_loss(obs_out['mono_recon'], mono_act) +
+                F.mse_loss(obs_out['comp_recon'], comp_act)
             )
-            
-            # Contrastive loss
-            contrast_loss = contrastive_loss_fn(outputs['latent'], inputs)
-            
-            # Classification loss
-            class_loss = F.cross_entropy(outputs['bit_logits'], bit_position)
-            
-            # Carry prediction loss (auxiliary)
-            carry_loss = F.mse_loss(outputs['carry_pred'].squeeze(), carry_count)
-            
-            # Combined loss
-            loss = recon_loss + 0.5 * contrast_loss + class_loss + 0.1 * carry_loss
-            
-            loss.backward()
-            optimizer.step()
-            
-            train_loss += loss.item()
-            
+            class_loss = F.cross_entropy(obs_out['bit_logits'], batch_bit)
+            carry_loss = F.mse_loss(obs_out['carry_pred'].squeeze(), batch_carry.float())
+
+            obs_loss = recon_loss + class_loss + 0.1 * carry_loss
+
+            obs_opt.zero_grad()
+            obs_loss.backward()
+            obs_opt.step()
+
+            # Accumulate
+            epoch_mono_loss += mono_loss.item()
+            epoch_comp_loss += comp_loss.item()
+            epoch_obs_loss += obs_loss.item()
+
             # Accuracy
-            pred = outputs['bit_logits'].argmax(dim=1)
-            train_correct += (pred == bit_position).sum().item()
-            train_total += bit_position.size(0)
-        
-        train_loss /= len(train_loader)
-        train_acc = train_correct / train_total
-        
-        # Validation
-        model.eval()
-        val_loss = 0
-        val_correct = 0
-        val_total = 0
-        
-        with torch.no_grad():
-            for batch in val_loader:
-                mono_act = batch['mono_act'].to(device)
-                comp_act = batch['comp_act'].to(device)
-                bit_position = batch['bit_position'].to(device)
-                inputs = batch['input'].to(device)
-                carry_count = batch['carry_count'].to(device).float()
-                
-                outputs = model(mono_act, comp_act)
-                
-                recon_loss = (
-                    F.mse_loss(outputs['mono_recon'], mono_act) +
-                    F.mse_loss(outputs['comp_recon'], comp_act)
-                )
-                contrast_loss = contrastive_loss_fn(outputs['latent'], inputs)
-                class_loss = F.cross_entropy(outputs['bit_logits'], bit_position)
-                carry_loss = F.mse_loss(outputs['carry_pred'].squeeze(), carry_count)
-                
-                loss = recon_loss + 0.5 * contrast_loss + class_loss + 0.1 * carry_loss
-                
-                val_loss += loss.item()
-                
-                pred = outputs['bit_logits'].argmax(dim=1)
-                val_correct += (pred == bit_position).sum().item()
-                val_total += bit_position.size(0)
-        
-        val_loss /= len(val_loader)
-        val_acc = val_correct / val_total
-        
-        # Update scheduler
-        scheduler.step()
-        
-        # Save best model
-        if val_loss < best_val_loss:
-            best_val_loss = val_loss
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'val_loss': val_loss,
-                'val_acc': val_acc,
-            }, save_path)
-        
-        # Log
-        history['train_loss'].append(train_loss)
-        history['val_loss'].append(val_loss)
-        history['train_acc'].append(train_acc)
-        history['val_acc'].append(val_acc)
-        
-        if (epoch + 1) % 10 == 0:
-            print(f"Epoch {epoch+1}/{epochs}")
-            print(f"  Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.4f}")
-            print(f"  Val Loss: {val_loss:.4f} | Val Acc: {val_acc:.4f}")
-    
-    print("="*80)
-    print("TRAINING COMPLETE")
-    print(f"Best Val Loss: {best_val_loss:.4f}")
-    print(f"Model saved to: {save_path}")
-    print("="*80)
-    
-    return history
+            mono_correct += (torch.round(mono_out).long() == batch_y.long()).all(dim=1).sum().item()
+            comp_correct += (torch.round(comp_out).long() == batch_y.long()).all(dim=1).sum().item()
+
+        obs_sched.step()
+
+        # Normalize
+        epoch_mono_loss /= n_batches
+        epoch_comp_loss /= n_batches
+        epoch_obs_loss /= n_batches
+        mono_acc = mono_correct / n_samples
+        comp_acc = comp_correct / n_samples
+
+        # Snapshot activations periodically (for trajectory analysis)
+        if epoch % 10 == 0 or epoch < 20:
+            with torch.no_grad():
+                mono_act_all = mono_model.get_activations(inputs)
+                comp_act_all = comp_model.get_activations(inputs)
+                latent_all = observer.encode(mono_act_all, comp_act_all)
+                activation_snapshots.append({
+                    'epoch': epoch,
+                    'latent': latent_all.numpy().copy(),
+                })
+
+        log['epochs'].append({
+            'epoch': epoch + 1,
+            'mono_loss': epoch_mono_loss,
+            'comp_loss': epoch_comp_loss,
+            'obs_loss': epoch_obs_loss,
+            'mono_acc': mono_acc,
+            'comp_acc': comp_acc,
+        })
+
+        if (epoch + 1) % 20 == 0 or epoch == 0:
+            print(f"Epoch {epoch+1:3d} | "
+                  f"Mono: {mono_acc:.4f} | "
+                  f"Comp: {comp_acc:.4f} | "
+                  f"Obs Loss: {epoch_obs_loss:.4f}")
+
+    print("-" * 80)
+    print("Training complete.")
+
+    # === Final Evaluation ===
+    print("\n" + "=" * 80)
+    print("EXTRACTING FINAL LATENT REPRESENTATIONS")
+    print("=" * 80)
+
+    observer.eval()
+    mono_model.eval()
+    comp_model.eval()
+
+    with torch.no_grad():
+        mono_act_final = mono_model.get_activations(inputs)
+        comp_act_final = comp_model.get_activations(inputs)
+        latent_final = observer.encode(mono_act_final, comp_act_final)
+
+    # Save everything
+    save_dir = 'data'
+    np.savez(
+        f'{save_dir}/online_observer_latents.npz',
+        latents=latent_final.numpy(),
+        carry_counts=carry_counts.numpy(),
+        bit_positions=bit_positions.numpy(),
+        mono_activations=mono_act_final.numpy(),
+        comp_activations=comp_act_final.numpy(),
+    )
+    print(f"Saved: {save_dir}/online_observer_latents.npz")
+
+    # Save trajectory
+    np.savez(
+        f'{save_dir}/online_observer_trajectory.npz',
+        snapshots=[s['latent'] for s in activation_snapshots],
+        epochs=[s['epoch'] for s in activation_snapshots],
+    )
+    print(f"Saved: {save_dir}/online_observer_trajectory.npz")
+
+    # Save models
+    torch.save(mono_model.state_dict(), 'models/online_mono_final.pt')
+    torch.save(comp_model.state_dict(), 'models/online_comp_final.pt')
+    torch.save(observer.state_dict(), 'models/online_observer_final.pt')
+    print("Saved model weights.")
+
+    log['end_time'] = datetime.now().isoformat()
+    with open('journal/online_training_log.json', 'w') as f:
+        json.dump(log, f, indent=2)
+
+    return latent_final.numpy(), carry_counts.numpy()
+
+
+def evaluate_online_vs_pca(latents, carry_counts):
+    """Compare online observer to PCA baseline."""
+    from sklearn.linear_model import LinearRegression
+    from sklearn.metrics import silhouette_score
+    from sklearn.decomposition import PCA
+
+    print("\n" + "=" * 80)
+    print("ONLINE OBSERVER vs PCA BASELINE")
+    print("=" * 80)
+
+    # Online observer metrics
+    reg = LinearRegression()
+    reg.fit(latents, carry_counts)
+    online_r2 = reg.score(latents, carry_counts)
+    online_sil = silhouette_score(latents, carry_counts)
+
+    # Load original data for PCA comparison
+    orig_data = np.load('data/delta_observer_dataset.npz')
+    mono_act = orig_data['mono_activations']
+    comp_act = orig_data['comp_activations']
+    combined = np.concatenate([mono_act, comp_act], axis=1)
+
+    pca = PCA(n_components=16)
+    pca_latents = pca.fit_transform(combined)
+
+    reg_pca = LinearRegression()
+    reg_pca.fit(pca_latents, carry_counts)
+    pca_r2 = reg_pca.score(pca_latents, carry_counts)
+    pca_sil = silhouette_score(pca_latents, carry_counts)
+
+    # Post-hoc observer (from original data)
+    orig_latents = np.load('data/delta_latent_umap.npz')['latents']
+    reg_posthoc = LinearRegression()
+    reg_posthoc.fit(orig_latents, carry_counts)
+    posthoc_r2 = reg_posthoc.score(orig_latents, carry_counts)
+    posthoc_sil = silhouette_score(orig_latents, carry_counts)
+
+    print(f"\n{'Method':<25} {'R²':>12} {'Silhouette':>12}")
+    print("-" * 50)
+    print(f"{'Online Observer':<25} {online_r2:>12.4f} {online_sil:>12.4f}")
+    print(f"{'Post-hoc Observer':<25} {posthoc_r2:>12.4f} {posthoc_sil:>12.4f}")
+    print(f"{'PCA Baseline':<25} {pca_r2:>12.4f} {pca_sil:>12.4f}")
+
+    # Verdict
+    print("\n" + "-" * 50)
+    if online_r2 > pca_r2 + 0.01:
+        print(f"✓ Online Observer beats PCA by {online_r2 - pca_r2:.4f}")
+        verdict = "PASS"
+    elif online_r2 > pca_r2:
+        print(f"~ Online Observer slightly better than PCA (+{online_r2 - pca_r2:.4f})")
+        verdict = "MARGINAL"
+    else:
+        print(f"✗ Online Observer does not beat PCA ({online_r2:.4f} vs {pca_r2:.4f})")
+        verdict = "FAIL"
+
+    return {
+        'online_r2': online_r2,
+        'online_silhouette': online_sil,
+        'posthoc_r2': posthoc_r2,
+        'posthoc_silhouette': posthoc_sil,
+        'pca_r2': pca_r2,
+        'pca_silhouette': pca_sil,
+        'verdict': verdict,
+    }
 
 
 if __name__ == "__main__":
-    # Load dataset
-    dataset = DeltaObserverDataset('/home/ubuntu/geometric-microscope/analysis/delta_observer_dataset.npz')
-    
-    # Split 80/20
-    train_size = int(0.8 * len(dataset))
-    val_size = len(dataset) - train_size
-    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
-    
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
-    
-    # Create model
-    model = DeltaObserver(mono_dim=64, comp_dim=64, latent_dim=16)
-    
-    # Train
-    history = train_delta_observer(
-        model,
-        train_loader,
-        val_loader,
-        epochs=100,
-        lr=0.001,
-        device='cpu',
-        save_path='/home/ubuntu/geometric-microscope/models/delta_observer_best.pt',
-    )
-    
-    # Save history
-    with open('/home/ubuntu/geometric-microscope/logs/delta_observer_training.json', 'w') as f:
-        json.dump(history, f, indent=2)
-    
-    print("\n✅ Training history saved to logs/delta_observer_training.json")
+    latents, carry_counts = train_online(epochs=200, batch_size=32)
+    results = evaluate_online_vs_pca(latents, carry_counts)
+
+    # Save results
+    with open('journal/online_observer_results.json', 'w') as f:
+        json.dump(results, f, indent=2)
+    print(f"\nResults saved to journal/online_observer_results.json")

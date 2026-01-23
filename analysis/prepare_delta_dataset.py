@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 """
-Prepare dataset for Delta Observer training.
+[LEGACY] Prepare dataset for post-hoc Delta Observer training.
 
+NOTE: This script is part of the legacy post-hoc workflow. The primary
+Delta Observer implementation now uses online observation during training,
+which captures temporal dynamics that post-hoc analysis cannot access.
+
+For the current approach, see: models/delta_observer.py
+
+This script is preserved for baseline comparison and reproducibility of
+original paper results.
+
+Original purpose:
 Extract activations from both trained models and compute semantic labels (carry_count).
 """
 
