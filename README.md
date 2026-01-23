@@ -1,4 +1,4 @@
-# Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations
+# Delta Observer
 
 **Aaron (Tripp) Josserand-Austin** | EntroMorphic Research Team
 
@@ -15,6 +15,22 @@ This repository contains code, data, and trained models for our paper "Delta Obs
 **Key Finding:** Semantic information in neural networks can be **linearly accessible** (R²=0.9505) without exhibiting strong **geometric clustering** (Silhouette=0.0320), challenging the assumption that interpretability requires discrete feature clusters.
 
 **Method:** We train two architectures (monolithic and compositional) to solve 4-bit binary addition, then train a Delta Observer to map between their representation spaces, discovering shared semantic structure.
+
+---
+
+## 🚀 Run in Google Colab
+
+**No installation required!** Open and run notebooks directly in your browser:
+
+| Notebook | Description | Runtime | Colab Link |
+|----------|-------------|---------|------------|
+| **00_quickstart_demo** | Quick demo with pre-computed results | 5 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/00_quickstart_demo.ipynb) |
+| **01_training_models** | Train source models from scratch | 15 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/01_training_models.ipynb) |
+| **02_delta_observer_training** | Train Delta Observer | 20 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/02_delta_observer_training.ipynb) |
+| **03_analysis_visualization** | Geometric analysis & paper figures | 10 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/03_analysis_visualization.ipynb) |
+| **99_full_reproduction** | Complete end-to-end reproduction | 30 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/99_full_reproduction.ipynb) |
+
+**📖 [Colab Setup Guide](notebooks/COLAB_SETUP.md)** - Detailed instructions for running notebooks in Google Colab
 
 ---
 
@@ -41,7 +57,8 @@ delta-observer/
 │   ├── 02_delta_observer_training.ipynb  # Train Delta Observer
 │   ├── 03_analysis_visualization.ipynb   # Geometric analysis & paper figures
 │   ├── 99_full_reproduction.ipynb   # Complete end-to-end reproduction (30 min)
-│   └── README.md                    # Notebook documentation
+│   ├── README.md                    # Notebook documentation
+│   └── COLAB_SETUP.md               # Google Colab setup guide
 ├── figures/                         # Generated figures from paper
 │   ├── figure1_model_geometries.png
 │   ├── figure2_delta_latent_space.png
@@ -102,62 +119,38 @@ python models/train_4bit_monolithic.py
 python models/train_4bit_compositional.py
 ```
 
-Both models achieve 100% accuracy on 4-bit addition (512 possible inputs).
-
 ### 2. Extract Activations
-
-Extract hidden layer activations from both models:
 
 ```bash
 python analysis/prepare_delta_dataset.py
 ```
 
-This creates `data/delta_observer_dataset.npz` with:
-- Monolithic activations (512 × 64D)
-- Compositional activations (512 × 64D)
-- Carry count labels (0-4)
-- Bit position labels (0-3)
-
 ### 3. Train Delta Observer
-
-Train the Delta Observer to map between representations:
 
 ```bash
 python models/delta_observer.py
 ```
 
-The Delta Observer learns a 16D latent space that:
-- Reconstructs both activation spaces
-- Predicts semantic properties (carry count, bit position)
-- Discovers continuous semantic structure
-
 ### 4. Analyze Results
-
-Analyze the Delta Observer's latent space:
 
 ```bash
 python analysis/analyze_delta_latent.py
+python analysis/geometric_analysis.py
 ```
-
-This generates:
-- UMAP visualizations colored by carry count and bit position
-- Linear probe analysis (R² scores)
-- Clustering analysis (Silhouette scores)
-- 6-panel comparison figure
 
 ---
 
 ## Reproducing Paper Results
 
-To reproduce all results from the paper:
+### Option 1: Python Scripts
 
 ```bash
 # 1. Train both models
 python models/train_4bit_monolithic.py
 python models/train_4bit_compositional.py
 
-# 2. Perform geometric analysis of original models
-python analysis/geometric_analysis.py
+# 2. Extract activations
+python analysis/prepare_delta_dataset.py
 
 # 3. Prepare Delta Observer dataset
 python analysis/prepare_delta_dataset.py
@@ -239,22 +232,20 @@ See [notebooks/README.md](notebooks/README.md) for detailed documentation.
 
 ### Monolithic vs Compositional Representations
 
-| Model | Parameters | Accuracy | Structure | Silhouette |
-|-------|------------|----------|-----------|------------|
-| Monolithic | 9,285 | 100% | Magnitude-based | 0.5551 |
-| Compositional | 1,480 | 100% | Bit-position-based | 0.8060 |
+| Model | Test Accuracy | Hidden Dimension | Architecture |
+|-------|--------------|------------------|--------------|
+| Monolithic | 50.78% | 64D | Single MLP |
+| Compositional | 38.28% | 4×16D | Modular per-bit |
 
-**Finding:** 6× parameter efficiency with better geometric structure.
-
-### Delta Observer Latent Space
+### Delta Observer Latent Space Analysis
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
-| Linear probe R² (carry) | 0.9505 | Excellent linear accessibility |
-| Silhouette score | 0.0320 | Minimal clustering |
-| PCA variance (2D) | 93.1% | Low-dimensional structure |
+| **R² (Linear Accessibility)** | 0.9505 | Semantic information is **highly linearly accessible** |
+| **Silhouette (Clustering)** | 0.0320 | Points are **not geometrically clustered** |
+| **Latent Dimension** | 16D | Compact semantic representation |
 
-**Finding:** Semantic information is linearly accessible without geometric clustering.
+**Key Insight:** High R² with low Silhouette demonstrates that semantic information can be linearly accessible without requiring discrete geometric clusters.
 
 ---
 
@@ -279,21 +270,17 @@ If you use this code or findings in your research, please cite:
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-EntroMorphic Research Team thanks the specific Manus instance for computational resources, web research, coding, and feedback. We thank the specific Claude instance hosted by Anthropic for coding and providing detailed feedback on the Delta Observer methodology during the design phase.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Contact
 
 **Aaron (Tripp) Josserand-Austin**
-EntroMorphic Research Team
-📧 tripp@entromorphic.com
-🔗 [entromorphic.com](https://entromorphic.com)
+- Email: tripp@entromorphic.com
+- Website: [entromorphic.com](https://entromorphic.com)
+- GitHub: [@EntroMorphic](https://github.com/EntroMorphic)
 
-For questions about the paper or code, please open an issue or contact us directly.
+---
+
+**For Science!** 🔬🌊
