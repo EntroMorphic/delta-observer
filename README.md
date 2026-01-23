@@ -8,6 +8,16 @@
 
 ---
 
+<p align="center">
+  <img src="figures/delta_observer_training_hires.gif" alt="Delta Observer Training - Watch the Scaffolding Rise and Fall" width="100%">
+</p>
+
+<p align="center">
+  <em>Watch neural networks build scaffolding to learn, then tear it down. Every frame is one epoch of training.</em>
+</p>
+
+---
+
 ## Overview
 
 This repository contains code, data, and trained models for our paper "Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations."
