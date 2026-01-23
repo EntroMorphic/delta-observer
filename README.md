@@ -28,7 +28,7 @@ Our analysis revealed that geometric clustering is not absent—it's **transient
 | Learning (epoch 20) | 0.94 | **0.33** | Clustering emerges |
 | Final (epoch 200) | 0.99 | -0.02 | Clustering dissolves |
 
-**Insight:** The accessibility-clustering dissociation isn't that clustering never exists—it's that clustering is a *transient phase* during learning that dissolves once training converges. Post-hoc analysis only sees the final unclustered state.
+**Insight:** Clustering is scaffolding, not structure. Networks build geometric organization to *learn* semantic concepts, then discard that organization once the concepts are encoded in the weights. Post-hoc analysis only sees the final state and concludes "no clusters." But the clusters existed—they were temporary. The semantic primitive isn't in the final representation; it's in the learning trajectory.
 
 ---
 
