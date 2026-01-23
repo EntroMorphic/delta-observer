@@ -22,13 +22,13 @@ This repository contains code, data, and trained models for our paper "Delta Obs
 
 **No installation required!** Open and run notebooks directly in your browser:
 
-| Notebook | Description | Runtime | Colab Link |
-|----------|-------------|---------|------------|
-| **00_quickstart_demo** | Quick demo with pre-computed results | 5 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/00_quickstart_demo.ipynb) |
-| **01_training_models** | Train source models from scratch | 15 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/01_training_models.ipynb) |
-| **02_delta_observer_training** | Train Delta Observer | 20 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/02_delta_observer_training.ipynb) |
-| **03_analysis_visualization** | Geometric analysis & paper figures | 10 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/03_analysis_visualization.ipynb) |
-| **99_full_reproduction** | Complete end-to-end reproduction | 30 min | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/99_full_reproduction.ipynb) |
+| Notebook | Description | Colab |
+|----------|-------------|-------|
+| **00_quickstart_demo** | Quick demo with pre-computed results | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/00_quickstart_demo.ipynb) |
+| **01_training_models** | Train source models from scratch | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/01_training_models.ipynb) |
+| **02_delta_observer_training** | Train Delta Observer | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/02_delta_observer_training.ipynb) |
+| **03_analysis_visualization** | Geometric analysis & paper figures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/03_analysis_visualization.ipynb) |
+| **99_full_reproduction** | Complete end-to-end reproduction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/99_full_reproduction.ipynb) |
 
 **📖 [Colab Setup Guide](notebooks/COLAB_SETUP.md)** - Detailed instructions for running notebooks in Google Colab
 
@@ -212,15 +212,15 @@ Epoch 200: -0.02 (no clustering)
 
 See the **[🚀 Run in Google Colab](#-run-in-google-colab)** section above for one-click notebook access.
 
-| Notebook | Description | Runtime |
-|----------|-------------|---------|
-| `00_quickstart_demo.ipynb` | Demo with pre-computed results | 5 min |
-| `01_training_models.ipynb` | Train source models from scratch | 15 min |
-| `02_delta_observer_training.ipynb` | Train Delta Observer | 20 min |
-| `03_analysis_visualization.ipynb` | Analysis & paper figures | 10 min |
-| `99_full_reproduction.ipynb` | Complete end-to-end reproduction | 30 min |
+| Notebook | Description |
+|----------|-------------|
+| `00_quickstart_demo.ipynb` | Quick demo with pre-computed results |
+| `01_training_models.ipynb` | Train source models from scratch |
+| `02_delta_observer_training.ipynb` | Train Delta Observer |
+| `03_analysis_visualization.ipynb` | Geometric analysis & paper figures |
+| `99_full_reproduction.ipynb` | Complete end-to-end reproduction |
 
-*Note: Notebooks demonstrate the post-hoc workflow. For online observation with transient clustering analysis, use `python models/delta_observer.py` directly.*
+*All notebooks use the online observer data and include transient clustering analysis.*
 
 ---
 
