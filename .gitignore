@@ -1,5 +1,7 @@
 *.old
 journal/
 tmp/
+archive/
+paper/archive/
 __pycache__/
 *.pt

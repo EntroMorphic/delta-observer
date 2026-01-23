@@ -1,0 +1,255 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alain and Bengio(2016)]{alain2016understanding}
+Guillaume Alain and Yoshua Bengio.
+\newblock Understanding intermediate layers using linear classifier probes.
+\newblock \emph{arXiv preprint arXiv:1610.01644}, 2016.
+
+\bibitem[Andreas et~al.(2016)Andreas, Rohrbach, Darrell, and
+  Klein]{andreas2016neural}
+Jacob Andreas, Marcus Rohrbach, Trevor Darrell, and Dan Klein.
+\newblock Neural module networks.
+\newblock \emph{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 39--48, 2016.
+
+\bibitem[Battaglia et~al.(2018)Battaglia, Hamrick, Bapst, Sanchez-Gonzalez,
+  Zambaldi, Malinowski, Tacchetti, Raposo, Santoro, Faulkner,
+  et~al.]{battaglia2018relational}
+Peter~W Battaglia, Jessica~B Hamrick, Victor Bapst, Alvaro Sanchez-Gonzalez,
+  Vinicius Zambaldi, Mateusz Malinowski, Andrea Tacchetti, David Raposo, Adam
+  Santoro, Ryan Faulkner, et~al.
+\newblock Relational inductive biases, deep learning, and graph networks.
+\newblock \emph{arXiv preprint arXiv:1806.01261}, 2018.
+
+\bibitem[Belinkov et~al.(2017)Belinkov, Durrani, Dalvi, Sajjad, and
+  Glass]{belinkov2017neural}
+Yonatan Belinkov, Nadir Durrani, Fahim Dalvi, Hassan Sajjad, and James Glass.
+\newblock What do neural machine translation models learn about morphology?
+\newblock \emph{arXiv preprint arXiv:1704.03471}, 2017.
+
+\bibitem[Bengio et~al.(2013)Bengio, Courville, and
+  Vincent]{bengio2013representation}
+Yoshua Bengio, Aaron Courville, and Pascal Vincent.
+\newblock Representation learning: A review and new perspectives.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 35\penalty0 (8):\penalty0 1798--1828, 2013.
+
+\bibitem[Bills et~al.(2023)Bills, Cammarata, Mossing, Tillman, Gao, Goh,
+  Sutskever, Leike, Wu, and Saunders]{bills2023language}
+Steven Bills, Nick Cammarata, Dan Mossing, Henk Tillman, Leo Gao, Gabriel Goh,
+  Ilya Sutskever, Jan Leike, Jeff Wu, and William Saunders.
+\newblock Language models can explain neurons in language models.
+\newblock \emph{OpenAI Blog}, 2023.
+
+\bibitem[Bronstein et~al.(2021)Bronstein, Bruna, Cohen, and
+  Veli{\v{c}}kovi{\'c}]{bronstein2021geometric}
+Michael~M Bronstein, Joan Bruna, Taco Cohen, and Petar Veli{\v{c}}kovi{\'c}.
+\newblock Geometric deep learning: Grids, groups, graphs, geodesics, and
+  gauges.
+\newblock \emph{arXiv preprint arXiv:2104.13478}, 2021.
+
+\bibitem[Chen et~al.(2018)Chen, Li, Grosse, and Duvenaud]{chen2018isolating}
+Ricky~TQ Chen, Xuechen Li, Roger~B Grosse, and David~K Duvenaud.
+\newblock Isolating sources of disentanglement in variational autoencoders.
+\newblock \emph{Advances in Neural Information Processing Systems}, 31, 2018.
+
+\bibitem[Chen et~al.(2020)Chen, Kornblith, Norouzi, and Hinton]{chen2020simple}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
+\newblock A simple framework for contrastive learning of visual
+  representations.
+\newblock \emph{International Conference on Machine Learning}, pages
+  1597--1607, 2020.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann,
+  Askell, Bai, Chen, Conerly, et~al.]{elhage2021mathematical}
+Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben
+  Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, et~al.
+\newblock A mathematical framework for transformer circuits.
+\newblock \emph{Transformer Circuits Thread}, 2021.
+
+\bibitem[Fefferman et~al.(2016)Fefferman, Mitter, and
+  Narayanan]{fefferman2016testing}
+Charles Fefferman, Sanjoy Mitter, and Hariharan Narayanan.
+\newblock Testing the manifold hypothesis.
+\newblock \emph{Journal of the American Mathematical Society}, 29\penalty0
+  (4):\penalty0 983--1049, 2016.
+
+\bibitem[Fort et~al.(2020)Fort, Hu, and Lakshminarayanan]{fort2020deep}
+Stanislav Fort, Huiyi Hu, and Balaji Lakshminarayanan.
+\newblock Deep ensembles: A loss landscape perspective.
+\newblock \emph{arXiv preprint arXiv:1912.02757}, 2020.
+
+\bibitem[Frankle et~al.(2020)Frankle, Dziugaite, Roy, and
+  Carbin]{frankle2020linear}
+Jonathan Frankle, Gintare~Karolina Dziugaite, Daniel~M Roy, and Michael Carbin.
+\newblock Linear mode connectivity and the lottery ticket hypothesis.
+\newblock \emph{International Conference on Machine Learning}, pages
+  3259--3269, 2020.
+
+\bibitem[Goyal et~al.(2019)Goyal, Lamb, Hoffmann, Sodhani, Levine, Bengio, and
+  Sch{\"o}lkopf]{goyal2019recurrent}
+Anirudh Goyal, Alex Lamb, Jordan Hoffmann, Shagun Sodhani, Sergey Levine,
+  Yoshua Bengio, and Bernhard Sch{\"o}lkopf.
+\newblock Recurrent independent mechanisms.
+\newblock \emph{arXiv preprint arXiv:1909.10893}, 2019.
+
+\bibitem[Grill et~al.(2020)Grill, Strub, Altch{\'e}, Tallec, Richemond,
+  Buchatskaya, Doersch, Pires, Guo, Azar, et~al.]{grill2020bootstrap}
+Jean-Bastien Grill, Florian Strub, Florent Altch{\'e}, Corentin Tallec,
+  Pierre~H Richemond, Elena Buchatskaya, Carl Doersch, Bernardo~Avila Pires,
+  Zhaohan~Daniel Guo, Mohammad~Gheshlaghi Azar, et~al.
+\newblock Bootstrap your own latent: A new approach to self-supervised
+  learning.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 21271--21284, 2020.
+
+\bibitem[He et~al.(2020)He, Fan, Wu, Xie, and Girshick]{he2020momentum}
+Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, and Ross Girshick.
+\newblock Momentum contrast for unsupervised visual representation learning.
+\newblock \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 9729--9738, 2020.
+
+\bibitem[Hewitt and Manning(2019)]{hewitt2019structural}
+John Hewitt and Christopher~D Manning.
+\newblock A structural probe for finding syntax in word representations.
+\newblock \emph{Proceedings of NAACL-HLT}, pages 4129--4138, 2019.
+
+\bibitem[Higgins et~al.(2017)Higgins, Matthey, Pal, Burgess, Glorot, Botvinick,
+  Mohamed, and Lerchner]{higgins2017beta}
+Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot,
+  Matthew Botvinick, Shakir Mohamed, and Alexander Lerchner.
+\newblock beta-vae: Learning basic visual concepts with a constrained
+  variational framework.
+\newblock \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[Kim and Linzen(2020)]{kim2020cogs}
+Najoung Kim and Tal Linzen.
+\newblock Cogs: A compositional generalization challenge based on semantic
+  interpretation.
+\newblock \emph{arXiv preprint arXiv:2010.05465}, 2020.
+
+\bibitem[Kingma and Welling(2013)]{kingma2013auto}
+Diederik~P Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock \emph{arXiv preprint arXiv:1312.6114}, 2013.
+
+\bibitem[Kornblith et~al.(2019)Kornblith, Norouzi, Lee, and
+  Hinton]{kornblith2019similarity}
+Simon Kornblith, Mohammad Norouzi, Honglak Lee, and Geoffrey Hinton.
+\newblock Similarity of neural network representations revisited.
+\newblock \emph{International Conference on Machine Learning}, pages
+  3519--3529, 2019.
+
+\bibitem[Lake and Baroni(2018)]{lake2018generalization}
+Brenden Lake and Marco Baroni.
+\newblock Generalization without systematicity: On the compositional skills of
+  sequence-to-sequence recurrent networks.
+\newblock \emph{International Conference on Machine Learning}, pages
+  2873--2882, 2018.
+
+\bibitem[Lake et~al.(2017)Lake, Ullman, Tenenbaum, and
+  Gershman]{lake2017building}
+Brenden~M Lake, Tomer~D Ullman, Joshua~B Tenenbaum, and Samuel~J Gershman.
+\newblock Building machines that learn and think like people.
+\newblock \emph{Behavioral and Brain Sciences}, 40:\penalty0 e253, 2017.
+
+\bibitem[Locatello et~al.(2019)Locatello, Bauer, Lucic, Raetsch, Gelly,
+  Sch{\"o}lkopf, and Bachem]{locatello2019challenging}
+Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Raetsch, Sylvain Gelly,
+  Bernhard Sch{\"o}lkopf, and Olivier Bachem.
+\newblock Challenging common assumptions in the unsupervised learning of
+  disentangled representations.
+\newblock \emph{International Conference on Machine Learning}, pages
+  4114--4124, 2019.
+
+\bibitem[Madsen and Johansen(2020)]{madsen2020neural}
+Andreas Madsen and Alexander~Rosenberg Johansen.
+\newblock Neural arithmetic units.
+\newblock \emph{arXiv preprint arXiv:2001.05016}, 2020.
+
+\bibitem[McInnes et~al.(2018)McInnes, Healy, and Melville]{mcInnes2018umap}
+Leland McInnes, John Healy, and James Melville.
+\newblock Umap: Uniform manifold approximation and projection for dimension
+  reduction.
+\newblock \emph{arXiv preprint arXiv:1802.03426}, 2018.
+
+\bibitem[Morcos et~al.(2018)Morcos, Raghu, and Bengio]{morcos2018insights}
+Ari~S Morcos, Maithra Raghu, and Samy Bengio.
+\newblock Insights on representational similarity in neural networks with
+  canonical correlation.
+\newblock \emph{Advances in Neural Information Processing Systems}, 31, 2018.
+
+\bibitem[Nanda et~al.(2023)Nanda, Chan, Liberum, Smith, and
+  Steinhardt]{nanda2023progress}
+Neel Nanda, Lawrence Chan, Tom Liberum, Jess Smith, and Jacob Steinhardt.
+\newblock Progress measures for grokking via mechanistic interpretability.
+\newblock \emph{arXiv preprint arXiv:2301.05217}, 2023.
+
+\bibitem[Olah et~al.(2017)Olah, Mordvintsev, and Schubert]{olah2017feature}
+Chris Olah, Alexander Mordvintsev, and Ludwig Schubert.
+\newblock Feature visualization.
+\newblock \emph{Distill}, 2\penalty0 (11):\penalty0 e7, 2017.
+
+\bibitem[Oord et~al.(2018)Oord, Li, and Vinyals]{oord2018representation}
+Aaron van~den Oord, Yazhe Li, and Oriol Vinyals.
+\newblock Representation learning with contrastive predictive coding.
+\newblock \emph{arXiv preprint arXiv:1807.03748}, 2018.
+
+\bibitem[Raghu et~al.(2017)Raghu, Gilmer, Yosinski, and
+  Sohl-Dickstein]{raghu2017svcca}
+Maithra Raghu, Justin Gilmer, Jason Yosinski, and Jascha Sohl-Dickstein.
+\newblock Svcca: Singular vector canonical correlation analysis for deep
+  learning dynamics and interpretability.
+\newblock \emph{Advances in Neural Information Processing Systems}, 30, 2017.
+
+\bibitem[Rezende et~al.(2014)Rezende, Mohamed, and
+  Wierstra]{rezende2014stochastic}
+Danilo~Jimenez Rezende, Shakir Mohamed, and Daan Wierstra.
+\newblock Stochastic backpropagation and approximate inference in deep
+  generative models.
+\newblock \emph{International Conference on Machine Learning}, pages
+  1278--1286, 2014.
+
+\bibitem[Rousseeuw(1987)]{rousseeuw1987silhouettes}
+Peter~J Rousseeuw.
+\newblock Silhouettes: a graphical aid to the interpretation and validation of
+  cluster analysis.
+\newblock \emph{Journal of Computational and Applied Mathematics}, 20:\penalty0
+  53--65, 1987.
+
+\bibitem[Saxton et~al.(2019)Saxton, Grefenstette, Hill, and
+  Kohli]{saxton2019analysing}
+David Saxton, Edward Grefenstette, Felix Hill, and Pushmeet Kohli.
+\newblock Analysing mathematical reasoning abilities of neural models.
+\newblock \emph{arXiv preprint arXiv:1904.01557}, 2019.
+
+\bibitem[Templeton et~al.(2024)Templeton, Conerly, Marcus, Lindsey, Bricken,
+  Chen, Pearce, Citro, Ameisen, Jones, et~al.]{templeton2024scaling}
+Adly Templeton, Tom Conerly, Jonathan Marcus, Jack Lindsey, Trenton Bricken,
+  Brian Chen, Adam Pearce, Craig Citro, Emmanuel Ameisen, Andy Jones, et~al.
+\newblock Scaling monosemanticity: Extracting interpretable features from
+  claude 3 sonnet.
+\newblock \emph{Anthropic Blog}, 2024.
+
+\bibitem[Tenney et~al.(2019)Tenney, Das, and Pavlick]{tenney2019bert}
+Ian Tenney, Dipanjan Das, and Ellie Pavlick.
+\newblock Bert rediscovers the classical nlp pipeline.
+\newblock \emph{arXiv preprint arXiv:1905.05950}, 2019.
+
+\bibitem[Trask et~al.(2018)Trask, Hill, Reed, Rae, Dyer, and
+  Blunsom]{trask2018neural}
+Andrew Trask, Felix Hill, Scott~E Reed, Jack Rae, Chris Dyer, and Phil Blunsom.
+\newblock Neural arithmetic logic units.
+\newblock \emph{Advances in Neural Information Processing Systems}, 31, 2018.
+
+\bibitem[Zaremba and Sutskever(2014)]{zaremba2014learning}
+Wojciech Zaremba and Ilya Sutskever.
+\newblock Learning to execute.
+\newblock \emph{arXiv preprint arXiv:1410.4615}, 2014.
+
+\end{thebibliography}
