@@ -79,8 +79,11 @@ y_min, y_max = all_proj[:, 1].min() - 0.5, all_proj[:, 1].max() + 0.5
 print("\nCreating high-resolution animation...")
 fig = plt.figure(figsize=(16, 9))
 
-# Main latent space plot
-ax_main = fig.add_axes([0.05, 0.12, 0.55, 0.78])
+# Main latent space plot - leave room for colorbar
+ax_main = fig.add_axes([0.05, 0.12, 0.50, 0.78])
+
+# Colorbar axis (fixed position)
+ax_cbar = fig.add_axes([0.56, 0.12, 0.02, 0.78])
 
 # Metrics plot
 ax_metrics = fig.add_axes([0.65, 0.52, 0.32, 0.38])
@@ -93,12 +96,16 @@ ax_info.axis('off')
 fig.suptitle('Delta Observer: The Scaffolding Rises and Falls',
              fontsize=18, fontweight='bold', y=0.97)
 
-# Colorbar reference (will be created once)
-cbar = None
+# Create colorbar once with a dummy mappable
+import matplotlib.cm as cm
+import matplotlib.colors as mcolors
+norm = mcolors.Normalize(vmin=carry_counts.min(), vmax=carry_counts.max())
+sm = cm.ScalarMappable(cmap='viridis', norm=norm)
+sm.set_array([])
+cbar = plt.colorbar(sm, cax=ax_cbar)
+cbar.set_label('Carry Count', fontsize=11)
 
 def animate(frame_idx):
-    global cbar
-
     ax_main.clear()
     ax_metrics.clear()
     ax_info.clear()
@@ -112,18 +119,14 @@ def animate(frame_idx):
     # Main scatter plot
     scatter = ax_main.scatter(proj[:, 0], proj[:, 1], c=carry_counts,
                               cmap='viridis', s=25, alpha=0.8,
-                              edgecolors='white', linewidth=0.2)
+                              edgecolors='white', linewidth=0.2,
+                              vmin=carry_counts.min(), vmax=carry_counts.max())
 
     ax_main.set_xlim(x_min, x_max)
     ax_main.set_ylim(y_min, y_max)
     ax_main.set_xlabel('PC1', fontsize=12)
     ax_main.set_ylabel('PC2', fontsize=12)
     ax_main.set_title(f'Latent Space — Epoch {epoch}', fontsize=14, fontweight='bold')
-
-    # Colorbar (only first frame)
-    if frame_idx == 0:
-        cbar = plt.colorbar(scatter, ax=ax_main, shrink=0.8, pad=0.02)
-        cbar.set_label('Carry Count', fontsize=11)
 
     # === Metrics Plot ===
     # Full trajectory in gray
@@ -189,24 +192,31 @@ with Silhouette = {peak_sil:.4f}"""
                  bbox=dict(boxstyle='round,pad=0.5', facecolor='wheat', alpha=0.9),
                  family='monospace')
 
-    # Progress bar at bottom
-    progress = (frame_idx + 1) / len(epochs)
-    ax_progress = fig.add_axes([0.05, 0.02, 0.9, 0.03])
+    return scatter,
+
+# Progress bar axis (created once, outside animate)
+ax_progress = fig.add_axes([0.05, 0.02, 0.9, 0.03])
+
+def animate_with_progress(frame_idx):
+    result = animate(frame_idx)
+
+    # Update progress bar
     ax_progress.clear()
-    ax_progress.barh(0, progress, height=1, color='#2196F3', alpha=0.8)
+    progress = (frame_idx + 1) / len(epochs)
     ax_progress.barh(0, 1, height=1, color='#E0E0E0', alpha=0.3)
+    ax_progress.barh(0, progress, height=1, color='#2196F3', alpha=0.8)
     ax_progress.set_xlim(0, 1)
     ax_progress.set_ylim(-0.5, 0.5)
     ax_progress.axis('off')
     ax_progress.text(0.5, 0, f'Frame {frame_idx + 1}/{len(epochs)}',
                      ha='center', va='center', fontsize=9, color='#333')
 
-    return scatter,
+    return result
 
 
 # Create animation
 print(f"Rendering {len(epochs)} frames...")
-anim = FuncAnimation(fig, animate, frames=len(epochs), interval=50, blit=False)
+anim = FuncAnimation(fig, animate_with_progress, frames=len(epochs), interval=50, blit=False)
 
 # Save as high-quality MP4
 output_mp4 = 'figures/delta_observer_training_hires.mp4'
