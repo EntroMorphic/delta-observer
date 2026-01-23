@@ -122,9 +122,9 @@ Neural networks are similar. Two different architectures can solve the same prob
 
 \vspace{1em}
 
-Deep neural networks have achieved remarkable success across diverse domains, yet their internal representations remain largely opaque \citep{olah2017feature, elhage2021mathematical}. A fundamental question in interpretability research is: when different architectures solve the same task, do they learn similar or distinct internal representations?
+Deep neural networks have achieved remarkable success across diverse domains, yet their internal representations remain largely opaque. Feature visualization \citep{olah2017feature} has illuminated what individual neurons detect, while mathematical frameworks for circuit analysis \citep{elhage2021mathematical} have enabled systematic study of computational mechanisms. Recent work has made significant progress in tracking specific phenomena like grokking \citep{nanda2023progress} and scaling interpretability to frontier models \citep{templeton2024scaling, bills2023language}. However, these approaches share a critical limitation: they analyze \textit{final} trained models. What happens \textit{during} training is invisible.
 
-Recent work in mechanistic interpretability has made significant progress in understanding individual neurons and circuits \citep{nanda2023progress, templeton2024scaling}. However, these approaches share a critical limitation: they analyze \textit{final} trained models. What happens \textit{during} training is invisible.
+A fundamental question persists: when different architectures solve the same task, do they learn similar or distinct internal representations? Representation similarity methods like SVCCA \citep{raghu2017svcca} and CKA \citep{kornblith2019similarity, morcos2018insights} compare learned representations across models, while linear probing \citep{alain2016understanding, belinkov2017neural, hewitt2019structural, tenney2019bert} tests what information is linearly accessible. Yet these methods operate on static snapshots of trained networks.
 
 We address this limitation by introducing the \textbf{Delta Observer}, an architecture that watches two neural networks learn \textit{simultaneously}---not after they're done, but while they're still figuring things out. This ``online observation'' reveals dynamics that post-hoc analysis completely misses.
 
@@ -151,7 +151,45 @@ Neural networks build geometric organization (clusters) to help them learn seman
 \end{enumerate}
 
 % ============================================================================
-% SECTION 2: THE PROBLEM (ACCESSIBLE VERSION)
+% SECTION 2: RELATED WORK
+% ============================================================================
+
+\section{Related Work}
+
+\subsection{Mechanistic Interpretability}
+
+The mechanistic interpretability program seeks to reverse-engineer neural networks into human-understandable components \citep{olah2017feature, elhage2021mathematical}. This includes studying circuits that implement specific computations \citep{nanda2023progress}, extracting interpretable features from large models \citep{templeton2024scaling}, and using language models to explain neuron behavior \citep{bills2023language}. While powerful, these approaches analyze trained models---our work reveals that important structure exists only \textit{during} training.
+
+\subsection{Linear Probing and Representation Analysis}
+
+Linear probes \citep{alain2016understanding} test whether information is linearly accessible in neural representations. This technique has been applied extensively to language models \citep{belinkov2017neural, hewitt2019structural, tenney2019bert}. Our observation that $R^2=0.9879$ for semantic prediction aligns with findings that semantic information is often linearly accessible, but our discovery that geometric clustering is transient complicates the interpretation of such results.
+
+\subsection{Representation Similarity}
+
+Methods for comparing representations across networks include Singular Vector Canonical Correlation Analysis (SVCCA) \citep{raghu2017svcca}, Centered Kernel Alignment (CKA) \citep{kornblith2019similarity}, and related approaches \citep{morcos2018insights}. These methods typically compare final representations; our online observation approach extends this to the full training trajectory.
+
+\subsection{Manifold Hypothesis and Geometric Structure}
+
+The manifold hypothesis \citep{bengio2013representation, fefferman2016testing} suggests neural networks learn low-dimensional manifolds in high-dimensional space. Geometric deep learning \citep{bronstein2021geometric} exploits this structure. Our finding that geometric clustering is transient suggests the manifold structure itself may be dynamic during training.
+
+\subsection{Learning Dynamics}
+
+Work on loss landscape geometry \citep{frankle2020linear, fort2020deep} studies how networks traverse parameter space during training. Our contribution is analogous but focuses on \textit{representation} space: how the internal organization of information evolves, not just how weights change.
+
+\subsection{Compositional Architectures}
+
+Building networks with compositional inductive biases \citep{lake2017building, battaglia2018relational} is an active research direction. Neural module networks \citep{andreas2016neural} and recurrent independent mechanisms \citep{goyal2019recurrent} explicitly encourage modular computation. We study how compositional vs. monolithic architectures represent the same task differently.
+
+\subsection{Disentangled Representations}
+
+Research on disentanglement \citep{higgins2017beta, chen2018isolating} aims to learn representations where factors of variation are separated. \citet{locatello2019challenging} showed unsupervised disentanglement is fundamentally difficult without inductive biases. Our semantic bottleneck provides such a bias through the prediction objective.
+
+\subsection{Contrastive and Self-Supervised Learning}
+
+Contrastive methods \citep{oord2018representation, chen2020simple, he2020momentum, grill2020bootstrap} learn representations by comparing similar and dissimilar examples. Our cross-network approach shares the spirit of learning shared structure across different ``views''---but our views are different architectures rather than data augmentations.
+
+% ============================================================================
+% SECTION 3: THE PROBLEM (ACCESSIBLE VERSION)
 % ============================================================================
 
 \section{The Problem: Different Architectures, Same Task}
@@ -163,7 +201,7 @@ Neural networks build geometric organization (clusters) to help them learn seman
 \label{fig:architectures}
 \end{figure}
 
-We study a simple but revealing task: \textbf{4-bit binary addition}. Given two 4-bit numbers (0-15 each), predict their 5-bit sum (0-30).
+We study a simple but revealing task: \textbf{4-bit binary addition}. Given two 4-bit numbers (0-15 each), predict their 5-bit sum (0-30). This task has been studied in the context of neural arithmetic \citep{trask2018neural, madsen2020neural}, mathematical reasoning \citep{saxton2019analysing}, and learning to execute \citep{zaremba2014learning}.
 
 \begin{planenglish}
 Why such a simple task? Because it has a clear \textit{semantic variable} we can track: the \textbf{carry count}. When you add 7+1=8, you need 3 carry operations (the 1s ripple through). When you add 1+2=3, you need 0 carries. This gives us ground truth for asking: ``Does the network's internal representation encode the concept of carries?''
@@ -174,20 +212,20 @@ We train two architectures that approach this task differently:
 \begin{itemize}
 \item \textbf{Monolithic MLP:} Processes all 8 input bits together through dense layers. No explicit structure matching the task.
 
-\item \textbf{Compositional Network:} Processes each bit position with a separate module, passing carry information between them---mimicking how humans (and hardware) actually do addition.
+\item \textbf{Compositional Network:} Processes each bit position with a separate module, passing carry information between them---mimicking how humans (and hardware) actually do addition. This reflects compositional generalization principles \citep{lake2018generalization, kim2020cogs}.
 \end{itemize}
 
 Both achieve \textbf{100\% accuracy}. But how do they organize information internally? Do they both ``understand'' carries? And if so, is that understanding organized the same way?
 
 % ============================================================================
-% SECTION 3: THE DELTA OBSERVER
+% SECTION 4: THE DELTA OBSERVER
 % ============================================================================
 
 \section{The Delta Observer: Watching Networks Learn}
 
 \subsection{Architecture Overview}
 
-The Delta Observer has three jobs:
+The Delta Observer architecture draws inspiration from variational autoencoders \citep{kingma2013auto, rezende2014stochastic} but with a crucial difference: instead of encoding data, we encode \textit{activations from other networks}. The architecture has three jobs:
 
 \begin{enumerate}
 \item \textbf{Encode} activations from both source networks into a shared latent space
@@ -233,8 +271,16 @@ The online approach is more expensive (3 forward passes per batch instead of 1),
 \end{algorithmic}
 \end{algorithm}
 
+\subsection{Measuring Semantic Structure}
+
+We use two complementary metrics:
+
+\textbf{Linear Accessibility ($R^2$):} We fit a linear regression from the latent space to carry count. High $R^2$ means the semantic variable is linearly decodable---a standard test in probing literature \citep{alain2016understanding}.
+
+\textbf{Geometric Clustering (Silhouette):} The Silhouette score \citep{rousseeuw1987silhouettes} measures whether points cluster by their semantic label. Positive values indicate clustering; near-zero indicates no geometric organization.
+
 % ============================================================================
-% SECTION 4: RESULTS
+% SECTION 5: RESULTS
 % ============================================================================
 
 \section{Results}
@@ -299,17 +345,17 @@ Converged & 200 & 0.99 & -0.02 & Scaffolding gone, knowledge remains \\
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{latent_evolution.png}
-\caption{\textbf{Watching Scaffolding Rise and Fall.} Three snapshots of the Delta Observer's latent space during training. \textit{Left:} Early training---random noise, no structure. \textit{Middle:} Peak clustering---clear separation by carry count (the scaffolding). \textit{Right:} Converged---clusters have dissolved, points are mixed, but linear prediction still works perfectly. The semantic information is still there; it's just no longer \textit{geometrically organized}.}
+\caption{\textbf{Watching Scaffolding Rise and Fall.} Three snapshots of the Delta Observer's latent space during training, visualized using UMAP \citep{mcInnes2018umap}. \textit{Left:} Early training---random noise, no structure. \textit{Middle:} Peak clustering---clear separation by carry count (the scaffolding). \textit{Right:} Converged---clusters have dissolved, points are mixed, but linear prediction still works perfectly. The semantic information is still there; it's just no longer \textit{geometrically organized}.}
 \label{fig:evolution}
 \end{figure}
 
 % ============================================================================
-% SECTION 5: WHAT IT MEANS
+% SECTION 6: WHAT IT MEANS
 % ============================================================================
 
-\section{What This Means}
+\section{Discussion}
 
-\subsection{For Interpretability Research}
+\subsection{Implications for Interpretability Research}
 
 \begin{keyinsight}
 \textbf{Post-hoc analysis is fundamentally limited.}
@@ -317,7 +363,9 @@ Converged & 200 & 0.99 & -0.02 & Scaffolding gone, knowledge remains \\
 If you only analyze a trained model, you're seeing the building after the scaffolding came down. The geometric structure that \textit{organized learning} is gone. You might conclude ``there's no structure here'' when really the structure was temporary.
 \end{keyinsight}
 
-Current interpretability methods---probing classifiers, activation visualization, circuit analysis---all operate on final trained models. Our results suggest this misses crucial dynamics. The most informative structure may be \textbf{transient}.
+Current interpretability methods---probing classifiers \citep{alain2016understanding, belinkov2017neural}, activation visualization \citep{olah2017feature}, circuit analysis \citep{elhage2021mathematical, nanda2023progress}---all operate on final trained models. Our results suggest this misses crucial dynamics. The most informative structure may be \textbf{transient}.
+
+This connects to broader concerns about interpretability methods. Just as \citet{locatello2019challenging} showed that disentanglement claims require careful validation, our work suggests that claims about geometric structure in representations require attention to \textit{when} during training the analysis is performed.
 
 \subsection{A New Mental Model}
 
@@ -327,6 +375,8 @@ Current interpretability methods---probing classifiers, activation visualization
 \textbf{New view:} Neural networks travel through representation space during training. The \textit{trajectory}---not just the destination---encodes what they learn. Analyzing only the endpoint is like judging a journey by its final GPS coordinate.
 \end{planenglish}
 
+This perspective connects to work on loss landscape geometry \citep{frankle2020linear, fort2020deep}, but shifts focus from parameter space to representation space. The relevant question becomes: what information is encoded in the \textit{path} through representation space, not just the endpoint?
+
 \subsection{The Semantic Primitive is in the Trajectory}
 
 The 4\% improvement from online observation represents information that \textit{only exists in the learning trajectory}. The final representation has ``forgotten'' this information---but the observer that watched the journey remembers.
@@ -334,7 +384,7 @@ The 4\% improvement from online observation represents information that \textit{
 This suggests a provocative hypothesis: \textbf{the semantic primitive is not a representation but a path}. Understanding what a network ``knows'' may require understanding \textit{how it came to know it}.
 
 % ============================================================================
-% SECTION 6: LIMITATIONS & FUTURE WORK
+% SECTION 7: LIMITATIONS & FUTURE WORK
 % ============================================================================
 
 \section{Limitations and Future Work}
@@ -347,6 +397,8 @@ This suggests a provocative hypothesis: \textbf{the semantic primitive is not a 
 \item \textbf{Computational Cost:} Online observation requires training 3 models simultaneously. For large models, this may be prohibitive.
 
 \item \textbf{Single Domain:} Our results are specific to binary arithmetic. Whether transient clustering occurs in language models, vision models, or other domains is an open question.
+
+\item \textbf{Architecture Dependence:} We studied MLP and compositional architectures; whether transformers \citep{elhage2021mathematical} or other architectures exhibit similar dynamics is unknown.
 \end{itemize}
 
 \subsection{Future Directions}
@@ -354,15 +406,17 @@ This suggests a provocative hypothesis: \textbf{the semantic primitive is not a 
 \begin{enumerate}
 \item \textbf{Scale Up:} Apply online observation to transformers on language tasks. Do attention patterns show transient structure?
 
-\item \textbf{Preserve Scaffolding:} Can we modify training to \textit{keep} the geometric clusters? Would this improve interpretability?
+\item \textbf{Preserve Scaffolding:} Can we modify training to \textit{keep} the geometric clusters? Would this improve interpretability? Regularization approaches from disentanglement research \citep{higgins2017beta, chen2018isolating} may be relevant.
 
 \item \textbf{Transfer Learning:} Does scaffolding structure transfer between related tasks? Is it reusable?
 
 \item \textbf{Theoretical Understanding:} Why does scaffolding dissolve? Is it optimization pressure, or something deeper about how neural networks encode information?
+
+\item \textbf{Connection to Grokking:} The phenomenon of grokking \citep{nanda2023progress}---sudden generalization after apparent convergence---may be related to transient geometric structure. Do grokking networks show similar clustering dynamics?
 \end{enumerate}
 
 % ============================================================================
-% SECTION 7: CONCLUSION
+% SECTION 8: CONCLUSION
 % ============================================================================
 
 \section{Conclusion}
