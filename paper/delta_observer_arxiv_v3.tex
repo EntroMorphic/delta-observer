@@ -1,0 +1,414 @@
+% ArXiv submission for Delta Observer paper - Version 3
+% Made more accessible with visual storytelling and plain-English explanations
+\documentclass{article}
+
+% Standard packages for ArXiv
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{tcolorbox}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+% Page setup
+\usepackage[margin=1in]{geometry}
+
+% Custom colors
+\definecolor{insightblue}{RGB}{52, 152, 219}
+\definecolor{discoverygreen}{RGB}{46, 204, 113}
+\definecolor{warningorange}{RGB}{243, 156, 18}
+
+% Custom callout boxes
+\newtcolorbox{keyinsight}{
+  colback=insightblue!10,
+  colframe=insightblue,
+  fonttitle=\bfseries,
+  title=Key Insight,
+  rounded corners
+}
+
+\newtcolorbox{planenglish}{
+  colback=discoverygreen!10,
+  colframe=discoverygreen,
+  fonttitle=\bfseries,
+  title=In Plain English,
+  rounded corners
+}
+
+\newtcolorbox{tldr}{
+  colback=warningorange!10,
+  colframe=warningorange,
+  fonttitle=\bfseries,
+  title=TL;DR,
+  rounded corners
+}
+
+% Title and authors
+\title{Delta Observer: Learning Continuous Semantic Manifolds\\Between Neural Network Representations}
+
+\author{
+  Aaron (Tripp) Josserand-Austin\thanks{Correspondence: tripp@entromorphic.com} \\
+  EntroMorphic Research Team \\
+  \href{https://entromorphic.com}{entromorphic.com}
+}
+
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================================
+% PLAIN ENGLISH SUMMARY BOX - RIGHT AT THE TOP
+% ============================================================================
+
+\begin{tldr}
+\textbf{What we found:} Neural networks build internal ``scaffolding'' to help them learn, then tear it down once learning is complete. If you only look at a trained network, you miss this scaffolding entirely---it's already gone.
+
+\textbf{Why it matters:} Current interpretability methods analyze finished models. But the most interesting structure is \textit{temporary}. To truly understand how neural networks learn, we need to watch them \textit{while} they're learning.
+
+\textbf{The numbers:} We can predict semantic information with 98.8\% accuracy ($R^2=0.9879$), but the geometric clusters that organized this information during training have completely dissolved (Silhouette $\approx 0$).
+\end{tldr}
+
+\vspace{1em}
+
+% ============================================================================
+% ABSTRACT
+% ============================================================================
+
+\begin{abstract}
+\textbf{The Puzzle:} Two neural networks can solve the same problem while organizing information completely differently inside. How do we compare these different internal ``languages''?
+
+\textbf{Our Approach:} We built a ``Delta Observer''---a network that watches \textit{two other networks learn simultaneously}, discovering what concepts they share despite their different architectures.
+
+\textbf{The Surprise:} We discovered that geometric clustering---the spatial organization of concepts---is \textbf{transient}. It emerges during training (Silhouette=0.33 at epoch 20), helps the network learn, then \textbf{dissolves completely} once learning finishes (Silhouette=-0.02 at epoch 200). The scaffolding comes down after the building is complete.
+
+\textbf{The Implication:} Post-hoc interpretability methods only see the finished building, not the scaffolding that built it. Online observation---watching networks \textit{as they learn}---captures 4\% more semantic information than static analysis. The key to understanding neural networks may lie not in their final state, but in their \textbf{learning trajectory}.
+\end{abstract}
+
+\textbf{Keywords:} interpretability, representation learning, transient clustering, learning dynamics, online observation
+
+\vspace{1em}
+
+% ============================================================================
+% FIGURE 0: THE DISCOVERY AT A GLANCE
+% ============================================================================
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{summary_visualization.png}
+\caption{\textbf{The Discovery at a Glance.} \textit{Top:} During training, clustering (red) peaks then dissolves, while accessibility (green) steadily improves. \textit{Bottom:} Three snapshots of the latent space showing this evolution. \textbf{Left:} Random initialization---no structure. \textbf{Middle:} Peak learning---clear clusters emerge (the ``scaffolding''). \textbf{Right:} Converged---clusters have dissolved, but semantic information remains accessible. \textit{The scaffolding helped build the building, then came down.}}
+\label{fig:glance}
+\end{figure}
+
+% ============================================================================
+% SECTION 1: INTRODUCTION
+% ============================================================================
+
+\section{Introduction}
+
+\begin{planenglish}
+Imagine you're trying to understand how two different people organize their kitchen. One uses a traditional layout (pots here, pans there), while another uses a completely different system. Both kitchens work perfectly---every meal gets made---but the organization is different.
+
+Neural networks are similar. Two different architectures can solve the same problem perfectly, but organize information internally in completely different ways. We built a tool to find the \textit{shared concepts} between these different organizations, and discovered something unexpected: the most important organizational structure is \textbf{temporary}.
+\end{planenglish}
+
+\vspace{1em}
+
+Deep neural networks have achieved remarkable success across diverse domains, yet their internal representations remain largely opaque \citep{olah2017feature, elhage2021mathematical}. A fundamental question in interpretability research is: when different architectures solve the same task, do they learn similar or distinct internal representations?
+
+Recent work in mechanistic interpretability has made significant progress in understanding individual neurons and circuits \citep{nanda2023progress, templeton2024scaling}. However, these approaches share a critical limitation: they analyze \textit{final} trained models. What happens \textit{during} training is invisible.
+
+We address this limitation by introducing the \textbf{Delta Observer}, an architecture that watches two neural networks learn \textit{simultaneously}---not after they're done, but while they're still figuring things out. This ``online observation'' reveals dynamics that post-hoc analysis completely misses.
+
+\subsection{What We Found}
+
+\begin{keyinsight}
+\textbf{Clustering is scaffolding, not structure.}
+
+Neural networks build geometric organization (clusters) to help them learn semantic concepts. Once learning is complete, this scaffolding is no longer needed---and it dissolves. Post-hoc analysis sees only the finished building, not the scaffolding that built it.
+\end{keyinsight}
+
+\subsection{Five Key Contributions}
+
+\begin{enumerate}
+\item \textbf{Online Observation Methodology:} We introduce concurrent training where the Delta Observer watches source models learn in real-time, capturing temporal dynamics invisible to static analysis.
+
+\item \textbf{4\% Improvement Over Baselines:} Online observation achieves $R^2=0.9879$ vs. $R^2=0.9482$ for PCA---the extra 4\% comes from temporal information that post-hoc methods cannot access.
+
+\item \textbf{Transient Clustering Discovery:} Geometric clustering peaks during training (Silhouette=0.33 at epoch 20) then dissolves completely (Silhouette=-0.02 at epoch 200).
+
+\item \textbf{Conceptual Reframing:} The semantic primitive is not in the final representation but in the \textbf{learning trajectory}. Analyzing only the endpoint misses the journey.
+
+\item \textbf{Reproducible Framework:} We provide code, notebooks, and pre-trained models for full reproduction at \url{https://github.com/EntroMorphic/delta-observer}.
+\end{enumerate}
+
+% ============================================================================
+% SECTION 2: THE PROBLEM (ACCESSIBLE VERSION)
+% ============================================================================
+
+\section{The Problem: Different Architectures, Same Task}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{architecture_comparison.png}
+\caption{\textbf{Two Ways to Add Numbers.} \textit{Left:} A monolithic network processes all input bits together through dense layers. \textit{Middle:} A compositional network processes each bit position separately, with carry propagation (like how humans do arithmetic). \textit{Right:} The Delta Observer learns to map between these different representations. Both source networks achieve 100\% accuracy on 4-bit addition, but organize information very differently inside.}
+\label{fig:architectures}
+\end{figure}
+
+We study a simple but revealing task: \textbf{4-bit binary addition}. Given two 4-bit numbers (0-15 each), predict their 5-bit sum (0-30).
+
+\begin{planenglish}
+Why such a simple task? Because it has a clear \textit{semantic variable} we can track: the \textbf{carry count}. When you add 7+1=8, you need 3 carry operations (the 1s ripple through). When you add 1+2=3, you need 0 carries. This gives us ground truth for asking: ``Does the network's internal representation encode the concept of carries?''
+\end{planenglish}
+
+We train two architectures that approach this task differently:
+
+\begin{itemize}
+\item \textbf{Monolithic MLP:} Processes all 8 input bits together through dense layers. No explicit structure matching the task.
+
+\item \textbf{Compositional Network:} Processes each bit position with a separate module, passing carry information between them---mimicking how humans (and hardware) actually do addition.
+\end{itemize}
+
+Both achieve \textbf{100\% accuracy}. But how do they organize information internally? Do they both ``understand'' carries? And if so, is that understanding organized the same way?
+
+% ============================================================================
+% SECTION 3: THE DELTA OBSERVER
+% ============================================================================
+
+\section{The Delta Observer: Watching Networks Learn}
+
+\subsection{Architecture Overview}
+
+The Delta Observer has three jobs:
+
+\begin{enumerate}
+\item \textbf{Encode} activations from both source networks into a shared latent space
+\item \textbf{Decode} back to the original activation spaces (ensuring information is preserved)
+\item \textbf{Predict} semantic variables (carry count) from the shared space (testing what concepts are captured)
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{figure4_architecture_diagram.png}
+\caption{\textbf{Delta Observer Architecture.} Activations from both networks are encoded into a shared 16-dimensional ``semantic bottleneck.'' If carry count can be predicted from this bottleneck, then the shared space has captured the semantic concept---regardless of how differently each network originally represented it.}
+\label{fig:delta_arch}
+\end{figure}
+
+\subsection{The Key Innovation: Online Observation}
+
+\begin{keyinsight}
+\textbf{Post-hoc vs. Online Observation}
+
+\textbf{Post-hoc:} Train source models to completion, freeze them, then train the observer on their final activations. This is equivalent to PCA or other static dimensionality reduction.
+
+\textbf{Online:} Train all three models simultaneously. The observer sees activations at \textit{every training step}, not just the endpoint. It learns from the full trajectory.
+\end{keyinsight}
+
+The online approach is more expensive (3 forward passes per batch instead of 1), but it captures information that post-hoc analysis fundamentally cannot access: the \textbf{temporal evolution} of representations.
+
+\begin{algorithm}
+\caption{Online Delta Observer Training}
+\label{alg:online}
+\begin{algorithmic}
+\FOR{each training batch}
+\STATE \textit{// Source models take a learning step}
+\STATE Update Monolithic network on batch
+\STATE Update Compositional network on batch
+\STATE \textit{// Observer learns from current (evolving) activations}
+\STATE $z \gets$ Observer.encode(Mono.activations, Comp.activations)
+\STATE Update Observer to reconstruct activations + predict carry count
+\STATE \textit{// Periodically snapshot for trajectory analysis}
+\IF{should\_snapshot}
+\STATE Save $(z, \text{epoch}, R^2, \text{Silhouette})$
+\ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+% ============================================================================
+% SECTION 4: RESULTS
+% ============================================================================
+
+\section{Results}
+
+\subsection{Online Observation Beats Static Analysis}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Method Comparison.} Online observation captures 4\% more semantic information than PCA baseline. The improvement comes from temporal information unavailable to static methods.}
+\label{tab:comparison}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{$R^2$ (Carry Prediction)} & \textbf{Silhouette} & \textbf{Improvement vs PCA} \\
+\midrule
+\rowcolor{discoverygreen!20} Online Observer & \textbf{0.9879} & -0.024 & \textbf{+4.0\%} \\
+Post-hoc Observer & 0.9505 & 0.032 & +0.2\% \\
+PCA Baseline & 0.9482 & 0.046 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{planenglish}
+\textbf{What does $R^2=0.9879$ mean?} If you give me the Delta Observer's internal representation for any input, I can predict how many carries that addition requires with 98.8\% accuracy using just a linear function (a simple weighted sum). The semantic concept of ``carry count'' is \textit{linearly accessible}---no complex decoding needed.
+
+\textbf{What does Silhouette $\approx 0$ mean?} If you plot all the points in the latent space and color them by carry count, they're \textit{not} clustered into separate groups. Points with 2 carries are mixed in with points with 1 or 3 carries. Yet we can still predict carry count accurately! The information is there, just not organized into neat clusters.
+\end{planenglish}
+
+\subsection{The Big Discovery: Transient Clustering}
+
+Here's where it gets interesting. We tracked clustering throughout training:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{figure5_training_curves.png}
+\caption{\textbf{Clustering is Transient.} The green line shows linear accessibility ($R^2$)---how well we can predict carry count. The red line shows geometric clustering (Silhouette)---how spatially grouped the carry-count classes are. \textbf{Key observation:} Clustering peaks at epoch 20 (Silhouette=0.33), then \textit{dissolves completely} by convergence. The scaffolding comes down after the building is complete.}
+\label{fig:transient}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{The Clustering Lifecycle.} Clustering emerges, peaks, and dissolves---all while accuracy continues to improve.}
+\label{tab:lifecycle}
+\begin{tabular}{llccl}
+\toprule
+\textbf{Phase} & \textbf{Epoch} & \textbf{$R^2$} & \textbf{Silhouette} & \textbf{Interpretation} \\
+\midrule
+Initialization & 0 & 0.38 & -0.02 & Random weights, no structure \\
+Early Learning & 13 & 0.86 & 0.16 & Structure emerging \\
+\rowcolor{warningorange!20} Peak Scaffolding & 20 & 0.94 & \textbf{0.33} & Maximum geometric organization \\
+Late Learning & 50 & 0.91 & 0.00 & Scaffolding dissolving \\
+Converged & 200 & 0.99 & -0.02 & Scaffolding gone, knowledge remains \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{keyinsight}
+\textbf{90\% of learning happens by epoch 13.} That's when $R^2$ reaches 0.86. Clustering peaks shortly after at epoch 20. Then something remarkable happens: the clustering dissolves, but the learned knowledge \textit{remains}. The network no longer needs the geometric scaffolding---the concepts are now encoded directly in the weights.
+\end{keyinsight}
+
+\subsection{Visualizing the Evolution}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{latent_evolution.png}
+\caption{\textbf{Watching Scaffolding Rise and Fall.} Three snapshots of the Delta Observer's latent space during training. \textit{Left:} Early training---random noise, no structure. \textit{Middle:} Peak clustering---clear separation by carry count (the scaffolding). \textit{Right:} Converged---clusters have dissolved, points are mixed, but linear prediction still works perfectly. The semantic information is still there; it's just no longer \textit{geometrically organized}.}
+\label{fig:evolution}
+\end{figure}
+
+% ============================================================================
+% SECTION 5: WHAT IT MEANS
+% ============================================================================
+
+\section{What This Means}
+
+\subsection{For Interpretability Research}
+
+\begin{keyinsight}
+\textbf{Post-hoc analysis is fundamentally limited.}
+
+If you only analyze a trained model, you're seeing the building after the scaffolding came down. The geometric structure that \textit{organized learning} is gone. You might conclude ``there's no structure here'' when really the structure was temporary.
+\end{keyinsight}
+
+Current interpretability methods---probing classifiers, activation visualization, circuit analysis---all operate on final trained models. Our results suggest this misses crucial dynamics. The most informative structure may be \textbf{transient}.
+
+\subsection{A New Mental Model}
+
+\begin{planenglish}
+\textbf{Old view:} Neural networks learn representations. We analyze those representations to understand what the network ``knows.''
+
+\textbf{New view:} Neural networks travel through representation space during training. The \textit{trajectory}---not just the destination---encodes what they learn. Analyzing only the endpoint is like judging a journey by its final GPS coordinate.
+\end{planenglish}
+
+\subsection{The Semantic Primitive is in the Trajectory}
+
+The 4\% improvement from online observation represents information that \textit{only exists in the learning trajectory}. The final representation has ``forgotten'' this information---but the observer that watched the journey remembers.
+
+This suggests a provocative hypothesis: \textbf{the semantic primitive is not a representation but a path}. Understanding what a network ``knows'' may require understanding \textit{how it came to know it}.
+
+% ============================================================================
+% SECTION 6: LIMITATIONS & FUTURE WORK
+% ============================================================================
+
+\section{Limitations and Future Work}
+
+\subsection{Limitations}
+
+\begin{itemize}
+\item \textbf{Toy Task:} 4-bit addition is simple. We chose it precisely because it has clear semantics (carry count), but generalization to complex tasks remains to be shown.
+
+\item \textbf{Computational Cost:} Online observation requires training 3 models simultaneously. For large models, this may be prohibitive.
+
+\item \textbf{Single Domain:} Our results are specific to binary arithmetic. Whether transient clustering occurs in language models, vision models, or other domains is an open question.
+\end{itemize}
+
+\subsection{Future Directions}
+
+\begin{enumerate}
+\item \textbf{Scale Up:} Apply online observation to transformers on language tasks. Do attention patterns show transient structure?
+
+\item \textbf{Preserve Scaffolding:} Can we modify training to \textit{keep} the geometric clusters? Would this improve interpretability?
+
+\item \textbf{Transfer Learning:} Does scaffolding structure transfer between related tasks? Is it reusable?
+
+\item \textbf{Theoretical Understanding:} Why does scaffolding dissolve? Is it optimization pressure, or something deeper about how neural networks encode information?
+\end{enumerate}
+
+% ============================================================================
+% SECTION 7: CONCLUSION
+% ============================================================================
+
+\section{Conclusion}
+
+\begin{tldr}
+Neural networks build geometric scaffolding to learn, then tear it down. Post-hoc interpretability misses this because it only sees the finished building. To truly understand neural networks, we need to watch them learn---not just analyze what they become.
+\end{tldr}
+
+\vspace{1em}
+
+We introduced \textbf{online observation}---watching neural networks learn in real-time rather than analyzing them after training. This revealed a surprising phenomenon: \textbf{transient clustering}. Geometric organization emerges during learning, peaks, then dissolves completely.
+
+This has profound implications for interpretability. The absence of structure in a trained model doesn't mean structure never existed---it means we're looking at the wrong moment in time. The semantic primitive isn't a static representation; it's a \textbf{trajectory through representation space}.
+
+Our Delta Observer methodology provides a framework for studying these dynamics. By watching multiple architectures learn simultaneously, we can identify shared semantic primitives that transcend architectural differences---and understand how those primitives emerge, organize, and eventually dissolve into the weights.
+
+The scaffolding comes down after the building is complete. But to understand how the building was built, you have to watch the construction.
+
+% ============================================================================
+% REPRODUCIBILITY
+% ============================================================================
+
+\section*{Reproducibility}
+
+All code, data, and pre-trained models are available at:
+
+\begin{center}
+\url{https://github.com/EntroMorphic/delta-observer}
+\end{center}
+
+Interactive notebooks can be run directly in Google Colab:
+
+\begin{itemize}
+\item \textbf{00\_quickstart\_demo}: See results in 2 minutes
+\item \textbf{99\_full\_reproduction}: Reproduce all findings end-to-end
+\end{itemize}
+
+% ============================================================================
+% ACKNOWLEDGMENTS
+% ============================================================================
+
+\section*{Acknowledgments}
+
+We thank Claude (Anthropic) for extensive collaboration on methodology development, falsification testing, and discovering the transient clustering phenomenon through rigorous experimental iteration. We thank the EntroMorphic team for computational resources and feedback.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
