@@ -52,6 +52,16 @@ class ScaffoldingAblationTests(unittest.TestCase):
             changed = [f for f in ablation.FACTORS if config[f] != baseline[f]]
             self.assertEqual(changed, [factor])
 
+    def test_addendum_a_splits_the_observer_factor(self):
+        configs = ablation.addendum_a_configurations()
+        for name in ("P/obs-nobit", "P/obs-constlr"):
+            changed = [f for f in ablation.FACTORS if configs[name][f] != ablation.PAPER[f]]
+            self.assertEqual(changed, ["observer"])
+        result = ablation.train(configs["P/obs-nobit"], seed=0, epochs=2)
+        for measure in ablation.SOURCE_MEASURES:
+            self.assertEqual(len(result["history"][f"sil_{measure}"]), 2)
+            self.assertIn("present", result["summary"][measure])
+
     def test_simplified_data_is_carry_free_addition(self):
         inputs, outputs, carry_counts, _ = ablation.make_data("256")
         self.assertEqual(tuple(inputs.shape), (256, 8))

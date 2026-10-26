@@ -31,6 +31,7 @@ import torch.optim as optim
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import StandardScaler
 
 from models.delta_observer import ALPHA, generate_dataset, get_scheduler
 
@@ -55,6 +56,18 @@ def configurations():
         configs[f"P/{factor}"] = {**PAPER, factor: NOTEBOOK[factor]}
         configs[f"N/{factor}"] = {**NOTEBOOK, factor: PAPER[factor]}
     return configs
+
+
+def addendum_a_configurations():
+    """Protocol addendum A: split the observer factor on the paper baseline."""
+    v1 = configurations()
+    return {"P": v1["P"], "P/observer": v1["P/observer"], "N": v1["N"],
+            "P/obs-nobit": {**PAPER, "observer": "paper_nobit"},
+            "P/obs-constlr": {**PAPER, "observer": "paper_constlr"}}
+
+
+SUITES = {"v1": configurations, "addendum-a": addendum_a_configurations}
+SOURCE_MEASURES = ("src_concat", "src_mono", "src_comp")
 
 
 # =============================================================================
@@ -239,7 +252,7 @@ def train(config, seed, epochs=200, snapshots="sweep"):
 
     mono = (PaperMono if config["mono"] == "paper" else NotebookMono)(in_dim)
     comp = (PaperComp if config["comp"] == "paper" else NotebookComp)()
-    observer = Observer(bit_head=config["observer"] == "paper")
+    observer = Observer(bit_head=config["observer"] in ("paper", "paper_constlr"))
 
     if config["schedule"] == "alpha":
         mono_opt = optim.Adam(mono.parameters(), lr=ALPHA)
@@ -251,10 +264,12 @@ def train(config, seed, epochs=200, snapshots="sweep"):
         comp_opt = optim.Adam(comp.parameters(), lr=0.01)
         source_scheds = []
     obs_opt = optim.Adam(observer.parameters(), lr=0.001)
-    obs_sched = optim.lr_scheduler.CosineAnnealingLR(obs_opt, epochs) if config["observer"] == "paper" else None
+    obs_sched = (optim.lr_scheduler.CosineAnnealingLR(obs_opt, epochs)
+                 if config["observer"] in ("paper", "paper_nobit") else None)
 
     carry_np = carry_counts.numpy()
-    history = {k: [] for k in ("sil_train", "sil_eval", "r2_train", "r2_eval", "mono_acc", "comp_acc")}
+    history = {k: [] for k in ("sil_train", "sil_eval", "r2_train", "r2_eval", "mono_acc", "comp_acc",
+                               *(f"sil_{m}" for m in SOURCE_MEASURES))}
     replica_snapshots = []
 
     for epoch in range(epochs):
@@ -297,6 +312,11 @@ def train(config, seed, epochs=200, snapshots="sweep"):
             sil, r2 = latent_metrics(latent, carry_np)
             history[f"sil_{mode}"].append(sil)
             history[f"r2_{mode}"].append(r2)
+        # Observer-free: clustering in the sources' own (standardized) activations
+        mono_np, comp_np = mono_act.numpy(), comp_act.numpy()
+        for measure, acts in (("src_concat", np.concatenate([mono_np, comp_np], axis=1)),
+                              ("src_mono", mono_np), ("src_comp", comp_np)):
+            history[f"sil_{measure}"].append(float(silhouette_score(StandardScaler().fit_transform(acts), carry_np)))
 
     observer.eval(); mono.eval(); comp.eval()
     with torch.no_grad():
@@ -313,7 +333,7 @@ def train(config, seed, epochs=200, snapshots="sweep"):
 
 def summarize(history, online_r2, online_sil, pca_r2, pca_sil):
     summary = {}
-    for mode in ("train", "eval"):
+    for mode in ("train", "eval", *SOURCE_MEASURES):
         sil = np.array(history[f"sil_{mode}"])
         peak, final = float(sil.max()), float(sil[-FINAL_WINDOW:].mean())
         summary[mode] = {
@@ -346,7 +366,7 @@ def aggregate(runs, configs):
     for name in configs:
         rows = [r["summary"] for r in runs if r["config_name"] == name]
         entry = {"n": len(rows)}
-        for mode in ("train", "eval"):
+        for mode in ("train", "eval", *SOURCE_MEASURES):
             entry[mode] = {
                 "present": sum(r[mode]["present"] for r in rows),
                 **{f"{k}_{stat}": float(fn([r[mode][k] for r in rows]))
@@ -368,12 +388,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2, 3, 4])
     parser.add_argument("--epochs", type=int, default=200)
+    parser.add_argument("--suite", choices=sorted(SUITES), default="v1")
     parser.add_argument("--configs", nargs="+", default=None, help="subset of configuration names")
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--output", default="research/results/scaffolding_ablation_v1.json")
+    parser.add_argument("--output", default=None,
+                        help="default: research/results/scaffolding_ablation_<suite>.json")
     args = parser.parse_args()
 
-    configs = configurations()
+    configs = SUITES[args.suite]()
     if args.configs:
         configs = {k: configs[k] for k in args.configs}
     jobs = [(name, cfg, seed, args.epochs) for name, cfg in configs.items() for seed in args.seeds]
@@ -398,13 +420,13 @@ def main():
         "environment": {"python": platform.python_version(), "torch": torch.__version__,
                         "numpy": np.__version__, "sklearn": sklearn.__version__,
                         "platform": platform.platform(), "threads_per_run": 1},
-        "settings": {"seeds": args.seeds, "epochs": args.epochs, "presence_peak": PRESENCE_PEAK,
+        "settings": {"suite": args.suite, "seeds": args.seeds, "epochs": args.epochs, "presence_peak": PRESENCE_PEAK,
                      "presence_ratio": PRESENCE_RATIO, "final_window": FINAL_WINDOW},
         "configurations": configs,
         "summary": aggregate(runs, configs),
         "runs": runs,
     }
-    destination = ROOT / args.output
+    destination = ROOT / (args.output or f"research/results/scaffolding_ablation_{args.suite.replace('-', '_')}.json")
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(json.dumps(report, indent=1))
     print(f"\nWrote {destination.relative_to(ROOT)}")
