@@ -344,20 +344,20 @@ def main():
     overall_r = results['overall_correlation']
 
     if overall_r > threshold:
-        print(f"\n✓ TEMPORAL STRUCTURE EXISTS")
+        print("\n✓ TEMPORAL STRUCTURE EXISTS")
         print(f"  Overall correlation: {overall_r:.4f} > {threshold}")
-        print(f"  Both models learn in correlated patterns.")
-        print(f"  → Proceed with online observer implementation.")
+        print("  Both models learn in correlated patterns.")
+        print("  → Proceed with online observer implementation.")
     elif overall_r > 0.5:
-        print(f"\n⚠ MODERATE TEMPORAL STRUCTURE")
+        print("\n⚠ MODERATE TEMPORAL STRUCTURE")
         print(f"  Overall correlation: {overall_r:.4f}")
-        print(f"  Some shared learning patterns exist.")
-        print(f"  → Proceed with caution.")
+        print("  Some shared learning patterns exist.")
+        print("  → Proceed with caution.")
     else:
-        print(f"\n✗ WEAK TEMPORAL STRUCTURE")
+        print("\n✗ WEAK TEMPORAL STRUCTURE")
         print(f"  Overall correlation: {overall_r:.4f} < 0.5")
-        print(f"  Models learn independently.")
-        print(f"  → Online observer may not help.")
+        print("  Models learn independently.")
+        print("  → Online observer may not help.")
 
     # Save results
     LOGS_DIR.mkdir(exist_ok=True)

@@ -104,7 +104,7 @@ def analyze_linear_probes(latents, carry_counts, bit_positions):
     carry_r2 = reg_carry.score(latents, carry_counts)
     carry_corr, _ = pearsonr(carry_counts, carry_pred)
     
-    print(f"   Carry count prediction:")
+    print("   Carry count prediction:")
     print(f"     R² score: {carry_r2:.4f}")
     print(f"     Correlation: {carry_corr:.4f}")
     
@@ -115,7 +115,7 @@ def analyze_linear_probes(latents, carry_counts, bit_positions):
     bit_r2 = reg_bit.score(latents, bit_positions)
     bit_corr, _ = pearsonr(bit_positions, bit_pred)
     
-    print(f"   Bit position prediction:")
+    print("   Bit position prediction:")
     print(f"     R² score: {bit_r2:.4f}")
     print(f"     Correlation: {bit_corr:.4f}")
     
@@ -143,7 +143,7 @@ def visualize_latent_space(latents, carry_counts, bit_positions, inputs):
     explained_var = pca.explained_variance_ratio_
     
     # Create figure with multiple subplots
-    fig = plt.figure(figsize=(20, 12))
+    plt.figure(figsize=(20, 12))
     
     # Plot 1: UMAP colored by carry_count
     ax1 = plt.subplot(2, 3, 1)
@@ -247,7 +247,7 @@ def test_perturbation_stability(model, dataset, n_samples=20):
     std_dist = np.std(perturbation_distances)
     
     print(f"   Mean perturbation distance: {mean_dist:.4f} ± {std_dist:.4f}")
-    print(f"   (Lower = more stable, meaning is robust)")
+    print("   (Lower = more stable, meaning is robust)")
     
     return mean_dist, std_dist
 

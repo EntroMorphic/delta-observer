@@ -168,19 +168,14 @@ def animate(frame_idx):
     # Determine phase
     if epoch < 5:
         phase = "🌱 Initialization"
-        phase_color = "#9E9E9E"
     elif epoch < peak_epoch - 5:
         phase = "📈 Scaffolding Rising"
-        phase_color = "#FF9800"
     elif epoch < peak_epoch + 10:
         phase = "🏗️ Peak Scaffolding"
-        phase_color = "#F44336"
     elif epoch < 80:
         phase = "📉 Scaffolding Dissolving"
-        phase_color = "#9C27B0"
     else:
         phase = "✅ Converged"
-        phase_color = "#4CAF50"
 
     info_text = f"""Epoch: {epoch}
 

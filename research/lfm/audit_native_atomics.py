@@ -4,7 +4,6 @@
 import argparse
 import hashlib
 import json
-import re
 import time
 from pathlib import Path
 

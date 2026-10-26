@@ -16,7 +16,6 @@ Extract activations from both trained models and compute semantic labels (carry_
 """
 
 import torch
-import torch.nn as nn
 import numpy as np
 import sys
 from pathlib import Path
@@ -240,7 +239,7 @@ def prepare_dataset():
     print(f"   Compositional activations: {comp_activations.shape}")
     print(f"   Carry counts: {carry_counts.shape}")
     print(f"   Bit positions: {bit_positions.shape}")
-    print(f"\n✅ Ready for Delta Observer training!")
+    print("\n✅ Ready for Delta Observer training!")
 
 
 if __name__ == "__main__":

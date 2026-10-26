@@ -33,7 +33,6 @@ import torch.nn.functional as F
 import numpy as np
 from torch.utils.data import Dataset, DataLoader, random_split
 import json
-from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -187,8 +186,6 @@ class ContrastiveLoss(nn.Module):
         embeddings: [batch, latent_dim]
         inputs: [batch, input_dim] - original inputs to check if same
         """
-        batch_size = embeddings.size(0)
-        
         # Compute pairwise similarity
         embeddings_norm = F.normalize(embeddings, dim=1)
         similarity = torch.matmul(embeddings_norm, embeddings_norm.t()) / self.temperature

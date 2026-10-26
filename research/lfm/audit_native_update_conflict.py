@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from transformers import AutoModelForCausalLM,AutoTokenizer,GenerationConfig
 
 from research.lfm.evaluate_pretrained_development import chat_inputs,content_validation
-from research.lfm.native_lora import adapter_state,install_lora,load_adapter
+from research.lfm.native_lora import adapter_state,install_lora
 from research.lfm.native_lora_smoke import MODEL,REVISION
 from research.lfm.probe_lfm import choose_device
 

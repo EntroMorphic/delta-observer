@@ -36,7 +36,7 @@ def compare_all_methods():
         online_sil = silhouette_score(online_latents, carry_counts)
 
         results['online'] = {'r2': online_r2, 'silhouette': online_sil}
-        print(f"\n[Online Observer]")
+        print("\n[Online Observer]")
         print(f"  R²:         {online_r2:.4f}")
         print(f"  Silhouette: {online_sil:.4f}")
     except FileNotFoundError:
@@ -55,7 +55,7 @@ def compare_all_methods():
         posthoc_sil = silhouette_score(posthoc_latents, posthoc_carry)
 
         results['posthoc'] = {'r2': posthoc_r2, 'silhouette': posthoc_sil}
-        print(f"\n[Post-hoc Observer]")
+        print("\n[Post-hoc Observer]")
         print(f"  R²:         {posthoc_r2:.4f}")
         print(f"  Silhouette: {posthoc_sil:.4f}")
     except FileNotFoundError:
@@ -79,7 +79,7 @@ def compare_all_methods():
         pca_sil = silhouette_score(pca_latents, pca_carry)
 
         results['pca'] = {'r2': pca_r2, 'silhouette': pca_sil}
-        print(f"\n[PCA Baseline]")
+        print("\n[PCA Baseline]")
         print(f"  R²:         {pca_r2:.4f}")
         print(f"  Silhouette: {pca_sil:.4f}")
     except FileNotFoundError:
@@ -121,7 +121,7 @@ def compare_all_methods():
     LOGS_DIR.mkdir(exist_ok=True)
     with open(LOGS_DIR / 'method_comparison.json', 'w') as f:
         json.dump(save_results, f, indent=2, default=lambda o: o.tolist())
-    print(f"\nResults saved to logs/method_comparison.json")
+    print("\nResults saved to logs/method_comparison.json")
 
     return results
 

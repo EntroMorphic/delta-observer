@@ -306,10 +306,6 @@ def figure5_trajectory_phases(epochs, r2_values, silhouette_values):
     """
     fig, ax = plt.subplots(figsize=(12, 6))
 
-    # Plot both metrics normalized to [0,1] for comparison
-    r2_norm = r2_values
-    sil_norm = (silhouette_values - silhouette_values.min()) / (silhouette_values.max() - silhouette_values.min() + 1e-8)
-
     ax.fill_between(epochs, 0, 1, where=(epochs <= 10), alpha=0.2, color='blue', label='Phase 1: Init')
     ax.fill_between(epochs, 0, 1, where=((epochs > 10) & (epochs <= 50)), alpha=0.2, color='green', label='Phase 2: Learning')
     ax.fill_between(epochs, 0, 1, where=(epochs > 50), alpha=0.2, color='orange', label='Phase 3: Convergence')
@@ -345,7 +341,7 @@ def main():
     print("Computing trajectory metrics...")
     epochs, r2_values, silhouette_values = compute_trajectory_metrics(trajectory, latents)
 
-    print(f"\nTrajectory Summary:")
+    print("\nTrajectory Summary:")
     print(f"  Epochs: {epochs[0]} to {epochs[-1]} ({len(epochs)} snapshots)")
     print(f"  R² range: {r2_values.min():.4f} to {r2_values.max():.4f}")
     print(f"  Silhouette range: {silhouette_values.min():.4f} to {silhouette_values.max():.4f}")

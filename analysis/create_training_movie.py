@@ -160,15 +160,6 @@ def animate(frame_idx):
     Phase: {phase}
     """
 
-    # Color the phase text
-    phase_colors = {
-        "Initialization": "#666666",
-        "Early Learning": "#2196F3",
-        "Peak Scaffolding": "#FF9800",
-        "Dissolving": "#9C27B0",
-        "Converged": "#4CAF50"
-    }
-
     ax_info.text(0.5, 0.5, info_text.strip(), transform=ax_info.transAxes,
                  fontsize=11, verticalalignment='center', horizontalalignment='center',
                  bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8),

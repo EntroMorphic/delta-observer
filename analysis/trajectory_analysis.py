@@ -168,12 +168,12 @@ def analyze_trajectory():
         json.dump(results, f, indent=2, default=lambda o: o.tolist())
 
     print(f"\nR² evolution: {r2_history[0]:.4f} → {r2_history[-1]:.4f}")
-    print(f"The observer learned to access carry_count with increasing fidelity")
-    print(f"as it observed more of the training process.")
+    print("The observer learned to access carry_count with increasing fidelity")
+    print("as it observed more of the training process.")
 
     if epoch_r2 > 0.5:
         print(f"\nCRITICAL: The latent space encodes epoch information (R²={epoch_r2:.4f})")
-        print(f"This temporal signature is what distinguishes online from post-hoc.")
+        print("This temporal signature is what distinguishes online from post-hoc.")
 
     return results
 

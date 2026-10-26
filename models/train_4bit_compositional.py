@@ -118,8 +118,6 @@ class Compositional4BitAdder(nn.Module):
         x: [batch, 9] = [a0, a1, a2, a3, b0, b1, b2, b3, carry_in]
         output: [batch, 5] = [s0, s1, s2, s3, carry_out]
         """
-        batch_size = x.size(0)
-        
         # Extract bits
         a = x[:, 0:4]  # [a0, a1, a2, a3]
         b = x[:, 4:8]  # [b0, b1, b2, b3]
@@ -286,7 +284,7 @@ def main():
     
     total_params = sum(p.numel() for p in model.parameters())
     print(f"   Total parameters: {total_params:,}")
-    print(f"   Architecture: 4 separate full-adder networks")
+    print("   Architecture: 4 separate full-adder networks")
     
     # Optimizer and scheduler
     criterion = nn.MSELoss()
@@ -299,7 +297,7 @@ def main():
         optimizer, num_warmup_steps, num_training_steps, PEAK_LR, MIN_LR
     )
     
-    print(f"\n📈 Learning rate schedule:")
+    print("\n📈 Learning rate schedule:")
     print(f"   Warmup: → {PEAK_LR:.6f} (α) over {WARMUP_EPOCHS} epochs")
     print(f"   Decay: {PEAK_LR:.6f} → {MIN_LR:.8f} (α/1000) over {EPOCHS-WARMUP_EPOCHS} epochs")
     
@@ -379,14 +377,14 @@ def main():
         json.dump(training_log, f, indent=2)
     
     print("-" * 80)
-    print(f"\n✅ Training complete!")
+    print("\n✅ Training complete!")
     print(f"   Best validation accuracy: {best_val_acc:.4f} ({best_val_acc*100:.2f}%)")
     print(f"   Final validation accuracy: {val_acc:.4f} ({val_acc*100:.2f}%)")
     print(f"   Stopped at epoch: {epoch+1}/{EPOCHS}")
-    print(f"\n💾 Models saved:")
-    print(f"   - 4bit_compositional_best.pt")
-    print(f"   - 4bit_compositional_final.pt")
-    print(f"\n📊 Training log saved: logs/4bit_compositional_training.json")
+    print("\n💾 Models saved:")
+    print("   - 4bit_compositional_best.pt")
+    print("   - 4bit_compositional_final.pt")
+    print("\n📊 Training log saved: logs/4bit_compositional_training.json")
 
 
 if __name__ == "__main__":

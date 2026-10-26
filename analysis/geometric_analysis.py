@@ -57,7 +57,7 @@ def analyze_geometry(activations_path, model_name, output_dir):
     # PCA for comparison
     print("\n📉 Running PCA...")
     pca = PCA(n_components=min(50, X.shape[1]))
-    X_pca = pca.fit_transform(X)
+    pca.fit(X)
     explained_var = pca.explained_variance_ratio_
     print(f"   First 10 components explain: {explained_var[:10].sum():.4f} of variance")
     
@@ -176,7 +176,7 @@ def visualize_comparison(mono_results, comp_results, output_dir):
     
     plt.tight_layout()
     plt.savefig(f"{output_dir}/geometric_comparison.png", dpi=150, bbox_inches='tight')
-    print(f"\n💾 Visualization saved: geometric_comparison.png")
+    print("\n💾 Visualization saved: geometric_comparison.png")
     plt.close()
     
     # Create individual high-res plots
@@ -234,13 +234,13 @@ def main():
     print("ANALYSIS COMPLETE")
     print("=" * 80)
     print("\n✅ Geometric analysis complete!")
-    print(f"\n📊 Results:")
-    print(f"   - monolithic_geometry.json")
-    print(f"   - compositional_geometry.json")
-    print(f"   - geometric_comparison.png")
-    print(f"   - monolithic_geometry_detailed.png")
-    print(f"   - compositional_geometry_detailed.png")
-    print(f"\n🔬 The shapes of computation are now visible!")
+    print("\n📊 Results:")
+    print("   - monolithic_geometry.json")
+    print("   - compositional_geometry.json")
+    print("   - geometric_comparison.png")
+    print("   - monolithic_geometry_detailed.png")
+    print("   - compositional_geometry_detailed.png")
+    print("\n🔬 The shapes of computation are now visible!")
 
 
 if __name__ == "__main__":

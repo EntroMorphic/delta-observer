@@ -284,7 +284,7 @@ def train_online(epochs=200, batch_size=32):
     comp_model = Compositional4BitAdder(hidden_size=16)
     observer = OnlineDeltaObserver(mono_dim=64, comp_dim=64, latent_dim=16)
 
-    print(f"\nModels created:")
+    print("\nModels created:")
     print(f"  Mono params: {sum(p.numel() for p in mono_model.parameters()):,}")
     print(f"  Comp params: {sum(p.numel() for p in comp_model.parameters()):,}")
     print(f"  Observer params: {sum(p.numel() for p in observer.parameters()):,}")
@@ -543,4 +543,4 @@ if __name__ == "__main__":
     LOGS_DIR.mkdir(exist_ok=True)
     with open(LOGS_DIR / 'online_observer_results.json', 'w') as f:
         json.dump(results, f, indent=2, default=lambda o: o.tolist())
-    print(f"\nResults saved to logs/online_observer_results.json")
+    print("\nResults saved to logs/online_observer_results.json")

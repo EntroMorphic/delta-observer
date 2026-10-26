@@ -12,7 +12,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
 import math
-from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent

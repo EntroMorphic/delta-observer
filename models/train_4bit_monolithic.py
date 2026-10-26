@@ -219,7 +219,7 @@ def main():
         optimizer, num_warmup_steps, num_training_steps, PEAK_LR, MIN_LR
     )
     
-    print(f"\n📈 Learning rate schedule:")
+    print("\n📈 Learning rate schedule:")
     print(f"   Warmup: → {PEAK_LR:.6f} (α) over {WARMUP_EPOCHS} epochs")
     print(f"   Decay: {PEAK_LR:.6f} → {MIN_LR:.8f} (α/1000) over {EPOCHS-WARMUP_EPOCHS} epochs")
     
@@ -299,14 +299,14 @@ def main():
         json.dump(training_log, f, indent=2)
     
     print("-" * 80)
-    print(f"\n✅ Training complete!")
+    print("\n✅ Training complete!")
     print(f"   Best validation accuracy: {best_val_acc:.4f} ({best_val_acc*100:.2f}%)")
     print(f"   Final validation accuracy: {val_acc:.4f} ({val_acc*100:.2f}%)")
     print(f"   Stopped at epoch: {epoch+1}/{EPOCHS}")
-    print(f"\n💾 Models saved:")
-    print(f"   - 4bit_monolithic_best.pt")
-    print(f"   - 4bit_monolithic_final.pt")
-    print(f"\n📊 Training log saved: logs/4bit_monolithic_training.json")
+    print("\n💾 Models saved:")
+    print("   - 4bit_monolithic_best.pt")
+    print("   - 4bit_monolithic_final.pt")
+    print("\n📊 Training log saved: logs/4bit_monolithic_training.json")
 
 
 if __name__ == "__main__":

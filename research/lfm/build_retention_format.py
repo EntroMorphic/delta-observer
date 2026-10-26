@@ -5,7 +5,6 @@ import argparse
 import hashlib
 import json
 import random
-from collections import Counter
 from pathlib import Path
 
 from transformers import AutoTokenizer

@@ -20,7 +20,7 @@
 
 ## Overview
 
-This repository contains code, data, and trained models for our paper "Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations."
+This repository contains code, pre-computed data, and figures for our paper "Delta Observer: Learning Continuous Semantic Manifolds Between Neural Network Representations."
 
 **Key Finding:** Semantic information in neural networks can be **linearly accessible** (R²=0.9879) without exhibiting **geometric clustering** (Silhouette=-0.02), and **clustering is transient**—it exists during training but dissolves in the final state.
 
