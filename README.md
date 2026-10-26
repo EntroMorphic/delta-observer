@@ -178,6 +178,10 @@ pip install -r requirements.txt
 
 ## Reproducing Results
 
+Training scripts use a fixed seed (42), so reruns are repeatable on the same hardware and library
+versions. They won't match the paper's numbers digit for digit: a seeded run gives online R² 0.993,
+post-hoc 0.962 and PCA 0.959 (online beats PCA by 3.4%; the paper reports 4.0%).
+
 ### Full Pipeline (Recommended)
 
 ```bash

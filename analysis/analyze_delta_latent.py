@@ -258,6 +258,8 @@ def main():
     print("DELTA OBSERVER LATENT SPACE ANALYSIS")
     print("="*80)
     
+    torch.manual_seed(42)  # perturbation-stability noise
+    
     # Load
     model, dataset = load_model_and_data()
     

@@ -235,8 +235,9 @@ def get_scheduler(optimizer, warmup_steps, total_steps, peak_lr, min_lr):
     return optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
 
-def train_hires(epochs=200, batch_size=32):
+def train_hires(epochs=200, batch_size=32, seed=42):
     """Train with snapshot at EVERY epoch."""
+    torch.manual_seed(seed)
 
     print("=" * 80)
     print("HIGH-RESOLUTION DELTA OBSERVER TRAINING")

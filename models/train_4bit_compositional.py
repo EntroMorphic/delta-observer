@@ -257,6 +257,9 @@ def main():
     WARMUP_EPOCHS = 10
     EPOCHS = 200
     TRAIN_SPLIT = 0.8
+    SEED = 42
+
+    torch.manual_seed(SEED)
     
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"\n🖥️  Device: {device}")
@@ -316,6 +319,7 @@ def main():
             'warmup_epochs': WARMUP_EPOCHS,
             'epochs': EPOCHS,
             'train_split': TRAIN_SPLIT,
+            'seed': SEED,
             'alpha': float(ALPHA),
         },
         'model_params': total_params,

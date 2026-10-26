@@ -306,6 +306,8 @@ def main():
     print("Validating temporal structure before building online observer")
     print("=" * 80)
 
+    torch.manual_seed(42)
+
     # Generate data
     print("\nGenerating dataset...")
     inputs, outputs, carry_counts = generate_dataset_with_carry()

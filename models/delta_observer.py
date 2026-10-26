@@ -263,8 +263,9 @@ def get_scheduler(optimizer, warmup_steps, total_steps, peak_lr, min_lr):
     return optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
 
 
-def train_online(epochs=200, batch_size=32):
+def train_online(epochs=200, batch_size=32, seed=42):
     """Train all three models concurrently."""
+    torch.manual_seed(seed)
 
     print("=" * 80)
     print("PHASE 1: ONLINE DELTA OBSERVER TRAINING")
@@ -303,6 +304,7 @@ def train_online(epochs=200, batch_size=32):
 
     # Training log
     log = {
+        'seed': seed,
         'epochs': [],
         'start_time': datetime.now().isoformat(),
     }

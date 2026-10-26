@@ -50,7 +50,7 @@ drive.mount('/content/drive')
 |---------|-----|
 | `FileNotFoundError` for a `.npz` file | Re-run the clone cell, or run `!git clone https://github.com/EntroMorphic/delta-observer.git` |
 | UMAP import fails | Run `!pip install umap-learn`, then **Runtime → Restart session** |
-| Results differ slightly from the paper | Training is stochastic (random initialization and data splits); small numeric differences between runs are expected |
+| Results differ from the paper | Notebooks `01` and `99` use a simplified 256-case setup, so their numbers differ from the paper's. The paper's results come from the scripts (see the README) |
 
 ## Running locally instead
 

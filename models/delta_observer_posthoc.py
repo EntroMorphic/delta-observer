@@ -355,6 +355,8 @@ def train_delta_observer(
 
 
 if __name__ == "__main__":
+    torch.manual_seed(42)
+
     # Load dataset
     dataset = DeltaObserverDataset(REPO_ROOT / 'data' / 'delta_observer_dataset.npz')
     
