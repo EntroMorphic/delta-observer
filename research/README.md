@@ -55,6 +55,13 @@ tests which factors produce the original paper's transient-clustering result
 ([protocol](reports/scaffolding_ablation_protocol.md)). Run in the paper
 environment (root `requirements.txt`); see the report for commands.
 
+## Optimizer maths and curvature dynamics
+
+[`reports/curvature_results.md`](reports/curvature_results.md) checks
+optimizer identities (AdamW, Muon, Newton, Gauss–Newton) and measures exact
+Hessians of the paper's source models over training
+([protocol](reports/curvature_protocol.md)). Run in the paper environment.
+
 ## Run
 
 ```bash
