@@ -34,6 +34,9 @@ import numpy as np
 from torch.utils.data import Dataset, DataLoader, random_split
 import json
 from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 class DeltaObserverDataset(Dataset):
@@ -356,7 +359,7 @@ def train_delta_observer(
 
 if __name__ == "__main__":
     # Load dataset
-    dataset = DeltaObserverDataset('/home/ubuntu/geometric-microscope/analysis/delta_observer_dataset.npz')
+    dataset = DeltaObserverDataset(REPO_ROOT / 'data' / 'delta_observer_dataset.npz')
     
     # Split 80/20
     train_size = int(0.8 * len(dataset))
@@ -377,11 +380,13 @@ if __name__ == "__main__":
         epochs=100,
         lr=0.001,
         device='cpu',
-        save_path='/home/ubuntu/geometric-microscope/models/delta_observer_best.pt',
+        save_path=REPO_ROOT / 'models' / 'delta_observer_best.pt',
     )
     
     # Save history
-    with open('/home/ubuntu/geometric-microscope/logs/delta_observer_training.json', 'w') as f:
+    logs_dir = REPO_ROOT / 'logs'
+    logs_dir.mkdir(exist_ok=True)
+    with open(logs_dir / 'delta_observer_training.json', 'w') as f:
         json.dump(history, f, indent=2)
     
     print("\n✅ Training history saved to logs/delta_observer_training.json")

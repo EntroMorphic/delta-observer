@@ -19,7 +19,10 @@ import torch
 import torch.nn as nn
 import numpy as np
 import sys
-sys.path.append('/home/ubuntu/geometric-microscope')
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
 
 from models.train_4bit_monolithic import Monolithic4BitAdder
 from models.train_4bit_compositional import Compositional4BitAdder
@@ -31,13 +34,13 @@ def load_models():
     
     # Monolithic
     mono_model = Monolithic4BitAdder()
-    mono_checkpoint = torch.load('/home/ubuntu/geometric-microscope/models/4bit_monolithic_best.pt')
+    mono_checkpoint = torch.load(REPO_ROOT / 'models' / '4bit_monolithic_best.pt', weights_only=True)
     mono_model.load_state_dict(mono_checkpoint['model_state_dict'])
     mono_model.eval()
     
     # Compositional
     comp_model = Compositional4BitAdder()
-    comp_checkpoint = torch.load('/home/ubuntu/geometric-microscope/models/4bit_compositional_best.pt')
+    comp_checkpoint = torch.load(REPO_ROOT / 'models' / '4bit_compositional_best.pt', weights_only=True)
     comp_model.load_state_dict(comp_checkpoint['model_state_dict'])
     comp_model.eval()
     
@@ -87,7 +90,7 @@ def extract_activations(model, inputs, model_type='monolithic'):
     Extract hidden layer activations from model.
     
     For monolithic: single hidden layer (64 neurons)
-    For compositional: all 4 bit-adder hiddens concatenated (4 × 8 = 32 neurons)
+    For compositional: all 4 bit-adder hiddens concatenated (4 × 16 = 64 neurons)
     """
     activations = []
     
@@ -219,7 +222,7 @@ def prepare_dataset():
     # Save dataset
     print("\n💾 Saving dataset...")
     np.savez(
-        '/home/ubuntu/geometric-microscope/analysis/delta_observer_dataset.npz',
+        REPO_ROOT / 'data' / 'delta_observer_dataset.npz',
         inputs=inputs.numpy(),
         mono_activations=mono_activations,
         comp_activations=comp_activations,

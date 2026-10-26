@@ -10,6 +10,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import silhouette_score
 from sklearn.decomposition import PCA
 import json
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+LOGS_DIR = REPO_ROOT / "logs"
 
 
 def compare_all_methods():
@@ -21,7 +26,7 @@ def compare_all_methods():
 
     # Load online observer data
     try:
-        online_data = np.load('data/online_observer_latents.npz')
+        online_data = np.load(DATA_DIR / 'online_observer_latents.npz')
         online_latents = online_data['latents']
         carry_counts = online_data['carry_counts']
 
@@ -40,7 +45,7 @@ def compare_all_methods():
 
     # Load post-hoc observer data
     try:
-        posthoc_data = np.load('data/delta_latent_umap.npz')
+        posthoc_data = np.load(DATA_DIR / 'delta_latent_umap.npz')
         posthoc_latents = posthoc_data['latents']
         posthoc_carry = posthoc_data['carry_counts']
 
@@ -59,7 +64,7 @@ def compare_all_methods():
 
     # PCA baseline
     try:
-        orig_data = np.load('data/delta_observer_dataset.npz')
+        orig_data = np.load(DATA_DIR / 'delta_observer_dataset.npz')
         mono_act = orig_data['mono_activations']
         comp_act = orig_data['comp_activations']
         pca_carry = orig_data['carry_counts']
@@ -113,9 +118,10 @@ def compare_all_methods():
 
     # Save results
     save_results = {k: v for k, v in results.items() if v is not None}
-    with open('journal/method_comparison.json', 'w') as f:
-        json.dump(save_results, f, indent=2)
-    print(f"\nResults saved to journal/method_comparison.json")
+    LOGS_DIR.mkdir(exist_ok=True)
+    with open(LOGS_DIR / 'method_comparison.json', 'w') as f:
+        json.dump(save_results, f, indent=2, default=lambda o: o.tolist())
+    print(f"\nResults saved to logs/method_comparison.json")
 
     return results
 

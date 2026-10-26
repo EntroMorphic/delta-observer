@@ -17,6 +17,10 @@ import numpy as np
 from scipy.stats import pearsonr, spearmanr
 import json
 import math
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+LOGS_DIR = REPO_ROOT / "logs"
 
 # Fine structure constant (matching original training)
 ALPHA = 1.0 / 137.0
@@ -356,7 +360,8 @@ def main():
         print(f"  → Online observer may not help.")
 
     # Save results
-    results_path = 'journal/curriculum_test_results.json'
+    LOGS_DIR.mkdir(exist_ok=True)
+    results_path = LOGS_DIR / 'curriculum_test_results.json'
     with open(results_path, 'w') as f:
         json.dump(results, f, indent=2)
     print(f"\nResults saved to: {results_path}")

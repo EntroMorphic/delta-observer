@@ -113,9 +113,12 @@ This single command:
 ### Analyze Results
 
 ```bash
-python analysis/analyze_delta_latent.py
 python analysis/trajectory_analysis.py
+python analysis/compare_methods.py
 ```
+
+Scripts can be run from any directory. Data goes to `data/`, figures to `figures/`, model weights to `models/`,
+and JSON logs/results to `logs/` (git-ignored).
 
 ---
 
@@ -125,26 +128,28 @@ python analysis/trajectory_analysis.py
 delta-observer/
 ├── models/
 │   ├── delta_observer.py            # PRIMARY: Online Delta Observer training
-│   ├── delta_observer_posthoc.py    # Legacy: Post-hoc observer (baseline)
-│   ├── train_4bit_monolithic.py     # Standalone monolithic training
-│   └── train_4bit_compositional.py  # Standalone compositional training
+│   ├── delta_observer_hires.py      # Online observer, every-epoch snapshots (for movies)
+│   ├── delta_observer_posthoc.py    # [Legacy] Post-hoc observer (baseline)
+│   ├── train_4bit_monolithic.py     # [Legacy] Standalone monolithic training
+│   └── train_4bit_compositional.py  # [Legacy] Standalone compositional training
 ├── analysis/
-│   ├── analyze_delta_latent.py      # Latent space analysis
 │   ├── trajectory_analysis.py       # Training trajectory analysis
+│   ├── compare_methods.py           # Online vs post-hoc vs PCA comparison
+│   ├── generate_online_figures.py   # Paper figures from online observer data
+│   ├── create_training_movie*.py    # Training movies (MP4 requires ffmpeg)
 │   ├── curriculum_test.py           # Temporal structure validation
-│   ├── geometric_analysis.py        # Geometric visualizations
-│   └── prepare_delta_dataset.py     # [Legacy] Post-hoc data extraction
-├── journal/                         # Research journal and methodology
-│   ├── findings.md                  # Analysis findings
-│   ├── PRC.md                       # Falsification results
-│   └── LMM.md                       # Lincoln Manifold Method
+│   ├── extract_activations.py       # [Legacy] Per-layer activation extraction
+│   ├── geometric_analysis.py        # [Legacy] Geometric visualizations
+│   ├── prepare_delta_dataset.py     # [Legacy] Post-hoc data extraction
+│   └── analyze_delta_latent.py      # [Legacy] Post-hoc latent space analysis
 ├── data/
 │   ├── online_observer_latents.npz  # Online observer outputs
 │   ├── online_observer_trajectory.npz # Latent snapshots during training
 │   └── delta_latent_umap.npz        # [Legacy] Post-hoc latents
 ├── notebooks/                       # Jupyter notebooks
 ├── figures/                         # Generated figures
-└── paper/                           # Paper PDF
+├── paper/                           # Paper PDF and LaTeX source
+└── research/                        # Observer.D experiments (see research/README.md)
 ```
 
 ---
@@ -153,11 +158,13 @@ delta-observer/
 
 ### Requirements
 
-- Python 3.8+
+- Python 3.9+
 - PyTorch 2.0+
-- NumPy
-- scikit-learn
-- Matplotlib
+- NumPy, SciPy, scikit-learn, umap-learn, Matplotlib
+- Optional: `ffmpeg` for the MP4 training movies (GIFs need no extra tools)
+
+The Observer.D experiments in `research/` use a separate environment; see
+[`research/lfm/requirements.txt`](research/lfm/requirements.txt) (tested with Python 3.12).
 
 ### Setup
 
@@ -192,6 +199,10 @@ For reproducing original paper results (before online observation):
 # Train models separately
 python models/train_4bit_monolithic.py
 python models/train_4bit_compositional.py
+
+# Geometric analysis of each model's activations
+python analysis/extract_activations.py
+python analysis/geometric_analysis.py
 
 # Extract activations post-hoc
 python analysis/prepare_delta_dataset.py
@@ -266,17 +277,6 @@ See the **[🚀 Run in Google Colab](#-run-in-google-colab)** section above for 
   url={https://github.com/EntroMorphic/delta-observer}
 }
 ```
-
----
-
-## Research Journal
-
-The `journal/` directory contains the research process:
-
-- **`findings.md`** - Complete analysis and conclusions
-- **`PRC.md`** - Falsification tests and results
-- **`LMM.md`** - Lincoln Manifold Method (our exploration methodology)
-- **`delta_observer_*.md`** - Raw thinking, nodes, reflections, synthesis
 
 ---
 

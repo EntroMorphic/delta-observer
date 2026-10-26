@@ -19,6 +19,12 @@ import numpy as np
 import json
 import math
 from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+MODELS_DIR = REPO_ROOT / "models"
+LOGS_DIR = REPO_ROOT / "logs"
 
 
 ALPHA = 1.0 / 137.0
@@ -430,7 +436,7 @@ def train_online(epochs=200, batch_size=32):
         latent_final = observer.encode(mono_act_final, comp_act_final)
 
     # Save everything
-    save_dir = 'data'
+    save_dir = DATA_DIR
     np.savez(
         f'{save_dir}/online_observer_latents.npz',
         latents=latent_final.numpy(),
@@ -450,13 +456,14 @@ def train_online(epochs=200, batch_size=32):
     print(f"Saved: {save_dir}/online_observer_trajectory.npz")
 
     # Save models
-    torch.save(mono_model.state_dict(), 'models/online_mono_final.pt')
-    torch.save(comp_model.state_dict(), 'models/online_comp_final.pt')
-    torch.save(observer.state_dict(), 'models/online_observer_final.pt')
+    torch.save(mono_model.state_dict(), MODELS_DIR / 'online_mono_final.pt')
+    torch.save(comp_model.state_dict(), MODELS_DIR / 'online_comp_final.pt')
+    torch.save(observer.state_dict(), MODELS_DIR / 'online_observer_final.pt')
     print("Saved model weights.")
 
     log['end_time'] = datetime.now().isoformat()
-    with open('journal/online_training_log.json', 'w') as f:
+    LOGS_DIR.mkdir(exist_ok=True)
+    with open(LOGS_DIR / 'online_training_log.json', 'w') as f:
         json.dump(log, f, indent=2)
 
     return latent_final.numpy(), carry_counts.numpy()
@@ -479,7 +486,7 @@ def evaluate_online_vs_pca(latents, carry_counts):
     online_sil = silhouette_score(latents, carry_counts)
 
     # Load original data for PCA comparison
-    orig_data = np.load('data/delta_observer_dataset.npz')
+    orig_data = np.load(DATA_DIR / 'delta_observer_dataset.npz')
     mono_act = orig_data['mono_activations']
     comp_act = orig_data['comp_activations']
     combined = np.concatenate([mono_act, comp_act], axis=1)
@@ -493,7 +500,7 @@ def evaluate_online_vs_pca(latents, carry_counts):
     pca_sil = silhouette_score(pca_latents, carry_counts)
 
     # Post-hoc observer (from original data)
-    orig_latents = np.load('data/delta_latent_umap.npz')['latents']
+    orig_latents = np.load(DATA_DIR / 'delta_latent_umap.npz')['latents']
     reg_posthoc = LinearRegression()
     reg_posthoc.fit(orig_latents, carry_counts)
     posthoc_r2 = reg_posthoc.score(orig_latents, carry_counts)
@@ -533,6 +540,7 @@ if __name__ == "__main__":
     results = evaluate_online_vs_pca(latents, carry_counts)
 
     # Save results
-    with open('journal/online_observer_results.json', 'w') as f:
-        json.dump(results, f, indent=2)
-    print(f"\nResults saved to journal/online_observer_results.json")
+    LOGS_DIR.mkdir(exist_ok=True)
+    with open(LOGS_DIR / 'online_observer_results.json', 'w') as f:
+        json.dump(results, f, indent=2, default=lambda o: o.tolist())
+    print(f"\nResults saved to logs/online_observer_results.json")

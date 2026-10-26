@@ -51,7 +51,7 @@ observer costs are reported separately.
 ## Run
 
 ```bash
-python -m unittest research.tests.test_math
+python -m unittest discover -s research/tests -t .
 python -m research.experiments.optimizer_comparison --seeds 0 1 2 3 4
 ```
 

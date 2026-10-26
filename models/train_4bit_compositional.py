@@ -16,10 +16,30 @@ from torch.utils.data import Dataset, DataLoader, random_split
 import json
 from datetime import datetime
 import math
+from pathlib import Path
 
 
 # Fine structure constant
 ALPHA = 1.0 / 137.0
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+MODELS_DIR = REPO_ROOT / "models"
+LOGS_DIR = REPO_ROOT / "logs"
+
+
+def generate_dataset():
+    """Generate all 512 4-bit addition cases (LSB-first bits)."""
+    inputs = []
+    outputs = []
+    for a in range(16):
+        for b in range(16):
+            for carry_in in [0, 1]:
+                a_bits = [(a >> i) & 1 for i in range(4)]
+                b_bits = [(b >> i) & 1 for i in range(4)]
+                total = a + b + carry_in
+                inputs.append(a_bits + b_bits + [carry_in])
+                outputs.append([(total >> i) & 1 for i in range(5)])
+    return torch.tensor(inputs), torch.tensor(outputs)
 
 
 class AdderDataset(Dataset):
@@ -244,11 +264,9 @@ def main():
     print(f"\n🖥️  Device: {device}")
     print(f"⚛️  Fine Structure Constant α = 1/137 ≈ {ALPHA:.10f}")
     
-    # Load dataset
-    print("\n📂 Loading dataset...")
-    data = torch.load("/home/ubuntu/geometric-microscope/data/4bit_adder_dataset.pt")
-    inputs = data['inputs']
-    outputs = data['outputs']
+    # Generate dataset
+    print("\n📂 Generating dataset...")
+    inputs, outputs = generate_dataset()
     print(f"   Total samples: {len(inputs)}")
     
     dataset = AdderDataset(inputs, outputs)
@@ -340,7 +358,7 @@ def main():
                 'model_state_dict': model.state_dict(),
                 'val_acc': val_acc,
                 'val_loss': val_loss,
-            }, "/home/ubuntu/geometric-microscope/models/4bit_compositional_best.pt")
+            }, MODELS_DIR / "4bit_compositional_best.pt")
         
         # Early stopping if perfect
         if val_acc >= 1.0:
@@ -354,9 +372,10 @@ def main():
     torch.save({
         'model_state_dict': model.state_dict(),
         'val_acc': val_acc,
-    }, "/home/ubuntu/geometric-microscope/models/4bit_compositional_final.pt")
+    }, MODELS_DIR / "4bit_compositional_final.pt")
     
-    with open("/home/ubuntu/geometric-microscope/logs/4bit_compositional_training.json", 'w') as f:
+    LOGS_DIR.mkdir(exist_ok=True)
+    with open(LOGS_DIR / "4bit_compositional_training.json", 'w') as f:
         json.dump(training_log, f, indent=2)
     
     print("-" * 80)

@@ -15,6 +15,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import silhouette_score
 from scipy.stats import pearsonr
 import json
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+LOGS_DIR = REPO_ROOT / "logs"
 
 
 def analyze_trajectory():
@@ -23,12 +28,12 @@ def analyze_trajectory():
     print("=" * 80)
 
     # Load trajectory
-    traj = np.load('data/online_observer_trajectory.npz', allow_pickle=True)
+    traj = np.load(DATA_DIR / 'online_observer_trajectory.npz', allow_pickle=True)
     snapshots = traj['snapshots']
     epochs = traj['epochs']
 
     # Load labels
-    data = np.load('data/online_observer_latents.npz')
+    data = np.load(DATA_DIR / 'online_observer_latents.npz')
     carry_counts = data['carry_counts']
 
     print(f"\nTrajectory: {len(snapshots)} snapshots at epochs {list(epochs)}")
@@ -158,8 +163,9 @@ def analyze_trajectory():
         'epoch_prediction_r2': epoch_r2,
     }
 
-    with open('journal/trajectory_analysis_results.json', 'w') as f:
-        json.dump(results, f, indent=2)
+    LOGS_DIR.mkdir(exist_ok=True)
+    with open(LOGS_DIR / 'trajectory_analysis_results.json', 'w') as f:
+        json.dump(results, f, indent=2, default=lambda o: o.tolist())
 
     print(f"\nR² evolution: {r2_history[0]:.4f} → {r2_history[-1]:.4f}")
     print(f"The observer learned to access carry_count with increasing fidelity")

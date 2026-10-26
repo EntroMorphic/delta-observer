@@ -12,16 +12,18 @@ Key questions:
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 from sklearn.linear_model import LinearRegression
 from scipy.stats import pearsonr
 import umap
 import sys
-sys.path.append('/home/ubuntu/geometric-microscope')
+from pathlib import Path
 
-from models.delta_observer import DeltaObserver, DeltaObserverDataset
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from models.delta_observer_posthoc import DeltaObserver, DeltaObserverDataset
 
 
 def load_model_and_data():
@@ -30,12 +32,12 @@ def load_model_and_data():
     
     # Load model
     model = DeltaObserver(mono_dim=64, comp_dim=64, latent_dim=16)
-    checkpoint = torch.load('/home/ubuntu/geometric-microscope/models/delta_observer_best.pt')
+    checkpoint = torch.load(REPO_ROOT / 'models' / 'delta_observer_best.pt', weights_only=True)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
     
     # Load dataset
-    dataset = DeltaObserverDataset('/home/ubuntu/geometric-microscope/analysis/delta_observer_dataset.npz')
+    dataset = DeltaObserverDataset(REPO_ROOT / 'data' / 'delta_observer_dataset.npz')
     
     print("✅ Model and data loaded")
     return model, dataset
@@ -200,12 +202,12 @@ def visualize_latent_space(latents, carry_counts, bit_positions, inputs):
     plt.colorbar(im, ax=ax6, label='Activation')
     
     plt.tight_layout()
-    plt.savefig('/home/ubuntu/geometric-microscope/analysis/delta_latent_analysis.png', 
+    plt.savefig(REPO_ROOT / 'figures' / 'delta_latent_analysis.png',
                 dpi=300, bbox_inches='tight')
     print("   ✅ Saved: delta_latent_analysis.png")
     
     # Save UMAP coordinates for further analysis
-    np.savez('/home/ubuntu/geometric-microscope/analysis/delta_latent_umap.npz',
+    np.savez(REPO_ROOT / 'data' / 'delta_latent_umap.npz',
              latent_2d=latent_2d,
              latents=latents,
              carry_counts=carry_counts,

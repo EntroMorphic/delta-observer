@@ -12,6 +12,11 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import silhouette_score
 import warnings
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+FIGURES_DIR = REPO_ROOT / "figures"
 warnings.filterwarnings('ignore')
 
 print("=" * 70)
@@ -20,7 +25,7 @@ print("=" * 70)
 
 # Load high-res trajectory
 print("\nLoading high-resolution trajectory...")
-data = np.load('data/online_observer_trajectory_hires.npz')
+data = np.load(DATA_DIR / 'online_observer_trajectory_hires.npz')
 snapshots = data['snapshots']  # (200, 512, 16)
 epochs = data['epochs']  # (200,)
 carry_counts = data['carry_counts']  # (512,)
@@ -219,22 +224,26 @@ print(f"Rendering {len(epochs)} frames...")
 anim = FuncAnimation(fig, animate_with_progress, frames=len(epochs), interval=50, blit=False)
 
 # Save as high-quality MP4
-output_mp4 = 'figures/delta_observer_training_hires.mp4'
+output_mp4 = FIGURES_DIR / 'delta_observer_training_hires.mp4'
 print(f"\nSaving MP4 to {output_mp4}...")
-writer = FFMpegWriter(fps=20, metadata=dict(artist='Delta Observer'), bitrate=4000)
-anim.save(output_mp4, writer=writer, dpi=150)
-print(f"Saved! Duration: {len(epochs) / 20:.1f} seconds at 20 fps")
+if FFMpegWriter.isAvailable():
+    writer = FFMpegWriter(fps=20, metadata=dict(artist='Delta Observer'), bitrate=4000)
+    anim.save(str(output_mp4), writer=writer, dpi=150)
+    print(f"Saved! Duration: {len(epochs) / 20:.1f} seconds at 20 fps")
+else:
+    print("ffmpeg not found; skipping MP4 (install ffmpeg to enable).")
 
 # Also save a GIF (lower quality for sharing)
-output_gif = 'figures/delta_observer_training_hires.gif'
+output_gif = FIGURES_DIR / 'delta_observer_training_hires.gif'
 print(f"\nSaving GIF to {output_gif}...")
-anim.save(output_gif, writer='pillow', fps=15, dpi=80)
+anim.save(str(output_gif), writer='pillow', fps=15, dpi=80)
 print("GIF saved!")
 
 plt.close()
 
 print("\n" + "=" * 70)
 print("DONE!")
-print(f"  MP4: {output_mp4} (high quality, 20 fps)")
+if FFMpegWriter.isAvailable():
+    print(f"  MP4: {output_mp4} (high quality, 20 fps)")
 print(f"  GIF: {output_gif} (shareable, 15 fps)")
 print("=" * 70)

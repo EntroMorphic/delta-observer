@@ -13,6 +13,10 @@ import torch.optim as optim
 import numpy as np
 import math
 from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
 
 ALPHA = 1.0 / 137.0
 
@@ -355,7 +359,7 @@ def train_hires(epochs=200, batch_size=32):
     print("Training complete.")
 
     # Save high-resolution trajectory
-    save_path = 'data/online_observer_trajectory_hires.npz'
+    save_path = DATA_DIR / 'online_observer_trajectory_hires.npz'
     np.savez(
         save_path,
         snapshots=np.array(all_snapshots),

@@ -5,6 +5,7 @@ archive/
 paper/archive/
 __pycache__/
 *.pt
+logs/
 .venv/
 .venv-lfm/
 research/observers/build/

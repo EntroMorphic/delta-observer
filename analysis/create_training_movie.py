@@ -11,17 +11,22 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import silhouette_score
 import warnings
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+FIGURES_DIR = REPO_ROOT / "figures"
 warnings.filterwarnings('ignore')
 
 print("Loading trajectory data...")
 
 # Load trajectory data
-trajectory = np.load('data/online_observer_trajectory.npz')
+trajectory = np.load(DATA_DIR / 'online_observer_trajectory.npz')
 snapshots = trajectory['snapshots']  # (38, 512, 16)
 epochs = trajectory['epochs']  # (38,)
 
 # Load semantic labels (carry counts)
-latents_data = np.load('data/online_observer_latents.npz')
+latents_data = np.load(DATA_DIR / 'online_observer_latents.npz')
 carry_counts = latents_data['carry_counts']  # (512,) or similar
 
 print(f"Loaded {len(epochs)} snapshots from epochs {epochs[0]} to {epochs[-1]}")
@@ -176,19 +181,22 @@ print(f"Rendering {len(epochs)} frames...")
 anim = FuncAnimation(fig, animate, frames=len(epochs), interval=200, blit=False)
 
 # Save as MP4
-output_path = 'figures/delta_observer_training.mp4'
+output_path = FIGURES_DIR / 'delta_observer_training.mp4'
 print(f"Saving to {output_path}...")
 
-writer = FFMpegWriter(fps=5, metadata=dict(artist='Delta Observer'), bitrate=2000)
-anim.save(output_path, writer=writer, dpi=120)
+if FFMpegWriter.isAvailable():
+    writer = FFMpegWriter(fps=5, metadata=dict(artist='Delta Observer'), bitrate=2000)
+    anim.save(str(output_path), writer=writer, dpi=120)
 
-print(f"\nDone! Movie saved to {output_path}")
-print(f"Duration: {len(epochs) / 5:.1f} seconds at 5 fps")
+    print(f"\nDone! Movie saved to {output_path}")
+    print(f"Duration: {len(epochs) / 5:.1f} seconds at 5 fps")
+else:
+    print("ffmpeg not found; skipping MP4 (install ffmpeg to enable).")
 
 # Also save a GIF version for easy sharing
-gif_path = 'figures/delta_observer_training.gif'
+gif_path = FIGURES_DIR / 'delta_observer_training.gif'
 print(f"Saving GIF to {gif_path}...")
-anim.save(gif_path, writer='pillow', fps=5, dpi=80)
+anim.save(str(gif_path), writer='pillow', fps=5, dpi=80)
 print("GIF saved!")
 
 plt.close()

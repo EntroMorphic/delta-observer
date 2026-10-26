@@ -11,6 +11,11 @@ import umap
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import json
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+FIGURES_DIR = REPO_ROOT / "figures"
 
 
 def load_activations(path):
@@ -87,7 +92,7 @@ def analyze_geometry(activations_path, model_name, output_dir):
     carry_in = inputs[:, 8].astype(int)
     
     # Decode outputs
-    sum_vals = np.sum(outputs[:, 0:4] * np.array([1, 2, 4, 8]), axis=1).astype(int)
+    sum_vals = np.sum(outputs * np.array([1, 2, 4, 8, 16]), axis=1).astype(int)  # includes carry_out
     carry_out = outputs[:, 4].astype(int)
     
     # Save results
@@ -208,24 +213,22 @@ def main():
     print("GEOMETRIC MICROSCOPE: 4-BIT ADDER ANALYSIS")
     print("=" * 80)
     
-    output_dir = "/home/ubuntu/geometric-microscope/analysis"
-    
     # Analyze monolithic model
     mono_results = analyze_geometry(
-        "/home/ubuntu/geometric-microscope/analysis/monolithic_activations.npz",
+        DATA_DIR / "monolithic_activations.npz",
         "monolithic",
-        output_dir
+        DATA_DIR
     )
     
     # Analyze compositional model
     comp_results = analyze_geometry(
-        "/home/ubuntu/geometric-microscope/analysis/compositional_activations.npz",
+        DATA_DIR / "compositional_activations.npz",
         "compositional",
-        output_dir
+        DATA_DIR
     )
     
     # Create comparison visualizations
-    visualize_comparison(mono_results, comp_results, output_dir)
+    visualize_comparison(mono_results, comp_results, FIGURES_DIR)
     
     print("\n" + "=" * 80)
     print("ANALYSIS COMPLETE")
