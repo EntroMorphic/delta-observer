@@ -62,6 +62,15 @@ class ScaffoldingAblationTests(unittest.TestCase):
             self.assertEqual(len(result["history"][f"sil_{measure}"]), 2)
             self.assertIn("present", result["summary"][measure])
 
+    def test_unsupervised_observer_has_no_supervised_heads(self):
+        config = ablation.addendum_b_configurations()["P/obs-unsup"]
+        self.assertEqual([f for f in ablation.FACTORS if config[f] != ablation.PAPER[f]], ["observer"])
+        observer = ablation.Observer(bit_head=False, carry_head=False)
+        self.assertIsNone(observer.bit_classifier)
+        self.assertIsNone(observer.carry_regressor)
+        result = ablation.train(config, seed=0, epochs=2)
+        self.assertEqual(len(result["history"]["r2_src_pca16"]), 2)
+
     def test_simplified_data_is_carry_free_addition(self):
         inputs, outputs, carry_counts, _ = ablation.make_data("256")
         self.assertEqual(tuple(inputs.shape), (256, 8))

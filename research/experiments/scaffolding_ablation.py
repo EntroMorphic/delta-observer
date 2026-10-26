@@ -66,8 +66,16 @@ def addendum_a_configurations():
             "P/obs-constlr": {**PAPER, "observer": "paper_constlr"}}
 
 
-SUITES = {"v1": configurations, "addendum-a": addendum_a_configurations}
-SOURCE_MEASURES = ("src_concat", "src_mono", "src_comp")
+def addendum_b_configurations():
+    """Protocol addendum B: an observer with no supervised heads."""
+    a = addendum_a_configurations()
+    return {"P": a["P"], "P/obs-nobit": a["P/obs-nobit"],
+            "P/obs-unsup": {**PAPER, "observer": "paper_unsup"}, "N": a["N"]}
+
+
+SUITES = {"v1": configurations, "addendum-a": addendum_a_configurations,
+          "addendum-b": addendum_b_configurations}
+SOURCE_MEASURES = ("src_concat", "src_mono", "src_comp", "src_pca16")
 
 
 # =============================================================================
@@ -193,7 +201,7 @@ class NotebookComp(nn.Module):
 class Observer(nn.Module):
     """OnlineDeltaObserver (bit_head=True) or the notebook DeltaObserver."""
 
-    def __init__(self, mono_dim=64, comp_dim=64, latent_dim=16, bit_head=True):
+    def __init__(self, mono_dim=64, comp_dim=64, latent_dim=16, bit_head=True, carry_head=True):
         super().__init__()
         self.mono_encoder = nn.Sequential(nn.Linear(mono_dim, 32), nn.ReLU(), nn.Dropout(0.1))
         self.comp_encoder = nn.Sequential(nn.Linear(comp_dim, 32), nn.ReLU(), nn.Dropout(0.1))
@@ -203,7 +211,8 @@ class Observer(nn.Module):
         self.comp_decoder = nn.Sequential(nn.Linear(latent_dim, 32), nn.ReLU(), nn.Linear(32, comp_dim))
         self.bit_classifier = (nn.Sequential(nn.Linear(latent_dim, 8), nn.ReLU(), nn.Linear(8, 4))
                                if bit_head else None)
-        self.carry_regressor = nn.Sequential(nn.Linear(latent_dim, 8), nn.ReLU(), nn.Linear(8, 1))
+        self.carry_regressor = (nn.Sequential(nn.Linear(latent_dim, 8), nn.ReLU(), nn.Linear(8, 1))
+                                if carry_head else None)
 
     def encode(self, mono_act, comp_act):
         joint = torch.cat([self.mono_encoder(mono_act), self.comp_encoder(comp_act)], dim=-1)
@@ -215,7 +224,9 @@ class Observer(nn.Module):
                  F.mse_loss(self.comp_decoder(latent), comp_act))
         if self.bit_classifier is not None:
             total = total + F.cross_entropy(self.bit_classifier(latent), bit)
-        return total + 0.1 * F.mse_loss(self.carry_regressor(latent).squeeze(), carry.float())
+        if self.carry_regressor is not None:
+            total = total + 0.1 * F.mse_loss(self.carry_regressor(latent).squeeze(), carry.float())
+        return total
 
 
 # =============================================================================
@@ -252,7 +263,8 @@ def train(config, seed, epochs=200, snapshots="sweep"):
 
     mono = (PaperMono if config["mono"] == "paper" else NotebookMono)(in_dim)
     comp = (PaperComp if config["comp"] == "paper" else NotebookComp)()
-    observer = Observer(bit_head=config["observer"] in ("paper", "paper_constlr"))
+    observer = Observer(bit_head=config["observer"] in ("paper", "paper_constlr"),
+                        carry_head=config["observer"] != "paper_unsup")
 
     if config["schedule"] == "alpha":
         mono_opt = optim.Adam(mono.parameters(), lr=ALPHA)
@@ -265,11 +277,11 @@ def train(config, seed, epochs=200, snapshots="sweep"):
         source_scheds = []
     obs_opt = optim.Adam(observer.parameters(), lr=0.001)
     obs_sched = (optim.lr_scheduler.CosineAnnealingLR(obs_opt, epochs)
-                 if config["observer"] in ("paper", "paper_nobit") else None)
+                 if config["observer"] in ("paper", "paper_nobit", "paper_unsup") else None)
 
     carry_np = carry_counts.numpy()
     history = {k: [] for k in ("sil_train", "sil_eval", "r2_train", "r2_eval", "mono_acc", "comp_acc",
-                               *(f"sil_{m}" for m in SOURCE_MEASURES))}
+                               "r2_src_pca16", *(f"sil_{m}" for m in SOURCE_MEASURES))}
     replica_snapshots = []
 
     for epoch in range(epochs):
@@ -314,9 +326,13 @@ def train(config, seed, epochs=200, snapshots="sweep"):
             history[f"r2_{mode}"].append(r2)
         # Observer-free: clustering in the sources' own (standardized) activations
         mono_np, comp_np = mono_act.numpy(), comp_act.numpy()
-        for measure, acts in (("src_concat", np.concatenate([mono_np, comp_np], axis=1)),
-                              ("src_mono", mono_np), ("src_comp", comp_np)):
-            history[f"sil_{measure}"].append(float(silhouette_score(StandardScaler().fit_transform(acts), carry_np)))
+        concat = StandardScaler().fit_transform(np.concatenate([mono_np, comp_np], axis=1))
+        for measure, acts in (("src_concat", concat), ("src_mono", StandardScaler().fit_transform(mono_np)),
+                              ("src_comp", StandardScaler().fit_transform(comp_np))):
+            history[f"sil_{measure}"].append(float(silhouette_score(acts, carry_np)))
+        sil, r2 = latent_metrics(PCA(n_components=16).fit_transform(concat), carry_np)
+        history["sil_src_pca16"].append(sil)
+        history["r2_src_pca16"].append(r2)
 
     observer.eval(); mono.eval(); comp.eval()
     with torch.no_grad():
