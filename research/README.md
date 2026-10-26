@@ -48,6 +48,13 @@ direct supervision.
 AdamW versus Muon within each row is the optimizer comparison. Source and
 observer costs are reported separately.
 
+## Transient-clustering ablation
+
+[`reports/scaffolding_ablation_results.md`](reports/scaffolding_ablation_results.md)
+tests which factors produce the original paper's transient-clustering result
+([protocol](reports/scaffolding_ablation_protocol.md)). Run in the paper
+environment (root `requirements.txt`); see the report for commands.
+
 ## Run
 
 ```bash
