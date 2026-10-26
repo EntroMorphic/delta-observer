@@ -56,10 +56,10 @@ and [measured pilot](research/reports/native_lora_pilot_results.md).
 | Notebook | Description | Colab |
 |----------|-------------|-------|
 | **00_quickstart_demo** | Quick demo with pre-computed results | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/00_quickstart_demo.ipynb) |
-| **01_training_models** | Train source models from scratch | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/01_training_models.ipynb) |
+| **01_training_models** | Train source models from scratch (simplified) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/01_training_models.ipynb) |
 | **02_delta_observer_training** | Train Delta Observer | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/02_delta_observer_training.ipynb) |
 | **03_analysis_visualization** | Geometric analysis & paper figures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/03_analysis_visualization.ipynb) |
-| **99_full_reproduction** | Complete end-to-end reproduction | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/99_full_reproduction.ipynb) |
+| **99_full_reproduction** | End-to-end online pipeline (simplified) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EntroMorphic/delta-observer/blob/main/notebooks/99_full_reproduction.ipynb) |
 
 **📖 [Colab Setup Guide](notebooks/COLAB_SETUP.md)** - Detailed instructions for running notebooks in Google Colab
 
@@ -257,12 +257,16 @@ See the **[🚀 Run in Google Colab](#-run-in-google-colab)** section above for 
 | Notebook | Description |
 |----------|-------------|
 | `00_quickstart_demo.ipynb` | Quick demo with pre-computed results |
-| `01_training_models.ipynb` | Train source models from scratch |
+| `01_training_models.ipynb` | Train source models from scratch (simplified) |
 | `02_delta_observer_training.ipynb` | Train Delta Observer |
 | `03_analysis_visualization.ipynb` | Geometric analysis & paper figures |
-| `99_full_reproduction.ipynb` | Complete end-to-end reproduction |
+| `99_full_reproduction.ipynb` | End-to-end online pipeline (simplified) |
 
-*All notebooks use the online observer data and include transient clustering analysis.*
+Notebooks `00`, `02` and `03` analyze the paper's pre-computed online observer data. Notebooks `01` and `99`
+train their own models on a **simplified 256-case setup** (a + b, no carry-in). In that variant the source
+models reach 100% accuracy, but transient clustering does not dissolve and the online observer does not beat
+PCA. To reproduce the paper's results, use the scripts in [Reproducing Results](#reproducing-results).
+Notebook outputs go to `notebooks/outputs/` (git-ignored).
 
 ---
 
