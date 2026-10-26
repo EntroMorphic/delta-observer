@@ -37,7 +37,7 @@ the observer, which only changes the random stream. Seeds 0–4.
 
 **Measurements.** At epochs 0, 1, 2, 5, 10, 15, 20, 25, 30, 40, 60, 100, 150
 and 200, the exact full-batch Hessian of each source model's MSE loss
-(float64, chunked forward-over-reverse HVPs, symmetrized), its full
+(float64, chunked reverse-over-reverse HVPs, symmetrized), its full
 eigendecomposition and the full-batch gradient. Recorded: top and bottom
 eigenvalues, negative-eigenvalue count and mass, the fraction of the
 gradient's squared norm in the top-k eigenspace (k = 1, 5, 10, 20), overlap
@@ -67,6 +67,11 @@ eigenvalue (Lanczos on HVPs) every 100 steps.
    quarter of steps) for both step sizes in ≥ 2/3 seeds, and the loss keeps
    decreasing over the long run but not monotonically. Uncertain: this
    requires progressive sharpening by 4–8× on a tiny model.
+
+**Amendment (before any run):** the Hessian is built from reverse-over-reverse
+HVPs instead of forward-over-reverse, after `torch.func` raised a ZeroTensor
+error on the latter. The two are mathematically identical; the implementation
+matches `torch.autograd.functional.hessian` to 4e-16 on the compositional model.
 
 ## Interpretation limits
 
