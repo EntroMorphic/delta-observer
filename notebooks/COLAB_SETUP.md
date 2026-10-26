@@ -31,9 +31,13 @@ automatically when you choose **Runtime → Change runtime type → GPU**.
 
 ## Saving outputs
 
-Colab sessions are temporary. Figures and files the notebooks write are
-lost when the runtime disconnects. To keep them, download them from the
-**Files** panel, or mount Google Drive first:
+Notebooks write their figures, data and model weights to an `outputs/`
+folder next to the notebook (git-ignored), never to the repository's
+`data/` or `figures/`, so the committed paper results are never overwritten.
+
+Colab sessions are temporary, so `outputs/` is lost when the runtime
+disconnects. To keep it, download it from the **Files** panel, or mount
+Google Drive first:
 
 ```python
 from google.colab import drive
