@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-25T19:31:45.780042+00:00",
+  "timing": "recorded during training; not a claimed exact launch timestamp",
+  "python": "3.12.15",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "implementation_sha256": {
+    "research/lfm/native_retention_transfer.py": "ddeb54eadb5c6460edc4f52b4ebfd400474bf70a6a51059a06131387d9b1d97f",
+    "research/reports/native_retention_transfer_protocol.md": "e8dedcffb93e64280499c4f611a3715ca8833743b9f3c2cf604f9919548fc143",
+    "research/lfm/native_lora.py": "eeb189b02ba340e7da273c99dfb15a09ff97dea13d9c315e9110b1104308e837",
+    "research/lfm/audit_native_update_conflict.py": "6fd611272c0357ba36bc94c19de01cd0f7adc340de28aee7715f2a3e4a96a7ef",
+    "research/lfm/evaluate_pretrained_development.py": "14aac8908a3945fe5689e93c483ecf5540ae0f2914de6289f1f5f4654d22a4fc",
+    "research/lfm/score_native_holdout100.py": "12811ed469294f68e2adaf6867d13f2e3611929ca2a4c0fc778cfd60530bc1a0"
+  },
+  "freeze_sha256": "03463ac1f2741e3a725ced3d669da81334849ecc562103f66d7a8e808c6b0887"
+}

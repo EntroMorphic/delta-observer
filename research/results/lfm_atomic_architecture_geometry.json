@@ -1,0 +1,67 @@
+{
+  "tied": {
+    "input": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 6.473789215087891,
+      "stable_rank": 1.298378586769104,
+      "top_1_variance_fraction": 0.7701913714408875,
+      "top_16_variance_fraction": 0.8052945733070374,
+      "top_64_variance_fraction": 0.8456599116325378
+    }
+  },
+  "bias": {
+    "input": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 6.472526550292969,
+      "stable_rank": 1.2983282804489136,
+      "top_1_variance_fraction": 0.7702212333679199,
+      "top_16_variance_fraction": 0.8053144812583923,
+      "top_64_variance_fraction": 0.8456772565841675
+    },
+    "bias": {
+      "count": 65536,
+      "mean": -0.023676250129938126,
+      "std": 0.01090500969439745,
+      "min": -0.04657585173845291,
+      "p01": -0.041948266327381134,
+      "p10": -0.03633483499288559,
+      "p25": -0.030710866674780846,
+      "median": -0.027253108099102974,
+      "p75": -0.015669146552681923,
+      "p90": -0.005814980715513229,
+      "p99": -0.00045291410060599446,
+      "max": 0.005936561618000269,
+      "log_frequency_pearson": 0.6035320162773132
+    }
+  },
+  "rank96": {
+    "input": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 7.351258277893066,
+      "stable_rank": 1.3326187133789062,
+      "top_1_variance_fraction": 0.7504021525382996,
+      "top_16_variance_fraction": 0.7935892343521118,
+      "top_64_variance_fraction": 0.8388714790344238
+    },
+    "output_embedding": {
+      "shape": [
+        65536,
+        96
+      ],
+      "effective_rank": 40.298004150390625,
+      "stable_rank": 3.152911424636841,
+      "top_1_variance_fraction": 0.31716716289520264,
+      "top_16_variance_fraction": 0.49515974521636963,
+      "top_64_variance_fraction": 0.8356758952140808
+    }
+  }
+}

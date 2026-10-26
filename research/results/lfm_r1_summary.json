@@ -1,0 +1,42 @@
+{
+  "experiment": "Observer.D-LFM R1",
+  "status": "valid scaling result",
+  "compression": 12.672249143181372,
+  "training_tokens": 131072,
+  "validation_tokens": 16384,
+  "teacher": {
+    "cross_entropy": 4.955153025686741,
+    "top_k_probability_mass": 0.9341093469411135
+  },
+  "arms": {
+    "direct": {
+      "seconds": 92.38594883300175,
+      "validation_ce": 7.607866056263447,
+      "normalized_ce_retention": 0.56762416466574,
+      "perplexity_ratio_to_teacher": 14.192491122792177,
+      "teacher_top1_agreement": 0.105712890625
+    },
+    "distill": {
+      "seconds": 111.87507304199971,
+      "validation_ce": 7.167205713689327,
+      "normalized_ce_retention": 0.6394490780743887,
+      "perplexity_ratio_to_teacher": 9.134447332525715,
+      "teacher_top1_agreement": 0.15753173828125
+    },
+    "trajectory": {
+      "seconds": 106.51205395900251,
+      "validation_ce": 7.168270103633404,
+      "normalized_ce_retention": 0.639275589089381,
+      "perplexity_ratio_to_teacher": 9.1441751225737,
+      "teacher_top1_agreement": 0.1568603515625,
+      "state_loss": 0.008926704715122469,
+      "delta_loss": 0.011232563803787343
+    }
+  },
+  "qualitative_control": {
+    "prompt_id": "reflective-recursion-cognition",
+    "passed": false,
+    "failure": "Repetitive '- 1, 1, 1, ...' generation loop"
+  },
+  "conclusion": "Output distillation materially improves token-level retention at 12.67x compression, but the frozen prompt exposes a severe coherence failure. The initial trajectory objective provides no behavioral advantage at R1. Advance to R2 while treating instruction retention as unproven."
+}

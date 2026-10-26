@@ -1,0 +1,48 @@
+{
+  "source": "research/results/native_fact_wording_audit_v1/crossing.json",
+  "overlapping_triples": [
+    [
+      24,
+      7,
+      5
+    ]
+  ],
+  "arms": {
+    "baseline": {
+      "training": {
+        "n": 19,
+        "strict": 0,
+        "parsed_content": 19
+      },
+      "diagnostic": {
+        "n": 19,
+        "strict": 0,
+        "parsed_content": 19
+      }
+    },
+    "rank8": {
+      "training": {
+        "n": 19,
+        "strict": 11,
+        "parsed_content": 11
+      },
+      "diagnostic": {
+        "n": 19,
+        "strict": 7,
+        "parsed_content": 7
+      }
+    },
+    "rank32": {
+      "training": {
+        "n": 19,
+        "strict": 9,
+        "parsed_content": 9
+      },
+      "diagnostic": {
+        "n": 19,
+        "strict": 8,
+        "parsed_content": 8
+      }
+    }
+  }
+}

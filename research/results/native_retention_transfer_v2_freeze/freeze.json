@@ -1,0 +1,32 @@
+{
+  "protocol_sha256": "e8dedcffb93e64280499c4f611a3715ca8833743b9f3c2cf604f9919548fc143",
+  "files": {
+    "tasks.json": "03ec9c59b2451d9fce11425676515ddd1889fc22048952647f5213680ad67f8b",
+    "target.json": "ae892748a32df5beb69339eb7203b9129dc6dc42804a2c26c5621d7b3fddb241",
+    "protected_tasks.json": "c463f15663e3c4aab152306d871da8a5a490a7dba274f605265fef1da523f754",
+    "protected.json": "76ccdf982152c0efadb7ef7755492958b15a1c0dbcf15ac8d9996d3aa0f889e0"
+  },
+  "historical_suites": {
+    "research/lfm/pretrained_development_tasks.json": "107c24f651ffc2ad278bbf8b932e219a32e7387a0450da44c5261197b09ad3a1",
+    "research/lfm/pretrained_development_tasks_v2.json": "890f2781c17d85765bb3b5f688d6c2322f276581da44eea9f09b7f192f2fd63d",
+    "research/results/native_holdout100_frozen/tasks.json": "db4c9543facb990be6644d74eade05d0d84ede837d22ddfdcef73b4fc547255d",
+    "research/results/native_remediation_v1_freeze/tasks.json": "a25c3a9d0cdd9b55889599dc60e6709e039183e32417bd5091345f0770524d6d",
+    "research/results/native_retention_format_v1_freeze/tasks.json": "4ff2e2e863d28b51e03b0a5afeb32249d82039d6c240c382e7ffb57510031f04",
+    "research/results/native_rule_v2_freeze/tasks.json": "7caeac127c76dec7b6e345cbbafb2c90815cd8ddf7f6d5743c8dee7d8db06dae",
+    "research/results/native_semantic_transfer_v1_freeze/tasks.json": "febaeefb128c4e22c4bff4b9fc866b1c19a27096a6836d66a50328ac5c57cb94"
+  },
+  "source_sha256": "f543225d319f35959beac76222fb2399c73c98e0a782c195598e0ce3c9cef9b5",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "arms": [
+    "ordinary",
+    "projected",
+    "replay",
+    "random"
+  ],
+  "steps": 128,
+  "status": "frozen_before_training; no heldout model outputs generated"
+}

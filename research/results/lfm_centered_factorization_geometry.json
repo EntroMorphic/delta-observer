@@ -1,0 +1,29 @@
+{
+  "source_centered": {
+    "effective_rank": 30.441287994384766,
+    "top1": 0.5239434242248535,
+    "top16": 0.6150858402252197,
+    "relative_centered_error": 1.0118944260284479e-07
+  },
+  "centered_rank_96": {
+    "effective_rank": 6.0630598068237305,
+    "top1": 0.7155279517173767,
+    "top16": 0.839997410774231,
+    "relative_centered_error": 0.5176387429237366,
+    "centered_energy_retained": 0.7322472929954529
+  },
+  "centered_rank_127": {
+    "effective_rank": 7.796059608459473,
+    "top1": 0.6841723918914795,
+    "top16": 0.8031873106956482,
+    "relative_centered_error": 0.48418042063713074,
+    "centered_energy_retained": 0.7658060193061829
+  },
+  "centered_rank_128": {
+    "effective_rank": 7.855496406555176,
+    "top1": 0.6832340955734253,
+    "top16": 0.8020858764648438,
+    "relative_centered_error": 0.4830850064754486,
+    "centered_energy_retained": 0.7668576836585999
+  }
+}

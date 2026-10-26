@@ -1,0 +1,192 @@
+{
+  "protocol": "research/reports/native_update_conflict_protocol.md",
+  "raw_replay_max_adapter_error": 0.0,
+  "boundaries": [
+    {
+      "step": 1,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.01641743646597081,
+        "raw_update_norm": 0.068892145557064,
+        "retention_gradient_norm": 87.21563096321952,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.01641743646597081,
+        "norm_matched_update_norm": 0.068892145557064
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 3.179544448852539,
+      "raw_target_ce": 2.305854320526123,
+      "projected_target_ce": 2.305854320526123,
+      "pre_key_ce": {
+        "record-0": 0.32188788056373596,
+        "record-1": 0.15471675992012024,
+        "record-4": 0.20183737576007843
+      },
+      "raw_key_ce": {
+        "record-0": 0.30581560730934143,
+        "record-1": 0.15275174379348755,
+        "record-4": 0.19730249047279358
+      },
+      "projected_key_ce": {
+        "record-0": 0.30581560730934143,
+        "record-1": 0.15275174379348755,
+        "record-4": 0.19730249047279358
+      }
+    },
+    {
+      "step": 16,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.027526133103338138,
+        "raw_update_norm": 0.029465724578250932,
+        "retention_gradient_norm": 136.36703482923747,
+        "removed_component_norm": 0.00020185327882069808,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 2.42861286636753e-17,
+        "norm_matched_update_norm": 0.02946572457825105
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 3.061291217803955,
+      "raw_target_ce": 2.8581414222717285,
+      "projected_target_ce": 2.858149528503418,
+      "pre_key_ce": {
+        "record-0": 0.5638161897659302,
+        "record-1": 0.20444108545780182,
+        "record-4": 0.23035812377929688
+      },
+      "raw_key_ce": {
+        "record-0": 0.5917340517044067,
+        "record-1": 0.20705246925354004,
+        "record-4": 0.22879844903945923
+      },
+      "projected_key_ce": {
+        "record-0": 0.5637494325637817,
+        "record-1": 0.2005644589662552,
+        "record-4": 0.22251535952091217
+      }
+    },
+    {
+      "step": 64,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.032138191011181406,
+        "raw_update_norm": 0.018358699769643303,
+        "retention_gradient_norm": 305.61344547004404,
+        "removed_component_norm": 0.00010515961089915837,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 4.336808689942018e-17,
+        "norm_matched_update_norm": 0.018358699769643487
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 1.8531571626663208,
+      "raw_target_ce": 1.6956074237823486,
+      "projected_target_ce": 1.69571053981781,
+      "pre_key_ce": {
+        "record-0": 1.8533495664596558,
+        "record-1": 0.3744605779647827,
+        "record-4": 0.3067697286605835
+      },
+      "raw_key_ce": {
+        "record-0": 1.8852148056030273,
+        "record-1": 0.38642898201942444,
+        "record-4": 0.31408414244651794
+      },
+      "projected_key_ce": {
+        "record-0": 1.8531514406204224,
+        "record-1": 0.3795991837978363,
+        "record-4": 0.3091804087162018
+      }
+    },
+    {
+      "step": 128,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.009926568838944374,
+        "raw_update_norm": 0.0176920884738084,
+        "retention_gradient_norm": 323.43288818146755,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.009926568838944374,
+        "norm_matched_update_norm": 0.0176920884738084
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 1.6753876209259033,
+      "raw_target_ce": 1.624306321144104,
+      "projected_target_ce": 1.624306321144104,
+      "pre_key_ce": {
+        "record-0": 2.6305789947509766,
+        "record-1": 0.6327523589134216,
+        "record-4": 0.36423739790916443
+      },
+      "raw_key_ce": {
+        "record-0": 2.6204464435577393,
+        "record-1": 0.6291815638542175,
+        "record-4": 0.36583566665649414
+      },
+      "projected_key_ce": {
+        "record-0": 2.6204464435577393,
+        "record-1": 0.6291815638542175,
+        "record-4": 0.36583566665649414
+      }
+    },
+    {
+      "step": 256,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.0007455971253341655,
+        "raw_update_norm": 0.019688798502741717,
+        "retention_gradient_norm": 348.41722086687315,
+        "removed_component_norm": 2.13995486066702e-06,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 2.168404344971009e-18,
+        "norm_matched_update_norm": 0.019688798502741613
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 0.37050074338912964,
+      "raw_target_ce": 0.2995283603668213,
+      "projected_target_ce": 0.29953110218048096,
+      "pre_key_ce": {
+        "record-0": 4.111550807952881,
+        "record-1": 1.365323543548584,
+        "record-4": 0.6288871765136719
+      },
+      "raw_key_ce": {
+        "record-0": 4.1121826171875,
+        "record-1": 1.3667047023773193,
+        "record-4": 0.6392747163772583
+      },
+      "projected_key_ce": {
+        "record-0": 4.111485958099365,
+        "record-1": 1.3663980960845947,
+        "record-4": 0.6391253471374512
+      }
+    },
+    {
+      "step": 512,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.008574370201580236,
+        "raw_update_norm": 0.018395811404558194,
+        "retention_gradient_norm": 310.8739724462216,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.008574370201580236,
+        "norm_matched_update_norm": 0.018395811404558194
+      },
+      "raw_restored_exactly": true,
+      "pre_target_ce": 0.5158812999725342,
+      "raw_target_ce": 0.4210595190525055,
+      "projected_target_ce": 0.4210595190525055,
+      "pre_key_ce": {
+        "record-0": 3.1385223865509033,
+        "record-1": 1.2654359340667725,
+        "record-4": 0.622035562992096
+      },
+      "raw_key_ce": {
+        "record-0": 3.1300089359283447,
+        "record-1": 1.265623927116394,
+        "record-4": 0.6214843392372131
+      },
+      "projected_key_ce": {
+        "record-0": 3.1300089359283447,
+        "record-1": 1.265623927116394,
+        "record-4": 0.6214843392372131
+      }
+    }
+  ]
+}

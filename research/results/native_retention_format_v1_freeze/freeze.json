@@ -1,0 +1,7 @@
+{
+  "tasks": 100,
+  "tasks_sha256": "4ff2e2e863d28b51e03b0a5afeb32249d82039d6c240c382e7ffb57510031f04",
+  "training_manifest_sha256": "fbebdac48252cb64b122a19691f8d399818991d9dd0b893eba3c32ef19fa1fcc",
+  "created_before_training": true,
+  "selection": "all three fixed 128-update endpoints"
+}

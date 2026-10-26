@@ -1,0 +1,1409 @@
+{
+  "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-mixed-diversity-1k-teacher-embedding-10/observer-d-lm-distill.pt",
+  "settings": [
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 1.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 5.8505487740039825
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 4.710785581095614
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.9289991110563278,
+          "std": 0.025107225300347504,
+          "min": 0.8570681810379028,
+          "p01": 0.8610270249843598,
+          "p10": 0.9045200705528259,
+          "p25": 0.9157431423664093,
+          "median": 0.9320093393325806,
+          "p75": 0.949329674243927,
+          "p90": 0.9548842489719391,
+          "p99": 0.9655300098657608,
+          "max": 0.9662664532661438
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 10.132544228008815,
+          "std": 1.74681359698097,
+          "min": 7.073080062866211,
+          "p01": 7.156351323127747,
+          "p10": 8.207140159606933,
+          "p25": 8.686859130859375,
+          "median": 10.07398796081543,
+          "p75": 11.20436406135559,
+          "p90": 11.922557258605957,
+          "p99": 14.366420183181763,
+          "max": 14.574426651000977
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.0332562461595184,
+          "std": 0.016626830610141415,
+          "min": 0.007364026736468077,
+          "p01": 0.008160855169408024,
+          "p10": 0.013033712282776833,
+          "p25": 0.02133092563599348,
+          "median": 0.030986836180090904,
+          "p75": 0.04643206670880318,
+          "p90": 0.054006303474307064,
+          "p99": 0.069505188241601,
+          "max": 0.07092836499214172
+        },
+        "unique_top1_tokens": 2,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.13168764114379883,
+            "entropy": 5.87982702255249
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.2801505923271179,
+            "entropy": 5.147754669189453
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.18622426688671112,
+            "entropy": 5.61629581451416
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.2576781213283539,
+            "entropy": 5.2778401374816895
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.280551940202713,
+            "entropy": 4.966973304748535
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.16780976951122284,
+            "entropy": 5.532745838165283
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.18932312726974487,
+            "entropy": 6.361204624176025
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.16499106585979462,
+            "entropy": 5.954843521118164
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 0.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 8.424940466880798
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 8.017540189545052
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.8469553185360772,
+          "std": 0.055937529277218505,
+          "min": 0.7042245864868164,
+          "p01": 0.7124352681636811,
+          "p10": 0.7815880179405212,
+          "p25": 0.8199678659439087,
+          "median": 0.8476914167404175,
+          "p75": 0.8922137022018433,
+          "p90": 0.9111826300621033,
+          "p99": 0.9377007436752319,
+          "max": 0.9414440989494324
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 14.596954209463936,
+          "std": 2.7036523454160424,
+          "min": 9.175882339477539,
+          "p01": 9.453767261505128,
+          "p10": 11.307639789581298,
+          "p25": 12.459396123886108,
+          "median": 14.798290729522705,
+          "p75": 16.105456829071045,
+          "p90": 17.72645606994629,
+          "p99": 20.336442470550537,
+          "max": 20.620288848876953
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.06436200599585261,
+          "std": 0.026754294360145505,
+          "min": 0.019802335649728775,
+          "p01": 0.021729642637073995,
+          "p10": 0.027188409119844437,
+          "p25": 0.05138090066611767,
+          "median": 0.058374250307679176,
+          "p75": 0.0731954574584961,
+          "p90": 0.09549402073025703,
+          "p99": 0.13613739639520647,
+          "max": 0.1412738561630249
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.028212280943989754,
+            "entropy": 9.477306365966797
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.10256011039018631,
+            "entropy": 8.534038543701172
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.008275301195681095,
+            "entropy": 9.932270050048828
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.01806725189089775,
+            "entropy": 9.752293586730957
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.014293733984231949,
+            "entropy": 9.762112617492676
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.027913756668567657,
+            "entropy": 9.641474723815918
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.029155375435948372,
+            "entropy": 9.787330627441406
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 708,
+            "top1_token": "\n",
+            "top1_probability": 0.007634549867361784,
+            "entropy": 10.222698211669922
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 0.25,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 6.969696879386902
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 6.414288105770974
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.830790713429451,
+          "std": 0.042155835626581636,
+          "min": 0.7411344051361084,
+          "p01": 0.7427760940790177,
+          "p10": 0.7719945549964905,
+          "p25": 0.806619331240654,
+          "median": 0.8328459560871124,
+          "p75": 0.8613966256380081,
+          "p90": 0.8760413765907288,
+          "p99": 0.9077109241485596,
+          "max": 0.9159939289093018
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 15.551476648875646,
+          "std": 1.9621002600021917,
+          "min": 11.037785530090332,
+          "p01": 11.54274214744568,
+          "p10": 13.399135875701905,
+          "p25": 14.177086114883423,
+          "median": 15.584810733795166,
+          "p75": 16.746211051940918,
+          "p90": 18.21748332977295,
+          "p99": 19.33674404144287,
+          "max": 19.396163940429688
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.06964063005787986,
+          "std": 0.03393679450704217,
+          "min": 0.02239619567990303,
+          "p01": 0.02479905027896166,
+          "p10": 0.03750429786741734,
+          "p25": 0.04761865083128214,
+          "median": 0.06046505831182003,
+          "p75": 0.08725256100296974,
+          "p90": 0.10261317789554596,
+          "p99": 0.17257536843419077,
+          "max": 0.1937856376171112
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.034126169979572296,
+            "entropy": 9.253859519958496
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.15061509609222412,
+            "entropy": 7.493188381195068
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.06917654722929001,
+            "entropy": 9.095152854919434
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.023206152021884918,
+            "entropy": 9.543685913085938
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.06586778163909912,
+            "entropy": 9.440710067749023
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.0460856594145298,
+            "entropy": 9.248600006103516
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.025743411853909492,
+            "entropy": 9.52647876739502
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.020924486219882965,
+            "entropy": 9.981307983398438
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 0.5,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 6.10272191464901
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 5.204511178838753
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.8286284910781043,
+          "std": 0.04132109400097615,
+          "min": 0.7418240904808044,
+          "p01": 0.744595622420311,
+          "p10": 0.7705880880355835,
+          "p25": 0.8097088783979416,
+          "median": 0.833911120891571,
+          "p75": 0.8524810969829559,
+          "p90": 0.8736700713634491,
+          "p99": 0.908268290758133,
+          "max": 0.9103283882141113
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 15.725846086229597,
+          "std": 1.937462896295402,
+          "min": 11.478357315063477,
+          "p01": 11.601405563354492,
+          "p10": 13.582018852233887,
+          "p25": 14.677311182022095,
+          "median": 15.58551836013794,
+          "p75": 16.708244800567627,
+          "p90": 18.350046348571777,
+          "p99": 19.360893859863282,
+          "max": 19.468156814575195
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.07240537420979568,
+          "std": 0.028601061465135098,
+          "min": 0.018809378147125244,
+          "p01": 0.02292771831154823,
+          "p10": 0.038095516711473466,
+          "p25": 0.05030345916748047,
+          "median": 0.06948752701282501,
+          "p75": 0.09318674728274345,
+          "p90": 0.1165914587676525,
+          "p99": 0.11976608648896217,
+          "max": 0.12036047875881195
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2090427130460739,
+            "entropy": 7.264456748962402
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.3064133822917938,
+            "entropy": 6.312276840209961
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.34830719232559204,
+            "entropy": 6.0506134033203125
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.13729529082775116,
+            "entropy": 7.886803150177002
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.35356301069259644,
+            "entropy": 6.356725692749023
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.20571288466453552,
+            "entropy": 7.273002624511719
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.09657693654298782,
+            "entropy": 7.5750298500061035
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.14200285077095032,
+            "entropy": 8.488551139831543
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 0.75,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 5.884420394897461
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 4.781122243304471
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.8703277558088303,
+          "std": 0.043155260619429196,
+          "min": 0.757996141910553,
+          "p01": 0.7584637957811355,
+          "p10": 0.8224142968654633,
+          "p25": 0.8537481278181076,
+          "median": 0.8799299597740173,
+          "p75": 0.8997580111026764,
+          "p90": 0.9177633464336395,
+          "p99": 0.9329479485750198,
+          "max": 0.9363874793052673
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 13.672378471919469,
+          "std": 2.194776684493501,
+          "min": 9.720601081848145,
+          "p01": 9.958120517730713,
+          "p10": 11.02916431427002,
+          "p25": 12.178600072860718,
+          "median": 13.321592330932617,
+          "p75": 14.702691078186035,
+          "p90": 16.199256134033206,
+          "p99": 18.89489772796631,
+          "max": 18.913755416870117
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.0671277227146285,
+          "std": 0.04051395088376936,
+          "min": 0.01824089325964451,
+          "p01": 0.018900482822209595,
+          "p10": 0.025148826092481612,
+          "p25": 0.04295084532350302,
+          "median": 0.0538690984249115,
+          "p75": 0.08064055629074574,
+          "p90": 0.12188915684819225,
+          "p99": 0.16277275636792182,
+          "max": 0.16318011283874512
+        },
+        "unique_top1_tokens": 2,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.32081472873687744,
+            "entropy": 5.759308338165283
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2014450579881668,
+            "entropy": 5.447900772094727
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.24139265716075897,
+            "entropy": 5.349033832550049
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.15649771690368652,
+            "entropy": 5.889829158782959
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.33040323853492737,
+            "entropy": 4.804868221282959
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.3378646671772003,
+            "entropy": 5.484628200531006
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.1819680780172348,
+            "entropy": 6.495652198791504
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2887069582939148,
+            "entropy": 6.519085884094238
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.0,
+      "ffn_scale": 1.25,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 5.878234446048737
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 4.759071158256014
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.9591209867170879,
+          "std": 0.01409194915636234,
+          "min": 0.9188750386238098,
+          "p01": 0.9220729613304138,
+          "p10": 0.9452934503555298,
+          "p25": 0.9513461291790009,
+          "median": 0.9596747756004333,
+          "p75": 0.9692179709672928,
+          "p90": 0.9749200701713562,
+          "p99": 0.9802122271060943,
+          "max": 0.9812126159667969
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 7.700997284480503,
+          "std": 1.3154594507327397,
+          "min": 5.288254261016846,
+          "p01": 5.426669378280639,
+          "p10": 6.12346134185791,
+          "p25": 6.775170922279358,
+          "median": 7.759491682052612,
+          "p75": 8.521398067474365,
+          "p90": 9.041557598114014,
+          "p99": 10.770151720046998,
+          "max": 10.996064186096191
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.016793704009614885,
+          "std": 0.0075247161389256625,
+          "min": 0.005769843701273203,
+          "p01": 0.005949633135460317,
+          "p10": 0.00827535279095173,
+          "p25": 0.01148308627307415,
+          "median": 0.01476740138605237,
+          "p75": 0.0231324415653944,
+          "p90": 0.026632332429289817,
+          "p99": 0.03410721465945244,
+          "max": 0.03657568246126175
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.16268672049045563,
+            "entropy": 6.04304838180542
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.2572574317455292,
+            "entropy": 5.533567428588867
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.18293680250644684,
+            "entropy": 5.940904140472412
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.23724579811096191,
+            "entropy": 5.5606184005737305
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.25683942437171936,
+            "entropy": 5.393889427185059
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.15942810475826263,
+            "entropy": 5.807952404022217
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.17597344517707825,
+            "entropy": 6.406483173370361
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.1994449645280838,
+            "entropy": 5.854901313781738
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 0.0,
+      "ffn_scale": 1.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 6.2254299223423
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 5.347608181371141
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.9926790084157672,
+          "std": 0.003387530038730904,
+          "min": 0.9862195253372192,
+          "p01": 0.9868026322126389,
+          "p10": 0.9888400971889496,
+          "p25": 0.990804448723793,
+          "median": 0.9920200705528259,
+          "p75": 0.9953314363956451,
+          "p90": 0.9970359385013581,
+          "p99": 0.9997837221622468,
+          "max": 0.9999994039535522
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 3.1577517549906458,
+          "std": 0.9884824251525881,
+          "min": 0.02978309988975525,
+          "p01": 0.31684594839811325,
+          "p10": 2.105353569984436,
+          "p25": 2.6293514370918274,
+          "median": 3.454119086265564,
+          "p75": 3.707272469997406,
+          "p90": 4.08363790512085,
+          "p99": 4.440943231582642,
+          "max": 4.540827751159668
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.001003018281652755,
+          "std": 0.00048083362411728434,
+          "min": 1.8590378658700502e-07,
+          "p01": 4.1789428272522856e-05,
+          "p10": 0.0003210760507499799,
+          "p25": 0.0007834239077055827,
+          "median": 0.0010757241398096085,
+          "p75": 0.0011829871218651533,
+          "p90": 0.0014172554831020534,
+          "p99": 0.0020900529506616295,
+          "max": 0.0021458989940583706
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.13114096224308014,
+            "entropy": 5.926520347595215
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.13162223994731903,
+            "entropy": 5.98778772354126
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.13491521775722504,
+            "entropy": 5.9393534660339355
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.12872536480426788,
+            "entropy": 5.958752632141113
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.1226433664560318,
+            "entropy": 5.969133377075195
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.14090704917907715,
+            "entropy": 5.913331985473633
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.1347751021385193,
+            "entropy": 5.939681529998779
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.12601631879806519,
+            "entropy": 5.925365924835205
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 0.5,
+      "ffn_scale": 1.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 5.955056846141815
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 4.8843201588692775
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.9806845039129257,
+          "std": 0.006001711710742108,
+          "min": 0.9656662940979004,
+          "p01": 0.9660796010494233,
+          "p10": 0.9745823681354523,
+          "p25": 0.9772412031888962,
+          "median": 0.9807526469230652,
+          "p75": 0.9832132011651993,
+          "p90": 0.9875406742095947,
+          "p99": 0.992687439918518,
+          "max": 0.9937257766723633
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 5.305227807589939,
+          "std": 0.8526966406882908,
+          "min": 3.059340476989746,
+          "p01": 3.2838081550598144,
+          "p10": 4.315075635910034,
+          "p25": 5.009300947189331,
+          "median": 5.36453652381897,
+          "p75": 5.834549784660339,
+          "p90": 6.162416410446167,
+          "p99": 7.115077700614929,
+          "max": 7.157936096191406
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.0063382154580072635,
+          "std": 0.003078298329822908,
+          "min": 0.0024291393347084522,
+          "p01": 0.002453949034679681,
+          "p10": 0.0031678086612373594,
+          "p25": 0.004584206850267947,
+          "median": 0.0052656736224889755,
+          "p75": 0.007620035205036402,
+          "p90": 0.010613184701651335,
+          "p99": 0.01392339462414384,
+          "max": 0.014106912538409233
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.16251406073570251,
+            "entropy": 6.019470691680908
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.21202071011066437,
+            "entropy": 5.827507972717285
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.16984227299690247,
+            "entropy": 6.035566329956055
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.1999964565038681,
+            "entropy": 5.7559943199157715
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.2031935453414917,
+            "entropy": 5.7692999839782715
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.16175824403762817,
+            "entropy": 5.912683963775635
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.17506465315818787,
+            "entropy": 6.195146083831787
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.17305685579776764,
+            "entropy": 6.09808874130249
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.5,
+      "ffn_scale": 1.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 5.89472009241581
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 4.851650707803182
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.8337246030569077,
+          "std": 0.050121698785499096,
+          "min": 0.6994532346725464,
+          "p01": 0.7094014406204223,
+          "p10": 0.7756980299949646,
+          "p25": 0.807111844420433,
+          "median": 0.8372709155082703,
+          "p75": 0.8684173822402954,
+          "p90": 0.880189961194992,
+          "p99": 0.9224560850858688,
+          "max": 0.928187906742096
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 15.49661592074803,
+          "std": 2.3318616250303585,
+          "min": 10.324566841125488,
+          "p01": 10.702453956604003,
+          "p10": 13.280753326416015,
+          "p25": 13.94644045829773,
+          "median": 15.499439716339111,
+          "p75": 16.855995178222656,
+          "p90": 18.211800956726076,
+          "p99": 20.690884666442873,
+          "max": 21.049415588378906
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.0842062455069806,
+          "std": 0.04432024915887746,
+          "min": 0.023495683446526527,
+          "p01": 0.02448350900784135,
+          "p10": 0.03460819236934185,
+          "p25": 0.043110957369208336,
+          "median": 0.08046875894069672,
+          "p75": 0.11285183764994144,
+          "p90": 0.14856245517730712,
+          "p99": 0.18325296193361285,
+          "max": 0.1903543919324875
+        },
+        "unique_top1_tokens": 2,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.30593204498291016,
+            "entropy": 5.922941207885742
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.19489459693431854,
+            "entropy": 5.125558376312256
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.3037590980529785,
+            "entropy": 4.9763898849487305
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.15792348980903625,
+            "entropy": 6.071119785308838
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.3221244215965271,
+            "entropy": 4.475848197937012
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.31397923827171326,
+            "entropy": 5.692477703094482
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.15301766991615295,
+            "entropy": 6.83009147644043
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.34234076738357544,
+            "entropy": 6.2721052169799805
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 2.0,
+      "ffn_scale": 1.0,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 6.087701588869095
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 5.306726983252992
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.7671714233500617,
+          "std": 0.07220596260789162,
+          "min": 0.6112812161445618,
+          "p01": 0.6143989461660385,
+          "p10": 0.6573875427246094,
+          "p25": 0.7217010706663132,
+          "median": 0.7823682427406311,
+          "p75": 0.8083959221839905,
+          "p90": 0.8517898678779602,
+          "p99": 0.8920209908485413,
+          "max": 0.8943594694137573
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 18.24821424484253,
+          "std": 2.869353021831642,
+          "min": 12.460016250610352,
+          "p01": 12.587940883636474,
+          "p10": 14.71973991394043,
+          "p25": 16.73160696029663,
+          "median": 17.846020698547363,
+          "p75": 20.213645935058594,
+          "p90": 22.42286605834961,
+          "p99": 23.77464094161987,
+          "max": 23.86765480041504
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.11590701547850456,
+          "std": 0.05428520579894958,
+          "min": 0.019285792484879494,
+          "p01": 0.023637424986809492,
+          "p10": 0.04894608557224274,
+          "p25": 0.0683742705732584,
+          "median": 0.11746494099497795,
+          "p75": 0.1553112044930458,
+          "p90": 0.18231577128171922,
+          "p99": 0.2158237348496914,
+          "max": 0.2217133790254593
+        },
+        "unique_top1_tokens": 2,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.27941596508026123,
+            "entropy": 6.841657638549805
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.46935051679611206,
+            "entropy": 4.65791654586792
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.503176748752594,
+            "entropy": 4.471891403198242
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.12576372921466827,
+            "entropy": 7.826777935028076
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.5880159735679626,
+            "entropy": 3.8328378200531006
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.23214146494865417,
+            "entropy": 6.954318046569824
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1098,
+            "top1_token": "The",
+            "top1_probability": 0.08207812905311584,
+            "entropy": 7.501551628112793
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2306056022644043,
+            "entropy": 7.687851905822754
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 1.5,
+      "ffn_scale": 0.5,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 6.504489287734032
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 6.01171501154749
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.7870240935257503,
+          "std": 0.056782888892874056,
+          "min": 0.62967449426651,
+          "p01": 0.6506523728370667,
+          "p10": 0.7329914450645447,
+          "p25": 0.7487888932228088,
+          "median": 0.7833051383495331,
+          "p75": 0.8287841975688934,
+          "p90": 0.8502888381481171,
+          "p99": 0.8901641184091568,
+          "max": 0.8924695253372192
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 17.43647837638855,
+          "std": 2.3680029655564603,
+          "min": 12.49602222442627,
+          "p01": 12.63147180557251,
+          "p10": 14.753586292266846,
+          "p25": 15.766466617584229,
+          "median": 17.748313903808594,
+          "p75": 19.103278160095215,
+          "p90": 19.716209602355956,
+          "p99": 22.523692226409914,
+          "max": 23.209978103637695
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.09277776908129454,
+          "std": 0.03930323655471021,
+          "min": 0.03299097716808319,
+          "p01": 0.03637301675975323,
+          "p10": 0.05946481674909592,
+          "p25": 0.06495607271790504,
+          "median": 0.083194550126791,
+          "p75": 0.11285345442593098,
+          "p90": 0.1435811474919319,
+          "p99": 0.20014201134443285,
+          "max": 0.2204306721687317
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.12053988873958588,
+            "entropy": 8.232444763183594
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.3480111360549927,
+            "entropy": 5.786698341369629
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2596600651741028,
+            "entropy": 7.08040714263916
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.06131478399038315,
+            "entropy": 8.847549438476562
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.20437484979629517,
+            "entropy": 8.040882110595703
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.08272114396095276,
+            "entropy": 8.722582817077637
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.09884533286094666,
+            "entropy": 8.405961990356445
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.06587858498096466,
+            "entropy": 9.354351043701172
+          }
+        ]
+      }
+    },
+    {
+      "attention_scale": 2.0,
+      "ffn_scale": 0.5,
+      "raw": {
+        "sequences": 64,
+        "supervised_tokens": 8192,
+        "ce": 7.253588244318962
+      },
+      "instruction": {
+        "sequences": 32,
+        "supervised_tokens": 3102,
+        "ce": 7.004456825674464
+      },
+      "prompts": {
+        "hidden_cosine": {
+          "count": 28,
+          "mean": 0.8157322640929904,
+          "std": 0.05551877525659594,
+          "min": 0.6353247761726379,
+          "p01": 0.6608420789241791,
+          "p10": 0.7586568713188171,
+          "p25": 0.7860641628503799,
+          "median": 0.8178049325942993,
+          "p75": 0.8512570261955261,
+          "p90": 0.8815548598766327,
+          "p99": 0.8944733488559723,
+          "max": 0.8982447385787964
+        },
+        "hidden_distance": {
+          "count": 28,
+          "mean": 16.15891150065831,
+          "std": 2.375097600490695,
+          "min": 12.134101867675781,
+          "p01": 12.352609891891479,
+          "p10": 13.092051315307618,
+          "p25": 14.673600673675537,
+          "median": 16.2519588470459,
+          "p75": 17.616333961486816,
+          "p90": 18.70038585662842,
+          "p99": 22.119954013824465,
+          "max": 22.978002548217773
+        },
+        "distribution_jensen_shannon": {
+          "count": 28,
+          "mean": 0.08387096518916744,
+          "std": 0.040305423412879,
+          "min": 0.03334309905767441,
+          "p01": 0.03376648843288422,
+          "p10": 0.04227606952190399,
+          "p25": 0.05152842961251736,
+          "median": 0.0782947838306427,
+          "p75": 0.10260908119380474,
+          "p90": 0.13559713065624238,
+          "p99": 0.19116543799638752,
+          "max": 0.2085007131099701
+        },
+        "unique_top1_tokens": 1,
+        "records": [
+          {
+            "prompt_id": "reflective-recursion-cognition",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.07583905756473541,
+            "entropy": 8.804647445678711
+          },
+          {
+            "prompt_id": "seasons-explanation",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.2979375123977661,
+            "entropy": 6.2367987632751465
+          },
+          {
+            "prompt_id": "json-format-following",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.1324605941772461,
+            "entropy": 8.415685653686523
+          },
+          {
+            "prompt_id": "simple-deduction",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.04797332361340523,
+            "entropy": 8.977025985717773
+          },
+          {
+            "prompt_id": "summary-fidelity",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.10024647414684296,
+            "entropy": 9.046509742736816
+          },
+          {
+            "prompt_id": "python-palindrome",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.045093514025211334,
+            "entropy": 9.216266632080078
+          },
+          {
+            "prompt_id": "uncertainty-calibration",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.09113118052482605,
+            "entropy": 8.500060081481934
+          },
+          {
+            "prompt_id": "french-response",
+            "top1_token_id": 1463,
+            "top1_token": "**",
+            "top1_probability": 0.046189431101083755,
+            "entropy": 9.578801155090332
+          }
+        ]
+      }
+    }
+  ]
+}

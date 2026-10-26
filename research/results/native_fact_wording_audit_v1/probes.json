@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "training-00-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 0,
+    "operands": [
+      9,
+      10,
+      1
+    ],
+    "prompt": "A delivery contains 9 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "89"
+  },
+  {
+    "id": "training-00-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 0,
+    "operands": [
+      9,
+      10,
+      1
+    ],
+    "prompt": "An order consists of 9 racks with 10 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "89"
+  },
+  {
+    "id": "training-01-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 1,
+    "operands": [
+      30,
+      6,
+      1
+    ],
+    "prompt": "A delivery contains 30 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "179"
+  },
+  {
+    "id": "training-01-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 1,
+    "operands": [
+      30,
+      6,
+      1
+    ],
+    "prompt": "An order consists of 30 racks with 6 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "179"
+  },
+  {
+    "id": "training-02-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 2,
+    "operands": [
+      22,
+      9,
+      5
+    ],
+    "prompt": "A delivery contains 22 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "193"
+  },
+  {
+    "id": "training-02-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 2,
+    "operands": [
+      22,
+      9,
+      5
+    ],
+    "prompt": "An order consists of 22 racks with 9 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "193"
+  },
+  {
+    "id": "training-03-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 3,
+    "operands": [
+      23,
+      7,
+      3
+    ],
+    "prompt": "A delivery contains 23 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "158"
+  },
+  {
+    "id": "training-03-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 3,
+    "operands": [
+      23,
+      7,
+      3
+    ],
+    "prompt": "An order consists of 23 racks with 7 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "158"
+  },
+  {
+    "id": "training-04-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 4,
+    "operands": [
+      11,
+      2,
+      5
+    ],
+    "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "17"
+  },
+  {
+    "id": "training-04-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 4,
+    "operands": [
+      11,
+      2,
+      5
+    ],
+    "prompt": "An order consists of 11 racks with 2 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "17"
+  },
+  {
+    "id": "training-05-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 5,
+    "operands": [
+      14,
+      5,
+      3
+    ],
+    "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "67"
+  },
+  {
+    "id": "training-05-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 5,
+    "operands": [
+      14,
+      5,
+      3
+    ],
+    "prompt": "An order consists of 14 racks with 5 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "67"
+  },
+  {
+    "id": "training-06-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 6,
+    "operands": [
+      9,
+      8,
+      3
+    ],
+    "prompt": "A delivery contains 9 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "69"
+  },
+  {
+    "id": "training-06-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 6,
+    "operands": [
+      9,
+      8,
+      3
+    ],
+    "prompt": "An order consists of 9 racks with 8 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "69"
+  },
+  {
+    "id": "training-07-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 7,
+    "operands": [
+      20,
+      10,
+      2
+    ],
+    "prompt": "A delivery contains 20 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "198"
+  },
+  {
+    "id": "training-07-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 7,
+    "operands": [
+      20,
+      10,
+      2
+    ],
+    "prompt": "An order consists of 20 racks with 10 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "198"
+  },
+  {
+    "id": "training-08-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 8,
+    "operands": [
+      12,
+      4,
+      5
+    ],
+    "prompt": "A delivery contains 12 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "43"
+  },
+  {
+    "id": "training-08-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 8,
+    "operands": [
+      12,
+      4,
+      5
+    ],
+    "prompt": "An order consists of 12 racks with 4 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "43"
+  },
+  {
+    "id": "training-09-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 9,
+    "operands": [
+      4,
+      4,
+      1
+    ],
+    "prompt": "A delivery contains 4 trays holding 4 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "15"
+  },
+  {
+    "id": "training-09-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 9,
+    "operands": [
+      4,
+      4,
+      1
+    ],
+    "prompt": "An order consists of 4 racks with 4 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "15"
+  },
+  {
+    "id": "training-10-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 10,
+    "operands": [
+      26,
+      3,
+      1
+    ],
+    "prompt": "A delivery contains 26 trays holding 3 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "77"
+  },
+  {
+    "id": "training-10-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 10,
+    "operands": [
+      26,
+      3,
+      1
+    ],
+    "prompt": "An order consists of 26 racks with 3 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "77"
+  },
+  {
+    "id": "training-11-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 11,
+    "operands": [
+      10,
+      12,
+      1
+    ],
+    "prompt": "A delivery contains 10 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "119"
+  },
+  {
+    "id": "training-11-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 11,
+    "operands": [
+      10,
+      12,
+      1
+    ],
+    "prompt": "An order consists of 10 racks with 12 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "119"
+  },
+  {
+    "id": "training-12-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 12,
+    "operands": [
+      3,
+      6,
+      5
+    ],
+    "prompt": "A delivery contains 3 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "13"
+  },
+  {
+    "id": "training-12-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 12,
+    "operands": [
+      3,
+      6,
+      5
+    ],
+    "prompt": "An order consists of 3 racks with 6 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "13"
+  },
+  {
+    "id": "training-13-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 13,
+    "operands": [
+      11,
+      10,
+      2
+    ],
+    "prompt": "A delivery contains 11 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "108"
+  },
+  {
+    "id": "training-13-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 13,
+    "operands": [
+      11,
+      10,
+      2
+    ],
+    "prompt": "An order consists of 11 racks with 10 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "108"
+  },
+  {
+    "id": "training-14-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 14,
+    "operands": [
+      15,
+      12,
+      4
+    ],
+    "prompt": "A delivery contains 15 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "176"
+  },
+  {
+    "id": "training-14-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 14,
+    "operands": [
+      15,
+      12,
+      4
+    ],
+    "prompt": "An order consists of 15 racks with 12 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "176"
+  },
+  {
+    "id": "training-15-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 15,
+    "operands": [
+      18,
+      11,
+      4
+    ],
+    "prompt": "A delivery contains 18 trays holding 11 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "194"
+  },
+  {
+    "id": "training-15-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 15,
+    "operands": [
+      18,
+      11,
+      4
+    ],
+    "prompt": "An order consists of 18 racks with 11 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "194"
+  },
+  {
+    "id": "training-16-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 16,
+    "operands": [
+      20,
+      8,
+      4
+    ],
+    "prompt": "A delivery contains 20 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "156"
+  },
+  {
+    "id": "training-16-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 16,
+    "operands": [
+      20,
+      8,
+      4
+    ],
+    "prompt": "An order consists of 20 racks with 8 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "156"
+  },
+  {
+    "id": "training-17-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 17,
+    "operands": [
+      4,
+      9,
+      4
+    ],
+    "prompt": "A delivery contains 4 trays holding 9 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "32"
+  },
+  {
+    "id": "training-17-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 17,
+    "operands": [
+      4,
+      9,
+      4
+    ],
+    "prompt": "An order consists of 4 racks with 9 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "32"
+  },
+  {
+    "id": "training-18-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 18,
+    "operands": [
+      22,
+      7,
+      1
+    ],
+    "prompt": "A delivery contains 22 trays holding 7 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "153"
+  },
+  {
+    "id": "training-18-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 18,
+    "operands": [
+      22,
+      7,
+      1
+    ],
+    "prompt": "An order consists of 22 racks with 7 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "153"
+  },
+  {
+    "id": "training-19-training",
+    "fact_source": "training",
+    "wording": "training",
+    "case": 19,
+    "operands": [
+      6,
+      5,
+      1
+    ],
+    "prompt": "A delivery contains 6 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "29"
+  },
+  {
+    "id": "training-19-diagnostic",
+    "fact_source": "training",
+    "wording": "diagnostic",
+    "case": 19,
+    "operands": [
+      6,
+      5,
+      1
+    ],
+    "prompt": "An order consists of 6 racks with 5 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "29"
+  },
+  {
+    "id": "diagnostic-00-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 0,
+    "operands": [
+      5,
+      2,
+      1
+    ],
+    "prompt": "A delivery contains 5 trays holding 2 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "9"
+  },
+  {
+    "id": "diagnostic-00-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 0,
+    "operands": [
+      5,
+      2,
+      1
+    ],
+    "prompt": "An order consists of 5 racks with 2 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "9"
+  },
+  {
+    "id": "diagnostic-01-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 1,
+    "operands": [
+      6,
+      3,
+      2
+    ],
+    "prompt": "A delivery contains 6 trays holding 3 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "16"
+  },
+  {
+    "id": "diagnostic-01-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 1,
+    "operands": [
+      6,
+      3,
+      2
+    ],
+    "prompt": "An order consists of 6 racks with 3 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "16"
+  },
+  {
+    "id": "diagnostic-02-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 2,
+    "operands": [
+      7,
+      4,
+      3
+    ],
+    "prompt": "A delivery contains 7 trays holding 4 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "25"
+  },
+  {
+    "id": "diagnostic-02-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 2,
+    "operands": [
+      7,
+      4,
+      3
+    ],
+    "prompt": "An order consists of 7 racks with 4 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "25"
+  },
+  {
+    "id": "diagnostic-03-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 3,
+    "operands": [
+      8,
+      5,
+      4
+    ],
+    "prompt": "A delivery contains 8 trays holding 5 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "36"
+  },
+  {
+    "id": "diagnostic-03-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 3,
+    "operands": [
+      8,
+      5,
+      4
+    ],
+    "prompt": "An order consists of 8 racks with 5 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "36"
+  },
+  {
+    "id": "diagnostic-04-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 4,
+    "operands": [
+      9,
+      6,
+      5
+    ],
+    "prompt": "A delivery contains 9 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "49"
+  },
+  {
+    "id": "diagnostic-04-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 4,
+    "operands": [
+      9,
+      6,
+      5
+    ],
+    "prompt": "An order consists of 9 racks with 6 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "49"
+  },
+  {
+    "id": "diagnostic-05-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 5,
+    "operands": [
+      10,
+      7,
+      1
+    ],
+    "prompt": "A delivery contains 10 trays holding 7 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "69"
+  },
+  {
+    "id": "diagnostic-05-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 5,
+    "operands": [
+      10,
+      7,
+      1
+    ],
+    "prompt": "An order consists of 10 racks with 7 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "69"
+  },
+  {
+    "id": "diagnostic-06-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 6,
+    "operands": [
+      11,
+      8,
+      2
+    ],
+    "prompt": "A delivery contains 11 trays holding 8 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "86"
+  },
+  {
+    "id": "diagnostic-06-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 6,
+    "operands": [
+      11,
+      8,
+      2
+    ],
+    "prompt": "An order consists of 11 racks with 8 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "86"
+  },
+  {
+    "id": "diagnostic-07-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 7,
+    "operands": [
+      12,
+      2,
+      3
+    ],
+    "prompt": "A delivery contains 12 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "21"
+  },
+  {
+    "id": "diagnostic-07-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 7,
+    "operands": [
+      12,
+      2,
+      3
+    ],
+    "prompt": "An order consists of 12 racks with 2 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "21"
+  },
+  {
+    "id": "diagnostic-08-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 8,
+    "operands": [
+      13,
+      3,
+      4
+    ],
+    "prompt": "A delivery contains 13 trays holding 3 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "35"
+  },
+  {
+    "id": "diagnostic-08-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 8,
+    "operands": [
+      13,
+      3,
+      4
+    ],
+    "prompt": "An order consists of 13 racks with 3 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "35"
+  },
+  {
+    "id": "diagnostic-09-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 9,
+    "operands": [
+      14,
+      4,
+      5
+    ],
+    "prompt": "A delivery contains 14 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "51"
+  },
+  {
+    "id": "diagnostic-09-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 9,
+    "operands": [
+      14,
+      4,
+      5
+    ],
+    "prompt": "An order consists of 14 racks with 4 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "51"
+  },
+  {
+    "id": "diagnostic-10-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 10,
+    "operands": [
+      15,
+      5,
+      1
+    ],
+    "prompt": "A delivery contains 15 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "74"
+  },
+  {
+    "id": "diagnostic-10-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 10,
+    "operands": [
+      15,
+      5,
+      1
+    ],
+    "prompt": "An order consists of 15 racks with 5 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "74"
+  },
+  {
+    "id": "diagnostic-11-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 11,
+    "operands": [
+      16,
+      6,
+      2
+    ],
+    "prompt": "A delivery contains 16 trays holding 6 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "94"
+  },
+  {
+    "id": "diagnostic-11-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 11,
+    "operands": [
+      16,
+      6,
+      2
+    ],
+    "prompt": "An order consists of 16 racks with 6 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "94"
+  },
+  {
+    "id": "diagnostic-12-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 12,
+    "operands": [
+      17,
+      7,
+      3
+    ],
+    "prompt": "A delivery contains 17 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "116"
+  },
+  {
+    "id": "diagnostic-12-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 12,
+    "operands": [
+      17,
+      7,
+      3
+    ],
+    "prompt": "An order consists of 17 racks with 7 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "116"
+  },
+  {
+    "id": "diagnostic-13-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 13,
+    "operands": [
+      18,
+      8,
+      4
+    ],
+    "prompt": "A delivery contains 18 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "140"
+  },
+  {
+    "id": "diagnostic-13-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 13,
+    "operands": [
+      18,
+      8,
+      4
+    ],
+    "prompt": "An order consists of 18 racks with 8 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "140"
+  },
+  {
+    "id": "diagnostic-14-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 14,
+    "operands": [
+      19,
+      2,
+      5
+    ],
+    "prompt": "A delivery contains 19 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "33"
+  },
+  {
+    "id": "diagnostic-14-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 14,
+    "operands": [
+      19,
+      2,
+      5
+    ],
+    "prompt": "An order consists of 19 racks with 2 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "33"
+  },
+  {
+    "id": "diagnostic-15-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 15,
+    "operands": [
+      20,
+      3,
+      1
+    ],
+    "prompt": "A delivery contains 20 trays holding 3 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "59"
+  },
+  {
+    "id": "diagnostic-15-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 15,
+    "operands": [
+      20,
+      3,
+      1
+    ],
+    "prompt": "An order consists of 20 racks with 3 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "59"
+  },
+  {
+    "id": "diagnostic-16-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 16,
+    "operands": [
+      21,
+      4,
+      2
+    ],
+    "prompt": "A delivery contains 21 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "82"
+  },
+  {
+    "id": "diagnostic-16-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 16,
+    "operands": [
+      21,
+      4,
+      2
+    ],
+    "prompt": "An order consists of 21 racks with 4 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "82"
+  },
+  {
+    "id": "diagnostic-17-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 17,
+    "operands": [
+      22,
+      5,
+      3
+    ],
+    "prompt": "A delivery contains 22 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "107"
+  },
+  {
+    "id": "diagnostic-17-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 17,
+    "operands": [
+      22,
+      5,
+      3
+    ],
+    "prompt": "An order consists of 22 racks with 5 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "107"
+  },
+  {
+    "id": "diagnostic-18-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 18,
+    "operands": [
+      23,
+      6,
+      4
+    ],
+    "prompt": "A delivery contains 23 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "134"
+  },
+  {
+    "id": "diagnostic-18-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 18,
+    "operands": [
+      23,
+      6,
+      4
+    ],
+    "prompt": "An order consists of 23 racks with 6 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "134"
+  },
+  {
+    "id": "diagnostic-19-training",
+    "fact_source": "diagnostic",
+    "wording": "training",
+    "case": 19,
+    "operands": [
+      24,
+      7,
+      5
+    ],
+    "prompt": "A delivery contains 24 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+    "expected": "163"
+  },
+  {
+    "id": "diagnostic-19-diagnostic",
+    "fact_source": "diagnostic",
+    "wording": "diagnostic",
+    "case": 19,
+    "operands": [
+      24,
+      7,
+      5
+    ],
+    "prompt": "An order consists of 24 racks with 7 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+    "expected": "163"
+  }
+]

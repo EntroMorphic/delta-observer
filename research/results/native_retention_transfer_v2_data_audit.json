@@ -1,0 +1,13 @@
+{
+  "data": {
+    "target_groups": 128,
+    "unique_training_facts": 128,
+    "protected_examples": 4,
+    "tasks": 100,
+    "historical_suites_checked": 7,
+    "normalized_prompt_overlap": 0,
+    "arithmetic_train_fact_overlap": 0,
+    "tokenization_and_masks_verified": true,
+    "limit": "Exact overlap audit, not semantic near-duplicate or independent-blinding guarantee"
+  }
+}

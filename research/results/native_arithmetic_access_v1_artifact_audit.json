@@ -1,0 +1,257 @@
+{
+  "complete": true,
+  "checked_case_conditions": 760,
+  "verified_token_parity_cases": 280,
+  "numeric_support_size": 1000,
+  "inputs_tokens_and_frozen_scores_reproduce": true,
+  "source_checkpoint_hashes_unchanged": true,
+  "conditional_prefix_pairs": {
+    "baseline": {
+      "scope": "Continuation-only prefix diagnostic, NOT native exact compliance",
+      "continuation_exact": 1,
+      "vs_own_original": {
+        "content_gains": [],
+        "content_losses": [
+          "fresh-add-00",
+          "fresh-subtract-01",
+          "fresh-add-01",
+          "fresh-subtract-02",
+          "fresh-add-02",
+          "fresh-subtract-03",
+          "fresh-add-03",
+          "fresh-add-04",
+          "fresh-subtract-05",
+          "fresh-add-05",
+          "fresh-subtract-06",
+          "fresh-add-06",
+          "fresh-subtract-07",
+          "fresh-add-07",
+          "fresh-subtract-08",
+          "fresh-add-08",
+          "fresh-subtract-09",
+          "fresh-add-09",
+          "fresh-subtract-10",
+          "fresh-add-10",
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-12",
+          "fresh-add-12",
+          "fresh-subtract-13",
+          "fresh-add-13",
+          "fresh-subtract-14",
+          "fresh-add-14",
+          "fresh-subtract-15",
+          "fresh-add-15",
+          "fresh-subtract-16",
+          "fresh-add-16",
+          "fresh-subtract-17",
+          "fresh-add-17",
+          "fresh-subtract-18",
+          "fresh-add-18",
+          "fresh-subtract-19",
+          "fresh-add-19"
+        ]
+      },
+      "vs_native_original": {
+        "content_gains": [],
+        "content_losses": [
+          "fresh-add-00",
+          "fresh-subtract-01",
+          "fresh-add-01",
+          "fresh-subtract-02",
+          "fresh-add-02",
+          "fresh-subtract-03",
+          "fresh-add-03",
+          "fresh-add-04",
+          "fresh-subtract-05",
+          "fresh-add-05",
+          "fresh-subtract-06",
+          "fresh-add-06",
+          "fresh-subtract-07",
+          "fresh-add-07",
+          "fresh-subtract-08",
+          "fresh-add-08",
+          "fresh-subtract-09",
+          "fresh-add-09",
+          "fresh-subtract-10",
+          "fresh-add-10",
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-12",
+          "fresh-add-12",
+          "fresh-subtract-13",
+          "fresh-add-13",
+          "fresh-subtract-14",
+          "fresh-add-14",
+          "fresh-subtract-15",
+          "fresh-add-15",
+          "fresh-subtract-16",
+          "fresh-add-16",
+          "fresh-subtract-17",
+          "fresh-add-17",
+          "fresh-subtract-18",
+          "fresh-add-18",
+          "fresh-subtract-19",
+          "fresh-add-19"
+        ]
+      }
+    },
+    "ordinary-seed-0": {
+      "scope": "Continuation-only prefix diagnostic, NOT native exact compliance",
+      "continuation_exact": 14,
+      "vs_own_original": {
+        "content_gains": [
+          "fresh-subtract-03",
+          "fresh-subtract-06",
+          "fresh-subtract-08",
+          "fresh-subtract-09",
+          "fresh-add-10",
+          "fresh-add-15",
+          "fresh-add-17",
+          "fresh-subtract-18",
+          "fresh-add-18",
+          "fresh-add-19"
+        ],
+        "content_losses": [
+          "fresh-subtract-11",
+          "fresh-add-11"
+        ]
+      },
+      "vs_native_original": {
+        "content_gains": [],
+        "content_losses": [
+          "fresh-add-00",
+          "fresh-subtract-01",
+          "fresh-add-01",
+          "fresh-subtract-02",
+          "fresh-add-02",
+          "fresh-subtract-04",
+          "fresh-add-04",
+          "fresh-subtract-05",
+          "fresh-add-05",
+          "fresh-add-06",
+          "fresh-add-07",
+          "fresh-add-08",
+          "fresh-add-09",
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-12",
+          "fresh-add-12",
+          "fresh-subtract-13",
+          "fresh-add-13",
+          "fresh-subtract-14",
+          "fresh-add-14",
+          "fresh-subtract-15",
+          "fresh-subtract-16",
+          "fresh-subtract-17",
+          "fresh-subtract-19"
+        ]
+      }
+    },
+    "ordinary-seed-1": {
+      "scope": "Continuation-only prefix diagnostic, NOT native exact compliance",
+      "continuation_exact": 12,
+      "vs_own_original": {
+        "content_gains": [
+          "fresh-subtract-03",
+          "fresh-subtract-08",
+          "fresh-subtract-09",
+          "fresh-add-10",
+          "fresh-add-15",
+          "fresh-add-17",
+          "fresh-add-18",
+          "fresh-add-19"
+        ],
+        "content_losses": [
+          "fresh-subtract-07",
+          "fresh-subtract-11",
+          "fresh-add-11"
+        ]
+      },
+      "vs_native_original": {
+        "content_gains": [],
+        "content_losses": [
+          "fresh-add-00",
+          "fresh-subtract-01",
+          "fresh-add-01",
+          "fresh-subtract-02",
+          "fresh-add-02",
+          "fresh-subtract-04",
+          "fresh-add-04",
+          "fresh-subtract-05",
+          "fresh-add-05",
+          "fresh-add-06",
+          "fresh-subtract-07",
+          "fresh-add-07",
+          "fresh-add-08",
+          "fresh-add-09",
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-12",
+          "fresh-add-12",
+          "fresh-subtract-13",
+          "fresh-add-13",
+          "fresh-subtract-14",
+          "fresh-add-14",
+          "fresh-subtract-15",
+          "fresh-subtract-16",
+          "fresh-subtract-17",
+          "fresh-subtract-18",
+          "fresh-subtract-19"
+        ]
+      }
+    },
+    "ordinary-seed-2": {
+      "scope": "Continuation-only prefix diagnostic, NOT native exact compliance",
+      "continuation_exact": 15,
+      "vs_own_original": {
+        "content_gains": [
+          "fresh-subtract-03",
+          "fresh-subtract-09",
+          "fresh-add-09",
+          "fresh-add-10",
+          "fresh-add-15",
+          "fresh-add-17",
+          "fresh-add-18",
+          "fresh-add-19"
+        ],
+        "content_losses": [
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-15"
+        ]
+      },
+      "vs_native_original": {
+        "content_gains": [],
+        "content_losses": [
+          "fresh-add-00",
+          "fresh-subtract-01",
+          "fresh-add-01",
+          "fresh-subtract-02",
+          "fresh-add-02",
+          "fresh-subtract-04",
+          "fresh-add-04",
+          "fresh-subtract-05",
+          "fresh-add-05",
+          "fresh-add-06",
+          "fresh-add-07",
+          "fresh-add-08",
+          "fresh-subtract-11",
+          "fresh-add-11",
+          "fresh-subtract-12",
+          "fresh-add-12",
+          "fresh-subtract-13",
+          "fresh-add-13",
+          "fresh-subtract-14",
+          "fresh-add-14",
+          "fresh-subtract-15",
+          "fresh-subtract-16",
+          "fresh-subtract-17",
+          "fresh-subtract-19"
+        ]
+      }
+    }
+  },
+  "artifact_sha256": "dad9a87d9f60c5dcadc383d00a81f68f546126e11a3859abaaecf20b4a5196c6",
+  "scope": "Independent artifact reconstruction, not an independent model or blinded evaluation"
+}

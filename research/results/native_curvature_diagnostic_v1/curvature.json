@@ -1,0 +1,164 @@
+{
+  "scope": "exact FP32 Hessian directional derivatives on six in-sample CE losses",
+  "directions": "unit-norm current LoRA B tensors, A held fixed; groups all/attention/conv",
+  "not_a_full_hessian_or_quantization_map": true,
+  "no_quantization_performed": true,
+  "inference_speed_or_capability_gain_claimed": false,
+  "attention_implementation": "eager",
+  "parameterization_caveat": "LoRA-factor curvature is not native effective-weight curvature and depends on factor scaling",
+  "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/native-fit-ladder-rank8/checkpoint.pt",
+  "direction_norms_before_normalization": {
+    "all": 2.6638265782151596,
+    "attention": 1.2876602088220244,
+    "conv": 2.3319312222751996
+  },
+  "finite_difference_epsilon": 0.01,
+  "rows": [
+    {
+      "prompt": "A delivery contains 9 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "89",
+      "ce": 0.00205588829703629,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": 0.006412031594663858,
+          "directional_curvature": 0.027182552963495255
+        },
+        "attention": {
+          "gradient_dot_direction": 0.00938089843839407,
+          "directional_curvature": 0.06185333803296089
+        },
+        "conv": {
+          "gradient_dot_direction": 0.0021446296013891697,
+          "directional_curvature": 0.0028054770082235336
+        }
+      },
+      "actual_ce_minus_epsilon": 0.001992962323129177,
+      "actual_ce_plus_epsilon": 0.002121358411386609,
+      "symmetric_fd_first": 0.006419804412871599,
+      "symmetric_fd_second": 0.025441404432058334,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    },
+    {
+      "prompt": "A delivery contains 30 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "179",
+      "ce": 0.008417954668402672,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": -0.002876885235309601,
+          "directional_curvature": 0.010948711074888706
+        },
+        "attention": {
+          "gradient_dot_direction": -0.018214691430330276,
+          "directional_curvature": 0.04955817386507988
+        },
+        "conv": {
+          "gradient_dot_direction": 0.00677156075835228,
+          "directional_curvature": 0.009693778119981289
+        }
+      },
+      "actual_ce_minus_epsilon": 0.00844743475317955,
+      "actual_ce_plus_epsilon": 0.008389821276068687,
+      "symmetric_fd_first": -0.0028806738555431366,
+      "symmetric_fd_second": 0.01346692442893982,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    },
+    {
+      "prompt": "A delivery contains 22 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "193",
+      "ce": 0.0004096738121006638,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": -4.908153277938254e-05,
+          "directional_curvature": 0.0011862586252391338
+        },
+        "attention": {
+          "gradient_dot_direction": -8.576242544222623e-05,
+          "directional_curvature": 0.0011692808475345373
+        },
+        "conv": {
+          "gradient_dot_direction": -8.710281690582633e-06,
+          "directional_curvature": 0.0007193719502538443
+        }
+      },
+      "actual_ce_minus_epsilon": 0.00041020981734618545,
+      "actual_ce_plus_epsilon": 0.000409316475270316,
+      "symmetric_fd_first": -4.466710379347205e-05,
+      "symmetric_fd_second": 0.001786684151738882,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    },
+    {
+      "prompt": "A delivery contains 23 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "158",
+      "ce": 9.005465835798532e-05,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": -9.747403964865953e-06,
+          "directional_curvature": 0.0002639818121679127
+        },
+        "attention": {
+          "gradient_dot_direction": 0.00013264438894111663,
+          "directional_curvature": 0.0004833545535802841
+        },
+        "conv": {
+          "gradient_dot_direction": -8.437912038061768e-05,
+          "directional_curvature": 0.00024227720859926194
+        }
+      },
+      "actual_ce_minus_epsilon": 9.017384581966326e-05,
+      "actual_ce_plus_epsilon": 8.999506098916754e-05,
+      "symmetric_fd_first": -8.939241524785757e-06,
+      "symmetric_fd_second": 0.0005959009286016226,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    },
+    {
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "17",
+      "ce": 0.0007972918101586401,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": -0.000565526366699487,
+          "directional_curvature": 0.0023819159250706434
+        },
+        "attention": {
+          "gradient_dot_direction": 0.0005837533390149474,
+          "directional_curvature": 0.0024085126351565123
+        },
+        "conv": {
+          "gradient_dot_direction": -0.0009683562675490975,
+          "directional_curvature": 0.003512660041451454
+        }
+      },
+      "actual_ce_minus_epsilon": 0.0008031237521208823,
+      "actual_ce_plus_epsilon": 0.0007916978793218732,
+      "symmetric_fd_first": -0.0005712936399504542,
+      "symmetric_fd_second": 0.0023801112547516823,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    },
+    {
+      "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "response": "67",
+      "ce": 0.000322953041177243,
+      "directions": {
+        "all": {
+          "gradient_dot_direction": -0.0008924783323891461,
+          "directional_curvature": 0.0038042934611439705
+        },
+        "attention": {
+          "gradient_dot_direction": -0.0005633608088828623,
+          "directional_curvature": 0.002521344693377614
+        },
+        "conv": {
+          "gradient_dot_direction": -0.0007084213430061936,
+          "directional_curvature": 0.0021665766835212708
+        }
+      },
+      "actual_ce_minus_epsilon": 0.0003320070100016892,
+      "actual_ce_plus_epsilon": 0.00031425629276782274,
+      "symmetric_fd_first": -0.0008875358616933227,
+      "symmetric_fd_second": 0.0035722041502594948,
+      "finite_difference_note": "finite-step validation, not claimed exact Hessian entries"
+    }
+  ],
+  "perturbations_restored_exactly": true,
+  "complete": true
+}

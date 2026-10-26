@@ -1,0 +1,171 @@
+{
+  "data": {
+    "target_groups": 128,
+    "unique_training_facts": 128,
+    "protected_examples": 4,
+    "tasks": 100,
+    "historical_suites_checked": 7,
+    "normalized_prompt_overlap": 0,
+    "arithmetic_train_fact_overlap": 0,
+    "tokenization_and_masks_verified": true,
+    "limit": "Exact overlap audit, not semantic near-duplicate or independent-blinding guarantee"
+  },
+  "training": {
+    "ordinary-seed-0": {
+      "training_sha256": "9e3735f99cfaf52ebfbb661e10c473c50a58103995e18febc2791af07aeb266e",
+      "checkpoint_sha256": "4215a4d20ef6a5ff5a8b2bb5ff5b0045864486ddf9ccd82e1f0696bc9b43696b",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.8973538018496328e-18,
+      "max_absolute_realized_dot": 0.003633192385934455,
+      "retention_ce_increase_steps_per_example": [
+        80,
+        71,
+        80,
+        76
+      ]
+    },
+    "projected-seed-0": {
+      "training_sha256": "0efe7943ec218eb0b9d8f679234dc041e60484abe1bee4cbfe8e0bcc8f365fd4",
+      "checkpoint_sha256": "817a6232246287b8d0a38c3a6f584287935482bceb29c8d7c3d4352d9e8b1e74",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.2468324983583301e-18,
+      "max_absolute_realized_dot": 7.845537585072409e-10,
+      "retention_ce_increase_steps_per_example": [
+        122,
+        115,
+        118,
+        120
+      ]
+    },
+    "replay-seed-0": {
+      "training_sha256": "441e0fc15a853d713ee31280200f87a2b134b265c21dcd8ba0c8d551a7642d55",
+      "checkpoint_sha256": "85d7e09fce20ef1a2b06a690e136acfdda16e2aec269d7a1d5491e80413726d6",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 2.656295322589486e-18,
+      "max_absolute_realized_dot": 0.0038555290734401237,
+      "retention_ce_increase_steps_per_example": [
+        15,
+        13,
+        47,
+        51
+      ]
+    },
+    "random-seed-0": {
+      "training_sha256": "a5070ffa8254e058ac08b1ba3be8dd702582847e3895892eec28deccbce4baa6",
+      "checkpoint_sha256": "8b8e8a43dcced184f1b929a48ee9f39b2c0e22e3bd15dc914258aa8373a9d826",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.6263032587282567e-18,
+      "max_absolute_realized_dot": 0.003630669625471591,
+      "retention_ce_increase_steps_per_example": [
+        80,
+        71,
+        79,
+        76
+      ]
+    },
+    "ordinary-seed-1": {
+      "training_sha256": "a4b940eda9ac0cc902fd05edf0c8bf2041368cac5009ffa6400a78f957e55f89",
+      "checkpoint_sha256": "f90df95b79fb7b17bbb282b65584d054f37c140c796fcd974f80da6837fc438a",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.7889335846010823e-18,
+      "max_absolute_realized_dot": 0.0034322290152759244,
+      "retention_ce_increase_steps_per_example": [
+        86,
+        68,
+        88,
+        90
+      ]
+    },
+    "projected-seed-1": {
+      "training_sha256": "5a34d0a1a210573df2ecef303749ba119495360d7ec11fc7d34af4931f97e236",
+      "checkpoint_sha256": "eadbb9142c55630aafd7834e4a1053643ce779d8ed9ebd51480465ff51585601",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.2468324983583301e-18,
+      "max_absolute_realized_dot": 6.814659941895137e-10,
+      "retention_ce_increase_steps_per_example": [
+        121,
+        113,
+        103,
+        121
+      ]
+    },
+    "replay-seed-1": {
+      "training_sha256": "25d7b80d3f151fcacba8cf63ad97b31b8b90985f55cfe88e645ee463f75d5ebd",
+      "checkpoint_sha256": "dfde08395dd05aa6bd4837ed8b7ae603ef5dcf6956be4f196984be2365d3f082",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.9786689647860456e-18,
+      "max_absolute_realized_dot": 0.0034797401420592297,
+      "retention_ce_increase_steps_per_example": [
+        14,
+        8,
+        39,
+        59
+      ]
+    },
+    "random-seed-1": {
+      "training_sha256": "1bfb94babe96c0b0721feab5943077f60c65bda4311a0b60d32ff7f9e158de1e",
+      "checkpoint_sha256": "0b8e00adc876b9d4a1e798f89c14930175c4afc0bdba8a28ca064d4f119ff3b9",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.9109063290057016e-18,
+      "max_absolute_realized_dot": 0.0034387627648234218,
+      "retention_ce_increase_steps_per_example": [
+        86,
+        68,
+        88,
+        90
+      ]
+    },
+    "ordinary-seed-2": {
+      "training_sha256": "0a65baaec3c9ebedddece6e9dfc8701602929bc2983ad16f8848c37fe0a1cf66",
+      "checkpoint_sha256": "0eaa65f881f269a5a6d537e30d2e3c4d0140e2adb00f9f7353174cbe23e78919",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.8431436932253575e-18,
+      "max_absolute_realized_dot": 0.005547781063835013,
+      "retention_ce_increase_steps_per_example": [
+        68,
+        57,
+        76,
+        76
+      ]
+    },
+    "projected-seed-2": {
+      "training_sha256": "b6d26a5b5517046a46f4291401ba982d60bbc48eafef1f639fa870e3ed9b4ab3",
+      "checkpoint_sha256": "c58d37d2505311b311e196497e814184eda493d1547fbf013b678630568415e9",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 1.111307226797642e-18,
+      "max_absolute_realized_dot": 7.271219695751817e-10,
+      "retention_ce_increase_steps_per_example": [
+        120,
+        116,
+        121,
+        123
+      ]
+    },
+    "replay-seed-2": {
+      "training_sha256": "4274e1a385d112457f2e2203a3cd4e937503147582a98d78a4e74b86a5c344a4",
+      "checkpoint_sha256": "3a7373ee565e7b1fa861acf85ab3c74969b9f95439c5dffdf46b29c3575fd09d",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 3.5236570605778894e-18,
+      "max_absolute_realized_dot": 0.00453316984053685,
+      "retention_ce_increase_steps_per_example": [
+        10,
+        7,
+        33,
+        51
+      ]
+    },
+    "random-seed-2": {
+      "training_sha256": "de0ee7fe645e12944d620c9ae879f49465d5611cca32811374ee986046b38d82",
+      "checkpoint_sha256": "2096c74be83464d3509117cc438f21d6f09f9b51cf9971ac7115af1676a43ddc",
+      "zero_projection_steps": 0,
+      "max_absolute_ideal_projected_dot": 2.520770051028798e-18,
+      "max_absolute_realized_dot": 0.0055392343102911665,
+      "retention_ce_increase_steps_per_example": [
+        68,
+        57,
+        76,
+        76
+      ]
+    }
+  }
+}

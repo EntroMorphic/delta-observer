@@ -1,0 +1,160 @@
+{
+  "r2": {
+    "parameters": 27973248,
+    "input_geometry": {
+      "shape": [
+        65536,
+        384
+      ],
+      "mean": -0.00836631003767252,
+      "std": 0.06558769941329956,
+      "row_norm": {
+        "count": 65536,
+        "mean": 1.2345755100250244,
+        "std": 0.39315637946128845,
+        "min": 0.4909566044807434,
+        "p01": 0.5815021395683289,
+        "p10": 0.6910644173622131,
+        "p25": 0.8509670495986938,
+        "median": 1.2665824890136719,
+        "p75": 1.6202528476715088,
+        "p90": 1.6903448104858398,
+        "p99": 1.774521827697754,
+        "max": 1.8829761743545532
+      },
+      "effective_rank": 30.44049072265625,
+      "stable_rank": 1.9085880517959595,
+      "top_1_variance_fraction": 0.523947536945343,
+      "top_16_variance_fraction": 0.6150903105735779,
+      "top_64_variance_fraction": 0.6946723461151123,
+      "zero_norm_rows": 0
+    },
+    "raw_validation": {
+      "ce": 6.262667348608375,
+      "distillation": 3.562855491414666,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 5.081088493578136,
+      "teacher_top1_agreement": 0.227264404296875,
+      "batches": 256,
+      "normalized_ce_retention": 0.8033738600874049,
+      "perplexity_ratio_to_teacher": 3.2595164463304354
+    },
+    "instruction_validation": {
+      "ce": 6.054766122023572,
+      "distillation": 5.1797898542796466,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 0.4468451390855932,
+      "teacher_top1_agreement": 0.16634429563713565,
+      "supervised_tokens": 3102,
+      "batches": 16
+    }
+  },
+  "tied_512": {
+    "parameters": 27973248,
+    "input_geometry": {
+      "shape": [
+        65536,
+        384
+      ],
+      "mean": -0.010823124088346958,
+      "std": 0.07198305428028107,
+      "row_norm": {
+        "count": 65536,
+        "mean": 1.3523178100585938,
+        "std": 0.45380306243896484,
+        "min": 0.4838358163833618,
+        "p01": 0.5860683917999268,
+        "p10": 0.716701865196228,
+        "p25": 0.921987771987915,
+        "median": 1.380062460899353,
+        "p75": 1.810657024383545,
+        "p90": 1.8731967210769653,
+        "p99": 1.942909598350525,
+        "max": 2.0302958488464355
+      },
+      "effective_rank": 21.229591369628906,
+      "stable_rank": 1.7005695104599,
+      "top_1_variance_fraction": 0.5880382657051086,
+      "top_16_variance_fraction": 0.6554790139198303,
+      "top_64_variance_fraction": 0.7232638001441956,
+      "zero_norm_rows": 0
+    },
+    "raw_validation": {
+      "ce": 6.211747992783785,
+      "distillation": 3.4762619994580746,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 5.081088493578136,
+      "teacher_top1_agreement": 0.238433837890625,
+      "supervised_tokens": 65536,
+      "batches": 256,
+      "normalized_ce_retention": 0.8118473329665118,
+      "perplexity_ratio_to_teacher": 3.0976987564867082
+    },
+    "instruction_validation": {
+      "ce": 5.64312083993244,
+      "distillation": 4.767938438190482,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 0.4468451390855932,
+      "teacher_top1_agreement": 0.20373952242730126,
+      "supervised_tokens": 3102,
+      "batches": 16
+    }
+  },
+  "rank96_512": {
+    "parameters": 34301568,
+    "input_geometry": {
+      "shape": [
+        65536,
+        384
+      ],
+      "mean": -0.008363177999854088,
+      "std": 0.06556187570095062,
+      "row_norm": {
+        "count": 65536,
+        "mean": 1.2342238426208496,
+        "std": 0.39258113503456116,
+        "min": 0.49161022901535034,
+        "p01": 0.5831524133682251,
+        "p10": 0.6917120218276978,
+        "p25": 0.8510590195655823,
+        "median": 1.26590895652771,
+        "p75": 1.6194121837615967,
+        "p90": 1.6894662380218506,
+        "p99": 1.7734322547912598,
+        "max": 1.8819974660873413
+      },
+      "effective_rank": 30.517845153808594,
+      "stable_rank": 1.9102625846862793,
+      "top_1_variance_fraction": 0.5234882235527039,
+      "top_16_variance_fraction": 0.6147707104682922,
+      "top_64_variance_fraction": 0.6945728659629822,
+      "zero_norm_rows": 0
+    },
+    "raw_validation": {
+      "ce": 6.302520576864481,
+      "distillation": 3.611853807233274,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 5.081088493578136,
+      "teacher_top1_agreement": 0.228179931640625,
+      "supervised_tokens": 65536,
+      "batches": 256,
+      "normalized_ce_retention": 0.7967418977755427,
+      "perplexity_ratio_to_teacher": 3.3920419435492097
+    },
+    "instruction_validation": {
+      "ce": 5.698474147256769,
+      "distillation": 4.818075013575748,
+      "state": 0.0,
+      "delta": 0.0,
+      "teacher_ce": 0.4468451390855932,
+      "teacher_top1_agreement": 0.19535783261810097,
+      "supervised_tokens": 3102,
+      "batches": 16
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "experiment": "Observer.D-LFM mixed raw/conversational pilot",
+  "status": "valid negative coherence result with quantitative improvement",
+  "compression": 12.672249143181372,
+  "initial_checkpoint": "R2 output distillation",
+  "schedule": {
+    "raw_sequences": 8192,
+    "instruction_sequences": 1024,
+    "unique_instruction_sequences": 128,
+    "instruction_repetition": 8,
+    "instruction_batch_fraction": 0.1111111111111111,
+    "steps": 4608,
+    "elapsed_seconds": 678.2474427089983,
+    "learning_rate": 0.0001
+  },
+  "instruction_validation": {
+    "cross_entropy": 4.83732193658461,
+    "normalized_ce_retention": 0.5874972729224788,
+    "teacher_top1_agreement": 0.28110896268538854,
+    "teacher_cross_entropy": 0.4468451390855932
+  },
+  "raw_validation": {
+    "cross_entropy": 5.9874492939561605,
+    "normalized_ce_retention": 0.8491728040090389,
+    "teacher_top1_agreement": 0.2580108642578125,
+    "teacher_cross_entropy": 5.081088493578136
+  },
+  "prompt_suite": {
+    "suite_version": 2,
+    "coherent": 0,
+    "total": 8,
+    "result": "research/results/lfm_mixed_pilot_prompts.json",
+    "frozen_prompt_passed": false
+  },
+  "conclusion": "Interleaving raw and conversational batches improves held-out CE in both domains and avoids the instruction-only forgetting seen at four epochs. It does not produce coherent free generation on any registered prompt. Repetition of 128 conversations is insufficient; increase unique conversational diversity before R3 rather than repeating this schedule."
+}

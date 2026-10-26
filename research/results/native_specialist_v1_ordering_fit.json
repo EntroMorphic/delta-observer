@@ -1,0 +1,2275 @@
+{
+  "scope": "in-sample generation diagnostic, not generalization",
+  "modes": {
+    "multiply": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "subtract": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "compound_final": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "chronology": {
+      "examples": 80,
+      "strict_passes": 80
+    },
+    "relations": {
+      "examples": 80,
+      "strict_passes": 80
+    },
+    "chain": {
+      "examples": 80,
+      "strict_passes": 80
+    },
+    "inverted": {
+      "examples": 80,
+      "strict_passes": 80
+    }
+  },
+  "rows": [
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3001 follows S2001, which follows R1001. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1001",
+      "response": "R1001",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3001 follows S2001, which follows R1001. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3001",
+      "response": "T3001",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2002 follows R1002, which follows T3002. Select the first of those three events. Output only its identifier.",
+      "expected": "T3002",
+      "response": "T3002",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2002 follows R1002, which follows T3002. Select the last of those three events. Output only its identifier.",
+      "expected": "S2002",
+      "response": "S2002",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3003 follows S2003, which follows R1003. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1003",
+      "response": "R1003",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3003 follows S2003, which follows R1003. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3003",
+      "response": "T3003",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3004 follows S2004, which follows R1004. Select the first of those three events. Output only its identifier.",
+      "expected": "R1004",
+      "response": "R1004",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3004 follows S2004, which follows R1004. Select the last of those three events. Output only its identifier.",
+      "expected": "T3004",
+      "response": "T3004",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1005 follows S2005, which follows T3005. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3005",
+      "response": "T3005",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1005 follows S2005, which follows T3005. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1005",
+      "response": "R1005",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3006 follows R1006, which follows S2006. Select the first of those three events. Output only its identifier.",
+      "expected": "S2006",
+      "response": "S2006",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3006 follows R1006, which follows S2006. Select the last of those three events. Output only its identifier.",
+      "expected": "T3006",
+      "response": "T3006",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1007 follows S2007, which follows T3007. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3007",
+      "response": "T3007",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1007 follows S2007, which follows T3007. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1007",
+      "response": "R1007",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1008 follows S2008, which follows T3008. Select the first of those three events. Output only its identifier.",
+      "expected": "T3008",
+      "response": "T3008",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1008 follows S2008, which follows T3008. Select the last of those three events. Output only its identifier.",
+      "expected": "R1008",
+      "response": "R1008",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1009 follows S2009, which follows T3009. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3009",
+      "response": "T3009",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1009 follows S2009, which follows T3009. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1009",
+      "response": "R1009",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1010 follows T3010, which follows S2010. Select the first of those three events. Output only its identifier.",
+      "expected": "S2010",
+      "response": "S2010",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1010 follows T3010, which follows S2010. Select the last of those three events. Output only its identifier.",
+      "expected": "R1010",
+      "response": "R1010",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1011 follows S2011, which follows T3011. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3011",
+      "response": "T3011",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1011 follows S2011, which follows T3011. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1011",
+      "response": "R1011",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3012 follows R1012, which follows S2012. Select the first of those three events. Output only its identifier.",
+      "expected": "S2012",
+      "response": "S2012",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3012 follows R1012, which follows S2012. Select the last of those three events. Output only its identifier.",
+      "expected": "T3012",
+      "response": "T3012",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3013 follows R1013, which follows S2013. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2013",
+      "response": "S2013",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3013 follows R1013, which follows S2013. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3013",
+      "response": "T3013",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1014 follows S2014, which follows T3014. Select the first of those three events. Output only its identifier.",
+      "expected": "T3014",
+      "response": "T3014",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1014 follows S2014, which follows T3014. Select the last of those three events. Output only its identifier.",
+      "expected": "R1014",
+      "response": "R1014",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3015 follows S2015, which follows R1015. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1015",
+      "response": "R1015",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3015 follows S2015, which follows R1015. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3015",
+      "response": "T3015",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2016 follows R1016, which follows T3016. Select the first of those three events. Output only its identifier.",
+      "expected": "T3016",
+      "response": "T3016",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2016 follows R1016, which follows T3016. Select the last of those three events. Output only its identifier.",
+      "expected": "S2016",
+      "response": "S2016",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3017 follows R1017, which follows S2017. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2017",
+      "response": "S2017",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3017 follows R1017, which follows S2017. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3017",
+      "response": "T3017",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2018 follows T3018, which follows R1018. Select the first of those three events. Output only its identifier.",
+      "expected": "R1018",
+      "response": "R1018",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2018 follows T3018, which follows R1018. Select the last of those three events. Output only its identifier.",
+      "expected": "S2018",
+      "response": "S2018",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1019 follows S2019, which follows T3019. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3019",
+      "response": "T3019",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1019 follows S2019, which follows T3019. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1019",
+      "response": "R1019",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2020 follows T3020, which follows R1020. Select the first of those three events. Output only its identifier.",
+      "expected": "R1020",
+      "response": "R1020",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2020 follows T3020, which follows R1020. Select the last of those three events. Output only its identifier.",
+      "expected": "S2020",
+      "response": "S2020",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3021 follows S2021, which follows R1021. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1021",
+      "response": "R1021",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3021 follows S2021, which follows R1021. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3021",
+      "response": "T3021",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1022 follows S2022, which follows T3022. Select the first of those three events. Output only its identifier.",
+      "expected": "T3022",
+      "response": "T3022",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1022 follows S2022, which follows T3022. Select the last of those three events. Output only its identifier.",
+      "expected": "R1022",
+      "response": "R1022",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2023 follows R1023, which follows T3023. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3023",
+      "response": "T3023",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2023 follows R1023, which follows T3023. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2023",
+      "response": "S2023",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3024 follows S2024, which follows R1024. Select the first of those three events. Output only its identifier.",
+      "expected": "R1024",
+      "response": "R1024",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3024 follows S2024, which follows R1024. Select the last of those three events. Output only its identifier.",
+      "expected": "T3024",
+      "response": "T3024",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3025 follows R1025, which follows S2025. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2025",
+      "response": "S2025",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3025 follows R1025, which follows S2025. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3025",
+      "response": "T3025",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2026 follows R1026, which follows T3026. Select the first of those three events. Output only its identifier.",
+      "expected": "T3026",
+      "response": "T3026",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2026 follows R1026, which follows T3026. Select the last of those three events. Output only its identifier.",
+      "expected": "S2026",
+      "response": "S2026",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2027 follows R1027, which follows T3027. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3027",
+      "response": "T3027",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2027 follows R1027, which follows T3027. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2027",
+      "response": "S2027",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2028 follows R1028, which follows T3028. Select the first of those three events. Output only its identifier.",
+      "expected": "T3028",
+      "response": "T3028",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2028 follows R1028, which follows T3028. Select the last of those three events. Output only its identifier.",
+      "expected": "S2028",
+      "response": "S2028",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1029 follows S2029, which follows T3029. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3029",
+      "response": "T3029",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1029 follows S2029, which follows T3029. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1029",
+      "response": "R1029",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1030 follows T3030, which follows S2030. Select the first of those three events. Output only its identifier.",
+      "expected": "S2030",
+      "response": "S2030",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1030 follows T3030, which follows S2030. Select the last of those three events. Output only its identifier.",
+      "expected": "R1030",
+      "response": "R1030",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2031 follows R1031, which follows T3031. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3031",
+      "response": "T3031",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2031 follows R1031, which follows T3031. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2031",
+      "response": "S2031",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2032 follows T3032, which follows R1032. Select the first of those three events. Output only its identifier.",
+      "expected": "R1032",
+      "response": "R1032",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2032 follows T3032, which follows R1032. Select the last of those three events. Output only its identifier.",
+      "expected": "S2032",
+      "response": "S2032",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1033 follows S2033, which follows T3033. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3033",
+      "response": "T3033",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1033 follows S2033, which follows T3033. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1033",
+      "response": "R1033",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2034 follows T3034, which follows R1034. Select the first of those three events. Output only its identifier.",
+      "expected": "R1034",
+      "response": "R1034",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2034 follows T3034, which follows R1034. Select the last of those three events. Output only its identifier.",
+      "expected": "S2034",
+      "response": "S2034",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3035 follows S2035, which follows R1035. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1035",
+      "response": "R1035",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3035 follows S2035, which follows R1035. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3035",
+      "response": "T3035",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1036 follows S2036, which follows T3036. Select the first of those three events. Output only its identifier.",
+      "expected": "T3036",
+      "response": "T3036",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: R1036 follows S2036, which follows T3036. Select the last of those three events. Output only its identifier.",
+      "expected": "R1036",
+      "response": "R1036",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3037 follows S2037, which follows R1037. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1037",
+      "response": "R1037",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3037 follows S2037, which follows R1037. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3037",
+      "response": "T3037",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2038 follows T3038, which follows R1038. Select the first of those three events. Output only its identifier.",
+      "expected": "R1038",
+      "response": "R1038",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: S2038 follows T3038, which follows R1038. Select the last of those three events. Output only its identifier.",
+      "expected": "S2038",
+      "response": "S2038",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3039 follows S2039, which follows R1039. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1039",
+      "response": "R1039",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3039 follows S2039, which follows R1039. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3039",
+      "response": "T3039",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3040 follows R1040, which follows S2040. Select the first of those three events. Output only its identifier.",
+      "expected": "S2040",
+      "response": "S2040",
+      "strict": true
+    },
+    {
+      "mode": "chronology",
+      "prompt": "Chronology: T3040 follows R1040, which follows S2040. Select the last of those three events. Output only its identifier.",
+      "expected": "T3040",
+      "response": "T3040",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1001 occurs before S2001; T3001 occurs after S2001. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1001",
+      "response": "R1001",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1001 occurs before S2001; T3001 occurs after S2001. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3001",
+      "response": "T3001",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3002 occurs before R1002; S2002 occurs after R1002. Select the first of those three events. Output only its identifier.",
+      "expected": "T3002",
+      "response": "T3002",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3002 occurs before R1002; S2002 occurs after R1002. Select the last of those three events. Output only its identifier.",
+      "expected": "S2002",
+      "response": "S2002",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1003 occurs before S2003; T3003 occurs after S2003. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1003",
+      "response": "R1003",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1003 occurs before S2003; T3003 occurs after S2003. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3003",
+      "response": "T3003",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1004 occurs before S2004; T3004 occurs after S2004. Select the first of those three events. Output only its identifier.",
+      "expected": "R1004",
+      "response": "R1004",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1004 occurs before S2004; T3004 occurs after S2004. Select the last of those three events. Output only its identifier.",
+      "expected": "T3004",
+      "response": "T3004",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3005 occurs before S2005; R1005 occurs after S2005. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3005",
+      "response": "T3005",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3005 occurs before S2005; R1005 occurs after S2005. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1005",
+      "response": "R1005",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2006 occurs before R1006; T3006 occurs after R1006. Select the first of those three events. Output only its identifier.",
+      "expected": "S2006",
+      "response": "S2006",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2006 occurs before R1006; T3006 occurs after R1006. Select the last of those three events. Output only its identifier.",
+      "expected": "T3006",
+      "response": "T3006",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3007 occurs before S2007; R1007 occurs after S2007. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3007",
+      "response": "T3007",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3007 occurs before S2007; R1007 occurs after S2007. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1007",
+      "response": "R1007",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3008 occurs before S2008; R1008 occurs after S2008. Select the first of those three events. Output only its identifier.",
+      "expected": "T3008",
+      "response": "T3008",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3008 occurs before S2008; R1008 occurs after S2008. Select the last of those three events. Output only its identifier.",
+      "expected": "R1008",
+      "response": "R1008",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3009 occurs before S2009; R1009 occurs after S2009. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3009",
+      "response": "T3009",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3009 occurs before S2009; R1009 occurs after S2009. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1009",
+      "response": "R1009",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2010 occurs before T3010; R1010 occurs after T3010. Select the first of those three events. Output only its identifier.",
+      "expected": "S2010",
+      "response": "S2010",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2010 occurs before T3010; R1010 occurs after T3010. Select the last of those three events. Output only its identifier.",
+      "expected": "R1010",
+      "response": "R1010",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3011 occurs before S2011; R1011 occurs after S2011. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3011",
+      "response": "T3011",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3011 occurs before S2011; R1011 occurs after S2011. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1011",
+      "response": "R1011",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2012 occurs before R1012; T3012 occurs after R1012. Select the first of those three events. Output only its identifier.",
+      "expected": "S2012",
+      "response": "S2012",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2012 occurs before R1012; T3012 occurs after R1012. Select the last of those three events. Output only its identifier.",
+      "expected": "T3012",
+      "response": "T3012",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2013 occurs before R1013; T3013 occurs after R1013. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2013",
+      "response": "S2013",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2013 occurs before R1013; T3013 occurs after R1013. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3013",
+      "response": "T3013",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3014 occurs before S2014; R1014 occurs after S2014. Select the first of those three events. Output only its identifier.",
+      "expected": "T3014",
+      "response": "T3014",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3014 occurs before S2014; R1014 occurs after S2014. Select the last of those three events. Output only its identifier.",
+      "expected": "R1014",
+      "response": "R1014",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1015 occurs before S2015; T3015 occurs after S2015. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1015",
+      "response": "R1015",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1015 occurs before S2015; T3015 occurs after S2015. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3015",
+      "response": "T3015",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3016 occurs before R1016; S2016 occurs after R1016. Select the first of those three events. Output only its identifier.",
+      "expected": "T3016",
+      "response": "T3016",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3016 occurs before R1016; S2016 occurs after R1016. Select the last of those three events. Output only its identifier.",
+      "expected": "S2016",
+      "response": "S2016",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2017 occurs before R1017; T3017 occurs after R1017. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2017",
+      "response": "S2017",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2017 occurs before R1017; T3017 occurs after R1017. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3017",
+      "response": "T3017",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1018 occurs before T3018; S2018 occurs after T3018. Select the first of those three events. Output only its identifier.",
+      "expected": "R1018",
+      "response": "R1018",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1018 occurs before T3018; S2018 occurs after T3018. Select the last of those three events. Output only its identifier.",
+      "expected": "S2018",
+      "response": "S2018",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3019 occurs before S2019; R1019 occurs after S2019. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3019",
+      "response": "T3019",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3019 occurs before S2019; R1019 occurs after S2019. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1019",
+      "response": "R1019",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1020 occurs before T3020; S2020 occurs after T3020. Select the first of those three events. Output only its identifier.",
+      "expected": "R1020",
+      "response": "R1020",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1020 occurs before T3020; S2020 occurs after T3020. Select the last of those three events. Output only its identifier.",
+      "expected": "S2020",
+      "response": "S2020",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1021 occurs before S2021; T3021 occurs after S2021. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1021",
+      "response": "R1021",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1021 occurs before S2021; T3021 occurs after S2021. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3021",
+      "response": "T3021",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3022 occurs before S2022; R1022 occurs after S2022. Select the first of those three events. Output only its identifier.",
+      "expected": "T3022",
+      "response": "T3022",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3022 occurs before S2022; R1022 occurs after S2022. Select the last of those three events. Output only its identifier.",
+      "expected": "R1022",
+      "response": "R1022",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3023 occurs before R1023; S2023 occurs after R1023. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3023",
+      "response": "T3023",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3023 occurs before R1023; S2023 occurs after R1023. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2023",
+      "response": "S2023",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1024 occurs before S2024; T3024 occurs after S2024. Select the first of those three events. Output only its identifier.",
+      "expected": "R1024",
+      "response": "R1024",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1024 occurs before S2024; T3024 occurs after S2024. Select the last of those three events. Output only its identifier.",
+      "expected": "T3024",
+      "response": "T3024",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2025 occurs before R1025; T3025 occurs after R1025. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2025",
+      "response": "S2025",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2025 occurs before R1025; T3025 occurs after R1025. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3025",
+      "response": "T3025",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3026 occurs before R1026; S2026 occurs after R1026. Select the first of those three events. Output only its identifier.",
+      "expected": "T3026",
+      "response": "T3026",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3026 occurs before R1026; S2026 occurs after R1026. Select the last of those three events. Output only its identifier.",
+      "expected": "S2026",
+      "response": "S2026",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3027 occurs before R1027; S2027 occurs after R1027. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3027",
+      "response": "T3027",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3027 occurs before R1027; S2027 occurs after R1027. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2027",
+      "response": "S2027",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3028 occurs before R1028; S2028 occurs after R1028. Select the first of those three events. Output only its identifier.",
+      "expected": "T3028",
+      "response": "T3028",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3028 occurs before R1028; S2028 occurs after R1028. Select the last of those three events. Output only its identifier.",
+      "expected": "S2028",
+      "response": "S2028",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3029 occurs before S2029; R1029 occurs after S2029. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3029",
+      "response": "T3029",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3029 occurs before S2029; R1029 occurs after S2029. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1029",
+      "response": "R1029",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2030 occurs before T3030; R1030 occurs after T3030. Select the first of those three events. Output only its identifier.",
+      "expected": "S2030",
+      "response": "S2030",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2030 occurs before T3030; R1030 occurs after T3030. Select the last of those three events. Output only its identifier.",
+      "expected": "R1030",
+      "response": "R1030",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3031 occurs before R1031; S2031 occurs after R1031. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3031",
+      "response": "T3031",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3031 occurs before R1031; S2031 occurs after R1031. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2031",
+      "response": "S2031",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1032 occurs before T3032; S2032 occurs after T3032. Select the first of those three events. Output only its identifier.",
+      "expected": "R1032",
+      "response": "R1032",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1032 occurs before T3032; S2032 occurs after T3032. Select the last of those three events. Output only its identifier.",
+      "expected": "S2032",
+      "response": "S2032",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3033 occurs before S2033; R1033 occurs after S2033. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3033",
+      "response": "T3033",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3033 occurs before S2033; R1033 occurs after S2033. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1033",
+      "response": "R1033",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1034 occurs before T3034; S2034 occurs after T3034. Select the first of those three events. Output only its identifier.",
+      "expected": "R1034",
+      "response": "R1034",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1034 occurs before T3034; S2034 occurs after T3034. Select the last of those three events. Output only its identifier.",
+      "expected": "S2034",
+      "response": "S2034",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1035 occurs before S2035; T3035 occurs after S2035. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1035",
+      "response": "R1035",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1035 occurs before S2035; T3035 occurs after S2035. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3035",
+      "response": "T3035",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3036 occurs before S2036; R1036 occurs after S2036. Select the first of those three events. Output only its identifier.",
+      "expected": "T3036",
+      "response": "T3036",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "T3036 occurs before S2036; R1036 occurs after S2036. Select the last of those three events. Output only its identifier.",
+      "expected": "R1036",
+      "response": "R1036",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1037 occurs before S2037; T3037 occurs after S2037. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1037",
+      "response": "R1037",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1037 occurs before S2037; T3037 occurs after S2037. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3037",
+      "response": "T3037",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1038 occurs before T3038; S2038 occurs after T3038. Select the first of those three events. Output only its identifier.",
+      "expected": "R1038",
+      "response": "R1038",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1038 occurs before T3038; S2038 occurs after T3038. Select the last of those three events. Output only its identifier.",
+      "expected": "S2038",
+      "response": "S2038",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1039 occurs before S2039; T3039 occurs after S2039. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1039",
+      "response": "R1039",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "R1039 occurs before S2039; T3039 occurs after S2039. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3039",
+      "response": "T3039",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2040 occurs before R1040; T3040 occurs after R1040. Select the first of those three events. Output only its identifier.",
+      "expected": "S2040",
+      "response": "S2040",
+      "strict": true
+    },
+    {
+      "mode": "relations",
+      "prompt": "S2040 occurs before R1040; T3040 occurs after R1040. Select the last of those three events. Output only its identifier.",
+      "expected": "T3040",
+      "response": "T3040",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1001, S2001, T3001. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1001",
+      "response": "R1001",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1001, S2001, T3001. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3001",
+      "response": "T3001",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3002, R1002, S2002. Select the first of those three events. Output only its identifier.",
+      "expected": "T3002",
+      "response": "T3002",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3002, R1002, S2002. Select the last of those three events. Output only its identifier.",
+      "expected": "S2002",
+      "response": "S2002",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1003, S2003, T3003. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1003",
+      "response": "R1003",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1003, S2003, T3003. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3003",
+      "response": "T3003",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1004, S2004, T3004. Select the first of those three events. Output only its identifier.",
+      "expected": "R1004",
+      "response": "R1004",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1004, S2004, T3004. Select the last of those three events. Output only its identifier.",
+      "expected": "T3004",
+      "response": "T3004",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3005, S2005, R1005. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3005",
+      "response": "T3005",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3005, S2005, R1005. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1005",
+      "response": "R1005",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2006, R1006, T3006. Select the first of those three events. Output only its identifier.",
+      "expected": "S2006",
+      "response": "S2006",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2006, R1006, T3006. Select the last of those three events. Output only its identifier.",
+      "expected": "T3006",
+      "response": "T3006",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3007, S2007, R1007. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3007",
+      "response": "T3007",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3007, S2007, R1007. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1007",
+      "response": "R1007",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3008, S2008, R1008. Select the first of those three events. Output only its identifier.",
+      "expected": "T3008",
+      "response": "T3008",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3008, S2008, R1008. Select the last of those three events. Output only its identifier.",
+      "expected": "R1008",
+      "response": "R1008",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3009, S2009, R1009. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3009",
+      "response": "T3009",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3009, S2009, R1009. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1009",
+      "response": "R1009",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2010, T3010, R1010. Select the first of those three events. Output only its identifier.",
+      "expected": "S2010",
+      "response": "S2010",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2010, T3010, R1010. Select the last of those three events. Output only its identifier.",
+      "expected": "R1010",
+      "response": "R1010",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3011, S2011, R1011. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3011",
+      "response": "T3011",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3011, S2011, R1011. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1011",
+      "response": "R1011",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2012, R1012, T3012. Select the first of those three events. Output only its identifier.",
+      "expected": "S2012",
+      "response": "S2012",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2012, R1012, T3012. Select the last of those three events. Output only its identifier.",
+      "expected": "T3012",
+      "response": "T3012",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2013, R1013, T3013. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2013",
+      "response": "S2013",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2013, R1013, T3013. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3013",
+      "response": "T3013",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3014, S2014, R1014. Select the first of those three events. Output only its identifier.",
+      "expected": "T3014",
+      "response": "T3014",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3014, S2014, R1014. Select the last of those three events. Output only its identifier.",
+      "expected": "R1014",
+      "response": "R1014",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1015, S2015, T3015. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1015",
+      "response": "R1015",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1015, S2015, T3015. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3015",
+      "response": "T3015",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3016, R1016, S2016. Select the first of those three events. Output only its identifier.",
+      "expected": "T3016",
+      "response": "T3016",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3016, R1016, S2016. Select the last of those three events. Output only its identifier.",
+      "expected": "S2016",
+      "response": "S2016",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2017, R1017, T3017. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2017",
+      "response": "S2017",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2017, R1017, T3017. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3017",
+      "response": "T3017",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1018, T3018, S2018. Select the first of those three events. Output only its identifier.",
+      "expected": "R1018",
+      "response": "R1018",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1018, T3018, S2018. Select the last of those three events. Output only its identifier.",
+      "expected": "S2018",
+      "response": "S2018",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3019, S2019, R1019. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3019",
+      "response": "T3019",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3019, S2019, R1019. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1019",
+      "response": "R1019",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1020, T3020, S2020. Select the first of those three events. Output only its identifier.",
+      "expected": "R1020",
+      "response": "R1020",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1020, T3020, S2020. Select the last of those three events. Output only its identifier.",
+      "expected": "S2020",
+      "response": "S2020",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1021, S2021, T3021. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1021",
+      "response": "R1021",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1021, S2021, T3021. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3021",
+      "response": "T3021",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3022, S2022, R1022. Select the first of those three events. Output only its identifier.",
+      "expected": "T3022",
+      "response": "T3022",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3022, S2022, R1022. Select the last of those three events. Output only its identifier.",
+      "expected": "R1022",
+      "response": "R1022",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3023, R1023, S2023. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3023",
+      "response": "T3023",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3023, R1023, S2023. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2023",
+      "response": "S2023",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1024, S2024, T3024. Select the first of those three events. Output only its identifier.",
+      "expected": "R1024",
+      "response": "R1024",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1024, S2024, T3024. Select the last of those three events. Output only its identifier.",
+      "expected": "T3024",
+      "response": "T3024",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2025, R1025, T3025. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2025",
+      "response": "S2025",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2025, R1025, T3025. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3025",
+      "response": "T3025",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3026, R1026, S2026. Select the first of those three events. Output only its identifier.",
+      "expected": "T3026",
+      "response": "T3026",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3026, R1026, S2026. Select the last of those three events. Output only its identifier.",
+      "expected": "S2026",
+      "response": "S2026",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3027, R1027, S2027. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3027",
+      "response": "T3027",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3027, R1027, S2027. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2027",
+      "response": "S2027",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3028, R1028, S2028. Select the first of those three events. Output only its identifier.",
+      "expected": "T3028",
+      "response": "T3028",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3028, R1028, S2028. Select the last of those three events. Output only its identifier.",
+      "expected": "S2028",
+      "response": "S2028",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3029, S2029, R1029. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3029",
+      "response": "T3029",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3029, S2029, R1029. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1029",
+      "response": "R1029",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2030, T3030, R1030. Select the first of those three events. Output only its identifier.",
+      "expected": "S2030",
+      "response": "S2030",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2030, T3030, R1030. Select the last of those three events. Output only its identifier.",
+      "expected": "R1030",
+      "response": "R1030",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3031, R1031, S2031. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3031",
+      "response": "T3031",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3031, R1031, S2031. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2031",
+      "response": "S2031",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1032, T3032, S2032. Select the first of those three events. Output only its identifier.",
+      "expected": "R1032",
+      "response": "R1032",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1032, T3032, S2032. Select the last of those three events. Output only its identifier.",
+      "expected": "S2032",
+      "response": "S2032",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3033, S2033, R1033. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3033",
+      "response": "T3033",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3033, S2033, R1033. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1033",
+      "response": "R1033",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1034, T3034, S2034. Select the first of those three events. Output only its identifier.",
+      "expected": "R1034",
+      "response": "R1034",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1034, T3034, S2034. Select the last of those three events. Output only its identifier.",
+      "expected": "S2034",
+      "response": "S2034",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1035, S2035, T3035. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1035",
+      "response": "R1035",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1035, S2035, T3035. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3035",
+      "response": "T3035",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3036, S2036, R1036. Select the first of those three events. Output only its identifier.",
+      "expected": "T3036",
+      "response": "T3036",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: T3036, S2036, R1036. Select the last of those three events. Output only its identifier.",
+      "expected": "R1036",
+      "response": "R1036",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1037, S2037, T3037. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1037",
+      "response": "R1037",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1037, S2037, T3037. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3037",
+      "response": "T3037",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1038, T3038, S2038. Select the first of those three events. Output only its identifier.",
+      "expected": "R1038",
+      "response": "R1038",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1038, T3038, S2038. Select the last of those three events. Output only its identifier.",
+      "expected": "S2038",
+      "response": "S2038",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1039, S2039, T3039. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1039",
+      "response": "R1039",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: R1039, S2039, T3039. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3039",
+      "response": "T3039",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2040, R1040, T3040. Select the first of those three events. Output only its identifier.",
+      "expected": "S2040",
+      "response": "S2040",
+      "strict": true
+    },
+    {
+      "mode": "chain",
+      "prompt": "Temporal order from first to last: S2040, R1040, T3040. Select the last of those three events. Output only its identifier.",
+      "expected": "T3040",
+      "response": "T3040",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2001 happens after R1001. S2001 happens before T3001. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1001",
+      "response": "R1001",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2001 happens after R1001. S2001 happens before T3001. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3001",
+      "response": "T3001",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1002 happens after T3002. R1002 happens before S2002. Select the first of those three events. Output only its identifier.",
+      "expected": "T3002",
+      "response": "T3002",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1002 happens after T3002. R1002 happens before S2002. Select the last of those three events. Output only its identifier.",
+      "expected": "S2002",
+      "response": "S2002",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2003 happens after R1003. S2003 happens before T3003. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1003",
+      "response": "R1003",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2003 happens after R1003. S2003 happens before T3003. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3003",
+      "response": "T3003",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2004 happens after R1004. S2004 happens before T3004. Select the first of those three events. Output only its identifier.",
+      "expected": "R1004",
+      "response": "R1004",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2004 happens after R1004. S2004 happens before T3004. Select the last of those three events. Output only its identifier.",
+      "expected": "T3004",
+      "response": "T3004",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2005 happens after T3005. S2005 happens before R1005. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3005",
+      "response": "T3005",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2005 happens after T3005. S2005 happens before R1005. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1005",
+      "response": "R1005",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1006 happens after S2006. R1006 happens before T3006. Select the first of those three events. Output only its identifier.",
+      "expected": "S2006",
+      "response": "S2006",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1006 happens after S2006. R1006 happens before T3006. Select the last of those three events. Output only its identifier.",
+      "expected": "T3006",
+      "response": "T3006",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2007 happens after T3007. S2007 happens before R1007. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3007",
+      "response": "T3007",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2007 happens after T3007. S2007 happens before R1007. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1007",
+      "response": "R1007",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2008 happens after T3008. S2008 happens before R1008. Select the first of those three events. Output only its identifier.",
+      "expected": "T3008",
+      "response": "T3008",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2008 happens after T3008. S2008 happens before R1008. Select the last of those three events. Output only its identifier.",
+      "expected": "R1008",
+      "response": "R1008",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2009 happens after T3009. S2009 happens before R1009. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3009",
+      "response": "T3009",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2009 happens after T3009. S2009 happens before R1009. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1009",
+      "response": "R1009",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3010 happens after S2010. T3010 happens before R1010. Select the first of those three events. Output only its identifier.",
+      "expected": "S2010",
+      "response": "S2010",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3010 happens after S2010. T3010 happens before R1010. Select the last of those three events. Output only its identifier.",
+      "expected": "R1010",
+      "response": "R1010",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2011 happens after T3011. S2011 happens before R1011. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3011",
+      "response": "T3011",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2011 happens after T3011. S2011 happens before R1011. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1011",
+      "response": "R1011",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1012 happens after S2012. R1012 happens before T3012. Select the first of those three events. Output only its identifier.",
+      "expected": "S2012",
+      "response": "S2012",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1012 happens after S2012. R1012 happens before T3012. Select the last of those three events. Output only its identifier.",
+      "expected": "T3012",
+      "response": "T3012",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1013 happens after S2013. R1013 happens before T3013. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2013",
+      "response": "S2013",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1013 happens after S2013. R1013 happens before T3013. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3013",
+      "response": "T3013",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2014 happens after T3014. S2014 happens before R1014. Select the first of those three events. Output only its identifier.",
+      "expected": "T3014",
+      "response": "T3014",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2014 happens after T3014. S2014 happens before R1014. Select the last of those three events. Output only its identifier.",
+      "expected": "R1014",
+      "response": "R1014",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2015 happens after R1015. S2015 happens before T3015. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1015",
+      "response": "R1015",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2015 happens after R1015. S2015 happens before T3015. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3015",
+      "response": "T3015",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1016 happens after T3016. R1016 happens before S2016. Select the first of those three events. Output only its identifier.",
+      "expected": "T3016",
+      "response": "T3016",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1016 happens after T3016. R1016 happens before S2016. Select the last of those three events. Output only its identifier.",
+      "expected": "S2016",
+      "response": "S2016",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1017 happens after S2017. R1017 happens before T3017. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2017",
+      "response": "S2017",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1017 happens after S2017. R1017 happens before T3017. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3017",
+      "response": "T3017",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3018 happens after R1018. T3018 happens before S2018. Select the first of those three events. Output only its identifier.",
+      "expected": "R1018",
+      "response": "R1018",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3018 happens after R1018. T3018 happens before S2018. Select the last of those three events. Output only its identifier.",
+      "expected": "S2018",
+      "response": "S2018",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2019 happens after T3019. S2019 happens before R1019. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3019",
+      "response": "T3019",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2019 happens after T3019. S2019 happens before R1019. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1019",
+      "response": "R1019",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3020 happens after R1020. T3020 happens before S2020. Select the first of those three events. Output only its identifier.",
+      "expected": "R1020",
+      "response": "R1020",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3020 happens after R1020. T3020 happens before S2020. Select the last of those three events. Output only its identifier.",
+      "expected": "S2020",
+      "response": "S2020",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2021 happens after R1021. S2021 happens before T3021. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1021",
+      "response": "R1021",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2021 happens after R1021. S2021 happens before T3021. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3021",
+      "response": "T3021",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2022 happens after T3022. S2022 happens before R1022. Select the first of those three events. Output only its identifier.",
+      "expected": "T3022",
+      "response": "T3022",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2022 happens after T3022. S2022 happens before R1022. Select the last of those three events. Output only its identifier.",
+      "expected": "R1022",
+      "response": "R1022",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1023 happens after T3023. R1023 happens before S2023. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3023",
+      "response": "T3023",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1023 happens after T3023. R1023 happens before S2023. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2023",
+      "response": "S2023",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2024 happens after R1024. S2024 happens before T3024. Select the first of those three events. Output only its identifier.",
+      "expected": "R1024",
+      "response": "R1024",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2024 happens after R1024. S2024 happens before T3024. Select the last of those three events. Output only its identifier.",
+      "expected": "T3024",
+      "response": "T3024",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1025 happens after S2025. R1025 happens before T3025. Select the earliest of those three events. Output only its identifier.",
+      "expected": "S2025",
+      "response": "S2025",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1025 happens after S2025. R1025 happens before T3025. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3025",
+      "response": "T3025",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1026 happens after T3026. R1026 happens before S2026. Select the first of those three events. Output only its identifier.",
+      "expected": "T3026",
+      "response": "T3026",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1026 happens after T3026. R1026 happens before S2026. Select the last of those three events. Output only its identifier.",
+      "expected": "S2026",
+      "response": "S2026",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1027 happens after T3027. R1027 happens before S2027. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3027",
+      "response": "T3027",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1027 happens after T3027. R1027 happens before S2027. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2027",
+      "response": "S2027",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1028 happens after T3028. R1028 happens before S2028. Select the first of those three events. Output only its identifier.",
+      "expected": "T3028",
+      "response": "T3028",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1028 happens after T3028. R1028 happens before S2028. Select the last of those three events. Output only its identifier.",
+      "expected": "S2028",
+      "response": "S2028",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2029 happens after T3029. S2029 happens before R1029. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3029",
+      "response": "T3029",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2029 happens after T3029. S2029 happens before R1029. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1029",
+      "response": "R1029",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3030 happens after S2030. T3030 happens before R1030. Select the first of those three events. Output only its identifier.",
+      "expected": "S2030",
+      "response": "S2030",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3030 happens after S2030. T3030 happens before R1030. Select the last of those three events. Output only its identifier.",
+      "expected": "R1030",
+      "response": "R1030",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1031 happens after T3031. R1031 happens before S2031. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3031",
+      "response": "T3031",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1031 happens after T3031. R1031 happens before S2031. Select the latest of those three events. Output only its identifier.",
+      "expected": "S2031",
+      "response": "S2031",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3032 happens after R1032. T3032 happens before S2032. Select the first of those three events. Output only its identifier.",
+      "expected": "R1032",
+      "response": "R1032",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3032 happens after R1032. T3032 happens before S2032. Select the last of those three events. Output only its identifier.",
+      "expected": "S2032",
+      "response": "S2032",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2033 happens after T3033. S2033 happens before R1033. Select the earliest of those three events. Output only its identifier.",
+      "expected": "T3033",
+      "response": "T3033",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2033 happens after T3033. S2033 happens before R1033. Select the latest of those three events. Output only its identifier.",
+      "expected": "R1033",
+      "response": "R1033",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3034 happens after R1034. T3034 happens before S2034. Select the first of those three events. Output only its identifier.",
+      "expected": "R1034",
+      "response": "R1034",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3034 happens after R1034. T3034 happens before S2034. Select the last of those three events. Output only its identifier.",
+      "expected": "S2034",
+      "response": "S2034",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2035 happens after R1035. S2035 happens before T3035. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1035",
+      "response": "R1035",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2035 happens after R1035. S2035 happens before T3035. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3035",
+      "response": "T3035",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2036 happens after T3036. S2036 happens before R1036. Select the first of those three events. Output only its identifier.",
+      "expected": "T3036",
+      "response": "T3036",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2036 happens after T3036. S2036 happens before R1036. Select the last of those three events. Output only its identifier.",
+      "expected": "R1036",
+      "response": "R1036",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2037 happens after R1037. S2037 happens before T3037. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1037",
+      "response": "R1037",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2037 happens after R1037. S2037 happens before T3037. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3037",
+      "response": "T3037",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3038 happens after R1038. T3038 happens before S2038. Select the first of those three events. Output only its identifier.",
+      "expected": "R1038",
+      "response": "R1038",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "T3038 happens after R1038. T3038 happens before S2038. Select the last of those three events. Output only its identifier.",
+      "expected": "S2038",
+      "response": "S2038",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2039 happens after R1039. S2039 happens before T3039. Select the earliest of those three events. Output only its identifier.",
+      "expected": "R1039",
+      "response": "R1039",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "S2039 happens after R1039. S2039 happens before T3039. Select the latest of those three events. Output only its identifier.",
+      "expected": "T3039",
+      "response": "T3039",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1040 happens after S2040. R1040 happens before T3040. Select the first of those three events. Output only its identifier.",
+      "expected": "S2040",
+      "response": "S2040",
+      "strict": true
+    },
+    {
+      "mode": "inverted",
+      "prompt": "R1040 happens after S2040. R1040 happens before T3040. Select the last of those three events. Output only its identifier.",
+      "expected": "T3040",
+      "response": "T3040",
+      "strict": true
+    }
+  ]
+}

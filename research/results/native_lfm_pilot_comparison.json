@@ -1,0 +1,58 @@
+{
+  "baseline": {
+    "strict_passes": 2,
+    "strict_scored": 35,
+    "content_parser_passes": 14,
+    "content_parser_scored": 21,
+    "format_following_strict_passes": 0,
+    "lost_baseline_successes": []
+  },
+  "repeated": {
+    "strict_passes": 10,
+    "strict_scored": 35,
+    "content_parser_passes": 14,
+    "content_parser_scored": 21,
+    "format_following_strict_passes": 7,
+    "lost_baseline_successes": [],
+    "training": {
+      "steps": 128,
+      "input_tokens": 9728,
+      "supervised_tokens": 1408,
+      "trainable_parameters": 835584,
+      "new_update_seconds": 19.81291400000191,
+      "peak_process_rss_bytes": 2529198080,
+      "frozen_before_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e",
+      "frozen_after_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e"
+    },
+    "gates": {
+      "format_following": true,
+      "baseline_success_retention": true,
+      "frozen_weights": true,
+      "positive_signal": true
+    }
+  },
+  "unique": {
+    "strict_passes": 9,
+    "strict_scored": 35,
+    "content_parser_passes": 14,
+    "content_parser_scored": 21,
+    "format_following_strict_passes": 7,
+    "lost_baseline_successes": [],
+    "training": {
+      "steps": 128,
+      "input_tokens": 9728,
+      "supervised_tokens": 1408,
+      "trainable_parameters": 835584,
+      "new_update_seconds": 20.502821042005962,
+      "peak_process_rss_bytes": 2529689600,
+      "frozen_before_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e",
+      "frozen_after_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e"
+    },
+    "gates": {
+      "format_following": true,
+      "baseline_success_retention": true,
+      "frozen_weights": true,
+      "positive_signal": true
+    }
+  }
+}

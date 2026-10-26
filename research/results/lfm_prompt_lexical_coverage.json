@@ -1,0 +1,1551 @@
+{
+  "prompts": [
+    {
+      "prompt": {
+        "id": "reflective-recursion-cognition",
+        "text": "Hypothetically, might reflective recursion be a function of cognition?",
+        "purpose": "Frozen qualitative coherence and conceptual-reasoning sentinel",
+        "added_before_evaluation": true
+      },
+      "token_count": 15,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 0,
+      "median_label_exposure": 151.0,
+      "tokens": [
+        {
+          "id": 58393,
+          "token": "Hyp",
+          "decoded": "Hyp",
+          "input_exposure": 5,
+          "label_exposure": 5,
+          "observer_norm": 0.8113220930099487,
+          "observer_pc1_score": 0.875052809715271,
+          "teacher_norm": 0.9828611612319946
+        },
+        {
+          "id": 849,
+          "token": "ot",
+          "decoded": "ot",
+          "input_exposure": 150,
+          "label_exposure": 151,
+          "observer_norm": 0.6743788123130798,
+          "observer_pc1_score": 1.3603684902191162,
+          "teacher_norm": 0.8787828087806702
+        },
+        {
+          "id": 4207,
+          "token": "het",
+          "decoded": "het",
+          "input_exposure": 29,
+          "label_exposure": 29,
+          "observer_norm": 0.907887876033783,
+          "observer_pc1_score": 0.8621643781661987,
+          "teacher_norm": 0.9341991543769836
+        },
+        {
+          "id": 1939,
+          "token": "ically",
+          "decoded": "ically",
+          "input_exposure": 145,
+          "label_exposure": 140,
+          "observer_norm": 0.7525180578231812,
+          "observer_pc1_score": 1.2712457180023193,
+          "teacher_norm": 0.7772964239120483
+        },
+        {
+          "id": 521,
+          "token": ",",
+          "decoded": ",",
+          "input_exposure": 46009,
+          "label_exposure": 45799,
+          "observer_norm": 1.0240530967712402,
+          "observer_pc1_score": 2.259500026702881,
+          "teacher_norm": 0.8219032883644104
+        },
+        {
+          "id": 2724,
+          "token": "\u0120might",
+          "decoded": " might",
+          "input_exposure": 358,
+          "label_exposure": 358,
+          "observer_norm": 0.6263467669487,
+          "observer_pc1_score": 1.3642642498016357,
+          "teacher_norm": 0.7616562843322754
+        },
+        {
+          "id": 44210,
+          "token": "\u0120reflective",
+          "decoded": " reflective",
+          "input_exposure": 9,
+          "label_exposure": 8,
+          "observer_norm": 0.9150879383087158,
+          "observer_pc1_score": 0.7855761051177979,
+          "teacher_norm": 0.9490558505058289
+        },
+        {
+          "id": 1460,
+          "token": "\u0120rec",
+          "decoded": " rec",
+          "input_exposure": 65,
+          "label_exposure": 66,
+          "observer_norm": 0.6464627981185913,
+          "observer_pc1_score": 1.1713672876358032,
+          "teacher_norm": 0.9835631251335144
+        },
+        {
+          "id": 43022,
+          "token": "ursion",
+          "decoded": "ursion",
+          "input_exposure": 9,
+          "label_exposure": 8,
+          "observer_norm": 1.1264921426773071,
+          "observer_pc1_score": 0.6574172973632812,
+          "teacher_norm": 0.7277276515960693
+        },
+        {
+          "id": 874,
+          "token": "\u0120be",
+          "decoded": " be",
+          "input_exposure": 4246,
+          "label_exposure": 4230,
+          "observer_norm": 0.6303316354751587,
+          "observer_pc1_score": 1.5123443603515625,
+          "teacher_norm": 0.8126821517944336
+        },
+        {
+          "id": 768,
+          "token": "\u0120a",
+          "decoded": " a",
+          "input_exposure": 17461,
+          "label_exposure": 16815,
+          "observer_norm": 0.7845532298088074,
+          "observer_pc1_score": 1.9247781038284302,
+          "teacher_norm": 0.8338280320167542
+        },
+        {
+          "id": 1947,
+          "token": "\u0120function",
+          "decoded": " function",
+          "input_exposure": 203,
+          "label_exposure": 198,
+          "observer_norm": 0.599818766117096,
+          "observer_pc1_score": 1.3626198768615723,
+          "teacher_norm": 0.8956959843635559
+        },
+        {
+          "id": 803,
+          "token": "\u0120of",
+          "decoded": " of",
+          "input_exposure": 29012,
+          "label_exposure": 28593,
+          "observer_norm": 0.844179093837738,
+          "observer_pc1_score": 1.9709604978561401,
+          "teacher_norm": 0.7192400693893433
+        },
+        {
+          "id": 41158,
+          "token": "\u0120cognition",
+          "decoded": " cognition",
+          "input_exposure": 4,
+          "label_exposure": 4,
+          "observer_norm": 1.0148330926895142,
+          "observer_pc1_score": 0.6584213376045227,
+          "teacher_norm": 0.8686280250549316
+        },
+        {
+          "id": 540,
+          "token": "?",
+          "decoded": "?",
+          "input_exposure": 1131,
+          "label_exposure": 626,
+          "observer_norm": 0.7025757431983948,
+          "observer_pc1_score": 1.757157325744629,
+          "teacher_norm": 0.7440929412841797
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "seasons-explanation",
+        "text": "In two sentences, explain why Earth has seasons.",
+        "purpose": "Concise factual explanation",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 10,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 0,
+      "median_label_exposure": 442.5,
+      "tokens": [
+        {
+          "id": 1286,
+          "token": "In",
+          "decoded": "In",
+          "input_exposure": 697,
+          "label_exposure": 678,
+          "observer_norm": 0.701922595500946,
+          "observer_pc1_score": 1.3108916282653809,
+          "teacher_norm": 0.748160183429718
+        },
+        {
+          "id": 1547,
+          "token": "\u0120two",
+          "decoded": " two",
+          "input_exposure": 945,
+          "label_exposure": 935,
+          "observer_norm": 0.635349452495575,
+          "observer_pc1_score": 1.5267621278762817,
+          "teacher_norm": 0.8267556428909302
+        },
+        {
+          "id": 19528,
+          "token": "\u0120sentences",
+          "decoded": " sentences",
+          "input_exposure": 24,
+          "label_exposure": 24,
+          "observer_norm": 0.734688937664032,
+          "observer_pc1_score": 1.014037847518921,
+          "teacher_norm": 0.8617667555809021
+        },
+        {
+          "id": 521,
+          "token": ",",
+          "decoded": ",",
+          "input_exposure": 46009,
+          "label_exposure": 45799,
+          "observer_norm": 1.0240530967712402,
+          "observer_pc1_score": 2.259500026702881,
+          "teacher_norm": 0.8219032883644104
+        },
+        {
+          "id": 7487,
+          "token": "\u0120explain",
+          "decoded": " explain",
+          "input_exposure": 98,
+          "label_exposure": 71,
+          "observer_norm": 0.7455465793609619,
+          "observer_pc1_score": 1.0806474685668945,
+          "teacher_norm": 0.8148089647293091
+        },
+        {
+          "id": 3921,
+          "token": "\u0120why",
+          "decoded": " why",
+          "input_exposure": 213,
+          "label_exposure": 207,
+          "observer_norm": 0.7743863463401794,
+          "observer_pc1_score": 1.2929391860961914,
+          "teacher_norm": 0.7867432832717896
+        },
+        {
+          "id": 5487,
+          "token": "\u0120Earth",
+          "decoded": " Earth",
+          "input_exposure": 184,
+          "label_exposure": 183,
+          "observer_norm": 0.6406273245811462,
+          "observer_pc1_score": 1.3144230842590332,
+          "teacher_norm": 0.9473932385444641
+        },
+        {
+          "id": 1178,
+          "token": "\u0120has",
+          "decoded": " has",
+          "input_exposure": 2016,
+          "label_exposure": 1972,
+          "observer_norm": 0.6530133485794067,
+          "observer_pc1_score": 1.6453001499176025,
+          "teacher_norm": 0.7645477056503296
+        },
+        {
+          "id": 16026,
+          "token": "\u0120seasons",
+          "decoded": " seasons",
+          "input_exposure": 17,
+          "label_exposure": 16,
+          "observer_norm": 0.76153963804245,
+          "observer_pc1_score": 0.984827995300293,
+          "teacher_norm": 0.9259876608848572
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "json-format-following",
+        "text": "Return exactly three prime numbers greater than 10 as a JSON array, with no other text.",
+        "purpose": "Instruction and output-format following",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 19,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 0,
+      "median_label_exposure": 523.0,
+      "tokens": [
+        {
+          "id": 17820,
+          "token": "Return",
+          "decoded": "Return",
+          "input_exposure": 6,
+          "label_exposure": 6,
+          "observer_norm": 0.9792693853378296,
+          "observer_pc1_score": 0.7017263174057007,
+          "teacher_norm": 0.9736976027488708
+        },
+        {
+          "id": 8544,
+          "token": "\u0120exactly",
+          "decoded": " exactly",
+          "input_exposure": 47,
+          "label_exposure": 47,
+          "observer_norm": 0.7270713448524475,
+          "observer_pc1_score": 1.0747003555297852,
+          "teacher_norm": 0.8496362566947937
+        },
+        {
+          "id": 2204,
+          "token": "\u0120three",
+          "decoded": " three",
+          "input_exposure": 458,
+          "label_exposure": 456,
+          "observer_norm": 0.6337460875511169,
+          "observer_pc1_score": 1.4726743698120117,
+          "teacher_norm": 0.8158235549926758
+        },
+        {
+          "id": 9125,
+          "token": "\u0120prime",
+          "decoded": " prime",
+          "input_exposure": 29,
+          "label_exposure": 28,
+          "observer_norm": 0.7937130928039551,
+          "observer_pc1_score": 1.0469400882720947,
+          "teacher_norm": 0.9169740676879883
+        },
+        {
+          "id": 5743,
+          "token": "\u0120numbers",
+          "decoded": " numbers",
+          "input_exposure": 157,
+          "label_exposure": 148,
+          "observer_norm": 0.5876654982566833,
+          "observer_pc1_score": 1.3198137283325195,
+          "teacher_norm": 0.8639657497406006
+        },
+        {
+          "id": 5574,
+          "token": "\u0120greater",
+          "decoded": " greater",
+          "input_exposure": 145,
+          "label_exposure": 145,
+          "observer_norm": 0.6389284729957581,
+          "observer_pc1_score": 1.2500442266464233,
+          "teacher_norm": 0.8241173624992371
+        },
+        {
+          "id": 1399,
+          "token": "\u0120than",
+          "decoded": " than",
+          "input_exposure": 1203,
+          "label_exposure": 1206,
+          "observer_norm": 0.7505783438682556,
+          "observer_pc1_score": 1.4932489395141602,
+          "teacher_norm": 0.765122652053833
+        },
+        {
+          "id": 730,
+          "token": "\u0120",
+          "decoded": " ",
+          "input_exposure": 13851,
+          "label_exposure": 13889,
+          "observer_norm": 0.9304473996162415,
+          "observer_pc1_score": 2.1090853214263916,
+          "teacher_norm": 0.8668469786643982
+        },
+        {
+          "id": 1155,
+          "token": "10",
+          "decoded": "10",
+          "input_exposure": 530,
+          "label_exposure": 523,
+          "observer_norm": 0.6585034132003784,
+          "observer_pc1_score": 1.363616943359375,
+          "teacher_norm": 0.7094027400016785
+        },
+        {
+          "id": 906,
+          "token": "\u0120as",
+          "decoded": " as",
+          "input_exposure": 5300,
+          "label_exposure": 5280,
+          "observer_norm": 0.709752082824707,
+          "observer_pc1_score": 1.7561092376708984,
+          "teacher_norm": 0.8161109685897827
+        },
+        {
+          "id": 768,
+          "token": "\u0120a",
+          "decoded": " a",
+          "input_exposure": 17461,
+          "label_exposure": 16815,
+          "observer_norm": 0.7845532298088074,
+          "observer_pc1_score": 1.9247781038284302,
+          "teacher_norm": 0.8338280320167542
+        },
+        {
+          "id": 26444,
+          "token": "\u0120JSON",
+          "decoded": " JSON",
+          "input_exposure": 7,
+          "label_exposure": 5,
+          "observer_norm": 1.4557865858078003,
+          "observer_pc1_score": 0.19329574704170227,
+          "teacher_norm": 0.7846626043319702
+        },
+        {
+          "id": 6947,
+          "token": "\u0120array",
+          "decoded": " array",
+          "input_exposure": 30,
+          "label_exposure": 29,
+          "observer_norm": 0.7511206865310669,
+          "observer_pc1_score": 1.0539711713790894,
+          "teacher_norm": 0.8218875527381897
+        },
+        {
+          "id": 521,
+          "token": ",",
+          "decoded": ",",
+          "input_exposure": 46009,
+          "label_exposure": 45799,
+          "observer_norm": 1.0240530967712402,
+          "observer_pc1_score": 2.259500026702881,
+          "teacher_norm": 0.8219032883644104
+        },
+        {
+          "id": 916,
+          "token": "\u0120with",
+          "decoded": " with",
+          "input_exposure": 5292,
+          "label_exposure": 5228,
+          "observer_norm": 0.7069346308708191,
+          "observer_pc1_score": 1.7676198482513428,
+          "teacher_norm": 0.7730733752250671
+        },
+        {
+          "id": 1295,
+          "token": "\u0120no",
+          "decoded": " no",
+          "input_exposure": 821,
+          "label_exposure": 825,
+          "observer_norm": 0.6282585859298706,
+          "observer_pc1_score": 1.4188809394836426,
+          "teacher_norm": 0.8740308880805969
+        },
+        {
+          "id": 1312,
+          "token": "\u0120other",
+          "decoded": " other",
+          "input_exposure": 1508,
+          "label_exposure": 1495,
+          "observer_norm": 0.6967194080352783,
+          "observer_pc1_score": 1.5263357162475586,
+          "teacher_norm": 0.8762806057929993
+        },
+        {
+          "id": 3304,
+          "token": "\u0120text",
+          "decoded": " text",
+          "input_exposure": 89,
+          "label_exposure": 77,
+          "observer_norm": 0.5736245512962341,
+          "observer_pc1_score": 1.2955083847045898,
+          "teacher_norm": 0.8619298338890076
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "simple-deduction",
+        "text": "Mira is older than Sol. Sol is older than Ivo. Who is youngest, and why?",
+        "purpose": "Short deductive reasoning",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 21,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 0,
+      "median_label_exposure": 626.0,
+      "tokens": [
+        {
+          "id": 554,
+          "token": "M",
+          "decoded": "M",
+          "input_exposure": 302,
+          "label_exposure": 303,
+          "observer_norm": 0.6928554177284241,
+          "observer_pc1_score": 1.4529986381530762,
+          "teacher_norm": 0.8230774402618408
+        },
+        {
+          "id": 3596,
+          "token": "ira",
+          "decoded": "ira",
+          "input_exposure": 67,
+          "label_exposure": 67,
+          "observer_norm": 0.7283273339271545,
+          "observer_pc1_score": 1.203916072845459,
+          "teacher_norm": 0.9358399510383606
+        },
+        {
+          "id": 856,
+          "token": "\u0120is",
+          "decoded": " is",
+          "input_exposure": 9411,
+          "label_exposure": 9380,
+          "observer_norm": 0.7690547704696655,
+          "observer_pc1_score": 1.9134066104888916,
+          "teacher_norm": 0.7419788837432861
+        },
+        {
+          "id": 6993,
+          "token": "\u0120older",
+          "decoded": " older",
+          "input_exposure": 77,
+          "label_exposure": 77,
+          "observer_norm": 0.6344964504241943,
+          "observer_pc1_score": 1.2312642335891724,
+          "teacher_norm": 0.8254777789115906
+        },
+        {
+          "id": 1399,
+          "token": "\u0120than",
+          "decoded": " than",
+          "input_exposure": 1203,
+          "label_exposure": 1206,
+          "observer_norm": 0.7505783438682556,
+          "observer_pc1_score": 1.4932489395141602,
+          "teacher_norm": 0.765122652053833
+        },
+        {
+          "id": 5683,
+          "token": "\u0120Sol",
+          "decoded": " Sol",
+          "input_exposure": 27,
+          "label_exposure": 27,
+          "observer_norm": 0.6441065669059753,
+          "observer_pc1_score": 1.1559553146362305,
+          "teacher_norm": 0.9205555319786072
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        },
+        {
+          "id": 5683,
+          "token": "\u0120Sol",
+          "decoded": " Sol",
+          "input_exposure": 27,
+          "label_exposure": 27,
+          "observer_norm": 0.6441065669059753,
+          "observer_pc1_score": 1.1559553146362305,
+          "teacher_norm": 0.9205555319786072
+        },
+        {
+          "id": 856,
+          "token": "\u0120is",
+          "decoded": " is",
+          "input_exposure": 9411,
+          "label_exposure": 9380,
+          "observer_norm": 0.7690547704696655,
+          "observer_pc1_score": 1.9134066104888916,
+          "teacher_norm": 0.7419788837432861
+        },
+        {
+          "id": 6993,
+          "token": "\u0120older",
+          "decoded": " older",
+          "input_exposure": 77,
+          "label_exposure": 77,
+          "observer_norm": 0.6344964504241943,
+          "observer_pc1_score": 1.2312642335891724,
+          "teacher_norm": 0.8254777789115906
+        },
+        {
+          "id": 1399,
+          "token": "\u0120than",
+          "decoded": " than",
+          "input_exposure": 1203,
+          "label_exposure": 1206,
+          "observer_norm": 0.7505783438682556,
+          "observer_pc1_score": 1.4932489395141602,
+          "teacher_norm": 0.765122652053833
+        },
+        {
+          "id": 859,
+          "token": "\u0120I",
+          "decoded": " I",
+          "input_exposure": 1495,
+          "label_exposure": 1483,
+          "observer_norm": 0.690390944480896,
+          "observer_pc1_score": 1.6529998779296875,
+          "teacher_norm": 0.8738516569137573
+        },
+        {
+          "id": 3133,
+          "token": "vo",
+          "decoded": "vo",
+          "input_exposure": 18,
+          "label_exposure": 18,
+          "observer_norm": 0.8209568858146667,
+          "observer_pc1_score": 0.952296257019043,
+          "teacher_norm": 0.9535827040672302
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        },
+        {
+          "id": 12747,
+          "token": "\u0120Who",
+          "decoded": " Who",
+          "input_exposure": 19,
+          "label_exposure": 20,
+          "observer_norm": 0.7924021482467651,
+          "observer_pc1_score": 0.9717832803726196,
+          "teacher_norm": 0.8589938879013062
+        },
+        {
+          "id": 856,
+          "token": "\u0120is",
+          "decoded": " is",
+          "input_exposure": 9411,
+          "label_exposure": 9380,
+          "observer_norm": 0.7690547704696655,
+          "observer_pc1_score": 1.9134066104888916,
+          "teacher_norm": 0.7419788837432861
+        },
+        {
+          "id": 34616,
+          "token": "\u0120youngest",
+          "decoded": " youngest",
+          "input_exposure": 8,
+          "label_exposure": 8,
+          "observer_norm": 0.8147141337394714,
+          "observer_pc1_score": 0.8911468982696533,
+          "teacher_norm": 0.8685888648033142
+        },
+        {
+          "id": 521,
+          "token": ",",
+          "decoded": ",",
+          "input_exposure": 46009,
+          "label_exposure": 45799,
+          "observer_norm": 1.0240530967712402,
+          "observer_pc1_score": 2.259500026702881,
+          "teacher_norm": 0.8219032883644104
+        },
+        {
+          "id": 810,
+          "token": "\u0120and",
+          "decoded": " and",
+          "input_exposure": 25602,
+          "label_exposure": 24960,
+          "observer_norm": 0.9574264287948608,
+          "observer_pc1_score": 2.157985210418701,
+          "teacher_norm": 0.8231796026229858
+        },
+        {
+          "id": 3921,
+          "token": "\u0120why",
+          "decoded": " why",
+          "input_exposure": 213,
+          "label_exposure": 207,
+          "observer_norm": 0.7743863463401794,
+          "observer_pc1_score": 1.2929391860961914,
+          "teacher_norm": 0.7867432832717896
+        },
+        {
+          "id": 540,
+          "token": "?",
+          "decoded": "?",
+          "input_exposure": 1131,
+          "label_exposure": 626,
+          "observer_norm": 0.7025757431983948,
+          "observer_pc1_score": 1.757157325744629,
+          "teacher_norm": 0.7440929412841797
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "summary-fidelity",
+        "text": "Summarize in one sentence: The library extended its hours during exams, so attendance rose even though the number of books stayed constant.",
+        "purpose": "Constrained summarization",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 27,
+      "zero_input_tokens": 1,
+      "zero_label_tokens": 1,
+      "tokens_le_3_labels": 1,
+      "median_label_exposure": 477.0,
+      "tokens": [
+        {
+          "id": 560,
+          "token": "S",
+          "decoded": "S",
+          "input_exposure": 477,
+          "label_exposure": 477,
+          "observer_norm": 0.6465226411819458,
+          "observer_pc1_score": 1.4733891487121582,
+          "teacher_norm": 0.8124862909317017
+        },
+        {
+          "id": 3174,
+          "token": "umm",
+          "decoded": "umm",
+          "input_exposure": 8,
+          "label_exposure": 8,
+          "observer_norm": 0.8452584147453308,
+          "observer_pc1_score": 0.9060046672821045,
+          "teacher_norm": 0.9441885352134705
+        },
+        {
+          "id": 64016,
+          "token": "arize",
+          "decoded": "arize",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 1.5866144895553589,
+          "observer_pc1_score": 0.04319491982460022,
+          "teacher_norm": 0.6618202328681946
+        },
+        {
+          "id": 797,
+          "token": "\u0120in",
+          "decoded": " in",
+          "input_exposure": 16192,
+          "label_exposure": 15888,
+          "observer_norm": 0.8057121634483337,
+          "observer_pc1_score": 2.018662452697754,
+          "teacher_norm": 0.8143641948699951
+        },
+        {
+          "id": 1235,
+          "token": "\u0120one",
+          "decoded": " one",
+          "input_exposure": 1595,
+          "label_exposure": 1601,
+          "observer_norm": 0.6319847702980042,
+          "observer_pc1_score": 1.5903174877166748,
+          "teacher_norm": 0.8319119811058044
+        },
+        {
+          "id": 13184,
+          "token": "\u0120sentence",
+          "decoded": " sentence",
+          "input_exposure": 45,
+          "label_exposure": 44,
+          "observer_norm": 0.6449728608131409,
+          "observer_pc1_score": 1.1166832447052002,
+          "teacher_norm": 0.866243302822113
+        },
+        {
+          "id": 535,
+          "token": ":",
+          "decoded": ":",
+          "input_exposure": 3712,
+          "label_exposure": 3711,
+          "observer_norm": 0.7512946128845215,
+          "observer_pc1_score": 1.8435947895050049,
+          "teacher_norm": 0.7589150667190552
+        },
+        {
+          "id": 941,
+          "token": "\u0120The",
+          "decoded": " The",
+          "input_exposure": 3994,
+          "label_exposure": 4009,
+          "observer_norm": 0.6352594494819641,
+          "observer_pc1_score": 1.6097774505615234,
+          "teacher_norm": 0.7375726103782654
+        },
+        {
+          "id": 10299,
+          "token": "\u0120library",
+          "decoded": " library",
+          "input_exposure": 74,
+          "label_exposure": 72,
+          "observer_norm": 0.585530161857605,
+          "observer_pc1_score": 1.2026119232177734,
+          "teacher_norm": 0.8889662623405457
+        },
+        {
+          "id": 10263,
+          "token": "\u0120extended",
+          "decoded": " extended",
+          "input_exposure": 42,
+          "label_exposure": 43,
+          "observer_norm": 0.6274122595787048,
+          "observer_pc1_score": 1.1333726644515991,
+          "teacher_norm": 0.8898062109947205
+        },
+        {
+          "id": 1352,
+          "token": "\u0120its",
+          "decoded": " its",
+          "input_exposure": 1391,
+          "label_exposure": 1365,
+          "observer_norm": 0.6485528349876404,
+          "observer_pc1_score": 1.5085841417312622,
+          "teacher_norm": 0.857807457447052
+        },
+        {
+          "id": 4934,
+          "token": "\u0120hours",
+          "decoded": " hours",
+          "input_exposure": 145,
+          "label_exposure": 145,
+          "observer_norm": 0.604208767414093,
+          "observer_pc1_score": 1.271276831626892,
+          "teacher_norm": 0.8236144185066223
+        },
+        {
+          "id": 2013,
+          "token": "\u0120during",
+          "decoded": " during",
+          "input_exposure": 623,
+          "label_exposure": 601,
+          "observer_norm": 0.5955730080604553,
+          "observer_pc1_score": 1.4278454780578613,
+          "teacher_norm": 0.7764220237731934
+        },
+        {
+          "id": 32406,
+          "token": "\u0120exams",
+          "decoded": " exams",
+          "input_exposure": 9,
+          "label_exposure": 8,
+          "observer_norm": 0.8924725651741028,
+          "observer_pc1_score": 0.8073246479034424,
+          "teacher_norm": 0.8437377214431763
+        },
+        {
+          "id": 521,
+          "token": ",",
+          "decoded": ",",
+          "input_exposure": 46009,
+          "label_exposure": 45799,
+          "observer_norm": 1.0240530967712402,
+          "observer_pc1_score": 2.259500026702881,
+          "teacher_norm": 0.8219032883644104
+        },
+        {
+          "id": 1101,
+          "token": "\u0120so",
+          "decoded": " so",
+          "input_exposure": 962,
+          "label_exposure": 963,
+          "observer_norm": 0.5722439885139465,
+          "observer_pc1_score": 1.4809727668762207,
+          "teacher_norm": 0.8853446245193481
+        },
+        {
+          "id": 33405,
+          "token": "\u0120attendance",
+          "decoded": " attendance",
+          "input_exposure": 9,
+          "label_exposure": 9,
+          "observer_norm": 0.8747409582138062,
+          "observer_pc1_score": 0.8000798225402832,
+          "teacher_norm": 0.9039670825004578
+        },
+        {
+          "id": 14118,
+          "token": "\u0120rose",
+          "decoded": " rose",
+          "input_exposure": 37,
+          "label_exposure": 37,
+          "observer_norm": 0.6396752595901489,
+          "observer_pc1_score": 1.1072041988372803,
+          "teacher_norm": 0.8812413811683655
+        },
+        {
+          "id": 1919,
+          "token": "\u0120even",
+          "decoded": " even",
+          "input_exposure": 603,
+          "label_exposure": 600,
+          "observer_norm": 0.5775911808013916,
+          "observer_pc1_score": 1.4345428943634033,
+          "teacher_norm": 0.9076818227767944
+        },
+        {
+          "id": 2453,
+          "token": "\u0120though",
+          "decoded": " though",
+          "input_exposure": 145,
+          "label_exposure": 146,
+          "observer_norm": 0.781991183757782,
+          "observer_pc1_score": 1.1552345752716064,
+          "teacher_norm": 0.7684081196784973
+        },
+        {
+          "id": 779,
+          "token": "\u0120the",
+          "decoded": " the",
+          "input_exposure": 46503,
+          "label_exposure": 45803,
+          "observer_norm": 0.8745051026344299,
+          "observer_pc1_score": 2.0769433975219727,
+          "teacher_norm": 0.8076577186584473
+        },
+        {
+          "id": 2080,
+          "token": "\u0120number",
+          "decoded": " number",
+          "input_exposure": 485,
+          "label_exposure": 479,
+          "observer_norm": 0.6694678664207458,
+          "observer_pc1_score": 1.4379478693008423,
+          "teacher_norm": 0.8468756079673767
+        },
+        {
+          "id": 803,
+          "token": "\u0120of",
+          "decoded": " of",
+          "input_exposure": 29012,
+          "label_exposure": 28593,
+          "observer_norm": 0.844179093837738,
+          "observer_pc1_score": 1.9709604978561401,
+          "teacher_norm": 0.7192400693893433
+        },
+        {
+          "id": 5936,
+          "token": "\u0120books",
+          "decoded": " books",
+          "input_exposure": 129,
+          "label_exposure": 128,
+          "observer_norm": 0.5812920928001404,
+          "observer_pc1_score": 1.2832930088043213,
+          "teacher_norm": 0.8795462250709534
+        },
+        {
+          "id": 22281,
+          "token": "\u0120stayed",
+          "decoded": " stayed",
+          "input_exposure": 11,
+          "label_exposure": 12,
+          "observer_norm": 0.8375416398048401,
+          "observer_pc1_score": 0.8675984144210815,
+          "teacher_norm": 0.79066002368927
+        },
+        {
+          "id": 6260,
+          "token": "\u0120constant",
+          "decoded": " constant",
+          "input_exposure": 57,
+          "label_exposure": 57,
+          "observer_norm": 0.6504464149475098,
+          "observer_pc1_score": 1.1669542789459229,
+          "teacher_norm": 0.881537914276123
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "python-palindrome",
+        "text": "Write a short Python function named is_palindrome that ignores letter case.",
+        "purpose": "Basic code generation",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 17,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 1,
+      "median_label_exposure": 87.0,
+      "tokens": [
+        {
+          "id": 22998,
+          "token": "Write",
+          "decoded": "Write",
+          "input_exposure": 173,
+          "label_exposure": 10,
+          "observer_norm": 1.0311448574066162,
+          "observer_pc1_score": 0.7671557664871216,
+          "teacher_norm": 0.8178204894065857
+        },
+        {
+          "id": 768,
+          "token": "\u0120a",
+          "decoded": " a",
+          "input_exposure": 17461,
+          "label_exposure": 16815,
+          "observer_norm": 0.7845532298088074,
+          "observer_pc1_score": 1.9247781038284302,
+          "teacher_norm": 0.8338280320167542
+        },
+        {
+          "id": 3290,
+          "token": "\u0120short",
+          "decoded": " short",
+          "input_exposure": 178,
+          "label_exposure": 171,
+          "observer_norm": 0.5764846205711365,
+          "observer_pc1_score": 1.318690299987793,
+          "teacher_norm": 0.9360383152961731
+        },
+        {
+          "id": 22017,
+          "token": "\u0120Python",
+          "decoded": " Python",
+          "input_exposure": 16,
+          "label_exposure": 9,
+          "observer_norm": 0.977118730545044,
+          "observer_pc1_score": 0.7620824575424194,
+          "teacher_norm": 0.8674865365028381
+        },
+        {
+          "id": 1947,
+          "token": "\u0120function",
+          "decoded": " function",
+          "input_exposure": 203,
+          "label_exposure": 198,
+          "observer_norm": 0.599818766117096,
+          "observer_pc1_score": 1.3626198768615723,
+          "teacher_norm": 0.8956959843635559
+        },
+        {
+          "id": 5668,
+          "token": "\u0120named",
+          "decoded": " named",
+          "input_exposure": 86,
+          "label_exposure": 87,
+          "observer_norm": 0.7166595458984375,
+          "observer_pc1_score": 1.2322649955749512,
+          "teacher_norm": 0.8377508521080017
+        },
+        {
+          "id": 856,
+          "token": "\u0120is",
+          "decoded": " is",
+          "input_exposure": 9411,
+          "label_exposure": 9380,
+          "observer_norm": 0.7690547704696655,
+          "observer_pc1_score": 1.9134066104888916,
+          "teacher_norm": 0.7419788837432861
+        },
+        {
+          "id": 5282,
+          "token": "_p",
+          "decoded": "_p",
+          "input_exposure": 1,
+          "label_exposure": 1,
+          "observer_norm": 1.3968991041183472,
+          "observer_pc1_score": 0.25106945633888245,
+          "teacher_norm": 0.7106525897979736
+        },
+        {
+          "id": 786,
+          "token": "al",
+          "decoded": "al",
+          "input_exposure": 458,
+          "label_exposure": 454,
+          "observer_norm": 0.6772170066833496,
+          "observer_pc1_score": 1.5492957830429077,
+          "teacher_norm": 0.8237977623939514
+        },
+        {
+          "id": 1050,
+          "token": "ind",
+          "decoded": "ind",
+          "input_exposure": 51,
+          "label_exposure": 51,
+          "observer_norm": 0.6033772826194763,
+          "observer_pc1_score": 1.243103265762329,
+          "teacher_norm": 0.9013009667396545
+        },
+        {
+          "id": 6751,
+          "token": "rome",
+          "decoded": "rome",
+          "input_exposure": 11,
+          "label_exposure": 11,
+          "observer_norm": 0.9712162613868713,
+          "observer_pc1_score": 0.7811718583106995,
+          "teacher_norm": 0.8686465620994568
+        },
+        {
+          "id": 896,
+          "token": "\u0120that",
+          "decoded": " that",
+          "input_exposure": 8163,
+          "label_exposure": 8043,
+          "observer_norm": 0.7048004269599915,
+          "observer_pc1_score": 1.7924821376800537,
+          "teacher_norm": 0.7405674457550049
+        },
+        {
+          "id": 7715,
+          "token": "\u0120ign",
+          "decoded": " ign",
+          "input_exposure": 14,
+          "label_exposure": 14,
+          "observer_norm": 0.8442164063453674,
+          "observer_pc1_score": 0.8822330832481384,
+          "teacher_norm": 0.9298679232597351
+        },
+        {
+          "id": 2362,
+          "token": "ores",
+          "decoded": "ores",
+          "input_exposure": 25,
+          "label_exposure": 25,
+          "observer_norm": 0.7045698165893555,
+          "observer_pc1_score": 1.1008052825927734,
+          "teacher_norm": 0.8636030554771423
+        },
+        {
+          "id": 7627,
+          "token": "\u0120letter",
+          "decoded": " letter",
+          "input_exposure": 67,
+          "label_exposure": 58,
+          "observer_norm": 0.6305238604545593,
+          "observer_pc1_score": 1.149266004562378,
+          "teacher_norm": 0.8992342948913574
+        },
+        {
+          "id": 2533,
+          "token": "\u0120case",
+          "decoded": " case",
+          "input_exposure": 287,
+          "label_exposure": 285,
+          "observer_norm": 0.6207641959190369,
+          "observer_pc1_score": 1.4053020477294922,
+          "teacher_norm": 0.8981773853302002
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "uncertainty-calibration",
+        "text": "What will the exact temperature in Paris be at noon 100 years from today? Answer honestly.",
+        "purpose": "Uncertainty and epistemic calibration",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 19,
+      "zero_input_tokens": 0,
+      "zero_label_tokens": 0,
+      "tokens_le_3_labels": 1,
+      "median_label_exposure": 626.0,
+      "tokens": [
+        {
+          "id": 3493,
+          "token": "What",
+          "decoded": "What",
+          "input_exposure": 377,
+          "label_exposure": 190,
+          "observer_norm": 0.6844933032989502,
+          "observer_pc1_score": 1.190356969833374,
+          "teacher_norm": 0.6742340922355652
+        },
+        {
+          "id": 1188,
+          "token": "\u0120will",
+          "decoded": " will",
+          "input_exposure": 1692,
+          "label_exposure": 1700,
+          "observer_norm": 0.6064848899841309,
+          "observer_pc1_score": 1.569770336151123,
+          "teacher_norm": 0.7936195135116577
+        },
+        {
+          "id": 779,
+          "token": "\u0120the",
+          "decoded": " the",
+          "input_exposure": 46503,
+          "label_exposure": 45803,
+          "observer_norm": 0.8745051026344299,
+          "observer_pc1_score": 2.0769433975219727,
+          "teacher_norm": 0.8076577186584473
+        },
+        {
+          "id": 5676,
+          "token": "\u0120exact",
+          "decoded": " exact",
+          "input_exposure": 33,
+          "label_exposure": 31,
+          "observer_norm": 0.6995148062705994,
+          "observer_pc1_score": 1.1420564651489258,
+          "teacher_norm": 0.874444842338562
+        },
+        {
+          "id": 5078,
+          "token": "\u0120temperature",
+          "decoded": " temperature",
+          "input_exposure": 250,
+          "label_exposure": 241,
+          "observer_norm": 0.6362013816833496,
+          "observer_pc1_score": 1.25211763381958,
+          "teacher_norm": 0.878072202205658
+        },
+        {
+          "id": 797,
+          "token": "\u0120in",
+          "decoded": " in",
+          "input_exposure": 16192,
+          "label_exposure": 15888,
+          "observer_norm": 0.8057121634483337,
+          "observer_pc1_score": 2.018662452697754,
+          "teacher_norm": 0.8143641948699951
+        },
+        {
+          "id": 5242,
+          "token": "\u0120Paris",
+          "decoded": " Paris",
+          "input_exposure": 49,
+          "label_exposure": 46,
+          "observer_norm": 0.6871809959411621,
+          "observer_pc1_score": 1.1193809509277344,
+          "teacher_norm": 0.8549704551696777
+        },
+        {
+          "id": 874,
+          "token": "\u0120be",
+          "decoded": " be",
+          "input_exposure": 4246,
+          "label_exposure": 4230,
+          "observer_norm": 0.6303316354751587,
+          "observer_pc1_score": 1.5123443603515625,
+          "teacher_norm": 0.8126821517944336
+        },
+        {
+          "id": 963,
+          "token": "\u0120at",
+          "decoded": " at",
+          "input_exposure": 3113,
+          "label_exposure": 3104,
+          "observer_norm": 0.6723605990409851,
+          "observer_pc1_score": 1.7328072786331177,
+          "teacher_norm": 0.8521307706832886
+        },
+        {
+          "id": 48842,
+          "token": "\u0120noon",
+          "decoded": " noon",
+          "input_exposure": 5,
+          "label_exposure": 5,
+          "observer_norm": 0.9062536358833313,
+          "observer_pc1_score": 0.8088358044624329,
+          "teacher_norm": 0.8166604042053223
+        },
+        {
+          "id": 730,
+          "token": "\u0120",
+          "decoded": " ",
+          "input_exposure": 13851,
+          "label_exposure": 13889,
+          "observer_norm": 0.9304473996162415,
+          "observer_pc1_score": 2.1090853214263916,
+          "teacher_norm": 0.8668469786643982
+        },
+        {
+          "id": 2096,
+          "token": "100",
+          "decoded": "100",
+          "input_exposure": 247,
+          "label_exposure": 245,
+          "observer_norm": 0.6646557450294495,
+          "observer_pc1_score": 1.2388533353805542,
+          "teacher_norm": 0.7431170344352722
+        },
+        {
+          "id": 1779,
+          "token": "\u0120years",
+          "decoded": " years",
+          "input_exposure": 873,
+          "label_exposure": 871,
+          "observer_norm": 0.6641068458557129,
+          "observer_pc1_score": 1.4445730447769165,
+          "teacher_norm": 0.8279359936714172
+        },
+        {
+          "id": 988,
+          "token": "\u0120from",
+          "decoded": " from",
+          "input_exposure": 3649,
+          "label_exposure": 3638,
+          "observer_norm": 0.7045031785964966,
+          "observer_pc1_score": 1.7227083444595337,
+          "teacher_norm": 0.7809519171714783
+        },
+        {
+          "id": 4008,
+          "token": "\u0120today",
+          "decoded": " today",
+          "input_exposure": 188,
+          "label_exposure": 185,
+          "observer_norm": 0.5760307312011719,
+          "observer_pc1_score": 1.324466586112976,
+          "teacher_norm": 0.8638774752616882
+        },
+        {
+          "id": 540,
+          "token": "?",
+          "decoded": "?",
+          "input_exposure": 1131,
+          "label_exposure": 626,
+          "observer_norm": 0.7025757431983948,
+          "observer_pc1_score": 1.757157325744629,
+          "teacher_norm": 0.7440929412841797
+        },
+        {
+          "id": 42275,
+          "token": "\u0120Answer",
+          "decoded": " Answer",
+          "input_exposure": 6,
+          "label_exposure": 4,
+          "observer_norm": 0.9847922921180725,
+          "observer_pc1_score": 0.7245132923126221,
+          "teacher_norm": 0.8328585624694824
+        },
+        {
+          "id": 59121,
+          "token": "\u0120honestly",
+          "decoded": " honestly",
+          "input_exposure": 2,
+          "label_exposure": 2,
+          "observer_norm": 1.1646727323532104,
+          "observer_pc1_score": 0.4969029128551483,
+          "teacher_norm": 0.8720491528511047
+        },
+        {
+          "id": 523,
+          "token": ".",
+          "decoded": ".",
+          "input_exposure": 29323,
+          "label_exposure": 28898,
+          "observer_norm": 0.9579808712005615,
+          "observer_pc1_score": 2.144153118133545,
+          "teacher_norm": 0.7438708543777466
+        }
+      ]
+    },
+    {
+      "prompt": {
+        "id": "french-response",
+        "text": "R\u00e9ponds en fran\u00e7ais: pourquoi le ciel para\u00eet-il bleu?",
+        "purpose": "Multilingual instruction following",
+        "added_before_evaluation": false,
+        "registered_before_instruction_pilot": true
+      },
+      "token_count": 14,
+      "zero_input_tokens": 7,
+      "zero_label_tokens": 7,
+      "tokens_le_3_labels": 8,
+      "median_label_exposure": 1.0,
+      "tokens": [
+        {
+          "id": 14462,
+          "token": "R\u00c3\u00a9",
+          "decoded": "R\u00e9",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 1.8567883968353271,
+          "observer_pc1_score": -0.2854544520378113,
+          "teacher_norm": 0.7670783400535583
+        },
+        {
+          "id": 4168,
+          "token": "pond",
+          "decoded": "pond",
+          "input_exposure": 2,
+          "label_exposure": 2,
+          "observer_norm": 0.9382554292678833,
+          "observer_pc1_score": 0.7754094004631042,
+          "teacher_norm": 0.9291753172874451
+        },
+        {
+          "id": 592,
+          "token": "s",
+          "decoded": "s",
+          "input_exposure": 1621,
+          "label_exposure": 1616,
+          "observer_norm": 0.7860837578773499,
+          "observer_pc1_score": 1.7093844413757324,
+          "teacher_norm": 0.899354875087738
+        },
+        {
+          "id": 915,
+          "token": "\u0120en",
+          "decoded": " en",
+          "input_exposure": 53,
+          "label_exposure": 51,
+          "observer_norm": 0.6002522706985474,
+          "observer_pc1_score": 1.288196325302124,
+          "teacher_norm": 0.8968285918235779
+        },
+        {
+          "id": 9656,
+          "token": "\u0120fran\u00c3\u00a7ais",
+          "decoded": " fran\u00e7ais",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 1.486849308013916,
+          "observer_pc1_score": 0.13888636231422424,
+          "teacher_norm": 0.645728588104248
+        },
+        {
+          "id": 535,
+          "token": ":",
+          "decoded": ":",
+          "input_exposure": 3712,
+          "label_exposure": 3711,
+          "observer_norm": 0.7512946128845215,
+          "observer_pc1_score": 1.8435947895050049,
+          "teacher_norm": 0.7589150667190552
+        },
+        {
+          "id": 41500,
+          "token": "\u0120pourquoi",
+          "decoded": " pourquoi",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 2.192835569381714,
+          "observer_pc1_score": -0.6368601322174072,
+          "teacher_norm": 0.6843047142028809
+        },
+        {
+          "id": 945,
+          "token": "\u0120le",
+          "decoded": " le",
+          "input_exposure": 89,
+          "label_exposure": 88,
+          "observer_norm": 0.5672449469566345,
+          "observer_pc1_score": 1.3703324794769287,
+          "teacher_norm": 0.9033796787261963
+        },
+        {
+          "id": 38771,
+          "token": "\u0120ciel",
+          "decoded": " ciel",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 2.0383799076080322,
+          "observer_pc1_score": -0.46610862016677856,
+          "teacher_norm": 0.774909496307373
+        },
+        {
+          "id": 1953,
+          "token": "\u0120para",
+          "decoded": " para",
+          "input_exposure": 9,
+          "label_exposure": 9,
+          "observer_norm": 1.08676016330719,
+          "observer_pc1_score": 0.6323645114898682,
+          "teacher_norm": 0.8100855946540833
+        },
+        {
+          "id": 16204,
+          "token": "\u00c3\u00aet",
+          "decoded": "\u00eet",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 2.1177332401275635,
+          "observer_pc1_score": -0.5668455958366394,
+          "teacher_norm": 0.7705663442611694
+        },
+        {
+          "id": 25226,
+          "token": "-il",
+          "decoded": "-il",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 2.0889430046081543,
+          "observer_pc1_score": -0.5281893610954285,
+          "teacher_norm": 0.849686861038208
+        },
+        {
+          "id": 62171,
+          "token": "\u0120bleu",
+          "decoded": " bleu",
+          "input_exposure": 0,
+          "label_exposure": 0,
+          "observer_norm": 1.8186115026474,
+          "observer_pc1_score": -0.22631540894508362,
+          "teacher_norm": 0.739396870136261
+        },
+        {
+          "id": 540,
+          "token": "?",
+          "decoded": "?",
+          "input_exposure": 1131,
+          "label_exposure": 626,
+          "observer_norm": 0.7025757431983948,
+          "observer_pc1_score": 1.757157325744629,
+          "teacher_norm": 0.7440929412841797
+        }
+      ]
+    }
+  ]
+}

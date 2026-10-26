@@ -1,0 +1,4406 @@
+{
+  "scope": "diagnostic counterfactuals, not new held-out benchmark",
+  "arms": {
+    "baseline": [
+      {
+        "id": "record-00",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cedar",
+        "forced_prefix": "",
+        "response": "cedar",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cedar\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cedar\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cedar\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cedar\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: birch",
+        "forced_prefix": "",
+        "response": "birch",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"birch\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: maple",
+        "forced_prefix": "",
+        "response": "maple",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"maple\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"maple\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"maple\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"maple\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: oak",
+        "forced_prefix": "",
+        "response": "oak",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"oak\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: pine",
+        "forced_prefix": "",
+        "response": "pine",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"pine\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"pine\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"pine\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"pine\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: elm",
+        "forced_prefix": "",
+        "response": "elm",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"elm\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          808,
+          586,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: ash",
+        "forced_prefix": "",
+        "response": "ash",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"ash\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"ash\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"ash\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"ash\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: fir",
+        "forced_prefix": "",
+        "response": "fir",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"fir\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: willow",
+        "forced_prefix": "",
+        "response": "willow",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"willow\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"willow\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"willow\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"willow\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: spruce",
+        "forced_prefix": "",
+        "response": "spruce",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"spruce\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: beech",
+        "forced_prefix": "",
+        "response": "bear",
+        "correct": false,
+        "completion_ids": [
+          575,
+          1083,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"beech\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"beech\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"beth\", \"enabled\": true}",
+        "correct": false,
+        "completion_ids": [
+          575,
+          1323,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"beech\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: alder",
+        "forced_prefix": "",
+        "response": "alder",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"alder\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hazel",
+        "forced_prefix": "",
+        "response": "hazel",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hazel\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hazel\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hazel\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hazel\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: yew",
+        "forced_prefix": "",
+        "response": "yew",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"yew\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: larch",
+        "forced_prefix": "",
+        "response": "larch",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"larch\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"larch\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"larch\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"larch\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: poplar",
+        "forced_prefix": "",
+        "response": "poplar",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"poplar\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cypress",
+        "forced_prefix": "",
+        "response": "cypress",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cypress\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cypress\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cypress\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cypress\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hemlock",
+        "forced_prefix": "",
+        "response": "hemlock",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hemlock\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: juniper",
+        "forced_prefix": "",
+        "response": "juniper",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"juniper\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"juniper\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"juniper\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"juniper\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: holly",
+        "forced_prefix": "",
+        "response": "holly",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"holly\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      }
+    ],
+    "repeated": [
+      {
+        "id": "record-00",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cedar",
+        "forced_prefix": "",
+        "response": "cedar",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cedar\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: birch",
+        "forced_prefix": "",
+        "response": "birch",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"birch\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: maple",
+        "forced_prefix": "",
+        "response": "maple",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"maple\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"maple\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"maple\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"maple\",\"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          25475,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: oak",
+        "forced_prefix": "",
+        "response": "oak",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"oak\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: pine",
+        "forced_prefix": "",
+        "response": "pine",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"pine\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: elm",
+        "forced_prefix": "",
+        "response": "elm",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"elm\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          808,
+          586,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          808,
+          586,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: ash",
+        "forced_prefix": "",
+        "response": "ash",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"ash\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: fir",
+        "forced_prefix": "",
+        "response": "fir",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"fir\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: willow",
+        "forced_prefix": "",
+        "response": "willow",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"willow\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"willow\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"willow\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"willow\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: spruce",
+        "forced_prefix": "",
+        "response": "spruce",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"spruce\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: beech",
+        "forced_prefix": "",
+        "response": "bear",
+        "correct": false,
+        "completion_ids": [
+          575,
+          1083,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"beech\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: alder",
+        "forced_prefix": "",
+        "response": "alder",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"alder\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hazel",
+        "forced_prefix": "",
+        "response": "hazel",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hazel\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hazel\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hazel\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hazel\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: yew",
+        "forced_prefix": "",
+        "response": "yew",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"yew\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: larch",
+        "forced_prefix": "",
+        "response": "larch",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"larch\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: poplar",
+        "forced_prefix": "",
+        "response": "poplar",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"poplar\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cypress",
+        "forced_prefix": "",
+        "response": "cypress",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cypress\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hemlock",
+        "forced_prefix": "",
+        "response": "hemlock",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hemlock\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: juniper",
+        "forced_prefix": "",
+        "response": "juniper",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"juniper\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: holly",
+        "forced_prefix": "",
+        "response": "holly",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"holly\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      }
+    ],
+    "unique": [
+      {
+        "id": "record-00",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cedar",
+        "forced_prefix": "",
+        "response": "cedar",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cedar\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-00",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cedar\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1456,
+          788,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: birch",
+        "forced_prefix": "",
+        "response": "birch",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"birch\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-01",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"birch\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          575,
+          864,
+          824,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: maple",
+        "forced_prefix": "",
+        "response": "maple",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"maple\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"maple\",\"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          25475,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"maple\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-02",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"maple\",\"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          10129,
+          799,
+          25475,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: oak",
+        "forced_prefix": "",
+        "response": "oak",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"oak\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-03",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"oak\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          588,
+          955,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: pine",
+        "forced_prefix": "",
+        "response": "pine",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"pine\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-04",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"pine\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          27089,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: elm",
+        "forced_prefix": "",
+        "response": "elm",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"elm\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          21086,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          808,
+          586,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-05",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"elm\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          808,
+          586,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: ash",
+        "forced_prefix": "",
+        "response": "ash",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"ash\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-06",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"ash\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1905,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: fir",
+        "forced_prefix": "",
+        "response": "fir",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"fir\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-07",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"fir\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          579,
+          864,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: willow",
+        "forced_prefix": "",
+        "response": "willow",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"willow\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"willow\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"willow\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-08",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"willow\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          15728,
+          867,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: spruce",
+        "forced_prefix": "",
+        "response": "spruce",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"spruce\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-09",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"spruce\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          1480,
+          43563,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: beech",
+        "forced_prefix": "",
+        "response": "bear",
+        "correct": false,
+        "completion_ids": [
+          575,
+          1083,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"beech\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-10",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"beech\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1619,
+          6376,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: alder",
+        "forced_prefix": "",
+        "response": "alder",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"alder\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-11",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"alder\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          786,
+          1506,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hazel",
+        "forced_prefix": "",
+        "response": "hazel",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hazel\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hazel\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hazel\", \"enabled\": true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          3347,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-12",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hazel\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          581,
+          1369,
+          808,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: yew",
+        "forced_prefix": "",
+        "response": "yew",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"yew\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-13",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"yew\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          598,
+          1225,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: larch",
+        "forced_prefix": "",
+        "response": "larch",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"larch\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-14",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"larch\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          585,
+          2783,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: poplar",
+        "forced_prefix": "",
+        "response": "poplar",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"poplar\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-15",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"poplar\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          18886,
+          13548,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: cypress",
+        "forced_prefix": "",
+        "response": "cypress",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"cypress\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-16",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"cypress\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          1551,
+          2877,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: hemlock",
+        "forced_prefix": "",
+        "response": "hemlock",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"hemlock\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-17",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"hemlock\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          773,
+          2738,
+          1436,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: juniper",
+        "forced_prefix": "",
+        "response": "juniper",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"juniper\"; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-18",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"juniper\", \"enabled\":true}",
+        "correct": true,
+        "completion_ids": [
+          583,
+          11523,
+          1007,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          10567,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "plain_echo",
+        "prompt": "Copy this word exactly, with no other text: holly",
+        "forced_prefix": "",
+        "response": "holly",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "quoted_value",
+        "prompt": "Encode this setting as JSON: label is the text \"holly\"; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"label\": \"",
+        "response": "{\"label\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_item",
+        "prompt": "Encode this setting as JSON: item is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"item\": \"",
+        "response": "{\"item\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      },
+      {
+        "id": "record-19",
+        "mode": "renamed_name",
+        "prompt": "Encode this setting as JSON: name is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+        "forced_prefix": "{\"name\": \"",
+        "response": "{\"name\": \"holly\", \"enabled\": false}",
+        "correct": true,
+        "completion_ids": [
+          9062,
+          876,
+          1878,
+          997,
+          771,
+          7526,
+          6881,
+          4831,
+          602,
+          7
+        ]
+      }
+    ]
+  },
+  "complete": true
+}

@@ -1,0 +1,927 @@
+{
+  "version": 3,
+  "role": "frozen_post_training_holdout",
+  "scope": "prompt-disjoint synthetic task families; number-word facts shared with training",
+  "tasks": [
+    {
+      "id": "record-00",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"agate\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "agate",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-00",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 39, -2, 4, -51. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -51,
+        -2,
+        4,
+        39
+      ]
+    },
+    {
+      "id": "arithmetic-00",
+      "category": "arithmetic",
+      "prompt": "An order consists of 5 racks with 2 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "9"
+    },
+    {
+      "id": "order-00",
+      "category": "transitive_ordering",
+      "prompt": "Event R4101 is later than S5101 and earlier than T6101. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5101"
+    },
+    {
+      "id": "translation-00",
+      "category": "spanish_number_words",
+      "prompt": "Write zero in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "cero"
+    },
+    {
+      "id": "record-01",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"opal\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "opal",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-01",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 40, -5, 5, -52. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -52,
+        -5,
+        5,
+        40
+      ]
+    },
+    {
+      "id": "arithmetic-01",
+      "category": "arithmetic",
+      "prompt": "An order consists of 6 racks with 3 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "16"
+    },
+    {
+      "id": "order-01",
+      "category": "transitive_ordering",
+      "prompt": "Event R4102 is later than S5102 and earlier than T6102. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6102"
+    },
+    {
+      "id": "translation-01",
+      "category": "spanish_number_words",
+      "prompt": "Write one in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "uno"
+    },
+    {
+      "id": "record-02",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"jade\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "jade",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-02",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 41, -8, 6, -53. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -53,
+        -8,
+        6,
+        41
+      ]
+    },
+    {
+      "id": "arithmetic-02",
+      "category": "arithmetic",
+      "prompt": "An order consists of 7 racks with 4 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "25"
+    },
+    {
+      "id": "order-02",
+      "category": "transitive_ordering",
+      "prompt": "Event R4103 is later than S5103 and earlier than T6103. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5103"
+    },
+    {
+      "id": "translation-02",
+      "category": "spanish_number_words",
+      "prompt": "Write two in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "dos"
+    },
+    {
+      "id": "record-03",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"quartz\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "quartz",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-03",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 42, -11, 7, -54. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -54,
+        -11,
+        7,
+        42
+      ]
+    },
+    {
+      "id": "arithmetic-03",
+      "category": "arithmetic",
+      "prompt": "An order consists of 8 racks with 5 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "36"
+    },
+    {
+      "id": "order-03",
+      "category": "transitive_ordering",
+      "prompt": "Event R4104 is later than S5104 and earlier than T6104. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6104"
+    },
+    {
+      "id": "translation-03",
+      "category": "spanish_number_words",
+      "prompt": "Write three in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "tres"
+    },
+    {
+      "id": "record-04",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"topaz\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "topaz",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-04",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 43, -14, 8, -55. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -55,
+        -14,
+        8,
+        43
+      ]
+    },
+    {
+      "id": "arithmetic-04",
+      "category": "arithmetic",
+      "prompt": "An order consists of 9 racks with 6 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "49"
+    },
+    {
+      "id": "order-04",
+      "category": "transitive_ordering",
+      "prompt": "Event S5105 is later than T6105 and earlier than R4105. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6105"
+    },
+    {
+      "id": "translation-04",
+      "category": "spanish_number_words",
+      "prompt": "Write four in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "cuatro"
+    },
+    {
+      "id": "record-05",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"ruby\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "ruby",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-05",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 44, -17, 9, -56. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -56,
+        -17,
+        9,
+        44
+      ]
+    },
+    {
+      "id": "arithmetic-05",
+      "category": "arithmetic",
+      "prompt": "An order consists of 10 racks with 7 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "69"
+    },
+    {
+      "id": "order-05",
+      "category": "transitive_ordering",
+      "prompt": "Event R4106 is later than T6106 and earlier than S5106. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5106"
+    },
+    {
+      "id": "translation-05",
+      "category": "spanish_number_words",
+      "prompt": "Write five in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "cinco"
+    },
+    {
+      "id": "record-06",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"amber\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "amber",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-06",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 45, -20, 10, -57. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -57,
+        -20,
+        10,
+        45
+      ]
+    },
+    {
+      "id": "arithmetic-06",
+      "category": "arithmetic",
+      "prompt": "An order consists of 11 racks with 8 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "86"
+    },
+    {
+      "id": "order-06",
+      "category": "transitive_ordering",
+      "prompt": "Event R4107 is later than S5107 and earlier than T6107. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5107"
+    },
+    {
+      "id": "translation-06",
+      "category": "spanish_number_words",
+      "prompt": "Write six in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "seis"
+    },
+    {
+      "id": "record-07",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"onyx\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "onyx",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-07",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 46, -23, 11, -58. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -58,
+        -23,
+        11,
+        46
+      ]
+    },
+    {
+      "id": "arithmetic-07",
+      "category": "arithmetic",
+      "prompt": "An order consists of 12 racks with 2 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "21"
+    },
+    {
+      "id": "order-07",
+      "category": "transitive_ordering",
+      "prompt": "Event S5108 is later than R4108 and earlier than T6108. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6108"
+    },
+    {
+      "id": "translation-07",
+      "category": "spanish_number_words",
+      "prompt": "Write seven in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "siete"
+    },
+    {
+      "id": "record-08",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"garnet\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "garnet",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-08",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 47, -26, 12, -59. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -59,
+        -26,
+        12,
+        47
+      ]
+    },
+    {
+      "id": "arithmetic-08",
+      "category": "arithmetic",
+      "prompt": "An order consists of 13 racks with 3 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "35"
+    },
+    {
+      "id": "order-08",
+      "category": "transitive_ordering",
+      "prompt": "Event T6109 is later than S5109 and earlier than R4109. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5109"
+    },
+    {
+      "id": "translation-08",
+      "category": "spanish_number_words",
+      "prompt": "Write eight in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "ocho"
+    },
+    {
+      "id": "record-09",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"zircon\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "zircon",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-09",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 48, -29, 13, -60. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -60,
+        -29,
+        13,
+        48
+      ]
+    },
+    {
+      "id": "arithmetic-09",
+      "category": "arithmetic",
+      "prompt": "An order consists of 14 racks with 4 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "51"
+    },
+    {
+      "id": "order-09",
+      "category": "transitive_ordering",
+      "prompt": "Event S5110 is later than T6110 and earlier than R4110. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "R4110"
+    },
+    {
+      "id": "translation-09",
+      "category": "spanish_number_words",
+      "prompt": "Write nine in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "nueve"
+    },
+    {
+      "id": "record-10",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"pearl\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "pearl",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-10",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 49, -32, 14, -61. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -61,
+        -32,
+        14,
+        49
+      ]
+    },
+    {
+      "id": "arithmetic-10",
+      "category": "arithmetic",
+      "prompt": "An order consists of 15 racks with 5 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "74"
+    },
+    {
+      "id": "order-10",
+      "category": "transitive_ordering",
+      "prompt": "Event S5111 is later than R4111 and earlier than T6111. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "R4111"
+    },
+    {
+      "id": "translation-10",
+      "category": "spanish_number_words",
+      "prompt": "Write ten in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "diez"
+    },
+    {
+      "id": "record-11",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"diamond\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "diamond",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-11",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 50, -35, 15, -62. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -62,
+        -35,
+        15,
+        50
+      ]
+    },
+    {
+      "id": "arithmetic-11",
+      "category": "arithmetic",
+      "prompt": "An order consists of 16 racks with 6 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "94"
+    },
+    {
+      "id": "order-11",
+      "category": "transitive_ordering",
+      "prompt": "Event R4112 is later than S5112 and earlier than T6112. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6112"
+    },
+    {
+      "id": "translation-11",
+      "category": "spanish_number_words",
+      "prompt": "Write eleven in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "once"
+    },
+    {
+      "id": "record-12",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"emerald\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "emerald",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-12",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 51, -38, 16, -63. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -63,
+        -38,
+        16,
+        51
+      ]
+    },
+    {
+      "id": "arithmetic-12",
+      "category": "arithmetic",
+      "prompt": "An order consists of 17 racks with 7 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "116"
+    },
+    {
+      "id": "order-12",
+      "category": "transitive_ordering",
+      "prompt": "Event R4113 is later than S5113 and earlier than T6113. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5113"
+    },
+    {
+      "id": "translation-12",
+      "category": "spanish_number_words",
+      "prompt": "Write twelve in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "doce"
+    },
+    {
+      "id": "record-13",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"sapphire\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "sapphire",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-13",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 52, -41, 17, -64. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -64,
+        -41,
+        17,
+        52
+      ]
+    },
+    {
+      "id": "arithmetic-13",
+      "category": "arithmetic",
+      "prompt": "An order consists of 18 racks with 8 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "140"
+    },
+    {
+      "id": "order-13",
+      "category": "transitive_ordering",
+      "prompt": "Event T6114 is later than R4114 and earlier than S5114. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5114"
+    },
+    {
+      "id": "translation-13",
+      "category": "spanish_number_words",
+      "prompt": "Write thirteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "trece"
+    },
+    {
+      "id": "record-14",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"amethyst\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "amethyst",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-14",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 53, -44, 18, -65. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -65,
+        -44,
+        18,
+        53
+      ]
+    },
+    {
+      "id": "arithmetic-14",
+      "category": "arithmetic",
+      "prompt": "An order consists of 19 racks with 2 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "33"
+    },
+    {
+      "id": "order-14",
+      "category": "transitive_ordering",
+      "prompt": "Event T6115 is later than S5115 and earlier than R4115. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5115"
+    },
+    {
+      "id": "translation-14",
+      "category": "spanish_number_words",
+      "prompt": "Write fourteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "catorce"
+    },
+    {
+      "id": "record-15",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"tourmaline\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "tourmaline",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-15",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 54, -47, 19, -66. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -66,
+        -47,
+        19,
+        54
+      ]
+    },
+    {
+      "id": "arithmetic-15",
+      "category": "arithmetic",
+      "prompt": "An order consists of 20 racks with 3 plates per rack. 1 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "59"
+    },
+    {
+      "id": "order-15",
+      "category": "transitive_ordering",
+      "prompt": "Event R4116 is later than S5116 and earlier than T6116. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6116"
+    },
+    {
+      "id": "translation-15",
+      "category": "spanish_number_words",
+      "prompt": "Write fifteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "quince"
+    },
+    {
+      "id": "record-16",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"peridot\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "peridot",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-16",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 55, -50, 20, -67. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -67,
+        -50,
+        20,
+        55
+      ]
+    },
+    {
+      "id": "arithmetic-16",
+      "category": "arithmetic",
+      "prompt": "An order consists of 21 racks with 4 plates per rack. 2 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "82"
+    },
+    {
+      "id": "order-16",
+      "category": "transitive_ordering",
+      "prompt": "Event T6117 is later than S5117 and earlier than R4117. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5117"
+    },
+    {
+      "id": "translation-16",
+      "category": "spanish_number_words",
+      "prompt": "Write sixteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "dieciséis"
+    },
+    {
+      "id": "record-17",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"aquamarine\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "aquamarine",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-17",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 56, -53, 21, -68. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -68,
+        -53,
+        21,
+        56
+      ]
+    },
+    {
+      "id": "arithmetic-17",
+      "category": "arithmetic",
+      "prompt": "An order consists of 22 racks with 5 plates per rack. 3 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "107"
+    },
+    {
+      "id": "order-17",
+      "category": "transitive_ordering",
+      "prompt": "Event S5118 is later than R4118 and earlier than T6118. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "T6118"
+    },
+    {
+      "id": "translation-17",
+      "category": "spanish_number_words",
+      "prompt": "Write seventeen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "diecisiete"
+    },
+    {
+      "id": "record-18",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"citrine\"; enabled has boolean value false. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "citrine",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-18",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 57, -56, 22, -69. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -69,
+        -56,
+        22,
+        57
+      ]
+    },
+    {
+      "id": "arithmetic-18",
+      "category": "arithmetic",
+      "prompt": "An order consists of 23 racks with 6 plates per rack. 4 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "134"
+    },
+    {
+      "id": "order-18",
+      "category": "transitive_ordering",
+      "prompt": "Event T6119 is later than R4119 and earlier than S5119. Choose the earliest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "R4119"
+    },
+    {
+      "id": "translation-18",
+      "category": "spanish_number_words",
+      "prompt": "Write eighteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "dieciocho"
+    },
+    {
+      "id": "record-19",
+      "category": "json_record",
+      "prompt": "Represent the following in JSON, using exactly label and enabled as keys: the label string is \"spinel\"; enabled has boolean value true. Send the JSON object alone, without Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "spinel",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-19",
+      "category": "signed_sorting",
+      "prompt": "Give the ascending JSON list for these integers: 58, -59, 23, -70. Include no other text or code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -70,
+        -59,
+        23,
+        58
+      ]
+    },
+    {
+      "id": "arithmetic-19",
+      "category": "arithmetic",
+      "prompt": "An order consists of 24 racks with 7 plates per rack. 5 plates are taken out of the order. State only the integer number of plates left.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "163"
+    },
+    {
+      "id": "order-19",
+      "category": "transitive_ordering",
+      "prompt": "Event T6120 is later than R4120 and earlier than S5120. Choose the latest event. Reply only with that identifier.",
+      "validator": "text_exact",
+      "expected": "S5120"
+    },
+    {
+      "id": "translation-19",
+      "category": "spanish_number_words",
+      "prompt": "Write nineteen in Spanish, as a lowercase number word. Your answer must contain only that word, including any required accent marks.",
+      "validator": "text_exact",
+      "expected": "diecinueve"
+    }
+  ]
+}

@@ -1,0 +1,3697 @@
+{
+  "protocol": "research/reports/native_semantic_transfer_protocol.md",
+  "tasks_sha256": "febaeefb128c4e22c4bff4b9fc866b1c19a27096a6836d66a50328ac5c57cb94",
+  "sources": {
+    "baseline": {
+      "path": "research/results/native_semantic_transfer_v1_baseline/baseline.json",
+      "sha256": "07209dab876546a989bb4ad528c5e1cbe56e156066c243307565e52e1e56221a"
+    },
+    "repeat": {
+      "path": "research/results/native_semantic_transfer_v1_repeat/baseline.json",
+      "sha256": "771ab016a7010c52c8f1d5cb1af495aa709cac1601b9a6cfd76e789b3537da14"
+    },
+    "paraphrase": {
+      "path": "research/results/native_semantic_transfer_v1_paraphrase/baseline.json",
+      "sha256": "57f85e603695a81601d2a67dc5c0c7fe2a2b9824a08bf83fb64f91252e746675"
+    },
+    "contrast": {
+      "path": "research/results/native_semantic_transfer_v1_contrast/baseline.json",
+      "sha256": "46a99da7a32dcfccb1cfdf933cfd5f1f86d0cdb76fa9a5b9fcd739104eadd8e5"
+    }
+  },
+  "arms": {
+    "baseline": {
+      "total": 100,
+      "strict_successes": 2,
+      "format_successes": 81,
+      "content_confirmed": 7,
+      "content_parser_failures": 6,
+      "content_unresolved": 87,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 80,
+          "strict_successes": 0,
+          "format_successes": 66,
+          "content_confirmed": 0,
+          "content_parser_failures": 1,
+          "content_unresolved": 79,
+          "truncated": 0
+        },
+        "json_record": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 5,
+          "content_parser_failures": 0,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "signed_sorting": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 5,
+          "content_confirmed": 0,
+          "content_parser_failures": 5,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "spanish_number_words": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 5,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 5,
+          "truncated": 0
+        },
+        "transitive_ordering": {
+          "total": 5,
+          "strict_successes": 2,
+          "format_successes": 5,
+          "content_confirmed": 2,
+          "content_parser_failures": 0,
+          "content_unresolved": 3,
+          "truncated": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "seen_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-0",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-0",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-0",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-0",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-1",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-1",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-1",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-1",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-2",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-2",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-2",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-2",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-3",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-3",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-3",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-3",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-4",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-4",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-4",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-4",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        }
+      ],
+      "splits": {
+        "counterfactual_add": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 18,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0
+        },
+        "new_facts_new_template": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 18,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0
+        },
+        "new_facts_seen_template": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 12,
+          "content_confirmed": 0,
+          "content_parser_failures": 1,
+          "content_unresolved": 19,
+          "truncated": 0
+        },
+        "retention": {
+          "total": 20,
+          "strict_successes": 2,
+          "format_successes": 15,
+          "content_confirmed": 7,
+          "content_parser_failures": 5,
+          "content_unresolved": 8,
+          "truncated": 0
+        },
+        "seen_facts_new_template": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 18,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0
+        }
+      },
+      "both_wordings_correct": 0,
+      "both_operations_correct": 0
+    },
+    "repeat": {
+      "total": 100,
+      "strict_successes": 32,
+      "format_successes": 94,
+      "content_confirmed": 34,
+      "content_parser_failures": 8,
+      "content_unresolved": 58,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 80,
+          "strict_successes": 30,
+          "format_successes": 80,
+          "content_confirmed": 30,
+          "content_parser_failures": 0,
+          "content_unresolved": 50,
+          "truncated": 0
+        },
+        "json_record": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 2,
+          "content_parser_failures": 3,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "signed_sorting": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 5,
+          "content_confirmed": 0,
+          "content_parser_failures": 5,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "spanish_number_words": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 4,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 5,
+          "truncated": 0
+        },
+        "transitive_ordering": {
+          "total": 5,
+          "strict_successes": 2,
+          "format_successes": 5,
+          "content_confirmed": 2,
+          "content_parser_failures": 0,
+          "content_unresolved": 3,
+          "truncated": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "seen_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-13",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-19",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-0",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-0",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-0",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-0",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-1",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-1",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-1",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-1",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-2",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-2",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-2",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-2",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-3",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-3",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-3",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-3",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-4",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-4",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-4",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-4",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        }
+      ],
+      "splits": {
+        "counterfactual_add": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 20,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0
+        },
+        "new_facts_new_template": {
+          "total": 20,
+          "strict_successes": 5,
+          "format_successes": 20,
+          "content_confirmed": 5,
+          "content_parser_failures": 0,
+          "content_unresolved": 15,
+          "truncated": 0
+        },
+        "new_facts_seen_template": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 20,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0
+        },
+        "retention": {
+          "total": 20,
+          "strict_successes": 2,
+          "format_successes": 14,
+          "content_confirmed": 4,
+          "content_parser_failures": 8,
+          "content_unresolved": 8,
+          "truncated": 0
+        },
+        "seen_facts_new_template": {
+          "total": 20,
+          "strict_successes": 15,
+          "format_successes": 20,
+          "content_confirmed": 15,
+          "content_parser_failures": 0,
+          "content_unresolved": 5,
+          "truncated": 0
+        }
+      },
+      "both_wordings_correct": 3,
+      "both_operations_correct": 0,
+      "baseline_exact_losses": [],
+      "baseline_content_losses": [
+        "record-0",
+        "record-1",
+        "record-4"
+      ],
+      "repeat_new_fact_subtraction_losses": []
+    },
+    "paraphrase": {
+      "total": 100,
+      "strict_successes": 38,
+      "format_successes": 94,
+      "content_confirmed": 41,
+      "content_parser_failures": 7,
+      "content_unresolved": 52,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 80,
+          "strict_successes": 36,
+          "format_successes": 80,
+          "content_confirmed": 36,
+          "content_parser_failures": 0,
+          "content_unresolved": 44,
+          "truncated": 0
+        },
+        "json_record": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 3,
+          "content_parser_failures": 2,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "signed_sorting": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 5,
+          "content_confirmed": 0,
+          "content_parser_failures": 5,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "spanish_number_words": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 4,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 5,
+          "truncated": 0
+        },
+        "transitive_ordering": {
+          "total": 5,
+          "strict_successes": 2,
+          "format_successes": 5,
+          "content_confirmed": 2,
+          "content_parser_failures": 0,
+          "content_unresolved": 3,
+          "truncated": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "seen_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-13",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-19",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-0",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-0",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-0",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-0",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-1",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-1",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-1",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-1",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-2",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-2",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-2",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-2",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-3",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-3",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-3",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-3",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-4",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-4",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-4",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-4",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        }
+      ],
+      "splits": {
+        "counterfactual_add": {
+          "total": 20,
+          "strict_successes": 1,
+          "format_successes": 20,
+          "content_confirmed": 1,
+          "content_parser_failures": 0,
+          "content_unresolved": 19,
+          "truncated": 0
+        },
+        "new_facts_new_template": {
+          "total": 20,
+          "strict_successes": 7,
+          "format_successes": 20,
+          "content_confirmed": 7,
+          "content_parser_failures": 0,
+          "content_unresolved": 13,
+          "truncated": 0
+        },
+        "new_facts_seen_template": {
+          "total": 20,
+          "strict_successes": 11,
+          "format_successes": 20,
+          "content_confirmed": 11,
+          "content_parser_failures": 0,
+          "content_unresolved": 9,
+          "truncated": 0
+        },
+        "retention": {
+          "total": 20,
+          "strict_successes": 2,
+          "format_successes": 14,
+          "content_confirmed": 5,
+          "content_parser_failures": 7,
+          "content_unresolved": 8,
+          "truncated": 0
+        },
+        "seen_facts_new_template": {
+          "total": 20,
+          "strict_successes": 17,
+          "format_successes": 20,
+          "content_confirmed": 17,
+          "content_parser_failures": 0,
+          "content_unresolved": 3,
+          "truncated": 0
+        }
+      },
+      "both_wordings_correct": 7,
+      "both_operations_correct": 0,
+      "baseline_exact_losses": [],
+      "baseline_content_losses": [
+        "record-0",
+        "record-1"
+      ],
+      "repeat_new_fact_subtraction_losses": [
+        "new_facts_new_template-00",
+        "new_facts_new_template-18"
+      ],
+      "gates": {
+        "primary_transfer_exceeds_repeat": true,
+        "preserves_repeat_new_fact_subtraction": false,
+        "preserves_baseline_exact": true,
+        "preserves_baseline_content": false,
+        "advance": false
+      }
+    },
+    "contrast": {
+      "total": 100,
+      "strict_successes": 41,
+      "format_successes": 94,
+      "content_confirmed": 44,
+      "content_parser_failures": 7,
+      "content_unresolved": 49,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 80,
+          "strict_successes": 38,
+          "format_successes": 80,
+          "content_confirmed": 38,
+          "content_parser_failures": 0,
+          "content_unresolved": 42,
+          "truncated": 0
+        },
+        "json_record": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 3,
+          "content_parser_failures": 2,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "signed_sorting": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 5,
+          "content_confirmed": 0,
+          "content_parser_failures": 5,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "spanish_number_words": {
+          "total": 5,
+          "strict_successes": 0,
+          "format_successes": 4,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 5,
+          "truncated": 0
+        },
+        "transitive_ordering": {
+          "total": 5,
+          "strict_successes": 3,
+          "format_successes": 5,
+          "content_confirmed": 3,
+          "content_parser_failures": 0,
+          "content_unresolved": 2,
+          "truncated": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "seen_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "seen_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-11",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-15",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_seen_template-19",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-06",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "new_facts_new_template-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-00",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-02",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-04",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-05",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-07",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-10",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-12",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-16",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-18",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "counterfactual_add-19",
+          "category": "arithmetic",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-0",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-0",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-0",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-0",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-1",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "sort-1",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-1",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-1",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-2",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-2",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-2",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-2",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-3",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-3",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-3",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-3",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-4",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-4",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "order-4",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-4",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        }
+      ],
+      "splits": {
+        "counterfactual_add": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 20,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0
+        },
+        "new_facts_new_template": {
+          "total": 20,
+          "strict_successes": 7,
+          "format_successes": 20,
+          "content_confirmed": 7,
+          "content_parser_failures": 0,
+          "content_unresolved": 13,
+          "truncated": 0
+        },
+        "new_facts_seen_template": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 20,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0
+        },
+        "retention": {
+          "total": 20,
+          "strict_successes": 3,
+          "format_successes": 14,
+          "content_confirmed": 6,
+          "content_parser_failures": 7,
+          "content_unresolved": 7,
+          "truncated": 0
+        },
+        "seen_facts_new_template": {
+          "total": 20,
+          "strict_successes": 11,
+          "format_successes": 20,
+          "content_confirmed": 11,
+          "content_parser_failures": 0,
+          "content_unresolved": 9,
+          "truncated": 0
+        }
+      },
+      "both_wordings_correct": 6,
+      "both_operations_correct": 6,
+      "baseline_exact_losses": [
+        "order-1",
+        "order-3"
+      ],
+      "baseline_content_losses": [
+        "record-0",
+        "record-1",
+        "order-1",
+        "order-3"
+      ],
+      "repeat_new_fact_subtraction_losses": [
+        "new_facts_seen_template-03",
+        "new_facts_seen_template-06",
+        "new_facts_seen_template-13"
+      ],
+      "gates": {
+        "primary_transfer_exceeds_repeat": true,
+        "preserves_repeat_new_fact_subtraction": false,
+        "preserves_baseline_exact": false,
+        "preserves_baseline_content": false,
+        "advance": false
+      }
+    }
+  }
+}

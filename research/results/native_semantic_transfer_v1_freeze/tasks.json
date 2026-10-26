@@ -1,0 +1,1417 @@
+{
+  "version": 1,
+  "role": "frozen_post_training_holdout",
+  "tasks": [
+    {
+      "id": "seen_facts_new_template-00",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        19,
+        4,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 19 crates with 4 cups in each crate. It subsequently ships out 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "68"
+    },
+    {
+      "id": "seen_facts_new_template-01",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        14,
+        9,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 14 crates with 9 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "124"
+    },
+    {
+      "id": "seen_facts_new_template-02",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        18,
+        2,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 18 crates with 2 cups in each crate. It subsequently ships out 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "35"
+    },
+    {
+      "id": "seen_facts_new_template-03",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        5,
+        9,
+        6
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 5 crates with 9 cups in each crate. It subsequently ships out 6 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "39"
+    },
+    {
+      "id": "seen_facts_new_template-04",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        12,
+        9,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 12 crates with 9 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "106"
+    },
+    {
+      "id": "seen_facts_new_template-05",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        5,
+        6,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 5 crates with 6 cups in each crate. It subsequently ships out 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "29"
+    },
+    {
+      "id": "seen_facts_new_template-06",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        11,
+        3,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 11 crates with 3 cups in each crate. It subsequently ships out 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "25"
+    },
+    {
+      "id": "seen_facts_new_template-07",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        23,
+        9,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 23 crates with 9 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "198"
+    },
+    {
+      "id": "seen_facts_new_template-08",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        13,
+        8,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 13 crates with 8 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "102"
+    },
+    {
+      "id": "seen_facts_new_template-09",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        26,
+        6,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 26 crates with 6 cups in each crate. It subsequently ships out 7 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "149"
+    },
+    {
+      "id": "seen_facts_new_template-10",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        10,
+        6,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 10 crates with 6 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "58"
+    },
+    {
+      "id": "seen_facts_new_template-11",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        8,
+        7,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 8 crates with 7 cups in each crate. It subsequently ships out 7 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "49"
+    },
+    {
+      "id": "seen_facts_new_template-12",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        19,
+        9,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 19 crates with 9 cups in each crate. It subsequently ships out 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "170"
+    },
+    {
+      "id": "seen_facts_new_template-13",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        16,
+        4,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 16 crates with 4 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "62"
+    },
+    {
+      "id": "seen_facts_new_template-14",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        24,
+        3,
+        6
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 24 crates with 3 cups in each crate. It subsequently ships out 6 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "66"
+    },
+    {
+      "id": "seen_facts_new_template-15",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        4,
+        3,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 4 crates with 3 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "3"
+    },
+    {
+      "id": "seen_facts_new_template-16",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        4,
+        7,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 4 crates with 7 cups in each crate. It subsequently ships out 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "20"
+    },
+    {
+      "id": "seen_facts_new_template-17",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        17,
+        7,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 17 crates with 7 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "110"
+    },
+    {
+      "id": "seen_facts_new_template-18",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        9,
+        3,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 9 crates with 3 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "18"
+    },
+    {
+      "id": "seen_facts_new_template-19",
+      "category": "arithmetic",
+      "split": "seen_facts_new_template",
+      "operands": [
+        24,
+        3,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 24 crates with 3 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "70"
+    },
+    {
+      "id": "new_facts_seen_template-00",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        14,
+        5,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "There are 14 trays of 5 tiles, with 8 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "62"
+    },
+    {
+      "id": "new_facts_seen_template-01",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        8,
+        4,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "There are 8 trays of 4 tiles, with 4 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "28"
+    },
+    {
+      "id": "new_facts_seen_template-02",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        26,
+        2,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "There are 26 trays of 2 tiles, with 1 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "51"
+    },
+    {
+      "id": "new_facts_seen_template-03",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        12,
+        8,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "There are 12 trays of 8 tiles, with 2 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "94"
+    },
+    {
+      "id": "new_facts_seen_template-04",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        21,
+        5,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "There are 21 trays of 5 tiles, with 1 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "104"
+    },
+    {
+      "id": "new_facts_seen_template-05",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        5,
+        9,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "There are 5 trays of 9 tiles, with 4 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "41"
+    },
+    {
+      "id": "new_facts_seen_template-06",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        11,
+        7,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "There are 11 trays of 7 tiles, with 3 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "74"
+    },
+    {
+      "id": "new_facts_seen_template-07",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        14,
+        8,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "There are 14 trays of 8 tiles, with 5 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "107"
+    },
+    {
+      "id": "new_facts_seen_template-08",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        22,
+        5,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "There are 22 trays of 5 tiles, with 3 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "107"
+    },
+    {
+      "id": "new_facts_seen_template-09",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        22,
+        7,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "There are 22 trays of 7 tiles, with 3 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "151"
+    },
+    {
+      "id": "new_facts_seen_template-10",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        21,
+        3,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "There are 21 trays of 3 tiles, with 2 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "61"
+    },
+    {
+      "id": "new_facts_seen_template-11",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        19,
+        9,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "There are 19 trays of 9 tiles, with 3 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "168"
+    },
+    {
+      "id": "new_facts_seen_template-12",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        5,
+        4,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "There are 5 trays of 4 tiles, with 3 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "17"
+    },
+    {
+      "id": "new_facts_seen_template-13",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        22,
+        3,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "There are 22 trays of 3 tiles, with 9 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "new_facts_seen_template-14",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        14,
+        9,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "There are 14 trays of 9 tiles, with 4 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "122"
+    },
+    {
+      "id": "new_facts_seen_template-15",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        21,
+        4,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "There are 21 trays of 4 tiles, with 7 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "77"
+    },
+    {
+      "id": "new_facts_seen_template-16",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        21,
+        4,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "There are 21 trays of 4 tiles, with 5 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "79"
+    },
+    {
+      "id": "new_facts_seen_template-17",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        28,
+        8,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "There are 28 trays of 8 tiles, with 8 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "216"
+    },
+    {
+      "id": "new_facts_seen_template-18",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        7,
+        5,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "There are 7 trays of 5 tiles, with 5 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "30"
+    },
+    {
+      "id": "new_facts_seen_template-19",
+      "category": "arithmetic",
+      "split": "new_facts_seen_template",
+      "operands": [
+        5,
+        6,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "There are 5 trays of 6 tiles, with 9 tiles then removed. How many tiles are there now? Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "21"
+    },
+    {
+      "id": "new_facts_new_template-00",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        14,
+        5,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 14 crates with 5 cups in each crate. It subsequently ships out 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "62"
+    },
+    {
+      "id": "new_facts_new_template-01",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        8,
+        4,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 8 crates with 4 cups in each crate. It subsequently ships out 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "28"
+    },
+    {
+      "id": "new_facts_new_template-02",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        26,
+        2,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 26 crates with 2 cups in each crate. It subsequently ships out 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "51"
+    },
+    {
+      "id": "new_facts_new_template-03",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        12,
+        8,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 12 crates with 8 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "94"
+    },
+    {
+      "id": "new_facts_new_template-04",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        21,
+        5,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 21 crates with 5 cups in each crate. It subsequently ships out 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "104"
+    },
+    {
+      "id": "new_facts_new_template-05",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        5,
+        9,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 5 crates with 9 cups in each crate. It subsequently ships out 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "41"
+    },
+    {
+      "id": "new_facts_new_template-06",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        11,
+        7,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 11 crates with 7 cups in each crate. It subsequently ships out 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "74"
+    },
+    {
+      "id": "new_facts_new_template-07",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        14,
+        8,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 14 crates with 8 cups in each crate. It subsequently ships out 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "107"
+    },
+    {
+      "id": "new_facts_new_template-08",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        22,
+        5,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 22 crates with 5 cups in each crate. It subsequently ships out 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "107"
+    },
+    {
+      "id": "new_facts_new_template-09",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        22,
+        7,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 22 crates with 7 cups in each crate. It subsequently ships out 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "151"
+    },
+    {
+      "id": "new_facts_new_template-10",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        21,
+        3,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 21 crates with 3 cups in each crate. It subsequently ships out 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "61"
+    },
+    {
+      "id": "new_facts_new_template-11",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        19,
+        9,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 19 crates with 9 cups in each crate. It subsequently ships out 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "168"
+    },
+    {
+      "id": "new_facts_new_template-12",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        5,
+        4,
+        3
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 5 crates with 4 cups in each crate. It subsequently ships out 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "17"
+    },
+    {
+      "id": "new_facts_new_template-13",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        22,
+        3,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 22 crates with 3 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "new_facts_new_template-14",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        14,
+        9,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 14 crates with 9 cups in each crate. It subsequently ships out 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "122"
+    },
+    {
+      "id": "new_facts_new_template-15",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        21,
+        4,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 21 crates with 4 cups in each crate. It subsequently ships out 7 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "77"
+    },
+    {
+      "id": "new_facts_new_template-16",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        21,
+        4,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 21 crates with 4 cups in each crate. It subsequently ships out 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "79"
+    },
+    {
+      "id": "new_facts_new_template-17",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        28,
+        8,
+        8
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 28 crates with 8 cups in each crate. It subsequently ships out 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "216"
+    },
+    {
+      "id": "new_facts_new_template-18",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        7,
+        5,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 7 crates with 5 cups in each crate. It subsequently ships out 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "30"
+    },
+    {
+      "id": "new_facts_new_template-19",
+      "category": "arithmetic",
+      "split": "new_facts_new_template",
+      "operands": [
+        5,
+        6,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "A warehouse stores 5 crates with 6 cups in each crate. It subsequently ships out 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "21"
+    },
+    {
+      "id": "counterfactual_add-00",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        14,
+        5,
+        8
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 14 crates with 5 cups in each crate. It subsequently receives 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "78"
+    },
+    {
+      "id": "counterfactual_add-01",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        8,
+        4,
+        4
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 8 crates with 4 cups in each crate. It subsequently receives 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "36"
+    },
+    {
+      "id": "counterfactual_add-02",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        26,
+        2,
+        1
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 26 crates with 2 cups in each crate. It subsequently receives 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "53"
+    },
+    {
+      "id": "counterfactual_add-03",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        12,
+        8,
+        2
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 12 crates with 8 cups in each crate. It subsequently receives 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "98"
+    },
+    {
+      "id": "counterfactual_add-04",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        21,
+        5,
+        1
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 21 crates with 5 cups in each crate. It subsequently receives 1 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "106"
+    },
+    {
+      "id": "counterfactual_add-05",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        5,
+        9,
+        4
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 5 crates with 9 cups in each crate. It subsequently receives 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "49"
+    },
+    {
+      "id": "counterfactual_add-06",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        11,
+        7,
+        3
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 11 crates with 7 cups in each crate. It subsequently receives 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "80"
+    },
+    {
+      "id": "counterfactual_add-07",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        14,
+        8,
+        5
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 14 crates with 8 cups in each crate. It subsequently receives 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "117"
+    },
+    {
+      "id": "counterfactual_add-08",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        22,
+        5,
+        3
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 22 crates with 5 cups in each crate. It subsequently receives 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "113"
+    },
+    {
+      "id": "counterfactual_add-09",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        22,
+        7,
+        3
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 22 crates with 7 cups in each crate. It subsequently receives 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "157"
+    },
+    {
+      "id": "counterfactual_add-10",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        21,
+        3,
+        2
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 21 crates with 3 cups in each crate. It subsequently receives 2 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "65"
+    },
+    {
+      "id": "counterfactual_add-11",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        19,
+        9,
+        3
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 19 crates with 9 cups in each crate. It subsequently receives 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "174"
+    },
+    {
+      "id": "counterfactual_add-12",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        5,
+        4,
+        3
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 5 crates with 4 cups in each crate. It subsequently receives 3 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "23"
+    },
+    {
+      "id": "counterfactual_add-13",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        22,
+        3,
+        9
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 22 crates with 3 cups in each crate. It subsequently receives 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "75"
+    },
+    {
+      "id": "counterfactual_add-14",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        14,
+        9,
+        4
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 14 crates with 9 cups in each crate. It subsequently receives 4 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "130"
+    },
+    {
+      "id": "counterfactual_add-15",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        21,
+        4,
+        7
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 21 crates with 4 cups in each crate. It subsequently receives 7 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "91"
+    },
+    {
+      "id": "counterfactual_add-16",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        21,
+        4,
+        5
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 21 crates with 4 cups in each crate. It subsequently receives 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "89"
+    },
+    {
+      "id": "counterfactual_add-17",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        28,
+        8,
+        8
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 28 crates with 8 cups in each crate. It subsequently receives 8 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "232"
+    },
+    {
+      "id": "counterfactual_add-18",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        7,
+        5,
+        5
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 7 crates with 5 cups in each crate. It subsequently receives 5 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "40"
+    },
+    {
+      "id": "counterfactual_add-19",
+      "category": "arithmetic",
+      "split": "counterfactual_add",
+      "operands": [
+        5,
+        6,
+        9
+      ],
+      "operation": "add",
+      "prompt": "A warehouse stores 5 crates with 6 cups in each crate. It subsequently receives 9 cups. State the number of cups now in storage. Reply only with the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "39"
+    },
+    {
+      "id": "record-0",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"pendant\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "pendant",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-0",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Return only a JSON integer array sorted low to high for 37, -8, 61, -82.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -82,
+        -8,
+        37,
+        61
+      ]
+    },
+    {
+      "id": "order-0",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "T14101 occurred after S13101. R12101 occurred before S13101. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R12101"
+    },
+    {
+      "id": "translation-0",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "In Spanish, how do you write the English number word one? Reply with only the lowercase word, correctly accented.",
+      "validator": "text_exact",
+      "expected": "uno"
+    },
+    {
+      "id": "record-1",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"stapler\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "stapler",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-1",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Return only a JSON integer array sorted low to high for 38, -9, 60, -83.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -83,
+        -9,
+        38,
+        60
+      ]
+    },
+    {
+      "id": "order-1",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "T14102 occurred after S13102. R12102 occurred before S13102. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T14102"
+    },
+    {
+      "id": "translation-1",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "In Spanish, how do you write the English number word four? Reply with only the lowercase word, correctly accented.",
+      "validator": "text_exact",
+      "expected": "cuatro"
+    },
+    {
+      "id": "record-2",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"helmet\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "helmet",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-2",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Return only a JSON integer array sorted low to high for 39, -10, 59, -84.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -84,
+        -10,
+        39,
+        59
+      ]
+    },
+    {
+      "id": "order-2",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "T14103 occurred after S13103. R12103 occurred before S13103. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R12103"
+    },
+    {
+      "id": "translation-2",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "In Spanish, how do you write the English number word seven? Reply with only the lowercase word, correctly accented.",
+      "validator": "text_exact",
+      "expected": "siete"
+    },
+    {
+      "id": "record-3",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"teapot\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "teapot",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-3",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Return only a JSON integer array sorted low to high for 40, -11, 58, -85.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -85,
+        -11,
+        40,
+        58
+      ]
+    },
+    {
+      "id": "order-3",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "T14104 occurred after S13104. R12104 occurred before S13104. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T14104"
+    },
+    {
+      "id": "translation-3",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "In Spanish, how do you write the English number word ten? Reply with only the lowercase word, correctly accented.",
+      "validator": "text_exact",
+      "expected": "diez"
+    },
+    {
+      "id": "record-4",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"compass\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "compass",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-4",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Return only a JSON integer array sorted low to high for 41, -12, 57, -86.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -86,
+        -12,
+        41,
+        57
+      ]
+    },
+    {
+      "id": "order-4",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "T14105 occurred after S13105. R12105 occurred before S13105. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R12105"
+    },
+    {
+      "id": "translation-4",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "In Spanish, how do you write the English number word thirteen? Reply with only the lowercase word, correctly accented.",
+      "validator": "text_exact",
+      "expected": "trece"
+    }
+  ],
+  "scope": "80 arithmetic / 20 retention; paired templates and operations intentionally share test facts"
+}

@@ -1,0 +1,6 @@
+{
+  "tasks": 100,
+  "tasks_sha256": "7caeac127c76dec7b6e345cbbafb2c90815cd8ddf7f6d5743c8dee7d8db06dae",
+  "training_manifest_sha256": "6bec4481e2c148b5e85020e9ba0a938fae7945c7342cc0d491c1422ae60dc336",
+  "created_before_training": true
+}

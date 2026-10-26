@@ -1,0 +1,485 @@
+{
+  "initial": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-r2-factor128-cells6.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 111.15473175048828,
+      "stable_rank": 13.59911823272705,
+      "top1_energy": 0.07353418320417404,
+      "top16_energy": 0.2660900056362152,
+      "frobenius_norm": 31.64904022216797
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 64.72869873046875,
+      "stable_rank": 4.111037254333496,
+      "top1_energy": 0.2432476133108139,
+      "top16_energy": 0.41279253363609314,
+      "frobenius_norm": 35.48637008666992
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 7.854623794555664,
+      "stable_rank": 1.4635788202285767,
+      "top1_energy": 0.6832566857337952,
+      "top16_energy": 0.8020995259284973,
+      "frobenius_norm": 157.32647705078125
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 111.15473175048828,
+      "stable_rank": 13.59911823272705,
+      "top1_energy": 0.07353418320417404,
+      "top16_energy": 0.2660900056362152,
+      "frobenius_norm": 31.64904022216797
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 64.72869873046875,
+      "stable_rank": 4.111037254333496,
+      "top1_energy": 0.2432476133108139,
+      "top16_energy": 0.4127925932407379,
+      "frobenius_norm": 35.48636245727539
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 7.854623794555664,
+      "stable_rank": 1.4635788202285767,
+      "top1_energy": 0.6832566857337952,
+      "top16_energy": 0.8020995259284973,
+      "frobenius_norm": 157.32647705078125
+    }
+  },
+  "pilot_512": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-factor128-cells6-pilot/observer-d-lm-distill.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 111.43589782714844,
+      "stable_rank": 13.725098609924316,
+      "top1_energy": 0.07285922020673752,
+      "top16_energy": 0.2643696665763855,
+      "frobenius_norm": 31.790468215942383
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 65.41972351074219,
+      "stable_rank": 4.153353214263916,
+      "top1_energy": 0.24076929688453674,
+      "top16_energy": 0.40911558270454407,
+      "frobenius_norm": 35.6175651550293
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 8.045498847961426,
+      "stable_rank": 1.4720990657806396,
+      "top1_energy": 0.6793021559715271,
+      "top16_energy": 0.7979724407196045,
+      "frobenius_norm": 157.6323699951172
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 67.0341796875,
+      "stable_rank": 4.284074306488037,
+      "top1_energy": 0.23342265188694,
+      "top16_energy": 0.4047236144542694,
+      "frobenius_norm": 32.498897552490234
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 66.50045776367188,
+      "stable_rank": 4.253798007965088,
+      "top1_energy": 0.23508402705192566,
+      "top16_energy": 0.40961840748786926,
+      "frobenius_norm": 36.06744384765625
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 3.155855655670166,
+      "stable_rank": 1.186049461364746,
+      "top1_energy": 0.8431351780891418,
+      "top16_energy": 0.9000604152679443,
+      "frobenius_norm": 209.84890747070312
+    }
+  },
+  "prior_full_4096": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-factor128-cells6-full/observer-d-lm-distill.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 113.47154998779297,
+      "stable_rank": 15.103861808776855,
+      "top1_energy": 0.06620822846889496,
+      "top16_energy": 0.25228211283683777,
+      "frobenius_norm": 33.2978401184082
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 67.88249206542969,
+      "stable_rank": 4.318048000335693,
+      "top1_energy": 0.23158612847328186,
+      "top16_energy": 0.39799538254737854,
+      "frobenius_norm": 36.08243179321289
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 9.50554370880127,
+      "stable_rank": 1.5386948585510254,
+      "top1_energy": 0.6499014496803284,
+      "top16_energy": 0.7721337676048279,
+      "frobenius_norm": 160.32749938964844
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 14.426278114318848,
+      "stable_rank": 1.716389536857605,
+      "top1_energy": 0.5826182961463928,
+      "top16_energy": 0.6793150305747986,
+      "frobenius_norm": 48.3596305847168
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 72.18753051757812,
+      "stable_rank": 4.795369625091553,
+      "top1_energy": 0.20853449404239655,
+      "top16_energy": 0.40091225504875183,
+      "frobenius_norm": 37.992618560791016
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 1.790179967880249,
+      "stable_rank": 1.0770421028137207,
+      "top1_energy": 0.9284688234329224,
+      "top16_energy": 0.9547033309936523,
+      "frobenius_norm": 366.4184875488281
+    }
+  },
+  "repeated_960": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-unique-supervision-repeated-control/observer-d-lm-step-000960.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 111.68708801269531,
+      "stable_rank": 13.85412311553955,
+      "top1_energy": 0.07218067348003387,
+      "top16_energy": 0.26290491223335266,
+      "frobenius_norm": 31.93529510498047
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 65.61651611328125,
+      "stable_rank": 4.165952205657959,
+      "top1_energy": 0.24004116654396057,
+      "top16_energy": 0.40822046995162964,
+      "frobenius_norm": 35.64253234863281
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 8.158147811889648,
+      "stable_rank": 1.477279543876648,
+      "top1_energy": 0.6769199371337891,
+      "top16_energy": 0.795781672000885,
+      "frobenius_norm": 157.86805725097656
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 46.287864685058594,
+      "stable_rank": 3.076030969619751,
+      "top1_energy": 0.3250942528247833,
+      "top16_energy": 0.4885365664958954,
+      "frobenius_norm": 34.839317321777344
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 67.62287902832031,
+      "stable_rank": 4.36001443862915,
+      "top1_energy": 0.2293570339679718,
+      "top16_energy": 0.4093168079853058,
+      "frobenius_norm": 36.463497161865234
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 2.4352681636810303,
+      "stable_rank": 1.1319907903671265,
+      "top1_energy": 0.8833994269371033,
+      "top16_energy": 0.9260647892951965,
+      "frobenius_norm": 246.4233856201172
+    }
+  },
+  "unique_960": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-unique-supervision-8k/observer-d-lm-step-000960.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 111.62586212158203,
+      "stable_rank": 13.831562995910645,
+      "top1_energy": 0.07229840755462646,
+      "top16_energy": 0.26334306597709656,
+      "frobenius_norm": 31.90524673461914
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 65.55237579345703,
+      "stable_rank": 4.162658214569092,
+      "top1_energy": 0.24023109674453735,
+      "top16_energy": 0.4087090790271759,
+      "frobenius_norm": 35.631649017333984
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 8.140134811401367,
+      "stable_rank": 1.4765952825546265,
+      "top1_energy": 0.6772336363792419,
+      "top16_energy": 0.7963289618492126,
+      "frobenius_norm": 157.781982421875
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 32.94308853149414,
+      "stable_rank": 2.4486241340637207,
+      "top1_energy": 0.40839260816574097,
+      "top16_energy": 0.5448920726776123,
+      "frobenius_norm": 36.96300506591797
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 67.38394165039062,
+      "stable_rank": 4.336594104766846,
+      "top1_energy": 0.23059572279453278,
+      "top16_energy": 0.40927305817604065,
+      "frobenius_norm": 36.36834716796875
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 2.4265458583831787,
+      "stable_rank": 1.1311827898025513,
+      "top1_energy": 0.8840304017066956,
+      "top16_energy": 0.9261303544044495,
+      "frobenius_norm": 246.1456298828125
+    }
+  },
+  "repeated_7680": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-unique-supervision-repeated-control/observer-d-lm-step-007680.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 114.66161346435547,
+      "stable_rank": 16.06182289123535,
+      "top1_energy": 0.062259431928396225,
+      "top16_energy": 0.244083434343338,
+      "frobenius_norm": 34.295074462890625
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 68.86454772949219,
+      "stable_rank": 4.37374210357666,
+      "top1_energy": 0.22863717377185822,
+      "top16_energy": 0.391431987285614,
+      "frobenius_norm": 36.06638717651367
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 10.37566089630127,
+      "stable_rank": 1.574784755706787,
+      "top1_energy": 0.6350074410438538,
+      "top16_energy": 0.7559709548950195,
+      "frobenius_norm": 161.1656036376953
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 12.131694793701172,
+      "stable_rank": 1.6235638856887817,
+      "top1_energy": 0.6159289479255676,
+      "top16_energy": 0.7044137120246887,
+      "frobenius_norm": 55.14590835571289
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 80.27957153320312,
+      "stable_rank": 5.827354431152344,
+      "top1_energy": 0.1716044545173645,
+      "top16_energy": 0.38205644488334656,
+      "frobenius_norm": 41.80899429321289
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 2.350733518600464,
+      "stable_rank": 1.1260838508605957,
+      "top1_energy": 0.8880332708358765,
+      "top16_energy": 0.9298608899116516,
+      "frobenius_norm": 363.2960205078125
+    }
+  },
+  "unique_7680": {
+    "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-unique-supervision-8k/observer-d-lm-step-007680.pt",
+    "input_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 114.26056671142578,
+      "stable_rank": 16.06963348388672,
+      "top1_energy": 0.06222917512059212,
+      "top16_energy": 0.24816370010375977,
+      "frobenius_norm": 34.29096984863281
+    },
+    "input_projection": {
+      "shape": [
+        384,
+        128
+      ],
+      "effective_rank": 68.73814392089844,
+      "stable_rank": 4.381998062133789,
+      "top1_energy": 0.22820639610290527,
+      "top16_energy": 0.39478105306625366,
+      "frobenius_norm": 36.1351203918457
+    },
+    "input_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 10.42848014831543,
+      "stable_rank": 1.580361247062683,
+      "top1_energy": 0.6327667236328125,
+      "top16_energy": 0.7582364678382874,
+      "frobenius_norm": 161.67030334472656
+    },
+    "output_table": {
+      "shape": [
+        65536,
+        128
+      ],
+      "effective_rank": 8.99911880493164,
+      "stable_rank": 1.4929091930389404,
+      "top1_energy": 0.6698331236839294,
+      "top16_energy": 0.753451406955719,
+      "frobenius_norm": 56.6268424987793
+    },
+    "output_projection": {
+      "shape": [
+        128,
+        384
+      ],
+      "effective_rank": 74.96664428710938,
+      "stable_rank": 5.136991500854492,
+      "top1_energy": 0.19466647505760193,
+      "top16_energy": 0.3980168104171753,
+      "frobenius_norm": 39.0888557434082
+    },
+    "output_product": {
+      "shape": [
+        65536,
+        384
+      ],
+      "effective_rank": 1.8338905572891235,
+      "stable_rank": 1.0819048881530762,
+      "top1_energy": 0.9242956638336182,
+      "top16_energy": 0.9541012048721313,
+      "frobenius_norm": 387.67486572265625
+    }
+  }
+}

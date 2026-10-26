@@ -1,0 +1,64 @@
+{
+  "checkpoint": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-unique-supervision-8k/observer-d-lm-distill.pt",
+  "paired_prompts": 16,
+  "batches": 8,
+  "losses": {
+    "static": {
+      "ce": 3.5665071308612823,
+      "kl": 2.9404666870832443
+    },
+    "correction": {
+      "ce": 3.3124945759773254,
+      "kl": 2.232856050133705
+    }
+  },
+  "gradients": {
+    "static_norm": 5.928921996904081,
+    "correction_norm": 14.6717097343771,
+    "cosine": 0.11103946437931435,
+    "correction_weight_at_10pct_norm": 0.040410573165935104,
+    "correction_weight_at_25pct_norm": 0.10102643291483776,
+    "by_group": {
+      "depth_embedding": {
+        "static_norm": 0.1376494743939891,
+        "correction_norm": 0.41845332781689665,
+        "cosine": 0.15864134722597975
+      },
+      "token_embedding": {
+        "static_norm": 3.036834920276012,
+        "correction_norm": 9.408076416328088,
+        "cosine": 0.025225970821743333
+      },
+      "input_projection": {
+        "static_norm": 0.210047752707141,
+        "correction_norm": 0.6623271032762542,
+        "cosine": 0.04428083239499209
+      },
+      "method_cell": {
+        "static_norm": 0.9740455544373876,
+        "correction_norm": 1.9640858058170658,
+        "cosine": 0.11935556675510686
+      },
+      "additional_method_cells": {
+        "static_norm": 1.0788330878066505,
+        "correction_norm": 3.0649274895967773,
+        "cosine": 0.09464998213358919
+      },
+      "final_norm": {
+        "static_norm": 0.05165269812270731,
+        "correction_norm": 0.1691789499961264,
+        "cosine": 0.15947824735491262
+      },
+      "output_projection": {
+        "static_norm": 0.26474965542346696,
+        "correction_norm": 0.8133830626976134,
+        "cosine": 0.10587573773887103
+      },
+      "output_embedding": {
+        "static_norm": 4.866341163688705,
+        "correction_norm": 10.592061045998008,
+        "cosine": 0.16214148803075776
+      }
+    }
+  }
+}

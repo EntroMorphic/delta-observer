@@ -26,6 +26,27 @@ This repository contains code, data, and trained models for our paper "Delta Obs
 
 **Method:** We train two architectures (monolithic and compositional) to solve 4-bit binary addition while a Delta Observer watches both models learn concurrently, discovering shared semantic structure through online observation.
 
+### Observer.D experimental method
+
+**Observer.D** extends Delta Observer from representation analysis to detached
+behavioral transfer. It distills paired source states, activation deltas, and
+training chronology into a student that runs without either source model or the
+observer at inference. The controlled research harness compares direct
+training, output distillation, and Observer.D guidance under AdamW and hybrid
+Muon. Observer.D's signature encoder includes a native C/ARM NEON backend with
+numerical-parity checks against PyTorch.
+
+See [`research/README.md`](research/README.md) for objectives, controls, and
+reproduction commands. Current results are preliminary and do not yet establish
+a trajectory advantage.
+
+**Current LLM research direction:** use observer-derived diagnostics to improve
+functioning pretrained LLMs under controlled adaptation budgets. Standalone
+compression experiments are paused. A native LoRA development pilot improved
+JSON-record compliance; broader capability and observer-specific advantages
+remain unproven. See the [active study plan](research/reports/pretrained_llm_improvement_plan.md)
+and [measured pilot](research/reports/native_lora_pilot_results.md).
+
 ---
 
 ## 🚀 Run in Google Colab

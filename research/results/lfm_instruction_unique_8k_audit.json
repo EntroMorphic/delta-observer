@@ -1,0 +1,21 @@
+{
+  "manifest": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-instruction-unique-8k/manifest.json",
+  "manifest_sha256": "5a60df618b1dd1287e926a1ad7257ddd319b91c559cb5a8ebd8bd6f09b955e4b",
+  "shards": 128,
+  "all_shard_hashes_match": true,
+  "sequence_count": 8192,
+  "prompt_hashes_path": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/lfm-instruction-unique-8k/prompt_hashes.txt",
+  "prompt_hashes_sha256": "10a01a1a7c5b58b2d690edfbf79e6c980594d1bf343bc3ef5fc6b803f2a3e006",
+  "prompt_hash_count": 8192,
+  "distinct_prompt_hash_count": 8192,
+  "frozen_prompt_hash_intersection": [],
+  "supervised_tokens": 622330,
+  "teacher_cross_entropy": 0.4500593654009852,
+  "teacher_top_k_probability_mass": 0.9868149676335273,
+  "rejections": {
+    "rejected_missing_user_text": 0,
+    "rejected_frozen_prompt": 0,
+    "rejected_duplicate_prompt": 0,
+    "rejected_too_long": 18687
+  }
+}

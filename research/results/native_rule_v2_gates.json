@@ -1,0 +1,7 @@
+{
+  "aggregate_exceeds_both": true,
+  "arithmetic_above_zero": true,
+  "ordering_above_ten": false,
+  "no_baseline_content_loss": false,
+  "advance": false
+}

@@ -1,0 +1,46 @@
+{
+  "model": "LiquidAI/LFM2.5-350M",
+  "revision": "9e6c6ccf47cd318696e137d381a7ded8fe4df09f",
+  "arms": {
+    "remediation": {
+      "path": "remediation.json",
+      "sha256": "953d108ce9631b6fa35bfb7d492ed7cf77868c5a77c3b96b904051f097a288e1",
+      "examples": 640,
+      "supervised_tokens": 4206,
+      "input_tokens": 28041,
+      "category_counts": {
+        "json_record": 128,
+        "signed_sorting": 128,
+        "arithmetic": 128,
+        "transitive_ordering": 128,
+        "spanish_number_words": 128
+      },
+      "copied_value_counts": {
+        "lantern": 8,
+        "mug": 8,
+        "notebook": 8,
+        "ribbon": 8,
+        "basket": 8,
+        "kettle": 8,
+        "scarf": 8,
+        "clock": 8,
+        "copper": 8,
+        "silver": 8,
+        "marble": 8,
+        "granite": 8,
+        "velvet": 8,
+        "cotton": 8,
+        "leather": 8,
+        "linen": 8
+      },
+      "style_counts": {
+        "compact": 43,
+        "spaced": 43,
+        "pretty": 42
+      }
+    }
+  },
+  "scope": "remediation bundle, not a budget-matched causal comparison to the old pilot",
+  "max_evaluation_train_word5_jaccard": 0.0,
+  "exclusion_caveat": "Prompt-disjoint lexical screen; shared task families and Spanish facts, not pretraining decontamination"
+}

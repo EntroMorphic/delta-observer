@@ -1,0 +1,30 @@
+{
+  "rank": 96,
+  "missing_keys": [
+    "output_projection.weight",
+    "output_embedding.weight"
+  ],
+  "unexpected_keys": [],
+  "weight_frobenius_relative_error": 0.18980756402015686,
+  "weight_squared_energy_retained": 0.9638364911079407,
+  "raw": {
+    "ce": 6.164541965350509,
+    "distillation": 3.6155988071113825,
+    "state": 0.0,
+    "delta": 0.0,
+    "teacher_ce": 5.081088493578136,
+    "teacher_top1_agreement": 0.1946258544921875,
+    "supervised_tokens": 65536,
+    "batches": 256
+  },
+  "instruction": {
+    "ce": 5.318089087650439,
+    "distillation": 4.431410433629649,
+    "state": 0.0,
+    "delta": 0.0,
+    "teacher_ce": 0.4468451390855932,
+    "teacher_top1_agreement": 0.22372662960560685,
+    "supervised_tokens": 3102,
+    "batches": 16
+  }
+}

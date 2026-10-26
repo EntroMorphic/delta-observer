@@ -1,0 +1,1267 @@
+{
+  "version": 1,
+  "role": "frozen_post_training_holdout",
+  "tasks": [
+    {
+      "id": "seen_fact_new_template-00",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        11,
+        2,
+        9
+      ],
+      "prompt": "9 screws are taken away from a supply consisting of 11 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "13"
+    },
+    {
+      "id": "seen_fact_new_template-01",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        18,
+        3,
+        8
+      ],
+      "prompt": "8 screws are taken away from a supply consisting of 18 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "46"
+    },
+    {
+      "id": "seen_fact_new_template-02",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        11,
+        5,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 11 packets of 5 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "50"
+    },
+    {
+      "id": "seen_fact_new_template-03",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        18,
+        3,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 18 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "50"
+    },
+    {
+      "id": "seen_fact_new_template-04",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        16,
+        2,
+        8
+      ],
+      "prompt": "8 screws are taken away from a supply consisting of 16 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "24"
+    },
+    {
+      "id": "seen_fact_new_template-05",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        20,
+        3,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 20 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "56"
+    },
+    {
+      "id": "seen_fact_new_template-06",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        22,
+        7,
+        1
+      ],
+      "prompt": "1 screws are taken away from a supply consisting of 22 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "153"
+    },
+    {
+      "id": "seen_fact_new_template-07",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        12,
+        3,
+        2
+      ],
+      "prompt": "2 screws are taken away from a supply consisting of 12 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "34"
+    },
+    {
+      "id": "seen_fact_new_template-08",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        14,
+        5,
+        1
+      ],
+      "prompt": "1 screws are taken away from a supply consisting of 14 packets of 5 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "69"
+    },
+    {
+      "id": "seen_fact_new_template-09",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        12,
+        9,
+        8
+      ],
+      "prompt": "8 screws are taken away from a supply consisting of 12 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "100"
+    },
+    {
+      "id": "seen_fact_new_template-10",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        26,
+        7,
+        6
+      ],
+      "prompt": "6 screws are taken away from a supply consisting of 26 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "176"
+    },
+    {
+      "id": "seen_fact_new_template-11",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        22,
+        2,
+        3
+      ],
+      "prompt": "3 screws are taken away from a supply consisting of 22 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "41"
+    },
+    {
+      "id": "seen_fact_new_template-12",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        6,
+        8,
+        1
+      ],
+      "prompt": "1 screws are taken away from a supply consisting of 6 packets of 8 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "47"
+    },
+    {
+      "id": "seen_fact_new_template-13",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        14,
+        3,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 14 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "38"
+    },
+    {
+      "id": "seen_fact_new_template-14",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        4,
+        9,
+        7
+      ],
+      "prompt": "7 screws are taken away from a supply consisting of 4 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "29"
+    },
+    {
+      "id": "seen_fact_new_template-15",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        23,
+        6,
+        6
+      ],
+      "prompt": "6 screws are taken away from a supply consisting of 23 packets of 6 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "132"
+    },
+    {
+      "id": "seen_fact_new_template-16",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        25,
+        7,
+        2
+      ],
+      "prompt": "2 screws are taken away from a supply consisting of 25 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "173"
+    },
+    {
+      "id": "seen_fact_new_template-17",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        28,
+        5,
+        6
+      ],
+      "prompt": "6 screws are taken away from a supply consisting of 28 packets of 5 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "134"
+    },
+    {
+      "id": "seen_fact_new_template-18",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        27,
+        4,
+        7
+      ],
+      "prompt": "7 screws are taken away from a supply consisting of 27 packets of 4 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "101"
+    },
+    {
+      "id": "seen_fact_new_template-19",
+      "category": "arithmetic",
+      "split": "seen_fact_new_template",
+      "operands": [
+        21,
+        3,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 21 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "59"
+    },
+    {
+      "id": "new_fact_seen_template-00",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        9,
+        9,
+        1
+      ],
+      "prompt": "A shipment has 9 cartons with 9 tiles each. After 1 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "80"
+    },
+    {
+      "id": "new_fact_seen_template-01",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        11,
+        2,
+        8
+      ],
+      "prompt": "A shipment has 11 cartons with 2 tiles each. After 8 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "14"
+    },
+    {
+      "id": "new_fact_seen_template-02",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        11,
+        2,
+        1
+      ],
+      "prompt": "A shipment has 11 cartons with 2 tiles each. After 1 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "21"
+    },
+    {
+      "id": "new_fact_seen_template-03",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        18,
+        5,
+        6
+      ],
+      "prompt": "A shipment has 18 cartons with 5 tiles each. After 6 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "84"
+    },
+    {
+      "id": "new_fact_seen_template-04",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        11,
+        8,
+        9
+      ],
+      "prompt": "A shipment has 11 cartons with 8 tiles each. After 9 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "79"
+    },
+    {
+      "id": "new_fact_seen_template-05",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        16,
+        2,
+        6
+      ],
+      "prompt": "A shipment has 16 cartons with 2 tiles each. After 6 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "26"
+    },
+    {
+      "id": "new_fact_seen_template-06",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        23,
+        3,
+        2
+      ],
+      "prompt": "A shipment has 23 cartons with 3 tiles each. After 2 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "67"
+    },
+    {
+      "id": "new_fact_seen_template-07",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        13,
+        5,
+        2
+      ],
+      "prompt": "A shipment has 13 cartons with 5 tiles each. After 2 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "63"
+    },
+    {
+      "id": "new_fact_seen_template-08",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        20,
+        7,
+        1
+      ],
+      "prompt": "A shipment has 20 cartons with 7 tiles each. After 1 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "139"
+    },
+    {
+      "id": "new_fact_seen_template-09",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        13,
+        3,
+        7
+      ],
+      "prompt": "A shipment has 13 cartons with 3 tiles each. After 7 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "32"
+    },
+    {
+      "id": "new_fact_seen_template-10",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        22,
+        9,
+        3
+      ],
+      "prompt": "A shipment has 22 cartons with 9 tiles each. After 3 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "195"
+    },
+    {
+      "id": "new_fact_seen_template-11",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        5,
+        2,
+        9
+      ],
+      "prompt": "A shipment has 5 cartons with 2 tiles each. After 9 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "1"
+    },
+    {
+      "id": "new_fact_seen_template-12",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        4,
+        8,
+        5
+      ],
+      "prompt": "A shipment has 4 cartons with 8 tiles each. After 5 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "27"
+    },
+    {
+      "id": "new_fact_seen_template-13",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        28,
+        4,
+        9
+      ],
+      "prompt": "A shipment has 28 cartons with 4 tiles each. After 9 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "103"
+    },
+    {
+      "id": "new_fact_seen_template-14",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        19,
+        6,
+        2
+      ],
+      "prompt": "A shipment has 19 cartons with 6 tiles each. After 2 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "112"
+    },
+    {
+      "id": "new_fact_seen_template-15",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        20,
+        2,
+        3
+      ],
+      "prompt": "A shipment has 20 cartons with 2 tiles each. After 3 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "37"
+    },
+    {
+      "id": "new_fact_seen_template-16",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        18,
+        2,
+        5
+      ],
+      "prompt": "A shipment has 18 cartons with 2 tiles each. After 5 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "31"
+    },
+    {
+      "id": "new_fact_seen_template-17",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        12,
+        5,
+        6
+      ],
+      "prompt": "A shipment has 12 cartons with 5 tiles each. After 6 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "54"
+    },
+    {
+      "id": "new_fact_seen_template-18",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        23,
+        4,
+        1
+      ],
+      "prompt": "A shipment has 23 cartons with 4 tiles each. After 1 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "91"
+    },
+    {
+      "id": "new_fact_seen_template-19",
+      "category": "arithmetic",
+      "split": "new_fact_seen_template",
+      "operands": [
+        21,
+        9,
+        5
+      ],
+      "prompt": "A shipment has 21 cartons with 9 tiles each. After 5 tiles are removed, how many tiles remain? Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "184"
+    },
+    {
+      "id": "new_fact_new_template-00",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        18,
+        3,
+        3
+      ],
+      "prompt": "3 screws are taken away from a supply consisting of 18 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "51"
+    },
+    {
+      "id": "new_fact_new_template-01",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        24,
+        9,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 24 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "212"
+    },
+    {
+      "id": "new_fact_new_template-02",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        14,
+        6,
+        6
+      ],
+      "prompt": "6 screws are taken away from a supply consisting of 14 packets of 6 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "78"
+    },
+    {
+      "id": "new_fact_new_template-03",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        8,
+        7,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 8 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "51"
+    },
+    {
+      "id": "new_fact_new_template-04",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        13,
+        9,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 13 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "112"
+    },
+    {
+      "id": "new_fact_new_template-05",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        4,
+        7,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 4 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "24"
+    },
+    {
+      "id": "new_fact_new_template-06",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        22,
+        2,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 22 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "39"
+    },
+    {
+      "id": "new_fact_new_template-07",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        7,
+        9,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 7 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "58"
+    },
+    {
+      "id": "new_fact_new_template-08",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        10,
+        9,
+        9
+      ],
+      "prompt": "9 screws are taken away from a supply consisting of 10 packets of 9 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "81"
+    },
+    {
+      "id": "new_fact_new_template-09",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        5,
+        2,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 5 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "6"
+    },
+    {
+      "id": "new_fact_new_template-10",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        10,
+        4,
+        9
+      ],
+      "prompt": "9 screws are taken away from a supply consisting of 10 packets of 4 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "31"
+    },
+    {
+      "id": "new_fact_new_template-11",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        25,
+        3,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 25 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "71"
+    },
+    {
+      "id": "new_fact_new_template-12",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        19,
+        2,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 19 packets of 2 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "33"
+    },
+    {
+      "id": "new_fact_new_template-13",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        6,
+        7,
+        8
+      ],
+      "prompt": "8 screws are taken away from a supply consisting of 6 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "34"
+    },
+    {
+      "id": "new_fact_new_template-14",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        5,
+        6,
+        3
+      ],
+      "prompt": "3 screws are taken away from a supply consisting of 5 packets of 6 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "27"
+    },
+    {
+      "id": "new_fact_new_template-15",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        27,
+        7,
+        1
+      ],
+      "prompt": "1 screws are taken away from a supply consisting of 27 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "188"
+    },
+    {
+      "id": "new_fact_new_template-16",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        11,
+        7,
+        4
+      ],
+      "prompt": "4 screws are taken away from a supply consisting of 11 packets of 7 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "73"
+    },
+    {
+      "id": "new_fact_new_template-17",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        11,
+        3,
+        7
+      ],
+      "prompt": "7 screws are taken away from a supply consisting of 11 packets of 3 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "26"
+    },
+    {
+      "id": "new_fact_new_template-18",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        16,
+        8,
+        5
+      ],
+      "prompt": "5 screws are taken away from a supply consisting of 16 packets of 8 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "123"
+    },
+    {
+      "id": "new_fact_new_template-19",
+      "category": "arithmetic",
+      "split": "new_fact_new_template",
+      "operands": [
+        4,
+        8,
+        6
+      ],
+      "prompt": "6 screws are taken away from a supply consisting of 4 packets of 8 screws. Find the remaining quantity. Return only the decimal integer, with no explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "26"
+    },
+    {
+      "id": "record-0",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"sandal\" and enabled is true. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "sandal",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-0",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 91, -71, -2, 12 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -71,
+        -2,
+        12,
+        91
+      ]
+    },
+    {
+      "id": "order-0",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8101 happened before S9101, and S9101 happened before T10101. State only the ID of the last event.",
+      "validator": "text_exact",
+      "expected": "T10101"
+    },
+    {
+      "id": "translation-0",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"zero\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "cero"
+    },
+    {
+      "id": "record-1",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"bucket\" and enabled is false. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "bucket",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-1",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 90, -72, -3, 13 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -72,
+        -3,
+        13,
+        90
+      ]
+    },
+    {
+      "id": "order-1",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8102 happened before S9102, and S9102 happened before T10102. State only the ID of the first event.",
+      "validator": "text_exact",
+      "expected": "R8102"
+    },
+    {
+      "id": "translation-1",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"two\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "dos"
+    },
+    {
+      "id": "record-2",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"candle\" and enabled is true. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "candle",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-2",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 89, -73, -4, 14 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -73,
+        -4,
+        14,
+        89
+      ]
+    },
+    {
+      "id": "order-2",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8103 happened before S9103, and S9103 happened before T10103. State only the ID of the last event.",
+      "validator": "text_exact",
+      "expected": "T10103"
+    },
+    {
+      "id": "translation-2",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"four\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "cuatro"
+    },
+    {
+      "id": "record-3",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"pillow\" and enabled is false. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "pillow",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-3",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 88, -74, -5, 15 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -74,
+        -5,
+        15,
+        88
+      ]
+    },
+    {
+      "id": "order-3",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8104 happened before S9104, and S9104 happened before T10104. State only the ID of the first event.",
+      "validator": "text_exact",
+      "expected": "R8104"
+    },
+    {
+      "id": "translation-3",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"six\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "seis"
+    },
+    {
+      "id": "record-4",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"button\" and enabled is true. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "button",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-4",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 87, -75, -6, 16 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -75,
+        -6,
+        16,
+        87
+      ]
+    },
+    {
+      "id": "order-4",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8105 happened before S9105, and S9105 happened before T10105. State only the ID of the last event.",
+      "validator": "text_exact",
+      "expected": "T10105"
+    },
+    {
+      "id": "translation-4",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"eight\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "ocho"
+    },
+    {
+      "id": "record-5",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"wallet\" and enabled is false. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "wallet",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-5",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 86, -76, -7, 17 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -76,
+        -7,
+        17,
+        86
+      ]
+    },
+    {
+      "id": "order-5",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8106 happened before S9106, and S9106 happened before T10106. State only the ID of the first event.",
+      "validator": "text_exact",
+      "expected": "R8106"
+    },
+    {
+      "id": "translation-5",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"ten\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "diez"
+    },
+    {
+      "id": "record-6",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"bottle\" and enabled is true. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "bottle",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-6",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 85, -77, -8, 18 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -77,
+        -8,
+        18,
+        85
+      ]
+    },
+    {
+      "id": "order-6",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8107 happened before S9107, and S9107 happened before T10107. State only the ID of the last event.",
+      "validator": "text_exact",
+      "expected": "T10107"
+    },
+    {
+      "id": "translation-6",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"twelve\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "doce"
+    },
+    {
+      "id": "record-7",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"ladder\" and enabled is false. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "ladder",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-7",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 84, -78, -9, 19 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -78,
+        -9,
+        19,
+        84
+      ]
+    },
+    {
+      "id": "order-7",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8108 happened before S9108, and S9108 happened before T10108. State only the ID of the first event.",
+      "validator": "text_exact",
+      "expected": "R8108"
+    },
+    {
+      "id": "translation-7",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"fourteen\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "catorce"
+    },
+    {
+      "id": "record-8",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"sponge\" and enabled is true. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "sponge",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-8",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 83, -79, -10, 20 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -79,
+        -10,
+        20,
+        83
+      ]
+    },
+    {
+      "id": "order-8",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8109 happened before S9109, and S9109 happened before T10109. State only the ID of the last event.",
+      "validator": "text_exact",
+      "expected": "T10109"
+    },
+    {
+      "id": "translation-8",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"sixteen\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "dieciséis"
+    },
+    {
+      "id": "record-9",
+      "category": "json_record",
+      "split": "retention",
+      "prompt": "Provide only JSON with exactly two fields: label is \"towel\" and enabled is false. Do not include any Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "towel",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-9",
+      "category": "signed_sorting",
+      "split": "retention",
+      "prompt": "Sort 82, -80, -11, 21 ascending. Reply solely with a JSON integer array.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -80,
+        -11,
+        21,
+        82
+      ]
+    },
+    {
+      "id": "order-9",
+      "category": "transitive_ordering",
+      "split": "retention",
+      "prompt": "R8110 happened before S9110, and S9110 happened before T10110. State only the ID of the first event.",
+      "validator": "text_exact",
+      "expected": "R8110"
+    },
+    {
+      "id": "translation-9",
+      "category": "spanish_number_words",
+      "split": "retention",
+      "prompt": "Translate the number word \"eighteen\" to Spanish. Answer only with its lowercase Spanish word.",
+      "validator": "text_exact",
+      "expected": "dieciocho"
+    }
+  ],
+  "scope": "60 arithmetic across registered fact/template splits and 40 retention; seen-fact split intentionally reuses supervised facts"
+}

@@ -1,0 +1,1226 @@
+{
+  "version": 2,
+  "role": "frozen_post_training_holdout",
+  "tasks": [
+    {
+      "id": "fresh-subtract-00",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        18,
+        6,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 18 boxes contains 6 tokens. After inventory, the collection loses 4 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "104"
+    },
+    {
+      "id": "fresh-add-00",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        18,
+        6,
+        4
+      ],
+      "operation": "add",
+      "prompt": "Each of 18 boxes contains 6 tokens. After inventory, the collection gains 4 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "112"
+    },
+    {
+      "id": "fresh-subtract-01",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        16,
+        4,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 16 boxes contains 4 tokens. After inventory, the collection loses 7 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "fresh-add-01",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        16,
+        4,
+        7
+      ],
+      "operation": "add",
+      "prompt": "Each of 16 boxes contains 4 tokens. After inventory, the collection gains 7 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "71"
+    },
+    {
+      "id": "fresh-subtract-02",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        19,
+        4,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 19 boxes contains 4 tokens. After inventory, the collection loses 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "67"
+    },
+    {
+      "id": "fresh-add-02",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        19,
+        4,
+        9
+      ],
+      "operation": "add",
+      "prompt": "Each of 19 boxes contains 4 tokens. After inventory, the collection gains 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "85"
+    },
+    {
+      "id": "fresh-subtract-03",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        8,
+        3,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 8 boxes contains 3 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "23"
+    },
+    {
+      "id": "fresh-add-03",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        8,
+        3,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 8 boxes contains 3 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "25"
+    },
+    {
+      "id": "fresh-subtract-04",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        5,
+        3,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 5 boxes contains 3 tokens. After inventory, the collection loses 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "6"
+    },
+    {
+      "id": "fresh-add-04",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        5,
+        3,
+        9
+      ],
+      "operation": "add",
+      "prompt": "Each of 5 boxes contains 3 tokens. After inventory, the collection gains 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "24"
+    },
+    {
+      "id": "fresh-subtract-05",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        22,
+        9,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 22 boxes contains 9 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "197"
+    },
+    {
+      "id": "fresh-add-05",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        22,
+        9,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 22 boxes contains 9 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "199"
+    },
+    {
+      "id": "fresh-subtract-06",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        28,
+        2,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 28 boxes contains 2 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "55"
+    },
+    {
+      "id": "fresh-add-06",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        28,
+        2,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 28 boxes contains 2 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "fresh-subtract-07",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        23,
+        3,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 23 boxes contains 3 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "68"
+    },
+    {
+      "id": "fresh-add-07",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        23,
+        3,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 23 boxes contains 3 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "70"
+    },
+    {
+      "id": "fresh-subtract-08",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        12,
+        7,
+        6
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 12 boxes contains 7 tokens. After inventory, the collection loses 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "78"
+    },
+    {
+      "id": "fresh-add-08",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        12,
+        7,
+        6
+      ],
+      "operation": "add",
+      "prompt": "Each of 12 boxes contains 7 tokens. After inventory, the collection gains 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "90"
+    },
+    {
+      "id": "fresh-subtract-09",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        12,
+        3,
+        6
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 12 boxes contains 3 tokens. After inventory, the collection loses 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "30"
+    },
+    {
+      "id": "fresh-add-09",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        12,
+        3,
+        6
+      ],
+      "operation": "add",
+      "prompt": "Each of 12 boxes contains 3 tokens. After inventory, the collection gains 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "42"
+    },
+    {
+      "id": "fresh-subtract-10",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        11,
+        5,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 11 boxes contains 5 tokens. After inventory, the collection loses 2 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "53"
+    },
+    {
+      "id": "fresh-add-10",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        11,
+        5,
+        2
+      ],
+      "operation": "add",
+      "prompt": "Each of 11 boxes contains 5 tokens. After inventory, the collection gains 2 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "fresh-subtract-11",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        21,
+        4,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 21 boxes contains 4 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "83"
+    },
+    {
+      "id": "fresh-add-11",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        21,
+        4,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 21 boxes contains 4 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "85"
+    },
+    {
+      "id": "fresh-subtract-12",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        5,
+        2,
+        7
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 5 boxes contains 2 tokens. After inventory, the collection loses 7 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "3"
+    },
+    {
+      "id": "fresh-add-12",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        5,
+        2,
+        7
+      ],
+      "operation": "add",
+      "prompt": "Each of 5 boxes contains 2 tokens. After inventory, the collection gains 7 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "17"
+    },
+    {
+      "id": "fresh-subtract-13",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        26,
+        9,
+        2
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 26 boxes contains 9 tokens. After inventory, the collection loses 2 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "232"
+    },
+    {
+      "id": "fresh-add-13",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        26,
+        9,
+        2
+      ],
+      "operation": "add",
+      "prompt": "Each of 26 boxes contains 9 tokens. After inventory, the collection gains 2 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "236"
+    },
+    {
+      "id": "fresh-subtract-14",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        18,
+        6,
+        6
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 18 boxes contains 6 tokens. After inventory, the collection loses 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "102"
+    },
+    {
+      "id": "fresh-add-14",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        18,
+        6,
+        6
+      ],
+      "operation": "add",
+      "prompt": "Each of 18 boxes contains 6 tokens. After inventory, the collection gains 6 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "114"
+    },
+    {
+      "id": "fresh-subtract-15",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        26,
+        6,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 26 boxes contains 6 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "155"
+    },
+    {
+      "id": "fresh-add-15",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        26,
+        6,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 26 boxes contains 6 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "157"
+    },
+    {
+      "id": "fresh-subtract-16",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        15,
+        6,
+        1
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 15 boxes contains 6 tokens. After inventory, the collection loses 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "89"
+    },
+    {
+      "id": "fresh-add-16",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        15,
+        6,
+        1
+      ],
+      "operation": "add",
+      "prompt": "Each of 15 boxes contains 6 tokens. After inventory, the collection gains 1 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "91"
+    },
+    {
+      "id": "fresh-subtract-17",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        9,
+        2,
+        5
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 9 boxes contains 2 tokens. After inventory, the collection loses 5 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "13"
+    },
+    {
+      "id": "fresh-add-17",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        9,
+        2,
+        5
+      ],
+      "operation": "add",
+      "prompt": "Each of 9 boxes contains 2 tokens. After inventory, the collection gains 5 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "23"
+    },
+    {
+      "id": "fresh-subtract-18",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        26,
+        5,
+        4
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 26 boxes contains 5 tokens. After inventory, the collection loses 4 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "126"
+    },
+    {
+      "id": "fresh-add-18",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        26,
+        5,
+        4
+      ],
+      "operation": "add",
+      "prompt": "Each of 26 boxes contains 5 tokens. After inventory, the collection gains 4 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "134"
+    },
+    {
+      "id": "fresh-subtract-19",
+      "category": "arithmetic",
+      "split": "subtract",
+      "operands": [
+        14,
+        5,
+        9
+      ],
+      "operation": "subtract",
+      "prompt": "Each of 14 boxes contains 5 tokens. After inventory, the collection loses 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "61"
+    },
+    {
+      "id": "fresh-add-19",
+      "category": "arithmetic",
+      "split": "add",
+      "operands": [
+        14,
+        5,
+        9
+      ],
+      "operation": "add",
+      "prompt": "Each of 14 boxes contains 5 tokens. After inventory, the collection gains 9 tokens. How many tokens does the collection contain now? Return only the decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "79"
+    },
+    {
+      "id": "fresh-record-00",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"sundial\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "sundial",
+        "enabled": true
+      }
+    },
+    {
+      "id": "fresh-order-00",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82001 occurred after S72001. R62001 occurred before S72001. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R62001"
+    },
+    {
+      "id": "fresh-record-01",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"thimble\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "thimble",
+        "enabled": false
+      }
+    },
+    {
+      "id": "fresh-order-01",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82002 occurred after S72002. R62002 occurred before S72002. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T82002"
+    },
+    {
+      "id": "fresh-record-02",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"badger\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "badger",
+        "enabled": true
+      }
+    },
+    {
+      "id": "fresh-order-02",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82003 occurred after S72003. R62003 occurred before S72003. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R62003"
+    },
+    {
+      "id": "fresh-record-03",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"copper\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "copper",
+        "enabled": false
+      }
+    },
+    {
+      "id": "fresh-order-03",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82004 occurred after S72004. R62004 occurred before S72004. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T82004"
+    },
+    {
+      "id": "fresh-record-04",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"orchid\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "orchid",
+        "enabled": true
+      }
+    },
+    {
+      "id": "fresh-order-04",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82005 occurred after S72005. R62005 occurred before S72005. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R62005"
+    },
+    {
+      "id": "fresh-record-05",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"ladle\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "ladle",
+        "enabled": false
+      }
+    },
+    {
+      "id": "fresh-order-05",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82006 occurred after S72006. R62006 occurred before S72006. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T82006"
+    },
+    {
+      "id": "fresh-record-06",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"otter\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "otter",
+        "enabled": true
+      }
+    },
+    {
+      "id": "fresh-order-06",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82007 occurred after S72007. R62007 occurred before S72007. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R62007"
+    },
+    {
+      "id": "fresh-record-07",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"marigold\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "marigold",
+        "enabled": false
+      }
+    },
+    {
+      "id": "fresh-order-07",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82008 occurred after S72008. R62008 occurred before S72008. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T82008"
+    },
+    {
+      "id": "fresh-record-08",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"quiver\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "quiver",
+        "enabled": true
+      }
+    },
+    {
+      "id": "fresh-order-08",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82009 occurred after S72009. R62009 occurred before S72009. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R62009"
+    },
+    {
+      "id": "fresh-record-09",
+      "category": "json_record",
+      "split": "same_schema",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"goblet\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "goblet",
+        "enabled": false
+      }
+    },
+    {
+      "id": "fresh-order-09",
+      "category": "transitive_ordering",
+      "split": "same_order_wording",
+      "prompt": "T82010 occurred after S72010. R62010 occurred before S72010. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T82010"
+    },
+    {
+      "id": "fresh-record-10",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"heron\" and active the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "heron",
+        "active": true
+      }
+    },
+    {
+      "id": "fresh-order-10",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62011, S72011, and T82011. S72011 is later than R62011; T82011 is later than S72011. Which identifier is first? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "R62011"
+    },
+    {
+      "id": "fresh-record-11",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"trowel\" and active the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "trowel",
+        "active": false
+      }
+    },
+    {
+      "id": "fresh-order-11",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62012, S72012, and T82012. S72012 is later than R62012; T82012 is later than S72012. Which identifier is last? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "T82012"
+    },
+    {
+      "id": "fresh-record-12",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"lilac\" and active the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "lilac",
+        "active": true
+      }
+    },
+    {
+      "id": "fresh-order-12",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62013, S72013, and T82013. S72013 is later than R62013; T82013 is later than S72013. Which identifier is first? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "R62013"
+    },
+    {
+      "id": "fresh-record-13",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"puffin\" and active the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "puffin",
+        "active": false
+      }
+    },
+    {
+      "id": "fresh-order-13",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62014, S72014, and T82014. S72014 is later than R62014; T82014 is later than S72014. Which identifier is last? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "T82014"
+    },
+    {
+      "id": "fresh-record-14",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"spindle\" and active the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "spindle",
+        "active": true
+      }
+    },
+    {
+      "id": "fresh-order-14",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62015, S72015, and T82015. S72015 is later than R62015; T82015 is later than S72015. Which identifier is first? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "R62015"
+    },
+    {
+      "id": "fresh-record-15",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"dahlia\" and active the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "dahlia",
+        "active": false
+      }
+    },
+    {
+      "id": "fresh-order-15",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62016, S72016, and T82016. S72016 is later than R62016; T82016 is later than S72016. Which identifier is last? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "T82016"
+    },
+    {
+      "id": "fresh-record-16",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"walrus\" and active the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "walrus",
+        "active": true
+      }
+    },
+    {
+      "id": "fresh-order-16",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62017, S72017, and T82017. S72017 is later than R62017; T82017 is later than S72017. Which identifier is first? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "R62017"
+    },
+    {
+      "id": "fresh-record-17",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"clover\" and active the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "clover",
+        "active": false
+      }
+    },
+    {
+      "id": "fresh-order-17",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62018, S72018, and T82018. S72018 is later than R62018; T82018 is later than S72018. Which identifier is last? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "T82018"
+    },
+    {
+      "id": "fresh-record-18",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"marten\" and active the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "marten",
+        "active": true
+      }
+    },
+    {
+      "id": "fresh-order-18",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62019, S72019, and T82019. S72019 is later than R62019; T82019 is later than S72019. Which identifier is first? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "R62019"
+    },
+    {
+      "id": "fresh-record-19",
+      "category": "json_record",
+      "split": "new_schema",
+      "prompt": "Output a bare JSON object with exactly title and active: title must be the string \"cobalt\" and active the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "title": "cobalt",
+        "active": false
+      }
+    },
+    {
+      "id": "fresh-order-19",
+      "category": "transitive_ordering",
+      "split": "new_order_wording",
+      "prompt": "The sequence includes R62020, S72020, and T82020. S72020 is later than R62020; T82020 is later than S72020. Which identifier is last? Write only that identifier.",
+      "validator": "text_exact",
+      "expected": "T82020"
+    },
+    {
+      "id": "fresh-sort-00",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 72, -29, 114, -143.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -143,
+        -29,
+        72,
+        114
+      ]
+    },
+    {
+      "id": "fresh-translation-00",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for two. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "dos"
+    },
+    {
+      "id": "fresh-sort-01",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 73, -30, 113, -144.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -144,
+        -30,
+        73,
+        113
+      ]
+    },
+    {
+      "id": "fresh-translation-01",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for three. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "tres"
+    },
+    {
+      "id": "fresh-sort-02",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 74, -31, 112, -145.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -145,
+        -31,
+        74,
+        112
+      ]
+    },
+    {
+      "id": "fresh-translation-02",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for five. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "cinco"
+    },
+    {
+      "id": "fresh-sort-03",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 75, -32, 111, -146.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -146,
+        -32,
+        75,
+        111
+      ]
+    },
+    {
+      "id": "fresh-translation-03",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for six. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "seis"
+    },
+    {
+      "id": "fresh-sort-04",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 76, -33, 110, -147.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -147,
+        -33,
+        76,
+        110
+      ]
+    },
+    {
+      "id": "fresh-translation-04",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for eight. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "ocho"
+    },
+    {
+      "id": "fresh-sort-05",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 77, -34, 109, -148.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -148,
+        -34,
+        77,
+        109
+      ]
+    },
+    {
+      "id": "fresh-translation-05",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for nine. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "nueve"
+    },
+    {
+      "id": "fresh-sort-06",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 78, -35, 108, -149.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -149,
+        -35,
+        78,
+        108
+      ]
+    },
+    {
+      "id": "fresh-translation-06",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for eleven. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "once"
+    },
+    {
+      "id": "fresh-sort-07",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 79, -36, 107, -150.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -150,
+        -36,
+        79,
+        107
+      ]
+    },
+    {
+      "id": "fresh-translation-07",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for twelve. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "doce"
+    },
+    {
+      "id": "fresh-sort-08",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 80, -37, 106, -151.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -151,
+        -37,
+        80,
+        106
+      ]
+    },
+    {
+      "id": "fresh-translation-08",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for fourteen. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "catorce"
+    },
+    {
+      "id": "fresh-sort-09",
+      "category": "signed_sorting",
+      "split": "sorting",
+      "prompt": "Return only a JSON integer array sorted low to high for 81, -38, 105, -152.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -152,
+        -38,
+        81,
+        105
+      ]
+    },
+    {
+      "id": "fresh-translation-09",
+      "category": "spanish_number_words",
+      "split": "translation",
+      "prompt": "Write the Spanish word for fifteen. Use lowercase with the required accent marks and no other text.",
+      "validator": "text_exact",
+      "expected": "quince"
+    }
+  ]
+}

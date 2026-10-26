@@ -1,0 +1,927 @@
+{
+  "version": 2,
+  "role": "frozen_post_training_holdout",
+  "scope": "new prompts; Spanish number mappings overlap training knowledge; task families deliberately shared",
+  "tasks": [
+    {
+      "id": "record-00",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"aster\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "aster",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-00",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 75; -43; -7; 17. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -43,
+        -7,
+        17,
+        75
+      ]
+    },
+    {
+      "id": "arithmetic-00",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 9 trays, with 3 cups per tray. After 6 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "21"
+    },
+    {
+      "id": "order-00",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T401 follows S301, which follows R201. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R201"
+    },
+    {
+      "id": "translation-00",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word zero with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "cero"
+    },
+    {
+      "id": "record-01",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"dahlia\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "dahlia",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-01",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 74; -44; -9; 18. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -44,
+        -9,
+        18,
+        74
+      ]
+    },
+    {
+      "id": "arithmetic-01",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 10 trays, with 4 cups per tray. After 7 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "33"
+    },
+    {
+      "id": "order-01",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T402 follows S302, which follows R202. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T402"
+    },
+    {
+      "id": "translation-01",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word one with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "uno"
+    },
+    {
+      "id": "record-02",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"tulip\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "tulip",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-02",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 73; -45; -11; 19. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -45,
+        -11,
+        19,
+        73
+      ]
+    },
+    {
+      "id": "arithmetic-02",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 11 trays, with 5 cups per tray. After 8 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "47"
+    },
+    {
+      "id": "order-02",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T403 follows S303, which follows R203. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R203"
+    },
+    {
+      "id": "translation-02",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word two with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "dos"
+    },
+    {
+      "id": "record-03",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"orchid\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "orchid",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-03",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 72; -46; -13; 20. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -46,
+        -13,
+        20,
+        72
+      ]
+    },
+    {
+      "id": "arithmetic-03",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 12 trays, with 6 cups per tray. After 9 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "63"
+    },
+    {
+      "id": "order-03",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T404 follows S304, which follows R204. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T404"
+    },
+    {
+      "id": "translation-03",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word three with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "tres"
+    },
+    {
+      "id": "record-04",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"poppy\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "poppy",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-04",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 71; -47; -15; 21. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -47,
+        -15,
+        21,
+        71
+      ]
+    },
+    {
+      "id": "arithmetic-04",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 13 trays, with 7 cups per tray. After 10 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "81"
+    },
+    {
+      "id": "order-04",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T405 follows S305, which follows R205. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R205"
+    },
+    {
+      "id": "translation-04",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word four with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "cuatro"
+    },
+    {
+      "id": "record-05",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"violet\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "violet",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-05",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 70; -48; -17; 22. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -48,
+        -17,
+        22,
+        70
+      ]
+    },
+    {
+      "id": "arithmetic-05",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 14 trays, with 8 cups per tray. After 11 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "101"
+    },
+    {
+      "id": "order-05",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T406 follows S306, which follows R206. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T406"
+    },
+    {
+      "id": "translation-05",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word five with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "cinco"
+    },
+    {
+      "id": "record-06",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"lilac\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "lilac",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-06",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 69; -49; -19; 23. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -49,
+        -19,
+        23,
+        69
+      ]
+    },
+    {
+      "id": "arithmetic-06",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 15 trays, with 9 cups per tray. After 12 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "123"
+    },
+    {
+      "id": "order-06",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T407 follows S307, which follows R207. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R207"
+    },
+    {
+      "id": "translation-06",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word six with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "seis"
+    },
+    {
+      "id": "record-07",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"iris\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "iris",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-07",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 68; -50; -21; 24. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -50,
+        -21,
+        24,
+        68
+      ]
+    },
+    {
+      "id": "arithmetic-07",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 16 trays, with 10 cups per tray. After 13 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "147"
+    },
+    {
+      "id": "order-07",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T408 follows S308, which follows R208. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T408"
+    },
+    {
+      "id": "translation-07",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word seven with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "siete"
+    },
+    {
+      "id": "record-08",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"rose\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "rose",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-08",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 67; -51; -23; 25. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -51,
+        -23,
+        25,
+        67
+      ]
+    },
+    {
+      "id": "arithmetic-08",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 17 trays, with 3 cups per tray. After 14 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "37"
+    },
+    {
+      "id": "order-08",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T409 follows S309, which follows R209. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R209"
+    },
+    {
+      "id": "translation-08",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word eight with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "ocho"
+    },
+    {
+      "id": "record-09",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"lily\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "lily",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-09",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 66; -52; -25; 26. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -52,
+        -25,
+        26,
+        66
+      ]
+    },
+    {
+      "id": "arithmetic-09",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 18 trays, with 4 cups per tray. After 15 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "57"
+    },
+    {
+      "id": "order-09",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T410 follows S310, which follows R210. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T410"
+    },
+    {
+      "id": "translation-09",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word nine with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "nueve"
+    },
+    {
+      "id": "record-10",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"sage\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "sage",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-10",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 65; -53; -27; 27. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -53,
+        -27,
+        27,
+        65
+      ]
+    },
+    {
+      "id": "arithmetic-10",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 19 trays, with 5 cups per tray. After 16 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "79"
+    },
+    {
+      "id": "order-10",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T411 follows S311, which follows R211. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R211"
+    },
+    {
+      "id": "translation-10",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word ten with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "diez"
+    },
+    {
+      "id": "record-11",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"thyme\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "thyme",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-11",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 64; -54; -29; 28. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -54,
+        -29,
+        28,
+        64
+      ]
+    },
+    {
+      "id": "arithmetic-11",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 20 trays, with 6 cups per tray. After 17 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "103"
+    },
+    {
+      "id": "order-11",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T412 follows S312, which follows R212. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T412"
+    },
+    {
+      "id": "translation-11",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word eleven with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "once"
+    },
+    {
+      "id": "record-12",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"basil\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "basil",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-12",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 63; -55; -31; 29. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -55,
+        -31,
+        29,
+        63
+      ]
+    },
+    {
+      "id": "arithmetic-12",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 21 trays, with 7 cups per tray. After 18 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "129"
+    },
+    {
+      "id": "order-12",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T413 follows S313, which follows R213. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R213"
+    },
+    {
+      "id": "translation-12",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word twelve with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "doce"
+    },
+    {
+      "id": "record-13",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"mint\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "mint",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-13",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 62; -56; -33; 30. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -56,
+        -33,
+        30,
+        62
+      ]
+    },
+    {
+      "id": "arithmetic-13",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 22 trays, with 8 cups per tray. After 19 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "157"
+    },
+    {
+      "id": "order-13",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T414 follows S314, which follows R214. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T414"
+    },
+    {
+      "id": "translation-13",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word thirteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "trece"
+    },
+    {
+      "id": "record-14",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"parsley\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "parsley",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-14",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 61; -57; -35; 31. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -57,
+        -35,
+        31,
+        61
+      ]
+    },
+    {
+      "id": "arithmetic-14",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 23 trays, with 9 cups per tray. After 20 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "187"
+    },
+    {
+      "id": "order-14",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T415 follows S315, which follows R215. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R215"
+    },
+    {
+      "id": "translation-14",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word fourteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "catorce"
+    },
+    {
+      "id": "record-15",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"fennel\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "fennel",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-15",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 60; -58; -37; 32. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -58,
+        -37,
+        32,
+        60
+      ]
+    },
+    {
+      "id": "arithmetic-15",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 24 trays, with 10 cups per tray. After 21 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "219"
+    },
+    {
+      "id": "order-15",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T416 follows S316, which follows R216. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T416"
+    },
+    {
+      "id": "translation-15",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word fifteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "quince"
+    },
+    {
+      "id": "record-16",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"cumin\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "cumin",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-16",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 59; -59; -39; 33. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -59,
+        -39,
+        33,
+        59
+      ]
+    },
+    {
+      "id": "arithmetic-16",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 25 trays, with 3 cups per tray. After 22 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "53"
+    },
+    {
+      "id": "order-16",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T417 follows S317, which follows R217. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R217"
+    },
+    {
+      "id": "translation-16",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word sixteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "dieciséis"
+    },
+    {
+      "id": "record-17",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"clove\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "clove",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-17",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 58; -60; -41; 34. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -60,
+        -41,
+        34,
+        58
+      ]
+    },
+    {
+      "id": "arithmetic-17",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 26 trays, with 4 cups per tray. After 23 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "81"
+    },
+    {
+      "id": "order-17",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T418 follows S318, which follows R218. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T418"
+    },
+    {
+      "id": "translation-17",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word seventeen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "diecisiete"
+    },
+    {
+      "id": "record-18",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"nutmeg\". Its text goes under label, and its enabled boolean is true. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "nutmeg",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-18",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 57; -61; -43; 35. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -61,
+        -43,
+        35,
+        57
+      ]
+    },
+    {
+      "id": "arithmetic-18",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 27 trays, with 5 cups per tray. After 24 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "111"
+    },
+    {
+      "id": "order-18",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T419 follows S319, which follows R219. Select the earliest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "R219"
+    },
+    {
+      "id": "translation-18",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word eighteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "dieciocho"
+    },
+    {
+      "id": "record-19",
+      "category": "json_record",
+      "prompt": "Produce a JSON record for a switch named \"saffron\". Its text goes under label, and its enabled boolean is false. The record must have only these two keys. Do not wrap it in Markdown or prose.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "saffron",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-19",
+      "category": "signed_sorting",
+      "prompt": "Increasing-order exercise: 56; -62; -45; 36. Reply with the sorted integers in a JSON array and no surrounding explanation or Markdown.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -62,
+        -45,
+        36,
+        56
+      ]
+    },
+    {
+      "id": "arithmetic-19",
+      "category": "arithmetic",
+      "prompt": "A delivery brings 28 trays, with 6 cups per tray. After 25 cups are taken away, what is the cup count left? Respond solely with a decimal integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "143"
+    },
+    {
+      "id": "order-19",
+      "category": "transitive_ordering",
+      "prompt": "Chronology: T420 follows S320, which follows R220. Select the latest of the three. Output only its identifier.",
+      "validator": "text_exact",
+      "expected": "T420"
+    },
+    {
+      "id": "translation-19",
+      "category": "spanish_number_words",
+      "prompt": "For a Spanish glossary, replace the English numeral word nineteen with its Spanish equivalent. Your complete response should be the lowercase Spanish word, correctly accented, with no other characters.",
+      "validator": "text_exact",
+      "expected": "diecinueve"
+    }
+  ]
+}

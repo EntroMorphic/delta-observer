@@ -1,0 +1,1315 @@
+{
+  "model_type": "lfm2",
+  "total_parameters": 354483968,
+  "config": {
+    "transformers_version": "5.20.2",
+    "architectures": [
+      "Lfm2ForCausalLM"
+    ],
+    "output_hidden_states": false,
+    "return_dict": true,
+    "dtype": "float32",
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "problem_type": null,
+    "vocab_size": 65536,
+    "hidden_size": 1024,
+    "intermediate_size": 6656,
+    "num_hidden_layers": 16,
+    "num_attention_heads": 16,
+    "num_key_value_heads": 8,
+    "max_position_embeddings": 128000,
+    "initializer_range": 0.02,
+    "norm_eps": 1e-05,
+    "use_cache": true,
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 7,
+    "tie_word_embeddings": true,
+    "rope_parameters": {
+      "rope_theta": 1000000.0,
+      "rope_type": "default"
+    },
+    "conv_bias": false,
+    "conv_L_cache": 3,
+    "block_multiple_of": 256,
+    "block_ffn_dim_multiplier": 1.0,
+    "block_auto_adjust_ff_dim": true,
+    "full_attn_idxs": null,
+    "layer_types": [
+      "conv",
+      "conv",
+      "full_attention",
+      "conv",
+      "conv",
+      "full_attention",
+      "conv",
+      "conv",
+      "full_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "full_attention",
+      "conv",
+      "full_attention",
+      "conv"
+    ],
+    "_name_or_path": "LiquidAI/LFM2.5-350M",
+    "block_dim": 1024,
+    "block_mlp_init_scale": 1.0,
+    "block_norm_eps": 1e-05,
+    "block_out_init_scale": 1.0,
+    "block_use_swiglu": true,
+    "block_use_xavier_init": true,
+    "conv_dim": 1024,
+    "conv_use_xavier_init": true,
+    "model_type": "lfm2",
+    "num_heads": 16,
+    "use_pos_enc": true,
+    "output_attentions": false
+  },
+  "groups": {
+    "model": {
+      "parameters": 67109888,
+      "tensors": [
+        {
+          "name": "model.embed_tokens.weight",
+          "shape": [
+            65536,
+            1024
+          ],
+          "parameters": 67108864
+        },
+        {
+          "name": "model.embedding_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_0": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.0.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.0.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.0.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.0.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.0.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.0.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.0.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.0.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_1": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.1.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.1.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.1.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.1.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.1.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.1.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.1.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.1.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_2": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.2.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.2.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.2.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.2.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.2.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.2.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.2.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.2.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.2.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.2.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.2.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_3": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.3.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.3.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.3.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.3.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.3.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.3.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.3.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.3.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_4": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.4.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.4.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.4.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.4.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.4.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.4.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.4.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.4.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_5": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.5.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.5.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.5.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.5.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.5.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.5.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.5.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.5.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.5.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.5.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.5.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_6": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.6.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.6.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.6.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.6.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.6.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.6.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.6.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.6.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_7": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.7.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.7.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.7.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.7.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.7.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.7.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.7.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.7.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_8": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.8.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.8.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.8.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.8.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.8.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.8.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.8.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.8.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.8.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.8.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.8.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_9": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.9.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.9.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.9.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.9.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.9.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.9.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.9.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.9.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_10": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.10.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.10.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.10.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.10.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.10.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.10.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.10.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.10.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.10.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.10.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.10.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_11": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.11.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.11.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.11.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.11.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.11.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.11.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.11.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.11.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_12": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.12.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.12.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.12.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.12.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.12.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.12.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.12.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.12.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.12.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.12.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.12.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_13": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.13.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.13.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.13.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.13.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.13.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.13.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.13.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.13.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_14": {
+      "parameters": 17303680,
+      "tensors": [
+        {
+          "name": "model.layers.14.self_attn.q_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.14.self_attn.k_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.14.self_attn.v_proj.weight",
+          "shape": [
+            512,
+            1024
+          ],
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.14.self_attn.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.14.self_attn.q_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.14.self_attn.k_layernorm.weight",
+          "shape": [
+            64
+          ],
+          "parameters": 64
+        },
+        {
+          "name": "model.layers.14.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.14.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.14.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.14.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.14.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    },
+    "layer_15": {
+      "parameters": 18355200,
+      "tensors": [
+        {
+          "name": "model.layers.15.conv.conv.weight",
+          "shape": [
+            1024,
+            1,
+            3
+          ],
+          "parameters": 3072
+        },
+        {
+          "name": "model.layers.15.conv.in_proj.weight",
+          "shape": [
+            3072,
+            1024
+          ],
+          "parameters": 3145728
+        },
+        {
+          "name": "model.layers.15.conv.out_proj.weight",
+          "shape": [
+            1024,
+            1024
+          ],
+          "parameters": 1048576
+        },
+        {
+          "name": "model.layers.15.feed_forward.w1.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.15.feed_forward.w3.weight",
+          "shape": [
+            4608,
+            1024
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.15.feed_forward.w2.weight",
+          "shape": [
+            1024,
+            4608
+          ],
+          "parameters": 4718592
+        },
+        {
+          "name": "model.layers.15.operator_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        },
+        {
+          "name": "model.layers.15.ffn_norm.weight",
+          "shape": [
+            1024
+          ],
+          "parameters": 1024
+        }
+      ]
+    }
+  }
+}

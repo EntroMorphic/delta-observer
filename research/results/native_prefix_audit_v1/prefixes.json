@@ -1,0 +1,7969 @@
+{
+  "scope": "forced syntax prefix causal diagnostic; not ordinary task success or deployment fix",
+  "prefixes_supply_no_field_values": true,
+  "arms": {
+    "baseline": {
+      "bare_compact": [
+        {
+          "id": "record-00",
+          "response": "{\"label\":\"cedar\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\":\"birch\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\":\"maple\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\":\"oak\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\":\"pine\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\":\"elm\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\":\"ash\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\":\"f\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\":\"label\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\":\"spruce\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\":\"beech\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\":\"alder\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\":\"hazel\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\":\"yew\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\":\"larch\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\":\"label\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\":\"cypress\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\":\"hemlock\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\":\"juniper\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\":\"holly\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_spaced": [
+        {
+          "id": "record-00",
+          "response": "{\"label\": \"cedar\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\": \"birch\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\": \"maple\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\": \"oak\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\": \"pine\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\": \"elm\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\": \"ash\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\": \"fir\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\": \"label\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\": \"spruce\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\": \"beech\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\": \"alder\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\": \"hazel\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\": \"yew\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\": \"larch\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\": \"poplar\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\": \"cypress\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\": \"juniper\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\": \"holly\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_pretty": [
+        {
+          "id": "record-00",
+          "response": "{\n  \"label\": \"cedar\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\n  \"label\": \"birch\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\n  \"label\": \"maple\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\n  \"label\": \"oak\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\n  \"label\": \"pine\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\n  \"label\": \"elm\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\n  \"label\": \"ash\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\n  \"label\": \"fir\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\n  \"label\": \"willow\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            15728,
+            867,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-09",
+          "response": "{\n  \"label\": \"spruce\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\n  \"label\": \"beth\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            1323,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-11",
+          "response": "{\n  \"label\": \"alder\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\n  \"label\": \"hazel\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\n  \"label\": \"yew\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\n  \"label\": \"larch\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\n  \"label\": \"poplar\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\n  \"label\": \"cypress\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\n  \"label\": \"hemlock\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\n  \"label\": \"juniper\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\n  \"label\": \"holly\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "fenced_pretty": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\n  \"label\": \"cedar\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\n  \"label\": \"birch\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\n  \"label\": \"maple\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\n  \"label\": \"oak\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\n  \"label\": \"pine\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\n  \"label\": \"elm\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\n  \"label\": \"ash\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\n  \"label\": \"fir\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\n  \"label\": \"willow\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            15728,
+            867,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\n  \"label\": \"spruce\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\n  \"label\": \"beech\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            4171,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\n  \"label\": \"alder\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\n  \"label\": \"hazel\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\n  \"label\": \"yew\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\n  \"label\": \"larch\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\n  \"label\": \"poplar\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\n  \"label\": \"cypress\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\n  \"label\": \"Hemlock\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            549,
+            870,
+            10210,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\n  \"label\": \"juniper\",\n  \"enabled\": true\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\n  \"label\": \"holly\",\n  \"enabled\": false\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        }
+      ],
+      "fenced_compact": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\"label\":\"cedar\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\"label\":\"birch\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\"label\":\"maple\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\"label\":\"oak\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\"label\":\"pine\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\"label\":\"elm\",\"enabled\":false}\"\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            59359,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\"label\":\"ash\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\"label\":\"f\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\"label\":\"label\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\"label\":\"spruce\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\"label\":\"beech\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\"label\":\"alder\",\"enabled\":false}\"\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            59359,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\"label\":\"hazel\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\"label\":\"yew\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\"label\":\"larch\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\"label\":\"poplar\",\"enabled\":false}\"\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            59359,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\"label\":\"cypress\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\"label\":\"hemlock\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\"label\":\"juniper\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\"label\":\"holly\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        }
+      ]
+    },
+    "repeated": {
+      "bare_compact": [
+        {
+          "id": "record-00",
+          "response": "{\"label\":\"cedar\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\":\"birch\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\":\"maple\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\":\"oak\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\":\"pine\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\":\"elm\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\":\"ash\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\":\"f\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\":\"label\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\":\"spruce\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\":\"beech\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\":\"alder\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\":\"hazel\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\":\"yew\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\":\"larch\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\":\"label\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\":\"cypress\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\":\"hemlock\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\":\"juniper\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\":\"holly\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_spaced": [
+        {
+          "id": "record-00",
+          "response": "{\"label\": \"cedar\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\": \"birch\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\": \"maple\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\": \"oak\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\": \"pine\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\": \"elm\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\": \"ash\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\": \"fir\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\": \"label\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\": \"spruce\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\": \"beech\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\": \"alder\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\": \"hazel\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\": \"yew\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\": \"larch\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\": \"poplar\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\": \"cypress\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\": \"juniper\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\": \"holly\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_pretty": [
+        {
+          "id": "record-00",
+          "response": "{\n  \"label\": \"cedar\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\n  \"label\": \"birch\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\n  \"label\": \"maple\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\n  \"label\": \"oak\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\n  \"label\": \"pine\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\n  \"label\": \"elm\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\n  \"label\": \"ash\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\n  \"label\": \"fir\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\n  \"label\": \"label\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\n  \"label\": \"spruce\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\n  \"label\": \"beech\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\n  \"label\": \"alder\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\n  \"label\": \"hazel\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\n  \"label\": \"yew\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\n  \"label\": \"larch\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\n  \"label\": \"poplar\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\n  \"label\": \"cypress\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\n  \"label\": \"hemlock\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\n  \"label\": \"juniper\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\n  \"label\": \"holly\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "fenced_pretty": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\n  \"label\": \"cedar\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\n  \"label\": \"birch\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\n  \"label\": \"maple\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\n  \"label\": \"oak\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\n  \"label\": \"pine\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\n  \"label\": \"elm\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\n  \"label\": \"ash\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\n  \"label\": \"fir\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\n  \"label\": \"label\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\n  \"label\": \"spruce\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\n  \"label\": \"beech\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\n  \"label\": \"alder\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\n  \"label\": \"hazel\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\n  \"label\": \"yew\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\n  \"label\": \"larch\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\n  \"label\": \"poplar\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\n  \"label\": \"cypress\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\n  \"label\": \"hemlock\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\n  \"label\": \"juniper\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\n  \"label\": \"holly\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        }
+      ],
+      "fenced_compact": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\"label\":\"cedar\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\"label\":\"birch\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\"label\":\"maple\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\"label\":\"oak\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\"label\":\"pine\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\"label\":\"elm\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\"label\":\"ash\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\"label\":\"f\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\"label\":\"label\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\"label\":\"spruce\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\"label\":\"beech\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\"label\":\"alder\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\"label\":\"hazel\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\"label\":\"yew\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\"label\":\"larch\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\"label\":\"label\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\"label\":\"cypress\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\"label\":\"hemlock\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\"label\":\"juniper\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\"label\":\"holly\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        }
+      ]
+    },
+    "unique": {
+      "bare_compact": [
+        {
+          "id": "record-00",
+          "response": "{\"label\":\"cedar\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\":\"birch\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\":\"maple\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\":\"oak\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\":\"pine\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\":\"elm\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\":\"ash\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\":\"f\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\":\"label\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\":\"spruce\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\":\"beech\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\":\"alder\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\":\"hazel\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\":\"yew\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\":\"larch\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\":\"label\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\":\"cypress\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\":\"hemlock\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\":\"juniper\",\"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\":\"holly\",\"enabled\":false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_spaced": [
+        {
+          "id": "record-00",
+          "response": "{\"label\": \"cedar\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\"label\": \"birch\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\"label\": \"maple\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\"label\": \"oak\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\"label\": \"pine\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\"label\": \"elm\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\"label\": \"ash\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\"label\": \"fir\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\"label\": \"label\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\"label\": \"spruce\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\"label\": \"beech\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\"label\": \"alder\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\"label\": \"hazel\", \"enabled\": true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\"label\": \"yew\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\"label\": \"larch\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\"label\": \"poplar\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\"label\": \"cypress\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\"label\": \"hemlock\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\"label\": \"juniper\", \"enabled\":true}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\"label\": \"holly\", \"enabled\": false}",
+          "forced_prefix_ids": [
+            38685,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            1878,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "bare_pretty": [
+        {
+          "id": "record-00",
+          "response": "{\n  \"label\": \"cedar\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "{\n  \"label\": \"birch\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "{\n  \"label\": \"maple\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "{\n  \"label\": \"oak\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "{\n  \"label\": \"pine\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "{\n  \"label\": \"elm\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "{\n  \"label\": \"ash\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "{\n  \"label\": \"fir\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-08",
+          "response": "{\n  \"label\": \"label\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "{\n  \"label\": \"spruce\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "{\n  \"label\": \"beech\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "{\n  \"label\": \"alder\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "{\n  \"label\": \"hazel\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "{\n  \"label\": \"yew\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "{\n  \"label\": \"larch\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "{\n  \"label\": \"poplar\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-16",
+          "response": "{\n  \"label\": \"cypress\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "{\n  \"label\": \"hemlock\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "{\n  \"label\": \"juniper\",\n  \"enabled\": true\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "{\n  \"label\": \"holly\",\n  \"enabled\": false\n}",
+          "forced_prefix_ids": [
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            708,
+            602,
+            7
+          ],
+          "strict": true,
+          "content": true
+        }
+      ],
+      "fenced_pretty": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\n  \"label\": \"cedar\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\n  \"label\": \"birch\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\n  \"label\": \"maple\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\n  \"label\": \"oak\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            588,
+            955,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\n  \"label\": \"pine\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            27089,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\n  \"label\": \"elm\",\n  \"enabled\": false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            808,
+            586,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\n  \"label\": \"ash\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1905,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\n  \"label\": \"fir\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            579,
+            864,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\n  \"label\": \"label\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            3283,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\n  \"label\": \"spruce\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\n  \"label\": \"beech\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\n  \"label\": \"alder\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\n  \"label\": \"hazel\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\n  \"label\": \"yew\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\n  \"label\": \"larch\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\n  \"label\": \"poplar\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            18886,
+            13548,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\n  \"label\": \"cypress\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\n  \"label\": \"hemlock\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\n  \"label\": \"juniper\",\n  \"enabled\": true}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            3347,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\n  \"label\": \"holly\",\n  \"enabled\": false}\n}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            3219,
+            730,
+            997,
+            3283,
+            6881,
+            997
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            6608,
+            730,
+            997,
+            771,
+            7526,
+            6881,
+            4831,
+            1105,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        }
+      ],
+      "fenced_compact": [
+        {
+          "id": "record-00",
+          "response": "```json\n{\"label\":\"cedar\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1456,
+            788,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-01",
+          "response": "```json\n{\"label\":\"birch\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            575,
+            864,
+            824,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-02",
+          "response": "```json\n{\"label\":\"maple\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            10129,
+            799,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-03",
+          "response": "```json\n{\"label\":\"oak\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            588,
+            955,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-04",
+          "response": "```json\n{\"label\":\"pine\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            27089,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-05",
+          "response": "```json\n{\"label\":\"elm\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            808,
+            586,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-06",
+          "response": "```json\n{\"label\":\"ash\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1905,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-07",
+          "response": "```json\n{\"label\":\"f\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            579,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-08",
+          "response": "```json\n{\"label\":\"label\",\"enabled\":true}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-09",
+          "response": "```json\n{\"label\":\"spruce\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1480,
+            43563,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-10",
+          "response": "```json\n{\"label\":\"beech\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1619,
+            6376,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-11",
+          "response": "```json\n{\"label\":\"alder\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            786,
+            1506,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-12",
+          "response": "```json\n{\"label\":\"hazel\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            581,
+            1369,
+            808,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-13",
+          "response": "```json\n{\"label\":\"yew\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            598,
+            1225,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-14",
+          "response": "```json\n{\"label\":\"larch\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            585,
+            2783,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-15",
+          "response": "```json\n{\"label\":\"label\",\"enabled\":false}\n```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            3283,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            1105,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": false
+        },
+        {
+          "id": "record-16",
+          "response": "```json\n{\"label\":\"cypress\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            1551,
+            2877,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-17",
+          "response": "```json\n{\"label\":\"hemlock\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            773,
+            2738,
+            1436,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-18",
+          "response": "```json\n{\"label\":\"juniper\",\"enabled\":true}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            583,
+            11523,
+            1007,
+            25475,
+            771,
+            7526,
+            6881,
+            10567,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        },
+        {
+          "id": "record-19",
+          "response": "```json\n{\"label\":\"holly\",\"enabled\":false}```",
+          "forced_prefix_ids": [
+            26298,
+            20086,
+            708,
+            38685,
+            3283,
+            42066
+          ],
+          "completion_ids": [
+            9062,
+            876,
+            25475,
+            771,
+            7526,
+            6881,
+            13890,
+            602,
+            26298,
+            7
+          ],
+          "strict": false,
+          "content": true
+        }
+      ]
+    }
+  },
+  "complete": true
+}

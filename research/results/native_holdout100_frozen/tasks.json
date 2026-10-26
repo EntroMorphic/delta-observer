@@ -1,0 +1,927 @@
+{
+  "version": 1,
+  "role": "frozen_post_training_holdout",
+  "scope": "100 new prompts in five correlated task families; not a general capability benchmark",
+  "tasks": [
+    {
+      "id": "record-00",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text cedar; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "cedar",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-00",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 53, -31, 2, -1 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -31,
+        -1,
+        2,
+        53
+      ]
+    },
+    {
+      "id": "arithmetic-00",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 11 cartons containing 4 bolts apiece, then ships 13 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "31"
+    },
+    {
+      "id": "order-00",
+      "category": "transitive_ordering",
+      "prompt": "Event S43 happened after R21 but before T65. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T65"
+    },
+    {
+      "id": "translation-00",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'zero'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "cero"
+    },
+    {
+      "id": "record-01",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text birch; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "birch",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-01",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 52, -32, 3, -3 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -32,
+        -3,
+        3,
+        52
+      ]
+    },
+    {
+      "id": "arithmetic-01",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 12 cartons containing 5 bolts apiece, then ships 14 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "46"
+    },
+    {
+      "id": "order-01",
+      "category": "transitive_ordering",
+      "prompt": "Event S44 happened after R22 but before T66. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R22"
+    },
+    {
+      "id": "translation-01",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'one'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "uno"
+    },
+    {
+      "id": "record-02",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text maple; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "maple",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-02",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 51, -33, 4, -5 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -33,
+        -5,
+        4,
+        51
+      ]
+    },
+    {
+      "id": "arithmetic-02",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 13 cartons containing 6 bolts apiece, then ships 15 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "63"
+    },
+    {
+      "id": "order-02",
+      "category": "transitive_ordering",
+      "prompt": "Event S45 happened after R23 but before T67. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T67"
+    },
+    {
+      "id": "translation-02",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'two'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "dos"
+    },
+    {
+      "id": "record-03",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text oak; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "oak",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-03",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 50, -34, 5, -7 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -34,
+        -7,
+        5,
+        50
+      ]
+    },
+    {
+      "id": "arithmetic-03",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 14 cartons containing 7 bolts apiece, then ships 16 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "82"
+    },
+    {
+      "id": "order-03",
+      "category": "transitive_ordering",
+      "prompt": "Event S46 happened after R24 but before T68. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R24"
+    },
+    {
+      "id": "translation-03",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'three'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "tres"
+    },
+    {
+      "id": "record-04",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text pine; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "pine",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-04",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 49, -35, 6, -9 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -35,
+        -9,
+        6,
+        49
+      ]
+    },
+    {
+      "id": "arithmetic-04",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 15 cartons containing 8 bolts apiece, then ships 17 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "103"
+    },
+    {
+      "id": "order-04",
+      "category": "transitive_ordering",
+      "prompt": "Event S47 happened after R25 but before T69. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T69"
+    },
+    {
+      "id": "translation-04",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'four'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "cuatro"
+    },
+    {
+      "id": "record-05",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text elm; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "elm",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-05",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 48, -36, 7, -11 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -36,
+        -11,
+        7,
+        48
+      ]
+    },
+    {
+      "id": "arithmetic-05",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 16 cartons containing 9 bolts apiece, then ships 18 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "126"
+    },
+    {
+      "id": "order-05",
+      "category": "transitive_ordering",
+      "prompt": "Event S48 happened after R26 but before T70. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R26"
+    },
+    {
+      "id": "translation-05",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'five'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "cinco"
+    },
+    {
+      "id": "record-06",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text ash; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "ash",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-06",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 47, -37, 8, -13 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -37,
+        -13,
+        8,
+        47
+      ]
+    },
+    {
+      "id": "arithmetic-06",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 17 cartons containing 10 bolts apiece, then ships 19 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "151"
+    },
+    {
+      "id": "order-06",
+      "category": "transitive_ordering",
+      "prompt": "Event S49 happened after R27 but before T71. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T71"
+    },
+    {
+      "id": "translation-06",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'six'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "seis"
+    },
+    {
+      "id": "record-07",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text fir; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "fir",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-07",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 46, -38, 9, -15 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -38,
+        -15,
+        9,
+        46
+      ]
+    },
+    {
+      "id": "arithmetic-07",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 18 cartons containing 4 bolts apiece, then ships 20 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "52"
+    },
+    {
+      "id": "order-07",
+      "category": "transitive_ordering",
+      "prompt": "Event S50 happened after R28 but before T72. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R28"
+    },
+    {
+      "id": "translation-07",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'seven'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "siete"
+    },
+    {
+      "id": "record-08",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text willow; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "willow",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-08",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 45, -39, 10, -17 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -39,
+        -17,
+        10,
+        45
+      ]
+    },
+    {
+      "id": "arithmetic-08",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 19 cartons containing 5 bolts apiece, then ships 21 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "74"
+    },
+    {
+      "id": "order-08",
+      "category": "transitive_ordering",
+      "prompt": "Event S51 happened after R29 but before T73. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T73"
+    },
+    {
+      "id": "translation-08",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'eight'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "ocho"
+    },
+    {
+      "id": "record-09",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text spruce; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "spruce",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-09",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 44, -40, 11, -19 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -40,
+        -19,
+        11,
+        44
+      ]
+    },
+    {
+      "id": "arithmetic-09",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 20 cartons containing 6 bolts apiece, then ships 22 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "98"
+    },
+    {
+      "id": "order-09",
+      "category": "transitive_ordering",
+      "prompt": "Event S52 happened after R30 but before T74. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R30"
+    },
+    {
+      "id": "translation-09",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'nine'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "nueve"
+    },
+    {
+      "id": "record-10",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text beech; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "beech",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-10",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 43, -41, 12, -21 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -41,
+        -21,
+        12,
+        43
+      ]
+    },
+    {
+      "id": "arithmetic-10",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 21 cartons containing 7 bolts apiece, then ships 23 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "124"
+    },
+    {
+      "id": "order-10",
+      "category": "transitive_ordering",
+      "prompt": "Event S53 happened after R31 but before T75. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T75"
+    },
+    {
+      "id": "translation-10",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'ten'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "diez"
+    },
+    {
+      "id": "record-11",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text alder; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "alder",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-11",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 42, -42, 13, -23 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -42,
+        -23,
+        13,
+        42
+      ]
+    },
+    {
+      "id": "arithmetic-11",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 22 cartons containing 8 bolts apiece, then ships 24 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "152"
+    },
+    {
+      "id": "order-11",
+      "category": "transitive_ordering",
+      "prompt": "Event S54 happened after R32 but before T76. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R32"
+    },
+    {
+      "id": "translation-11",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'eleven'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "once"
+    },
+    {
+      "id": "record-12",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text hazel; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "hazel",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-12",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 41, -43, 14, -25 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -43,
+        -25,
+        14,
+        41
+      ]
+    },
+    {
+      "id": "arithmetic-12",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 23 cartons containing 9 bolts apiece, then ships 25 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "182"
+    },
+    {
+      "id": "order-12",
+      "category": "transitive_ordering",
+      "prompt": "Event S55 happened after R33 but before T77. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T77"
+    },
+    {
+      "id": "translation-12",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'twelve'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "doce"
+    },
+    {
+      "id": "record-13",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text yew; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "yew",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-13",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 40, -44, 15, -27 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -44,
+        -27,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "arithmetic-13",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 24 cartons containing 10 bolts apiece, then ships 26 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "214"
+    },
+    {
+      "id": "order-13",
+      "category": "transitive_ordering",
+      "prompt": "Event S56 happened after R34 but before T78. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R34"
+    },
+    {
+      "id": "translation-13",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'thirteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "trece"
+    },
+    {
+      "id": "record-14",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text larch; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "larch",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-14",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 39, -45, 16, -29 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -45,
+        -29,
+        16,
+        39
+      ]
+    },
+    {
+      "id": "arithmetic-14",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 25 cartons containing 4 bolts apiece, then ships 27 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "73"
+    },
+    {
+      "id": "order-14",
+      "category": "transitive_ordering",
+      "prompt": "Event S57 happened after R35 but before T79. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T79"
+    },
+    {
+      "id": "translation-14",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'fourteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "catorce"
+    },
+    {
+      "id": "record-15",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text poplar; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "poplar",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-15",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 38, -46, 17, -31 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -46,
+        -31,
+        17,
+        38
+      ]
+    },
+    {
+      "id": "arithmetic-15",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 26 cartons containing 5 bolts apiece, then ships 28 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "102"
+    },
+    {
+      "id": "order-15",
+      "category": "transitive_ordering",
+      "prompt": "Event S58 happened after R36 but before T80. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R36"
+    },
+    {
+      "id": "translation-15",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'fifteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "quince"
+    },
+    {
+      "id": "record-16",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text cypress; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "cypress",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-16",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 37, -47, 18, -33 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -47,
+        -33,
+        18,
+        37
+      ]
+    },
+    {
+      "id": "arithmetic-16",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 27 cartons containing 6 bolts apiece, then ships 29 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "133"
+    },
+    {
+      "id": "order-16",
+      "category": "transitive_ordering",
+      "prompt": "Event S59 happened after R37 but before T81. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T81"
+    },
+    {
+      "id": "translation-16",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'sixteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "dieciséis"
+    },
+    {
+      "id": "record-17",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text hemlock; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "hemlock",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-17",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 36, -48, 19, -35 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -48,
+        -35,
+        19,
+        36
+      ]
+    },
+    {
+      "id": "arithmetic-17",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 28 cartons containing 7 bolts apiece, then ships 30 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "166"
+    },
+    {
+      "id": "order-17",
+      "category": "transitive_ordering",
+      "prompt": "Event S60 happened after R38 but before T82. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R38"
+    },
+    {
+      "id": "translation-17",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'seventeen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "diecisiete"
+    },
+    {
+      "id": "record-18",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text juniper; enabled is the boolean true. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "juniper",
+        "enabled": true
+      }
+    },
+    {
+      "id": "sort-18",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 35, -49, 20, -37 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -49,
+        -37,
+        20,
+        35
+      ]
+    },
+    {
+      "id": "arithmetic-18",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 29 cartons containing 8 bolts apiece, then ships 31 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "201"
+    },
+    {
+      "id": "order-18",
+      "category": "transitive_ordering",
+      "prompt": "Event S61 happened after R39 but before T83. Which of those three happened latest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "T83"
+    },
+    {
+      "id": "translation-18",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'eighteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "dieciocho"
+    },
+    {
+      "id": "record-19",
+      "category": "json_record",
+      "prompt": "Encode this setting as JSON: label is the text holly; enabled is the boolean false. Include these two fields and nothing else. Your entire reply must be the bare JSON object, not a code block.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "holly",
+        "enabled": false
+      }
+    },
+    {
+      "id": "sort-19",
+      "category": "signed_sorting",
+      "prompt": "Place the numbers 34, -50, 21, -39 in increasing numerical order. Respond with a bare JSON array of integers. Include neither commentary nor code fences.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -50,
+        -39,
+        21,
+        34
+      ]
+    },
+    {
+      "id": "arithmetic-19",
+      "category": "arithmetic",
+      "prompt": "A warehouse receives 30 cartons containing 9 bolts apiece, then ships 32 bolts. Calculate the remaining bolt count. Supply just its decimal integer, without any explanation.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "238"
+    },
+    {
+      "id": "order-19",
+      "category": "transitive_ordering",
+      "prompt": "Event S62 happened after R40 but before T84. Which of those three happened earliest? Reply solely with its event identifier.",
+      "validator": "text_exact",
+      "expected": "R40"
+    },
+    {
+      "id": "translation-19",
+      "category": "spanish_number_words",
+      "prompt": "Give the Spanish dictionary form of the English number word 'nineteen'. Write that word alone in lowercase, with correct accents and no punctuation.",
+      "validator": "text_exact",
+      "expected": "diecinueve"
+    }
+  ]
+}

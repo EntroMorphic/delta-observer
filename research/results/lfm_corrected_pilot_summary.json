@@ -1,0 +1,47 @@
+{
+  "experiment": "Observer.D-LFM BOS-corrected pilot",
+  "status": "valid mechanism pilot, insufficient scale for capability claims",
+  "teacher": "LiquidAI/LFM2.5-350M",
+  "teacher_parameters": 354483968,
+  "observer_d_parameters": 27973248,
+  "parameter_compression": 12.672249143181372,
+  "data": {
+    "dataset": "HuggingFaceFW/fineweb-edu/sample-10BT",
+    "sequence_length": 128,
+    "training_tokens": 4096,
+    "validation_tokens": 4096,
+    "top_k": 64,
+    "projection_dim": 128,
+    "projection_sha256": "a3bb0b71207c9c1e0cba1fcd2b66f15d23d07d758b4c82f2ae16f602124edd23",
+    "bos_initialized": true
+  },
+  "teacher_validation": {
+    "cross_entropy": 5.02562365680933
+  },
+  "arms": {
+    "direct": {
+      "seconds": 3.8567836250003893,
+      "validation_ce": 8.659692212939262,
+      "teacher_top1_agreement": 0.046875
+    },
+    "distill": {
+      "seconds": 4.060574625000299,
+      "validation_ce": 8.27399580180645,
+      "validation_sparse_kl": 5.8214960396289825,
+      "teacher_top1_agreement": 0.046875
+    },
+    "trajectory": {
+      "seconds": 4.2073710420008865,
+      "validation_ce": 8.274052754044533,
+      "validation_sparse_kl": 5.8215663731098175,
+      "validation_state_loss": 0.01076414468116127,
+      "validation_delta_loss": 0.013191836624173447,
+      "teacher_top1_agreement": 0.046875
+    }
+  },
+  "interpretation": {
+    "distillation_ce_change_vs_direct": -0.3856964111328125,
+    "trajectory_ce_change_vs_distillation": 0.00005695223808288574,
+    "conclusion": "At 12.67x parameter compression, the full pipeline is valid and output distillation improves early learning. Four thousand training tokens are far too few to retain teacher capability, and trajectory guidance has no behavioral effect at the initial weight."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "complete": true,
+  "case_conditions_reconstructed": 1440,
+  "on_off_histories_identical": 720,
+  "unique_executions": 984,
+  "alias_records_verified": 456,
+  "self_replays_verified": 960,
+  "self_replay_failures": [],
+  "empty_prefix_parity_cases": 480,
+  "prefix_text_counts": {
+    "seed-0/original/empty": {
+      "": 40
+    },
+    "seed-0/original/native": {
+      "Each box contains ": 7,
+      "": 32,
+      "The collection initially had \\(": 1
+    },
+    "seed-0/original/adapted": {
+      "": 40
+    },
+    "seed-0/reasoning_request/empty": {
+      "": 40
+    },
+    "seed-0/reasoning_request/native": {
+      "The collection originally has \\(": 8,
+      "The initial number of tokens is \\(": 11,
+      "The collection initially has \\(": 15,
+      "": 4,
+      "The collection initially had \\(": 2
+    },
+    "seed-0/reasoning_request/adapted": {
+      "First, calculate the initial number of tokens: \\(": 12,
+      "First, calculate the total number of tokens before inventory: \\(": 2,
+      "\\boxed": 24,
+      "\\boxed{": 1,
+      "First, calculate the total number of tokens before the loss: \\(": 1
+    },
+    "seed-1/original/empty": {
+      "": 40
+    },
+    "seed-1/original/native": {
+      "Each box contains ": 7,
+      "": 32,
+      "The collection initially had \\(": 1
+    },
+    "seed-1/original/adapted": {
+      "": 40
+    },
+    "seed-1/reasoning_request/empty": {
+      "": 40
+    },
+    "seed-1/reasoning_request/native": {
+      "The collection originally has \\(": 8,
+      "The initial number of tokens is \\(": 11,
+      "The collection initially has \\(": 15,
+      "": 4,
+      "The collection initially had \\(": 2
+    },
+    "seed-1/reasoning_request/adapted": {
+      "First, calculate the initial number of tokens: \\(": 5,
+      "\\boxed": 34,
+      "\\boxed{": 1
+    },
+    "seed-2/original/empty": {
+      "": 40
+    },
+    "seed-2/original/native": {
+      "Each box contains ": 7,
+      "": 32,
+      "The collection initially had \\(": 1
+    },
+    "seed-2/original/adapted": {
+      "": 40
+    },
+    "seed-2/reasoning_request/empty": {
+      "": 40
+    },
+    "seed-2/reasoning_request/native": {
+      "The collection originally has \\(": 8,
+      "The initial number of tokens is \\(": 11,
+      "The collection initially has \\(": 15,
+      "": 4,
+      "The collection initially had \\(": 2
+    },
+    "seed-2/reasoning_request/adapted": {
+      "First, calculate the initial number of tokens: \\(": 33,
+      "\\boxed": 6,
+      "First, calculate the total number of tokens before inventory: \\(": 1
+    }
+  },
+  "prefix_stop_reasons": {
+    "empty_control": 240,
+    "numeric_character": 480
+  },
+  "inputs_and_scores_reproduce": true,
+  "forks_sha256": "f8e8e25e920c6e425fafba233a7b811d10b3cf6bb9e1967f9e36d04794096246",
+  "limit": "Artifact reconstruction; full next-token distributions were not persisted, so JS is range/provenance-checked, not independently recomputed."
+}

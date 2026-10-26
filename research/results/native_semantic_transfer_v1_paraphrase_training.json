@@ -1,0 +1,4170 @@
+{
+  "config": {
+    "model": "LiquidAI/LFM2.5-350M",
+    "revision": "9e6c6ccf47cd318696e137d381a7ded8fe4df09f",
+    "rank": 8,
+    "alpha": 16,
+    "targets": [
+      "model.layers.0.conv.in_proj",
+      "model.layers.0.conv.out_proj",
+      "model.layers.1.conv.in_proj",
+      "model.layers.1.conv.out_proj",
+      "model.layers.2.self_attn.q_proj",
+      "model.layers.2.self_attn.k_proj",
+      "model.layers.2.self_attn.v_proj",
+      "model.layers.2.self_attn.out_proj",
+      "model.layers.3.conv.in_proj",
+      "model.layers.3.conv.out_proj",
+      "model.layers.4.conv.in_proj",
+      "model.layers.4.conv.out_proj",
+      "model.layers.5.self_attn.q_proj",
+      "model.layers.5.self_attn.k_proj",
+      "model.layers.5.self_attn.v_proj",
+      "model.layers.5.self_attn.out_proj",
+      "model.layers.6.conv.in_proj",
+      "model.layers.6.conv.out_proj",
+      "model.layers.7.conv.in_proj",
+      "model.layers.7.conv.out_proj",
+      "model.layers.8.self_attn.q_proj",
+      "model.layers.8.self_attn.k_proj",
+      "model.layers.8.self_attn.v_proj",
+      "model.layers.8.self_attn.out_proj",
+      "model.layers.9.conv.in_proj",
+      "model.layers.9.conv.out_proj",
+      "model.layers.10.self_attn.q_proj",
+      "model.layers.10.self_attn.k_proj",
+      "model.layers.10.self_attn.v_proj",
+      "model.layers.10.self_attn.out_proj",
+      "model.layers.11.conv.in_proj",
+      "model.layers.11.conv.out_proj",
+      "model.layers.12.self_attn.q_proj",
+      "model.layers.12.self_attn.k_proj",
+      "model.layers.12.self_attn.v_proj",
+      "model.layers.12.self_attn.out_proj",
+      "model.layers.13.conv.in_proj",
+      "model.layers.13.conv.out_proj",
+      "model.layers.14.self_attn.q_proj",
+      "model.layers.14.self_attn.k_proj",
+      "model.layers.14.self_attn.v_proj",
+      "model.layers.14.self_attn.out_proj",
+      "model.layers.15.conv.in_proj",
+      "model.layers.15.conv.out_proj"
+    ],
+    "arm": "paraphrase",
+    "seed": 0,
+    "dtype": "float32",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "manifest_sha256": "e0160b55aee54bd263454a178e06ce42d74daa8b032e1fa3285f95e0b19ef8d9",
+    "data_sha256": "66b3422d5f4f9dd784b397f0253e3c2cfb39a36f85afd4ea06db0a8f001ada94",
+    "loss": "supervised-token-weighted CE across sequential microbatches",
+    "supervised_tokens_per_update": 8
+  },
+  "steps": 512,
+  "history": [
+    {
+      "step": 1,
+      "loss": 3.3121733367443085,
+      "gradient_norm": 64.86442565917969,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 2,
+      "loss": 4.229548633098602,
+      "gradient_norm": 59.99043273925781,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 3,
+      "loss": 3.5452924966812134,
+      "gradient_norm": 63.0106315612793,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 4,
+      "loss": 2.770598292350769,
+      "gradient_norm": 45.14640808105469,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 5,
+      "loss": 3.1032049655914307,
+      "gradient_norm": 43.068016052246094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 6,
+      "loss": 2.2508506178855896,
+      "gradient_norm": 30.540061950683594,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 7,
+      "loss": 2.8418676257133484,
+      "gradient_norm": 30.414997100830078,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 8,
+      "loss": 2.6147369146347046,
+      "gradient_norm": 32.310211181640625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 9,
+      "loss": 1.9927338659763336,
+      "gradient_norm": 25.123706817626953,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 10,
+      "loss": 2.480065703392029,
+      "gradient_norm": 17.894472122192383,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 11,
+      "loss": 1.3737871497869492,
+      "gradient_norm": 25.058547973632812,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 12,
+      "loss": 2.062126725912094,
+      "gradient_norm": 26.660913467407227,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 13,
+      "loss": 1.8750125467777252,
+      "gradient_norm": 23.879026412963867,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 14,
+      "loss": 1.5303407311439514,
+      "gradient_norm": 25.13738441467285,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 15,
+      "loss": 1.4808236956596375,
+      "gradient_norm": 20.82032585144043,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 16,
+      "loss": 2.3284826576709747,
+      "gradient_norm": 35.28841018676758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 17,
+      "loss": 1.715287685394287,
+      "gradient_norm": 32.545894622802734,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 18,
+      "loss": 1.7906555235385895,
+      "gradient_norm": 18.194869995117188,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 19,
+      "loss": 1.133127048611641,
+      "gradient_norm": 24.858484268188477,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 20,
+      "loss": 1.5959057807922363,
+      "gradient_norm": 54.150638580322266,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 21,
+      "loss": 1.3193362802267075,
+      "gradient_norm": 27.198841094970703,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 22,
+      "loss": 0.8774596303701401,
+      "gradient_norm": 19.45768928527832,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 23,
+      "loss": 3.037276864051819,
+      "gradient_norm": 49.11140060424805,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 24,
+      "loss": 2.02144917845726,
+      "gradient_norm": 55.04590606689453,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 25,
+      "loss": 2.0779695212841034,
+      "gradient_norm": 31.127822875976562,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 26,
+      "loss": 0.6190016120672226,
+      "gradient_norm": 20.517255783081055,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 27,
+      "loss": 1.1061849147081375,
+      "gradient_norm": 17.43013572692871,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 28,
+      "loss": 0.8760822638869286,
+      "gradient_norm": 23.63601303100586,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 29,
+      "loss": 0.7933115810155869,
+      "gradient_norm": 19.380325317382812,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 30,
+      "loss": 3.1977763772010803,
+      "gradient_norm": 44.85602569580078,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 31,
+      "loss": 1.0353274196386337,
+      "gradient_norm": 37.308448791503906,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 32,
+      "loss": 0.9261787459254265,
+      "gradient_norm": 29.263107299804688,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 33,
+      "loss": 1.3644779548048973,
+      "gradient_norm": 50.59724426269531,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 34,
+      "loss": 0.7997188791632652,
+      "gradient_norm": 41.11223220825195,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 35,
+      "loss": 2.126405119895935,
+      "gradient_norm": 51.08695602416992,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 36,
+      "loss": 0.9531010389328003,
+      "gradient_norm": 45.26529312133789,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 37,
+      "loss": 1.1620564311742783,
+      "gradient_norm": 36.59853744506836,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 38,
+      "loss": 0.8398055583238602,
+      "gradient_norm": 30.808073043823242,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 39,
+      "loss": 0.13749417540384457,
+      "gradient_norm": 11.304622650146484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 40,
+      "loss": 0.8916192129254341,
+      "gradient_norm": 32.290592193603516,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 41,
+      "loss": 0.06564627820625901,
+      "gradient_norm": 8.417950630187988,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 42,
+      "loss": 0.9783240808174014,
+      "gradient_norm": 51.27055358886719,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 43,
+      "loss": 1.6956679373979568,
+      "gradient_norm": 57.27239990234375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 44,
+      "loss": 1.3462669402360916,
+      "gradient_norm": 78.97345733642578,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 45,
+      "loss": 0.7896922081708908,
+      "gradient_norm": 38.01003646850586,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 46,
+      "loss": 1.4766470044851303,
+      "gradient_norm": 40.333614349365234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 47,
+      "loss": 2.997759185731411,
+      "gradient_norm": 166.28952026367188,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 48,
+      "loss": 2.0370217114686966,
+      "gradient_norm": 79.05330657958984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 49,
+      "loss": 1.1099176704883575,
+      "gradient_norm": 101.31996154785156,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 50,
+      "loss": 1.570015400648117,
+      "gradient_norm": 54.72208023071289,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 51,
+      "loss": 0.4689057432115078,
+      "gradient_norm": 26.05180549621582,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 52,
+      "loss": 0.33809318393468857,
+      "gradient_norm": 16.77109718322754,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 53,
+      "loss": 2.228783428668976,
+      "gradient_norm": 33.60713195800781,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 54,
+      "loss": 1.8786049485206604,
+      "gradient_norm": 46.85763931274414,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 55,
+      "loss": 1.9882571995258331,
+      "gradient_norm": 58.49705505371094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 56,
+      "loss": 1.9591905772686005,
+      "gradient_norm": 82.95575714111328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 57,
+      "loss": 0.250566091388464,
+      "gradient_norm": 16.745515823364258,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 58,
+      "loss": 1.8452962934970856,
+      "gradient_norm": 83.40702056884766,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 59,
+      "loss": 0.7941073626279831,
+      "gradient_norm": 26.14423942565918,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 60,
+      "loss": 1.4604816883802414,
+      "gradient_norm": 36.787654876708984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 61,
+      "loss": 1.1128718256950378,
+      "gradient_norm": 45.70484924316406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 62,
+      "loss": 1.603424996137619,
+      "gradient_norm": 38.54853057861328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 63,
+      "loss": 1.6514021456241608,
+      "gradient_norm": 43.357704162597656,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 64,
+      "loss": 1.8318863809108734,
+      "gradient_norm": 52.246883392333984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 65,
+      "loss": 0.06716707511804998,
+      "gradient_norm": 8.295573234558105,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 66,
+      "loss": 1.7648533582687378,
+      "gradient_norm": 67.17222595214844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 67,
+      "loss": 0.5157942846417427,
+      "gradient_norm": 24.907302856445312,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 68,
+      "loss": 0.6171318143606186,
+      "gradient_norm": 25.639596939086914,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 69,
+      "loss": 1.0582608431577682,
+      "gradient_norm": 32.521949768066406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 70,
+      "loss": 3.055563747882843,
+      "gradient_norm": 54.206722259521484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 71,
+      "loss": 2.4176068902015686,
+      "gradient_norm": 68.6650619506836,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 72,
+      "loss": 0.4842424616217613,
+      "gradient_norm": 16.930078506469727,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 73,
+      "loss": 0.5044964775443077,
+      "gradient_norm": 19.755765914916992,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 74,
+      "loss": 0.9115137010812759,
+      "gradient_norm": 32.48421096801758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 75,
+      "loss": 0.8253804594278336,
+      "gradient_norm": 27.903987884521484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 76,
+      "loss": 1.465787649154663,
+      "gradient_norm": 37.85307693481445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 77,
+      "loss": 0.19108162820339203,
+      "gradient_norm": 13.106294631958008,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 78,
+      "loss": 1.5686909556388855,
+      "gradient_norm": 44.243980407714844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 79,
+      "loss": 1.2911157608032227,
+      "gradient_norm": 37.78026580810547,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 80,
+      "loss": 0.8097880333662033,
+      "gradient_norm": 24.74419593811035,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 81,
+      "loss": 0.14976878729066812,
+      "gradient_norm": 15.030754089355469,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 82,
+      "loss": 0.9844255287898704,
+      "gradient_norm": 75.7778549194336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 83,
+      "loss": 0.036404775019036606,
+      "gradient_norm": 3.8300678730010986,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 84,
+      "loss": 0.5618997327983379,
+      "gradient_norm": 30.486513137817383,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 85,
+      "loss": 1.2048570662736893,
+      "gradient_norm": 74.18096160888672,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 86,
+      "loss": 2.327114999294281,
+      "gradient_norm": 52.34394454956055,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 87,
+      "loss": 1.7890218198299408,
+      "gradient_norm": 38.82986831665039,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 88,
+      "loss": 1.031954325735569,
+      "gradient_norm": 43.283912658691406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 89,
+      "loss": 0.2565544256940484,
+      "gradient_norm": 15.387842178344727,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 90,
+      "loss": 1.6598137021064758,
+      "gradient_norm": 24.163848876953125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 91,
+      "loss": 1.46641343832016,
+      "gradient_norm": 33.85233688354492,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 92,
+      "loss": 0.9181850850582123,
+      "gradient_norm": 31.74521827697754,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 93,
+      "loss": 3.2304970026016235,
+      "gradient_norm": 81.03545379638672,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 94,
+      "loss": 1.2766476050019264,
+      "gradient_norm": 60.92756652832031,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 95,
+      "loss": 0.152839420363307,
+      "gradient_norm": 15.212714195251465,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 96,
+      "loss": 1.2440150380134583,
+      "gradient_norm": 50.327308654785156,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 97,
+      "loss": 0.020186225010547787,
+      "gradient_norm": 2.3104031085968018,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 98,
+      "loss": 1.4632703363895416,
+      "gradient_norm": 38.657012939453125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 99,
+      "loss": 1.167921394109726,
+      "gradient_norm": 53.229278564453125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 100,
+      "loss": 0.22318427078425884,
+      "gradient_norm": 25.925365447998047,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 101,
+      "loss": 0.0721140094101429,
+      "gradient_norm": 9.566167831420898,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 102,
+      "loss": 0.4968895688652992,
+      "gradient_norm": 26.11054229736328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 103,
+      "loss": 0.3371535502374172,
+      "gradient_norm": 29.40768814086914,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 104,
+      "loss": 1.5445423424243927,
+      "gradient_norm": 58.01774978637695,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 105,
+      "loss": 0.9449590183794498,
+      "gradient_norm": 45.873924255371094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 106,
+      "loss": 1.4182108342647552,
+      "gradient_norm": 63.97872543334961,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 107,
+      "loss": 1.4084913432598114,
+      "gradient_norm": 44.71791458129883,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 108,
+      "loss": 2.501592129468918,
+      "gradient_norm": 67.33343505859375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 109,
+      "loss": 0.001376317704853136,
+      "gradient_norm": 0.24855291843414307,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 110,
+      "loss": 1.3837896436452866,
+      "gradient_norm": 100.2057876586914,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 111,
+      "loss": 1.5387040823698044,
+      "gradient_norm": 85.31334686279297,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 112,
+      "loss": 2.649811416864395,
+      "gradient_norm": 81.92926025390625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 113,
+      "loss": 0.7377373427152634,
+      "gradient_norm": 46.94706344604492,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 114,
+      "loss": 1.6160428822040558,
+      "gradient_norm": 78.87065124511719,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 115,
+      "loss": 1.428313508629799,
+      "gradient_norm": 68.16529083251953,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 116,
+      "loss": 3.327691376209259,
+      "gradient_norm": 47.2967414855957,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 117,
+      "loss": 1.3542183339595795,
+      "gradient_norm": 71.2720947265625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 118,
+      "loss": 0.20714768208563328,
+      "gradient_norm": 9.678244590759277,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 119,
+      "loss": 1.0179848372936249,
+      "gradient_norm": 24.640857696533203,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 120,
+      "loss": 2.939333140850067,
+      "gradient_norm": 82.8885269165039,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 121,
+      "loss": 0.7979954034090042,
+      "gradient_norm": 34.45535659790039,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 122,
+      "loss": 0.21462257951498032,
+      "gradient_norm": 28.874879837036133,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 123,
+      "loss": 1.0664019286632538,
+      "gradient_norm": 44.41063690185547,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 124,
+      "loss": 1.681721955537796,
+      "gradient_norm": 42.04471206665039,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 125,
+      "loss": 1.0297899395227432,
+      "gradient_norm": 30.240999221801758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 126,
+      "loss": 3.4158442616462708,
+      "gradient_norm": 64.9450912475586,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 127,
+      "loss": 0.011614533723331988,
+      "gradient_norm": 1.0729764699935913,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 128,
+      "loss": 0.7826352715492249,
+      "gradient_norm": 40.951568603515625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 129,
+      "loss": 0.4091503918170929,
+      "gradient_norm": 26.690340042114258,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 130,
+      "loss": 1.0388126820325851,
+      "gradient_norm": 39.74625778198242,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 131,
+      "loss": 0.07115623634308577,
+      "gradient_norm": 10.225290298461914,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 132,
+      "loss": 0.025591935263946652,
+      "gradient_norm": 3.545786142349243,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 133,
+      "loss": 0.2870200127363205,
+      "gradient_norm": 9.101640701293945,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 134,
+      "loss": 0.45318600721657276,
+      "gradient_norm": 62.647335052490234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 135,
+      "loss": 0.6445679143071175,
+      "gradient_norm": 33.50529479980469,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 136,
+      "loss": 0.31718749180436134,
+      "gradient_norm": 22.83684539794922,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 137,
+      "loss": 0.5728946477174759,
+      "gradient_norm": 21.092988967895508,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 138,
+      "loss": 0.9333875328302383,
+      "gradient_norm": 39.2330436706543,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 139,
+      "loss": 0.03710540407337248,
+      "gradient_norm": 6.854316711425781,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 140,
+      "loss": 1.2748553901910782,
+      "gradient_norm": 48.14827346801758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 141,
+      "loss": 0.901760421693325,
+      "gradient_norm": 70.11529541015625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 142,
+      "loss": 0.02014644700102508,
+      "gradient_norm": 2.4387125968933105,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 143,
+      "loss": 0.45483461767435074,
+      "gradient_norm": 22.385583877563477,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 144,
+      "loss": 4.273197531700134,
+      "gradient_norm": 66.9575424194336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 145,
+      "loss": 0.6584018841385841,
+      "gradient_norm": 44.10663604736328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 146,
+      "loss": 0.3934437222778797,
+      "gradient_norm": 17.652162551879883,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 147,
+      "loss": 0.2408519210293889,
+      "gradient_norm": 33.33685302734375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 148,
+      "loss": 0.9024616926908493,
+      "gradient_norm": 26.467998504638672,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 149,
+      "loss": 0.5767109543085098,
+      "gradient_norm": 50.422237396240234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 150,
+      "loss": 0.3372962009161711,
+      "gradient_norm": 47.378074645996094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 151,
+      "loss": 2.164718985557556,
+      "gradient_norm": 65.786376953125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 152,
+      "loss": 1.0310396328568459,
+      "gradient_norm": 52.824981689453125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 153,
+      "loss": 2.092591345310211,
+      "gradient_norm": 52.58879089355469,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 154,
+      "loss": 1.755925714969635,
+      "gradient_norm": 99.59312438964844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 155,
+      "loss": 0.7954954132437706,
+      "gradient_norm": 41.484840393066406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 156,
+      "loss": 0.5268224496394396,
+      "gradient_norm": 80.25881958007812,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 157,
+      "loss": 0.1649351790547371,
+      "gradient_norm": 9.716127395629883,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 158,
+      "loss": 1.629417508840561,
+      "gradient_norm": 42.58424758911133,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 159,
+      "loss": 0.09566571982577443,
+      "gradient_norm": 7.467013359069824,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 160,
+      "loss": 0.2758251093327999,
+      "gradient_norm": 17.149106979370117,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 161,
+      "loss": 0.04498718027025461,
+      "gradient_norm": 4.919000148773193,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 162,
+      "loss": 0.14729652367532253,
+      "gradient_norm": 13.189719200134277,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 163,
+      "loss": 1.8964528143405914,
+      "gradient_norm": 53.71259307861328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 164,
+      "loss": 1.0326206386089325,
+      "gradient_norm": 74.8849105834961,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 165,
+      "loss": 0.08161062933504581,
+      "gradient_norm": 6.1674604415893555,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 166,
+      "loss": 0.14630886167287827,
+      "gradient_norm": 12.07151985168457,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 167,
+      "loss": 0.0006674097603536211,
+      "gradient_norm": 0.07549554109573364,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 168,
+      "loss": 0.21600280329585075,
+      "gradient_norm": 10.716185569763184,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 169,
+      "loss": 0.032597003504633904,
+      "gradient_norm": 5.835054874420166,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 170,
+      "loss": 0.07043100439477712,
+      "gradient_norm": 11.063985824584961,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 171,
+      "loss": 0.5894301161170006,
+      "gradient_norm": 42.56698989868164,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 172,
+      "loss": 1.301173523068428,
+      "gradient_norm": 89.15498352050781,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 173,
+      "loss": 0.1111777937039733,
+      "gradient_norm": 11.144143104553223,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 174,
+      "loss": 1.1183198988437653,
+      "gradient_norm": 51.170616149902344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 175,
+      "loss": 0.1691022152081132,
+      "gradient_norm": 19.252166748046875,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 176,
+      "loss": 0.5109985172748566,
+      "gradient_norm": 44.180641174316406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 177,
+      "loss": 0.8790988698601723,
+      "gradient_norm": 48.47168731689453,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 178,
+      "loss": 0.25979794189333916,
+      "gradient_norm": 19.63690185546875,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 179,
+      "loss": 0.1146321352571249,
+      "gradient_norm": 14.610475540161133,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 180,
+      "loss": 0.06812580861151218,
+      "gradient_norm": 3.5065758228302,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 181,
+      "loss": 1.8303288519382477,
+      "gradient_norm": 34.57647705078125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 182,
+      "loss": 1.5084020495414734,
+      "gradient_norm": 31.468355178833008,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 183,
+      "loss": 0.22664145473390818,
+      "gradient_norm": 22.93252944946289,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 184,
+      "loss": 1.8151191473007202,
+      "gradient_norm": 77.7285385131836,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 185,
+      "loss": 0.02908511459827423,
+      "gradient_norm": 1.9461740255355835,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 186,
+      "loss": 0.8623536787927151,
+      "gradient_norm": 50.407833099365234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 187,
+      "loss": 0.2193594966083765,
+      "gradient_norm": 15.520959854125977,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 188,
+      "loss": 0.8359372764825821,
+      "gradient_norm": 27.644142150878906,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 189,
+      "loss": 0.6868248879909515,
+      "gradient_norm": 45.01914978027344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 190,
+      "loss": 0.5134820342063904,
+      "gradient_norm": 22.933305740356445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 191,
+      "loss": 1.170533001422882,
+      "gradient_norm": 39.81948471069336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 192,
+      "loss": 0.13379793148487806,
+      "gradient_norm": 13.114590644836426,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 193,
+      "loss": 0.014800062170252204,
+      "gradient_norm": 1.5125876665115356,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 194,
+      "loss": 0.944681204855442,
+      "gradient_norm": 55.5849723815918,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 195,
+      "loss": 0.22721202112734318,
+      "gradient_norm": 15.463767051696777,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 196,
+      "loss": 0.17655390314757824,
+      "gradient_norm": 11.855440139770508,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 197,
+      "loss": 0.5327190011739731,
+      "gradient_norm": 29.763381958007812,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 198,
+      "loss": 2.0988796651363373,
+      "gradient_norm": 52.222442626953125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 199,
+      "loss": 1.040741115808487,
+      "gradient_norm": 47.46025848388672,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 200,
+      "loss": 0.10383650846779346,
+      "gradient_norm": 11.188019752502441,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 201,
+      "loss": 0.22627122700214386,
+      "gradient_norm": 17.727737426757812,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 202,
+      "loss": 0.11233549658209085,
+      "gradient_norm": 12.049108505249023,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 203,
+      "loss": 0.7460113167762756,
+      "gradient_norm": 33.91249465942383,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 204,
+      "loss": 0.946741595864296,
+      "gradient_norm": 27.06499671936035,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 205,
+      "loss": 0.07396097667515278,
+      "gradient_norm": 5.669549465179443,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 206,
+      "loss": 1.3538778200745583,
+      "gradient_norm": 72.98849487304688,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 207,
+      "loss": 0.16847232729196548,
+      "gradient_norm": 12.07880973815918,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 208,
+      "loss": 0.36472002789378166,
+      "gradient_norm": 21.392671585083008,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 209,
+      "loss": 0.060165917297126725,
+      "gradient_norm": 19.07494354248047,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 210,
+      "loss": 0.012583741510752589,
+      "gradient_norm": 2.5543854236602783,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 211,
+      "loss": 0.0007127926801331341,
+      "gradient_norm": 0.06785587966442108,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 212,
+      "loss": 0.045080828946083784,
+      "gradient_norm": 4.0895256996154785,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 213,
+      "loss": 0.4924507886171341,
+      "gradient_norm": 45.668968200683594,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 214,
+      "loss": 3.033494234085083,
+      "gradient_norm": 77.83818054199219,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 215,
+      "loss": 0.5543598160147667,
+      "gradient_norm": 28.57683753967285,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 216,
+      "loss": 0.28695400431752205,
+      "gradient_norm": 26.99831199645996,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 217,
+      "loss": 0.038162263575941324,
+      "gradient_norm": 4.264002799987793,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 218,
+      "loss": 0.8625661134719849,
+      "gradient_norm": 55.75619888305664,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 219,
+      "loss": 1.3014513552188873,
+      "gradient_norm": 50.17414855957031,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 220,
+      "loss": 0.88872379809618,
+      "gradient_norm": 65.50914001464844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 221,
+      "loss": 2.8014310896396637,
+      "gradient_norm": 94.68431854248047,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 222,
+      "loss": 1.0663345120847225,
+      "gradient_norm": 64.16857147216797,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 223,
+      "loss": 0.03404478495940566,
+      "gradient_norm": 3.757046937942505,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 224,
+      "loss": 0.9963886924088001,
+      "gradient_norm": 77.62264251708984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 225,
+      "loss": 8.676073412061669e-05,
+      "gradient_norm": 0.012081599794328213,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 226,
+      "loss": 1.1350570768117905,
+      "gradient_norm": 50.53239440917969,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 227,
+      "loss": 0.6054446324706078,
+      "gradient_norm": 39.08184814453125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 228,
+      "loss": 0.15015406906604767,
+      "gradient_norm": 26.051130294799805,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 229,
+      "loss": 0.001974431797862053,
+      "gradient_norm": 0.17096857726573944,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 230,
+      "loss": 0.011699022725224495,
+      "gradient_norm": 0.7856059670448303,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 231,
+      "loss": 0.06885232403874397,
+      "gradient_norm": 10.832551002502441,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 232,
+      "loss": 1.4670549184083939,
+      "gradient_norm": 58.562259674072266,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 233,
+      "loss": 0.6076925247907639,
+      "gradient_norm": 35.66624450683594,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 234,
+      "loss": 0.5690262466669083,
+      "gradient_norm": 37.37814712524414,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 235,
+      "loss": 0.9339213669300079,
+      "gradient_norm": 48.4757194519043,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 236,
+      "loss": 1.0504092276096344,
+      "gradient_norm": 56.91169357299805,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 237,
+      "loss": 0.0001588227205502335,
+      "gradient_norm": 0.011142556555569172,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 238,
+      "loss": 1.3971649259328842,
+      "gradient_norm": 89.32633972167969,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 239,
+      "loss": 0.2721967529505491,
+      "gradient_norm": 31.41402816772461,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 240,
+      "loss": 0.5252141617238522,
+      "gradient_norm": 42.02325439453125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 241,
+      "loss": 1.730807214975357,
+      "gradient_norm": 97.68119812011719,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 242,
+      "loss": 0.7734827846288681,
+      "gradient_norm": 39.37021255493164,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 243,
+      "loss": 0.3486030241474509,
+      "gradient_norm": 26.796051025390625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 244,
+      "loss": 1.9387953579425812,
+      "gradient_norm": 35.13568115234375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 245,
+      "loss": 0.4959355294704437,
+      "gradient_norm": 41.537044525146484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 246,
+      "loss": 0.49935138737782836,
+      "gradient_norm": 55.44784927368164,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 247,
+      "loss": 0.6611176580190659,
+      "gradient_norm": 29.59943962097168,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 248,
+      "loss": 1.6583280265331268,
+      "gradient_norm": 51.23332595825195,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 249,
+      "loss": 0.06399716809391975,
+      "gradient_norm": 5.222668170928955,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 250,
+      "loss": 0.09089705627411604,
+      "gradient_norm": 8.82193660736084,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 251,
+      "loss": 0.262466374784708,
+      "gradient_norm": 17.20029640197754,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 252,
+      "loss": 0.36553701013326645,
+      "gradient_norm": 23.739566802978516,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 253,
+      "loss": 0.6437291577458382,
+      "gradient_norm": 44.6807861328125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 254,
+      "loss": 2.2197183966636658,
+      "gradient_norm": 57.1333122253418,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 255,
+      "loss": 0.0009186319221043959,
+      "gradient_norm": 0.07402577251195908,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 256,
+      "loss": 1.440795823931694,
+      "gradient_norm": 67.9330062866211,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 257,
+      "loss": 0.02629829361103475,
+      "gradient_norm": 2.7532079219818115,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 258,
+      "loss": 0.24311130866408348,
+      "gradient_norm": 16.481708526611328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 259,
+      "loss": 0.007074253633618355,
+      "gradient_norm": 0.8569347858428955,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 260,
+      "loss": 0.0020065625139977783,
+      "gradient_norm": 0.1865105777978897,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 261,
+      "loss": 0.15822866559028625,
+      "gradient_norm": 14.061264991760254,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 262,
+      "loss": 0.032192137849051505,
+      "gradient_norm": 6.903397560119629,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 263,
+      "loss": 0.7719131112098694,
+      "gradient_norm": 25.042430877685547,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 264,
+      "loss": 0.20760705787688494,
+      "gradient_norm": 28.668489456176758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 265,
+      "loss": 0.3280450776219368,
+      "gradient_norm": 22.220361709594727,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 266,
+      "loss": 0.1606575008481741,
+      "gradient_norm": 13.626959800720215,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 267,
+      "loss": 0.0019984955433756113,
+      "gradient_norm": 0.21844962239265442,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 268,
+      "loss": 1.3386010080575943,
+      "gradient_norm": 64.55857849121094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 269,
+      "loss": 0.5416434071958065,
+      "gradient_norm": 35.368255615234375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 270,
+      "loss": 0.0006236289627850056,
+      "gradient_norm": 0.07445719093084335,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 271,
+      "loss": 0.18045091815292835,
+      "gradient_norm": 13.799915313720703,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 272,
+      "loss": 3.628170669078827,
+      "gradient_norm": 60.417991638183594,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 273,
+      "loss": 0.8172333687543869,
+      "gradient_norm": 87.22105407714844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 274,
+      "loss": 0.1018342636525631,
+      "gradient_norm": 6.560469627380371,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 275,
+      "loss": 0.047002340434119105,
+      "gradient_norm": 9.88029670715332,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 276,
+      "loss": 0.687627412378788,
+      "gradient_norm": 34.98773193359375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 277,
+      "loss": 0.15082402736879885,
+      "gradient_norm": 24.88930892944336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 278,
+      "loss": 0.0009024074242915958,
+      "gradient_norm": 0.15387338399887085,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 279,
+      "loss": 1.6334250569343567,
+      "gradient_norm": 48.41134262084961,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 280,
+      "loss": 0.3891186863183975,
+      "gradient_norm": 20.99456214904785,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 281,
+      "loss": 0.46204254776239395,
+      "gradient_norm": 25.237211227416992,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 282,
+      "loss": 0.16490298695862293,
+      "gradient_norm": 14.589676856994629,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 283,
+      "loss": 0.04031385341659188,
+      "gradient_norm": 3.857943534851074,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 284,
+      "loss": 0.31545041501522064,
+      "gradient_norm": 30.887798309326172,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 285,
+      "loss": 0.023697273107245564,
+      "gradient_norm": 2.7028884887695312,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 286,
+      "loss": 1.0501796454191208,
+      "gradient_norm": 33.167598724365234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 287,
+      "loss": 0.036091955844312906,
+      "gradient_norm": 3.5744078159332275,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 288,
+      "loss": 0.29495613276958466,
+      "gradient_norm": 24.25633430480957,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 289,
+      "loss": 0.001328911559539847,
+      "gradient_norm": 0.1574089229106903,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 290,
+      "loss": 0.02144993143156171,
+      "gradient_norm": 3.378818988800049,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 291,
+      "loss": 1.607781320810318,
+      "gradient_norm": 65.57367706298828,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 292,
+      "loss": 0.09403762267902493,
+      "gradient_norm": 20.33870506286621,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 293,
+      "loss": 0.017138682072982192,
+      "gradient_norm": 1.4381431341171265,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 294,
+      "loss": 0.03266720217652619,
+      "gradient_norm": 3.5842583179473877,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 295,
+      "loss": 0.0008975089876912534,
+      "gradient_norm": 0.10709305107593536,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 296,
+      "loss": 0.04119174322113395,
+      "gradient_norm": 2.6606459617614746,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 297,
+      "loss": 0.0032920733792707324,
+      "gradient_norm": 0.5660752654075623,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 298,
+      "loss": 0.011202717141713947,
+      "gradient_norm": 2.1782989501953125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 299,
+      "loss": 0.31254037097096443,
+      "gradient_norm": 25.093212127685547,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 300,
+      "loss": 0.05024480167776346,
+      "gradient_norm": 8.511065483093262,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 301,
+      "loss": 0.014270287356339395,
+      "gradient_norm": 2.1305081844329834,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 302,
+      "loss": 1.1060702800750732,
+      "gradient_norm": 39.28396224975586,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 303,
+      "loss": 0.04373334674164653,
+      "gradient_norm": 4.405918121337891,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 304,
+      "loss": 0.10918583814054728,
+      "gradient_norm": 16.249738693237305,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 305,
+      "loss": 0.3314035162329674,
+      "gradient_norm": 17.978723526000977,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 306,
+      "loss": 0.04418050264939666,
+      "gradient_norm": 6.626708984375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 307,
+      "loss": 0.29180229268968105,
+      "gradient_norm": 38.10529327392578,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 308,
+      "loss": 0.02193769346922636,
+      "gradient_norm": 1.5545204877853394,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 309,
+      "loss": 0.8102124780416489,
+      "gradient_norm": 25.53575897216797,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 310,
+      "loss": 0.7902106940746307,
+      "gradient_norm": 34.24002456665039,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 311,
+      "loss": 0.0030123653123155236,
+      "gradient_norm": 0.43416333198547363,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 312,
+      "loss": 1.5644201636314392,
+      "gradient_norm": 85.49520111083984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 313,
+      "loss": 0.010094405501149595,
+      "gradient_norm": 1.4133840799331665,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 314,
+      "loss": 0.47193245962262154,
+      "gradient_norm": 51.85218811035156,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 315,
+      "loss": 0.01892451010644436,
+      "gradient_norm": 1.3826849460601807,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 316,
+      "loss": 0.31467147171497345,
+      "gradient_norm": 17.189762115478516,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 317,
+      "loss": 0.8609936535358429,
+      "gradient_norm": 65.70867156982422,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 318,
+      "loss": 0.20666849240660667,
+      "gradient_norm": 18.412145614624023,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 319,
+      "loss": 0.9547616392374039,
+      "gradient_norm": 48.9981803894043,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 320,
+      "loss": 0.00482236867537722,
+      "gradient_norm": 0.4919614791870117,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 321,
+      "loss": 0.002530004596337676,
+      "gradient_norm": 0.2894042432308197,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 322,
+      "loss": 0.17859447794035077,
+      "gradient_norm": 17.624542236328125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 323,
+      "loss": 0.028073209105059505,
+      "gradient_norm": 2.414318561553955,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 324,
+      "loss": 0.04637797502800822,
+      "gradient_norm": 3.561462640762329,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 325,
+      "loss": 0.06607582233846188,
+      "gradient_norm": 5.956928730010986,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 326,
+      "loss": 0.9227941930294037,
+      "gradient_norm": 41.46174240112305,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 327,
+      "loss": 0.42983270436525345,
+      "gradient_norm": 46.880001068115234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 328,
+      "loss": 0.002463042677845806,
+      "gradient_norm": 0.3155985474586487,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 329,
+      "loss": 0.022867337334901094,
+      "gradient_norm": 2.214604377746582,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 330,
+      "loss": 0.011812158161774278,
+      "gradient_norm": 1.9069747924804688,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 331,
+      "loss": 0.11239438783377409,
+      "gradient_norm": 9.963314056396484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 332,
+      "loss": 0.4801235795021057,
+      "gradient_norm": 22.055831909179688,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 333,
+      "loss": 0.011180449509993196,
+      "gradient_norm": 1.1563581228256226,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 334,
+      "loss": 0.5370281096547842,
+      "gradient_norm": 52.65009307861328,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 335,
+      "loss": 0.011564058135263622,
+      "gradient_norm": 1.0396952629089355,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 336,
+      "loss": 0.026065124664455652,
+      "gradient_norm": 3.9693565368652344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 337,
+      "loss": 0.048782553581986576,
+      "gradient_norm": 14.102011680603027,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 338,
+      "loss": 0.0022367768760886975,
+      "gradient_norm": 0.38197818398475647,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 339,
+      "loss": 0.0002790504113363568,
+      "gradient_norm": 0.02722790651023388,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 340,
+      "loss": 0.008596493396908045,
+      "gradient_norm": 1.4861050844192505,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 341,
+      "loss": 0.021729561500251293,
+      "gradient_norm": 3.762786388397217,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 342,
+      "loss": 3.5500016808509827,
+      "gradient_norm": 113.7159652709961,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 343,
+      "loss": 0.2561540715396404,
+      "gradient_norm": 24.602819442749023,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 344,
+      "loss": 0.0020994520164094865,
+      "gradient_norm": 0.3283766508102417,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 345,
+      "loss": 0.00938279158435762,
+      "gradient_norm": 1.1315851211547852,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 346,
+      "loss": 0.643892876803875,
+      "gradient_norm": 55.636680603027344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 347,
+      "loss": 0.40842585265636444,
+      "gradient_norm": 35.651512145996094,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 348,
+      "loss": 0.03607120458036661,
+      "gradient_norm": 4.041906833648682,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 349,
+      "loss": 0.6341202259063721,
+      "gradient_norm": 59.18408966064453,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 350,
+      "loss": 0.9737221300601959,
+      "gradient_norm": 77.09537506103516,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 351,
+      "loss": 0.006463075755164027,
+      "gradient_norm": 0.7512412667274475,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 352,
+      "loss": 0.06380215077660978,
+      "gradient_norm": 12.62356185913086,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 353,
+      "loss": 3.0203152164176572e-05,
+      "gradient_norm": 0.0038324822671711445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 354,
+      "loss": 0.09960091672837734,
+      "gradient_norm": 12.835518836975098,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 355,
+      "loss": 0.2604766860604286,
+      "gradient_norm": 31.262508392333984,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 356,
+      "loss": 0.1559640746563673,
+      "gradient_norm": 31.942358016967773,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 357,
+      "loss": 0.0013625868450617418,
+      "gradient_norm": 0.1842702478170395,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 358,
+      "loss": 0.0027143564802827314,
+      "gradient_norm": 0.3522311747074127,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 359,
+      "loss": 0.4817500486969948,
+      "gradient_norm": 62.14888000488281,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 360,
+      "loss": 0.6823966056108475,
+      "gradient_norm": 57.39751052856445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 361,
+      "loss": 0.33923380821943283,
+      "gradient_norm": 26.037330627441406,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 362,
+      "loss": 0.30632236786186695,
+      "gradient_norm": 45.836944580078125,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 363,
+      "loss": 0.5582448616623878,
+      "gradient_norm": 37.167808532714844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 364,
+      "loss": 2.3668878078460693,
+      "gradient_norm": 92.75303649902344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 365,
+      "loss": 0.00024941732044680975,
+      "gradient_norm": 0.02171269990503788,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 366,
+      "loss": 0.032558028819039464,
+      "gradient_norm": 7.180974960327148,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 367,
+      "loss": 0.010763381724245846,
+      "gradient_norm": 1.8276795148849487,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 368,
+      "loss": 0.3213069075718522,
+      "gradient_norm": 30.173171997070312,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 369,
+      "loss": 0.16153343580663204,
+      "gradient_norm": 19.22144889831543,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 370,
+      "loss": 0.28784517757594585,
+      "gradient_norm": 33.68960189819336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 371,
+      "loss": 0.38768158573657274,
+      "gradient_norm": 51.61512756347656,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 372,
+      "loss": 1.6986500024795532,
+      "gradient_norm": 46.28010940551758,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 373,
+      "loss": 0.13305184803903103,
+      "gradient_norm": 13.139776229858398,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 374,
+      "loss": 0.08102640230208635,
+      "gradient_norm": 9.216652870178223,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 375,
+      "loss": 0.16398992575705051,
+      "gradient_norm": 10.998162269592285,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 376,
+      "loss": 0.8067348599433899,
+      "gradient_norm": 56.15876388549805,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 377,
+      "loss": 0.0018678119231481105,
+      "gradient_norm": 0.19759604334831238,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 378,
+      "loss": 0.010359226958826184,
+      "gradient_norm": 1.135362982749939,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 379,
+      "loss": 0.06126394588500261,
+      "gradient_norm": 7.654062271118164,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 380,
+      "loss": 0.062170734629034996,
+      "gradient_norm": 8.02623462677002,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 381,
+      "loss": 0.24761967360973358,
+      "gradient_norm": 27.19416618347168,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 382,
+      "loss": 1.0744950771331787,
+      "gradient_norm": 53.288787841796875,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 383,
+      "loss": 0.0005285422230372205,
+      "gradient_norm": 0.053109269589185715,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 384,
+      "loss": 0.44954706355929375,
+      "gradient_norm": 40.870975494384766,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 385,
+      "loss": 0.006440847762860358,
+      "gradient_norm": 0.804811954498291,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 386,
+      "loss": 0.05505331512540579,
+      "gradient_norm": 7.606898307800293,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 387,
+      "loss": 0.007695111678913236,
+      "gradient_norm": 1.8229583501815796,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 388,
+      "loss": 0.003001512886839919,
+      "gradient_norm": 0.41396453976631165,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 389,
+      "loss": 0.018639623420313,
+      "gradient_norm": 1.796751856803894,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 390,
+      "loss": 0.004374922718852758,
+      "gradient_norm": 1.002583384513855,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 391,
+      "loss": 0.6264993920922279,
+      "gradient_norm": 41.577823638916016,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 392,
+      "loss": 0.015240396838635206,
+      "gradient_norm": 2.695889949798584,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 393,
+      "loss": 0.0771037582308054,
+      "gradient_norm": 6.3514909744262695,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 394,
+      "loss": 0.005615012429188937,
+      "gradient_norm": 0.5132430195808411,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 395,
+      "loss": 0.007713639788562432,
+      "gradient_norm": 2.7481276988983154,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 396,
+      "loss": 0.22840017080307007,
+      "gradient_norm": 24.06412124633789,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 397,
+      "loss": 0.19121344573795795,
+      "gradient_norm": 18.01897621154785,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 398,
+      "loss": 0.00014779987577639986,
+      "gradient_norm": 0.01531743723899126,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 399,
+      "loss": 0.04455382423475385,
+      "gradient_norm": 5.042911052703857,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 400,
+      "loss": 1.6946050226688385,
+      "gradient_norm": 70.15779113769531,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 401,
+      "loss": 0.35680505633354187,
+      "gradient_norm": 52.817256927490234,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 402,
+      "loss": 0.023370765149593353,
+      "gradient_norm": 2.5861597061157227,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 403,
+      "loss": 0.014479317178484052,
+      "gradient_norm": 2.6610188484191895,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 404,
+      "loss": 0.33142122253775597,
+      "gradient_norm": 25.98821258544922,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 405,
+      "loss": 0.0050831076805479825,
+      "gradient_norm": 1.1579666137695312,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 406,
+      "loss": 0.00011450089368736371,
+      "gradient_norm": 0.016184022650122643,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 407,
+      "loss": 1.0291846692562103,
+      "gradient_norm": 53.6214714050293,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 408,
+      "loss": 0.07391680870205164,
+      "gradient_norm": 5.63987398147583,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 409,
+      "loss": 0.09590558148920536,
+      "gradient_norm": 10.802953720092773,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 410,
+      "loss": 0.11027188505977392,
+      "gradient_norm": 17.789485931396484,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 411,
+      "loss": 0.0003874510402965825,
+      "gradient_norm": 0.04348130524158478,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 412,
+      "loss": 0.003768142487388104,
+      "gradient_norm": 0.5282989740371704,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 413,
+      "loss": 0.0245205529499799,
+      "gradient_norm": 3.8326895236968994,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 414,
+      "loss": 0.1410928387194872,
+      "gradient_norm": 13.456686973571777,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 415,
+      "loss": 0.0032257457496598363,
+      "gradient_norm": 0.41092291474342346,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 416,
+      "loss": 0.13957764487713575,
+      "gradient_norm": 18.199068069458008,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 417,
+      "loss": 0.009166898904368281,
+      "gradient_norm": 1.3966225385665894,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 418,
+      "loss": 0.006675462704151869,
+      "gradient_norm": 1.1142679452896118,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 419,
+      "loss": 1.0375618487596512,
+      "gradient_norm": 70.68576049804688,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 420,
+      "loss": 0.005743900663219392,
+      "gradient_norm": 1.038262128829956,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 421,
+      "loss": 0.002707921725232154,
+      "gradient_norm": 0.31157180666923523,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 422,
+      "loss": 0.005721302179154009,
+      "gradient_norm": 0.5215699672698975,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 423,
+      "loss": 0.0019456622321740724,
+      "gradient_norm": 0.24389752745628357,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 424,
+      "loss": 0.015180127695202827,
+      "gradient_norm": 3.153489828109741,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 425,
+      "loss": 0.0010789867665152997,
+      "gradient_norm": 0.14806385338306427,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 426,
+      "loss": 0.004853204358369112,
+      "gradient_norm": 0.8953125476837158,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 427,
+      "loss": 0.05793821229599416,
+      "gradient_norm": 10.223941802978516,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 428,
+      "loss": 0.0004199283794150688,
+      "gradient_norm": 0.0499255396425724,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 429,
+      "loss": 0.002047061367193237,
+      "gradient_norm": 0.3243154287338257,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 430,
+      "loss": 0.8612289875745773,
+      "gradient_norm": 35.56993103027344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 431,
+      "loss": 0.01628696743864566,
+      "gradient_norm": 1.5251208543777466,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 432,
+      "loss": 0.0099020212655887,
+      "gradient_norm": 1.1423698663711548,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 433,
+      "loss": 0.11913507990539074,
+      "gradient_norm": 8.216760635375977,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 434,
+      "loss": 0.007092571468092501,
+      "gradient_norm": 0.8744149208068848,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 435,
+      "loss": 0.12855536863207817,
+      "gradient_norm": 20.227012634277344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 436,
+      "loss": 0.007770208991132677,
+      "gradient_norm": 0.7194764614105225,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 437,
+      "loss": 0.5009462758898735,
+      "gradient_norm": 33.48298645019531,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 438,
+      "loss": 0.5094618201255798,
+      "gradient_norm": 39.010101318359375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 439,
+      "loss": 0.029530406463891268,
+      "gradient_norm": 7.08848762512207,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 440,
+      "loss": 0.625062108039856,
+      "gradient_norm": 52.39870071411133,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 441,
+      "loss": 0.010945995571091771,
+      "gradient_norm": 1.5277665853500366,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 442,
+      "loss": 0.2908999267965555,
+      "gradient_norm": 50.83858108520508,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 443,
+      "loss": 0.004543170012766495,
+      "gradient_norm": 0.6678140759468079,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 444,
+      "loss": 0.07380548678338528,
+      "gradient_norm": 9.028059959411621,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 445,
+      "loss": 0.30837056040763855,
+      "gradient_norm": 41.295166015625,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 446,
+      "loss": 0.02679463941603899,
+      "gradient_norm": 3.3143832683563232,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 447,
+      "loss": 0.6683866381645203,
+      "gradient_norm": 40.526878356933594,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 448,
+      "loss": 0.0015730970189906657,
+      "gradient_norm": 0.22646576166152954,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 449,
+      "loss": 0.0008425897103734314,
+      "gradient_norm": 0.10284268856048584,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 450,
+      "loss": 0.04282200848683715,
+      "gradient_norm": 5.605508327484131,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 451,
+      "loss": 0.009109049569815397,
+      "gradient_norm": 1.0193133354187012,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 452,
+      "loss": 0.014235498383641243,
+      "gradient_norm": 1.9087278842926025,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 453,
+      "loss": 0.017825808376073837,
+      "gradient_norm": 2.0996739864349365,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 454,
+      "loss": 0.1453351303935051,
+      "gradient_norm": 15.476536750793457,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 455,
+      "loss": 0.29950837045907974,
+      "gradient_norm": 31.589357376098633,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 456,
+      "loss": 0.002044779117568396,
+      "gradient_norm": 0.3190804123878479,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 457,
+      "loss": 0.004525951109826565,
+      "gradient_norm": 0.5269623398780823,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 458,
+      "loss": 0.0018130662647308782,
+      "gradient_norm": 0.2872895300388336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 459,
+      "loss": 0.0439009889960289,
+      "gradient_norm": 5.614683628082275,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 460,
+      "loss": 0.29385340213775635,
+      "gradient_norm": 20.827070236206055,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 461,
+      "loss": 0.0010427277738926932,
+      "gradient_norm": 0.12125534564256668,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 462,
+      "loss": 0.39784364216029644,
+      "gradient_norm": 63.219078063964844,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 463,
+      "loss": 0.0010133998439414427,
+      "gradient_norm": 0.13772635161876678,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 464,
+      "loss": 0.005715882347431034,
+      "gradient_norm": 0.8032532930374146,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 465,
+      "loss": 0.002259773842524737,
+      "gradient_norm": 0.3802240490913391,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 466,
+      "loss": 0.09735698020085692,
+      "gradient_norm": 18.614599227905273,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 467,
+      "loss": 0.0006462145320256241,
+      "gradient_norm": 0.07563060522079468,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 468,
+      "loss": 0.0036458142567425966,
+      "gradient_norm": 0.43235424160957336,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 469,
+      "loss": 0.0013026681554038078,
+      "gradient_norm": 0.1901165097951889,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 470,
+      "loss": 1.6246521770954132,
+      "gradient_norm": 100.16522216796875,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 471,
+      "loss": 0.34221021458506584,
+      "gradient_norm": 50.901615142822266,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 472,
+      "loss": 0.0007378639093076345,
+      "gradient_norm": 0.10935554653406143,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 473,
+      "loss": 0.0007100597795215435,
+      "gradient_norm": 0.12260472774505615,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 474,
+      "loss": 0.17875752039253712,
+      "gradient_norm": 24.892959594726562,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 475,
+      "loss": 0.06356844119727612,
+      "gradient_norm": 7.864463806152344,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 476,
+      "loss": 0.0016970597207546234,
+      "gradient_norm": 0.2364567369222641,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 477,
+      "loss": 0.09935883432626724,
+      "gradient_norm": 15.475654602050781,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 478,
+      "loss": 0.25090119801461697,
+      "gradient_norm": 44.98539733886719,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 479,
+      "loss": 0.0023876780178397894,
+      "gradient_norm": 0.2462819665670395,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 480,
+      "loss": 0.015802669804543257,
+      "gradient_norm": 2.4373509883880615,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 481,
+      "loss": 1.95199677364144e-05,
+      "gradient_norm": 0.0029027515556663275,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 482,
+      "loss": 0.02741404459811747,
+      "gradient_norm": 4.311100482940674,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 483,
+      "loss": 0.8379432410001755,
+      "gradient_norm": 86.10602569580078,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 484,
+      "loss": 0.005868082924280316,
+      "gradient_norm": 1.0252759456634521,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 485,
+      "loss": 0.0013823058689013124,
+      "gradient_norm": 0.1793159693479538,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 486,
+      "loss": 0.001740937732392922,
+      "gradient_norm": 0.219926118850708,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 487,
+      "loss": 0.047081358497962356,
+      "gradient_norm": 8.64963150024414,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 488,
+      "loss": 0.08728621434420347,
+      "gradient_norm": 11.751036643981934,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 489,
+      "loss": 0.3188390131108463,
+      "gradient_norm": 42.26509475708008,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 490,
+      "loss": 0.027023260947316885,
+      "gradient_norm": 4.773896217346191,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 491,
+      "loss": 0.2579752989113331,
+      "gradient_norm": 32.09546661376953,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 492,
+      "loss": 1.797612801194191,
+      "gradient_norm": 127.00872802734375,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 493,
+      "loss": 0.00012222689201735193,
+      "gradient_norm": 0.015032322145998478,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 494,
+      "loss": 0.0013900104677304626,
+      "gradient_norm": 0.2397197186946869,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 495,
+      "loss": 0.0029818019247613847,
+      "gradient_norm": 0.5960619449615479,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 496,
+      "loss": 0.017291365191340446,
+      "gradient_norm": 2.8938634395599365,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 497,
+      "loss": 0.016717775026336312,
+      "gradient_norm": 1.411184549331665,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 498,
+      "loss": 0.008775475958827883,
+      "gradient_norm": 1.5036541223526,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 499,
+      "loss": 0.08364805206656456,
+      "gradient_norm": 18.091678619384766,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 500,
+      "loss": 0.6933812201023102,
+      "gradient_norm": 37.33579635620117,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 501,
+      "loss": 0.01474373391829431,
+      "gradient_norm": 1.6067944765090942,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 502,
+      "loss": 0.04540734086185694,
+      "gradient_norm": 4.977006912231445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 503,
+      "loss": 0.049472945742309093,
+      "gradient_norm": 5.527055740356445,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 504,
+      "loss": 0.0805325573310256,
+      "gradient_norm": 11.798110008239746,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 505,
+      "loss": 0.023629582254216075,
+      "gradient_norm": 3.3401129245758057,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 506,
+      "loss": 0.004840963403694332,
+      "gradient_norm": 0.7049749493598938,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 507,
+      "loss": 0.0025580779765732586,
+      "gradient_norm": 0.2987361252307892,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 508,
+      "loss": 0.013754960964433849,
+      "gradient_norm": 2.3442070484161377,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 509,
+      "loss": 0.05458875559270382,
+      "gradient_norm": 8.199291229248047,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 510,
+      "loss": 0.16852259449660778,
+      "gradient_norm": 15.876236915588379,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 511,
+      "loss": 0.0002306604801560752,
+      "gradient_norm": 0.020364025607705116,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    },
+    {
+      "step": 512,
+      "loss": 0.06474312336649746,
+      "gradient_norm": 12.453476905822754,
+      "input_tokens": 154,
+      "supervised_tokens": 8,
+      "microbatches": 4
+    }
+  ],
+  "trainable_parameters": 835584,
+  "new_update_seconds": 139.05048612500832,
+  "input_tokens": 78848,
+  "supervised_tokens": 4096,
+  "frozen_before_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e",
+  "frozen_after_sha256": "89baecd1ef14b5e4e9ffee7b86224faa0b5a1a7ca1b7a88ec2fa952ad828b60e",
+  "scope": "equal updates/target tokens/sequences; input lengths/compute and operation coverage differ"
+}

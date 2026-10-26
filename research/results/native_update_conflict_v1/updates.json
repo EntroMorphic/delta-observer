@@ -1,0 +1,3882 @@
+{
+  "scope": "same-state one-update causal forks on raw contrast training replay; no candidate model approval",
+  "protected_case": "record-0",
+  "unprotected_key_cases": [
+    "record-1",
+    "record-4"
+  ],
+  "data_sha256": "f543225d319f35959beac76222fb2399c73c98e0a782c195598e0ce3c9cef9b5",
+  "source_checkpoint_sha256": "6a2d73192f164f7cf8c180e6f7e87d53ecf8f1ebc994177129fc81d78c9e3c8f",
+  "checkpoints_measured": [
+    1,
+    16,
+    64,
+    128,
+    256,
+    512
+  ],
+  "projection": "Euclidean LoRA-factor half-space; one schema-key CE gradient, not full retention objective",
+  "scale16_caveat": "extrapolated displacement, not an actual optimizer step or local guarantee",
+  "boundaries": [
+    {
+      "step": 1,
+      "preupdate_target_loss": 3.179547220468521,
+      "unclipped_gradient_norm": 58.118431091308594,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.01641743646597081,
+        "raw_update_norm": 0.068892145557064,
+        "retention_gradient_norm": 87.21563096321952,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.01641743646597081,
+        "norm_matched_update_norm": 0.068892145557064
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 3.179544448852539,
+          "actual_schema_key_ce": {
+            "record-0": 0.32188788056373596,
+            "record-1": 0.15471675992012024,
+            "record-4": 0.20183737576007843
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 2.305854320526123,
+          "actual_schema_key_ce": {
+            "record-0": 0.30581560730934143,
+            "record-1": 0.15275174379348755,
+            "record-4": 0.19730249047279358
+          },
+          "realized_retention_gradient_dot_displacement": -0.01641743646597081,
+          "realized_displacement_norm": 0.068892145557064,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 2.305854320526123,
+          "actual_schema_key_ce": {
+            "record-0": 0.30581560730934143,
+            "record-1": 0.15275174379348755,
+            "record-4": 0.19730249047279358
+          },
+          "realized_retention_gradient_dot_displacement": -0.01641743646597081,
+          "realized_displacement_norm": 0.068892145557064,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 2.305854320526123,
+          "actual_schema_key_ce": {
+            "record-0": 0.30581560730934143,
+            "record-1": 0.15275174379348755,
+            "record-4": 0.19730249047279358
+          },
+          "realized_retention_gradient_dot_displacement": -0.01641743646597081,
+          "realized_displacement_norm": 0.068892145557064,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "70",
+              "completion_ids": [
+                2476,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 3.471919536590576,
+          "actual_schema_key_ce": {
+            "record-0": 0.14633040130138397,
+            "record-1": 0.1607973426580429,
+            "record-4": 0.15479549765586853
+          },
+          "realized_retention_gradient_dot_displacement": -0.262678983455533,
+          "realized_displacement_norm": 1.102274328913024,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\n\"label\": \"stapler\",\n\"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                3219,
+                511,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                6608,
+                511,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\n\"label\": \"compass\",\n\"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                3219,
+                511,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                6608,
+                511,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "45",
+              "completion_ids": [
+                2637,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "23",
+              "completion_ids": [
+                1968,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 3.471919536590576,
+          "actual_schema_key_ce": {
+            "record-0": 0.14633040130138397,
+            "record-1": 0.1607973426580429,
+            "record-4": 0.15479549765586853
+          },
+          "realized_retention_gradient_dot_displacement": -0.262678983455533,
+          "realized_displacement_norm": 1.102274328913024,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\n\"label\": \"stapler\",\n\"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                3219,
+                511,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                6608,
+                511,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\n\"label\": \"compass\",\n\"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                3219,
+                511,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                6608,
+                511,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "45",
+              "completion_ids": [
+                2637,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "23",
+              "completion_ids": [
+                1968,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    },
+    {
+      "step": 16,
+      "preupdate_target_loss": 3.0612942576408386,
+      "unclipped_gradient_norm": 38.324913024902344,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.027526133103338138,
+        "raw_update_norm": 0.029465724578250932,
+        "retention_gradient_norm": 136.36703482923747,
+        "removed_component_norm": 0.00020185327882069808,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 2.42861286636753e-17,
+        "norm_matched_update_norm": 0.02946572457825105
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 3.061291217803955,
+          "actual_schema_key_ce": {
+            "record-0": 0.5638161897659302,
+            "record-1": 0.20444108545780182,
+            "record-4": 0.23035812377929688
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "75",
+              "completion_ids": [
+                2725,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "73",
+              "completion_ids": [
+                9626,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 2.8581414222717285,
+          "actual_schema_key_ce": {
+            "record-0": 0.5917340517044067,
+            "record-1": 0.20705246925354004,
+            "record-4": 0.22879844903945923
+          },
+          "realized_retention_gradient_dot_displacement": 0.027526133103338138,
+          "realized_displacement_norm": 0.029465724578250932,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "75",
+              "completion_ids": [
+                2725,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "73",
+              "completion_ids": [
+                9626,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 2.8581604957580566,
+          "actual_schema_key_ce": {
+            "record-0": 0.5637461543083191,
+            "record-1": 0.20056875050067902,
+            "record-4": 0.22251848876476288
+          },
+          "realized_retention_gradient_dot_displacement": 1.33397746755054e-09,
+          "realized_displacement_norm": 0.029465032786304402,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "75",
+              "completion_ids": [
+                2725,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "73",
+              "completion_ids": [
+                9626,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 2.858149528503418,
+          "actual_schema_key_ce": {
+            "record-0": 0.5637494325637817,
+            "record-1": 0.2005644589662552,
+            "record-4": 0.22251535952091217
+          },
+          "realized_retention_gradient_dot_displacement": -2.055845394095812e-09,
+          "realized_displacement_norm": 0.029465724001802415,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "75",
+              "completion_ids": [
+                2725,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "73",
+              "completion_ids": [
+                9626,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 1.405060052871704,
+          "actual_schema_key_ce": {
+            "record-0": 1.0856177806854248,
+            "record-1": 0.23965618014335632,
+            "record-4": 0.17381079494953156
+          },
+          "realized_retention_gradient_dot_displacement": 0.4404181305078143,
+          "realized_displacement_norm": 0.47145159335976833,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "17",
+              "completion_ids": [
+                1417,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "23",
+              "completion_ids": [
+                1968,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 1.4044088125228882,
+          "actual_schema_key_ce": {
+            "record-0": 0.5332054495811462,
+            "record-1": 0.14170986413955688,
+            "record-4": 0.10786377638578415
+          },
+          "realized_retention_gradient_dot_displacement": -2.2673003058359953e-09,
+          "realized_displacement_norm": 0.4714515935869631,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"label\": \"pendant\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                2124,
+                919,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "17",
+              "completion_ids": [
+                1417,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "23",
+              "completion_ids": [
+                1968,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    },
+    {
+      "step": 64,
+      "preupdate_target_loss": 1.8531571924686432,
+      "unclipped_gradient_norm": 42.69950866699219,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.032138191011181406,
+        "raw_update_norm": 0.018358699769643303,
+        "retention_gradient_norm": 305.61344547004404,
+        "removed_component_norm": 0.00010515961089915837,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 4.336808689942018e-17,
+        "norm_matched_update_norm": 0.018358699769643487
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 1.8531571626663208,
+          "actual_schema_key_ce": {
+            "record-0": 1.8533495664596558,
+            "record-1": 0.3744605779647827,
+            "record-4": 0.3067697286605835
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 1.6956074237823486,
+          "actual_schema_key_ce": {
+            "record-0": 1.8852148056030273,
+            "record-1": 0.38642898201942444,
+            "record-4": 0.31408414244651794
+          },
+          "realized_retention_gradient_dot_displacement": 0.032138191011181406,
+          "realized_displacement_norm": 0.018358699769643303,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 1.695716142654419,
+          "actual_schema_key_ce": {
+            "record-0": 1.8530845642089844,
+            "record-1": 0.3795957565307617,
+            "record-4": 0.3091936409473419
+          },
+          "realized_retention_gradient_dot_displacement": -4.9087701347282076e-09,
+          "realized_displacement_norm": 0.01835839870628034,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 1.69571053981781,
+          "actual_schema_key_ce": {
+            "record-0": 1.8531514406204224,
+            "record-1": 0.3795991837978363,
+            "record-4": 0.3091804087162018
+          },
+          "realized_retention_gradient_dot_displacement": -9.423686857766567e-09,
+          "realized_displacement_norm": 0.0183586983253862,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "77",
+              "completion_ids": [
+                3556,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 1.0167198181152344,
+          "actual_schema_key_ce": {
+            "record-0": 2.3223793506622314,
+            "record-1": 0.5849682092666626,
+            "record-4": 0.4206344485282898
+          },
+          "realized_retention_gradient_dot_displacement": 0.5142110507802229,
+          "realized_displacement_norm": 0.2937391962233735,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "66",
+              "completion_ids": [
+                3589,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "72",
+              "completion_ids": [
+                8333,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 1.0170997381210327,
+          "actual_schema_key_ce": {
+            "record-0": 1.825513243675232,
+            "record-1": 0.4542398452758789,
+            "record-4": 0.3376472592353821
+          },
+          "realized_retention_gradient_dot_displacement": -2.01157920251549e-08,
+          "realized_displacement_norm": 0.29373919633828405,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "66",
+              "completion_ids": [
+                3589,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "72",
+              "completion_ids": [
+                8333,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    },
+    {
+      "step": 128,
+      "preupdate_target_loss": 1.6753950715065002,
+      "unclipped_gradient_norm": 91.77916717529297,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.009926568838944374,
+        "raw_update_norm": 0.0176920884738084,
+        "retention_gradient_norm": 323.43288818146755,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.009926568838944374,
+        "norm_matched_update_norm": 0.0176920884738084
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 1.6753876209259033,
+          "actual_schema_key_ce": {
+            "record-0": 2.6305789947509766,
+            "record-1": 0.6327523589134216,
+            "record-4": 0.36423739790916443
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 1.624306321144104,
+          "actual_schema_key_ce": {
+            "record-0": 2.6204464435577393,
+            "record-1": 0.6291815638542175,
+            "record-4": 0.36583566665649414
+          },
+          "realized_retention_gradient_dot_displacement": -0.009926568838944374,
+          "realized_displacement_norm": 0.0176920884738084,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 1.624306321144104,
+          "actual_schema_key_ce": {
+            "record-0": 2.6204464435577393,
+            "record-1": 0.6291815638542175,
+            "record-4": 0.36583566665649414
+          },
+          "realized_retention_gradient_dot_displacement": -0.009926568838944374,
+          "realized_displacement_norm": 0.0176920884738084,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 1.624306321144104,
+          "actual_schema_key_ce": {
+            "record-0": 2.6204464435577393,
+            "record-1": 0.6291815638542175,
+            "record-4": 0.36583566665649414
+          },
+          "realized_retention_gradient_dot_displacement": -0.009926568838944374,
+          "realized_displacement_norm": 0.0176920884738084,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 0.8744399547576904,
+          "actual_schema_key_ce": {
+            "record-0": 2.433903694152832,
+            "record-1": 0.5619409084320068,
+            "record-4": 0.3805045485496521
+          },
+          "realized_retention_gradient_dot_displacement": -0.15882510886355194,
+          "realized_displacement_norm": 0.28307341565260585,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 0.8744399547576904,
+          "actual_schema_key_ce": {
+            "record-0": 2.433903694152832,
+            "record-1": 0.5619409084320068,
+            "record-4": 0.3805045485496521
+          },
+          "realized_retention_gradient_dot_displacement": -0.15882510886355194,
+          "realized_displacement_norm": 0.28307341565260585,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"label\": \"stapler\", \"enabled\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                820,
+                948,
+                2296,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    },
+    {
+      "step": 256,
+      "preupdate_target_loss": 0.3704960308969021,
+      "unclipped_gradient_norm": 20.931467056274414,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": 0.0007455971253341655,
+        "raw_update_norm": 0.019688798502741717,
+        "retention_gradient_norm": 348.41722086687315,
+        "removed_component_norm": 2.13995486066702e-06,
+        "projection_active": true,
+        "retention_gradient_dot_projected": 2.168404344971009e-18,
+        "norm_matched_update_norm": 0.019688798502741613
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 0.37050074338912964,
+          "actual_schema_key_ce": {
+            "record-0": 4.111550807952881,
+            "record-1": 1.365323543548584,
+            "record-4": 0.6288871765136719
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 0.2995283603668213,
+          "actual_schema_key_ce": {
+            "record-0": 4.1121826171875,
+            "record-1": 1.3667047023773193,
+            "record-4": 0.6392747163772583
+          },
+          "realized_retention_gradient_dot_displacement": 0.0007455971253341655,
+          "realized_displacement_norm": 0.019688798502741717,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 0.29952871799468994,
+          "actual_schema_key_ce": {
+            "record-0": 4.111435890197754,
+            "record-1": 1.3663921356201172,
+            "record-4": 0.6391252279281616
+          },
+          "realized_retention_gradient_dot_displacement": 1.748455841789863e-06,
+          "realized_displacement_norm": 0.019688796921905574,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 0.29953110218048096,
+          "actual_schema_key_ce": {
+            "record-0": 4.111485958099365,
+            "record-1": 1.3663980960845947,
+            "record-4": 0.6391253471374512
+          },
+          "realized_retention_gradient_dot_displacement": 1.7480233238343842e-06,
+          "realized_displacement_norm": 0.019688796991244747,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 0.17570434510707855,
+          "actual_schema_key_ce": {
+            "record-0": 4.081535339355469,
+            "record-1": 1.3755524158477783,
+            "record-4": 0.7909054160118103
+          },
+          "realized_retention_gradient_dot_displacement": 0.011929559751212161,
+          "realized_displacement_norm": 0.31502077613946644,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"compass\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                7046,
+                1004,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "102",
+              "completion_ids": [
+                9270,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "102",
+              "completion_ids": [
+                9270,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 0.1756976991891861,
+          "actual_schema_key_ce": {
+            "record-0": 4.0696282386779785,
+            "record-1": 1.3700933456420898,
+            "record-4": 0.7881134748458862
+          },
+          "realized_retention_gradient_dot_displacement": 3.225287197039517e-08,
+          "realized_displacement_norm": 0.31502077608255,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"compass\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                7046,
+                1004,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "102",
+              "completion_ids": [
+                9270,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "102",
+              "completion_ids": [
+                9270,
+                7
+              ],
+              "content": null,
+              "native_exact": false
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    },
+    {
+      "step": 512,
+      "preupdate_target_loss": 0.5158786717802286,
+      "unclipped_gradient_norm": 34.18507385253906,
+      "direction_measurements": {
+        "retention_gradient_dot_raw_update": -0.008574370201580236,
+        "raw_update_norm": 0.018395811404558194,
+        "retention_gradient_norm": 310.8739724462216,
+        "removed_component_norm": 0.0,
+        "projection_active": false,
+        "retention_gradient_dot_projected": -0.008574370201580236,
+        "norm_matched_update_norm": 0.018395811404558194
+      },
+      "forks": [
+        {
+          "variant": "zero",
+          "actual_target_ce": 0.5158812999725342,
+          "actual_schema_key_ce": {
+            "record-0": 3.1385223865509033,
+            "record-1": 1.2654359340667725,
+            "record-4": 0.622035562992096
+          },
+          "realized_retention_gradient_dot_displacement": 0.0,
+          "realized_displacement_norm": 0.0,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw",
+          "actual_target_ce": 0.4210595190525055,
+          "actual_schema_key_ce": {
+            "record-0": 3.1300089359283447,
+            "record-1": 1.265623927116394,
+            "record-4": 0.6214843392372131
+          },
+          "realized_retention_gradient_dot_displacement": -0.008574370201580236,
+          "realized_displacement_norm": 0.018395811404558194,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected",
+          "actual_target_ce": 0.4210595190525055,
+          "actual_schema_key_ce": {
+            "record-0": 3.1300089359283447,
+            "record-1": 1.265623927116394,
+            "record-4": 0.6214843392372131
+          },
+          "realized_retention_gradient_dot_displacement": -0.008574370201580236,
+          "realized_displacement_norm": 0.018395811404558194,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched",
+          "actual_target_ce": 0.4210595190525055,
+          "actual_schema_key_ce": {
+            "record-0": 3.1300089359283447,
+            "record-1": 1.265623927116394,
+            "record-4": 0.6214843392372131
+          },
+          "realized_retention_gradient_dot_displacement": -0.008574370201580236,
+          "realized_displacement_norm": 0.018395811404558194,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "```json\n{\"pendant\":true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                2124,
+                919,
+                6881,
+                10567,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "raw_x16",
+          "actual_target_ce": 0.05467458814382553,
+          "actual_schema_key_ce": {
+            "record-0": 3.003835916519165,
+            "record-1": 1.2656804323196411,
+            "record-4": 0.6150994300842285
+          },
+          "realized_retention_gradient_dot_displacement": -0.13718992961124887,
+          "realized_displacement_norm": 0.29433298246680883,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "{\"pendant\": true}",
+              "completion_ids": [
+                38685,
+                2124,
+                919,
+                6881,
+                3347,
+                602,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        },
+        {
+          "variant": "projected_norm_matched_x16",
+          "actual_target_ce": 0.05467458814382553,
+          "actual_schema_key_ce": {
+            "record-0": 3.003835916519165,
+            "record-1": 1.2656804323196411,
+            "record-4": 0.6150994300842285
+          },
+          "realized_retention_gradient_dot_displacement": -0.13718992961124887,
+          "realized_displacement_norm": 0.29433298246680883,
+          "responses": [
+            {
+              "id": "record-0",
+              "response": "{\"pendant\": true}",
+              "completion_ids": [
+                38685,
+                2124,
+                919,
+                6881,
+                3347,
+                602,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-1",
+              "response": "```json\n{\"stapler\": false}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                820,
+                948,
+                2296,
+                6881,
+                4831,
+                1105,
+                26298,
+                7
+              ],
+              "content": false,
+              "native_exact": null
+            },
+            {
+              "id": "record-4",
+              "response": "```json\n{\"label\": \"compass\", \"enabled\": true}\n```",
+              "completion_ids": [
+                26298,
+                20086,
+                708,
+                38685,
+                3283,
+                6881,
+                997,
+                7046,
+                1004,
+                1878,
+                997,
+                771,
+                7526,
+                6881,
+                3347,
+                1105,
+                26298,
+                7
+              ],
+              "content": true,
+              "native_exact": null
+            },
+            {
+              "id": "new_facts_new_template-00",
+              "response": "62",
+              "completion_ids": [
+                5370,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            },
+            {
+              "id": "counterfactual_add-00",
+              "response": "78",
+              "completion_ids": [
+                2775,
+                7
+              ],
+              "content": true,
+              "native_exact": true
+            }
+          ]
+        }
+      ],
+      "raw_parameters_restored_exactly": true
+    }
+  ],
+  "raw_training_replication_max_adapter_error": 0.0,
+  "raw_replay_replication_passed": true,
+  "complete": true
+}

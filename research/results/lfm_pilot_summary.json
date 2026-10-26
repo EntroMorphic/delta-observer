@@ -1,0 +1,45 @@
+{
+  "experiment": "Observer.D-LFM full-pipeline pilot",
+  "status": "INVALIDATED - retained only as a falsification record",
+  "invalidation_reason": "Independent packed chunks omitted the LFM2.5 BOS token, producing invalid recurrent initial conditions and EOS-heavy teacher outputs.",
+  "teacher": "LiquidAI/LFM2.5-350M",
+  "teacher_parameters": 354483968,
+  "observer_d_parameters": 27973248,
+  "data": {
+    "dataset": "HuggingFaceFW/fineweb-edu/sample-10BT",
+    "sequence_length": 128,
+    "training_sequences": 32,
+    "validation_sequences": 32,
+    "training_tokens": 4096,
+    "validation_tokens": 4096,
+    "top_k": 64,
+    "projection_dim": 128,
+    "projection_sha256": "a3bb0b71207c9c1e0cba1fcd2b66f15d23d07d758b4c82f2ae16f602124edd23"
+  },
+  "arms": {
+    "direct": {
+      "seconds": 3.838978749998205,
+      "final_train_ce": 8.081589698791504,
+      "validation_ce": 8.653571531176567
+    },
+    "distill": {
+      "seconds": 3.766882167001313,
+      "final_train_ce": 7.982097148895264,
+      "validation_ce": 8.508447095751762,
+      "validation_sparse_kl": 4.104120224714279
+    },
+    "trajectory": {
+      "seconds": 5.380278708002152,
+      "final_train_ce": 7.981875419616699,
+      "validation_ce": 8.508430674672127,
+      "validation_sparse_kl": 4.1042067259550095,
+      "validation_state_loss": 0.009206288959831,
+      "validation_delta_loss": 0.012011979590170085
+    }
+  },
+  "interpretation": {
+    "output_distillation_validation_ce_change_vs_direct": -0.1451244354248047,
+    "trajectory_validation_ce_change_vs_output_distillation": -0.000016421079635620117,
+    "conclusion": "Do not use these metrics for efficacy. The pipeline execution was validated, but all behavioral comparisons must be rerun on BOS-corrected shards."
+  }
+}

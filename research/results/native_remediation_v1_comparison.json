@@ -1,0 +1,2701 @@
+{
+  "protocol": "research/reports/native_remediation_protocol.md",
+  "tasks_sha256": "a25c3a9d0cdd9b55889599dc60e6709e039183e32417bd5091345f0770524d6d",
+  "sources": {
+    "baseline": {
+      "path": "research/results/native_remediation_v1_baseline/baseline.json",
+      "sha256": "a48105c677a4db934e8d27e7560631e3442bc85e58cc8e6c13f6df00c5cd5e83"
+    },
+    "repeated": {
+      "path": "research/results/native_remediation_v1_old_adapter/baseline.json",
+      "sha256": "aca34357ec72160921db3f23f61312fa1c5b737cb1bea1cf4a6de1d6bcecbe36"
+    },
+    "remediation": {
+      "path": "research/results/native_remediation_v1_corrected/baseline.json",
+      "sha256": "3106f0f8e30227f53930ae92f90bf719b0a28968dbf535250eede7fa868538f2"
+    }
+  },
+  "arms": {
+    "baseline": {
+      "total": 100,
+      "strict_successes": 11,
+      "format_successes": 58,
+      "content_confirmed": 31,
+      "content_parser_failures": 20,
+      "content_unresolved": 49,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 19,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0
+        },
+        "json_record": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 20,
+          "content_parser_failures": 0,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "signed_sorting": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 0,
+          "content_parser_failures": 20,
+          "content_unresolved": 0,
+          "truncated": 0
+        },
+        "spanish_number_words": {
+          "total": 20,
+          "strict_successes": 1,
+          "format_successes": 20,
+          "content_confirmed": 1,
+          "content_parser_failures": 0,
+          "content_unresolved": 19,
+          "truncated": 0
+        },
+        "transitive_ordering": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 19,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "record-00",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-00",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-00",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-00",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-01",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-01",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-01",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-01",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-02",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-02",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-02",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-02",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-03",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-03",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-03",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-03",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-04",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-04",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-04",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-04",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-05",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-05",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-05",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-05",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-06",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-06",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-06",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-06",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-07",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-07",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-07",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-07",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-08",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-08",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-08",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-08",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-09",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-09",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-09",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-09",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-10",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-10",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-10",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-10",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-11",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-11",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-11",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-11",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-12",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-12",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-12",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-12",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-13",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-13",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-13",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-13",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-14",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-14",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-14",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-14",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-15",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-15",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-15",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-15",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-16",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-16",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-16",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-16",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-17",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-17",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-17",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-17",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-18",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-18",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-18",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-18",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-19",
+          "category": "json_record",
+          "strict": false,
+          "format": false,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-19",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-19",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-19",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        }
+      ]
+    },
+    "repeated": {
+      "total": 100,
+      "strict_successes": 31,
+      "format_successes": 77,
+      "content_confirmed": 31,
+      "content_parser_failures": 20,
+      "content_unresolved": 49,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 17,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0,
+          "net_change": 0
+        },
+        "json_record": {
+          "total": 20,
+          "strict_successes": 20,
+          "format_successes": 20,
+          "content_confirmed": 20,
+          "content_parser_failures": 0,
+          "content_unresolved": 0,
+          "truncated": 0,
+          "net_change": 20
+        },
+        "signed_sorting": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 0,
+          "content_confirmed": 0,
+          "content_parser_failures": 20,
+          "content_unresolved": 0,
+          "truncated": 0,
+          "net_change": 0
+        },
+        "spanish_number_words": {
+          "total": 20,
+          "strict_successes": 1,
+          "format_successes": 20,
+          "content_confirmed": 1,
+          "content_parser_failures": 0,
+          "content_unresolved": 19,
+          "truncated": 0,
+          "net_change": 0
+        },
+        "transitive_ordering": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 20,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0,
+          "net_change": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "record-00",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-00",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-00",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-00",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-01",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-01",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-01",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-01",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-02",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-02",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-02",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-02",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-03",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-03",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-03",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-03",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-04",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-04",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-04",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-04",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-05",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-05",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-05",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-05",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-06",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-06",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-06",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-06",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-07",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-07",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-07",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-07",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-08",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-08",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-08",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-08",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-09",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-09",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-09",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-09",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-10",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-10",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-10",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-10",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-11",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-11",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-11",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-11",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-12",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-12",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-12",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-12",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-13",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-13",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-13",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-13",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-14",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-14",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-14",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-14",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-15",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-15",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-15",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-15",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-16",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-16",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-16",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-16",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-17",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-17",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-17",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-17",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-18",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-18",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": false,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-18",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-18",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-19",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-19",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-19",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-19",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        }
+      ],
+      "gains": [
+        "record-00",
+        "record-01",
+        "record-02",
+        "record-03",
+        "record-04",
+        "record-05",
+        "record-06",
+        "record-07",
+        "record-08",
+        "record-09",
+        "record-10",
+        "record-11",
+        "record-12",
+        "record-13",
+        "record-14",
+        "record-15",
+        "record-16",
+        "record-17",
+        "record-18",
+        "record-19"
+      ],
+      "regressions": [],
+      "net_change": 20,
+      "content_gains": [],
+      "lost_confirmed_content": []
+    },
+    "remediation": {
+      "total": 100,
+      "strict_successes": 53,
+      "format_successes": 92,
+      "content_confirmed": 53,
+      "content_parser_failures": 13,
+      "content_unresolved": 34,
+      "truncated": 0,
+      "categories": {
+        "arithmetic": {
+          "total": 20,
+          "strict_successes": 0,
+          "format_successes": 20,
+          "content_confirmed": 0,
+          "content_parser_failures": 0,
+          "content_unresolved": 20,
+          "truncated": 0,
+          "net_change": 0
+        },
+        "json_record": {
+          "total": 20,
+          "strict_successes": 20,
+          "format_successes": 20,
+          "content_confirmed": 20,
+          "content_parser_failures": 0,
+          "content_unresolved": 0,
+          "truncated": 0,
+          "net_change": 20
+        },
+        "signed_sorting": {
+          "total": 20,
+          "strict_successes": 7,
+          "format_successes": 12,
+          "content_confirmed": 7,
+          "content_parser_failures": 13,
+          "content_unresolved": 0,
+          "truncated": 0,
+          "net_change": 7
+        },
+        "spanish_number_words": {
+          "total": 20,
+          "strict_successes": 16,
+          "format_successes": 20,
+          "content_confirmed": 16,
+          "content_parser_failures": 0,
+          "content_unresolved": 4,
+          "truncated": 0,
+          "net_change": 15
+        },
+        "transitive_ordering": {
+          "total": 20,
+          "strict_successes": 10,
+          "format_successes": 20,
+          "content_confirmed": 10,
+          "content_parser_failures": 0,
+          "content_unresolved": 10,
+          "truncated": 0,
+          "net_change": 0
+        }
+      },
+      "tasks": [
+        {
+          "id": "record-00",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-00",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-00",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-00",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-00",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-01",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-01",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-01",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-01",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-01",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-02",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-02",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-02",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-02",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-02",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-03",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-03",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-03",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-03",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-03",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-04",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-04",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-04",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-04",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-04",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-05",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-05",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-05",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-05",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-05",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-06",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-06",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-06",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-06",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-06",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-07",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-07",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-07",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-07",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-07",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-08",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-08",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-08",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-08",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-08",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-09",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-09",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-09",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-09",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-09",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-10",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-10",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-10",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-10",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-10",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-11",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-11",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-11",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-11",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-11",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-12",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-12",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": true,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-12",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-12",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-12",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-13",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-13",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-13",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-13",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-13",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-14",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-14",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-14",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-14",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-14",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-15",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-15",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-15",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-15",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-15",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-16",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-16",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-16",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-16",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-16",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-17",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-17",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-17",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-17",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-17",
+          "category": "spanish_number_words",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "record-18",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-18",
+          "category": "signed_sorting",
+          "strict": false,
+          "format": false,
+          "content": false,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-18",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-18",
+          "category": "transitive_ordering",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "translation-18",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "record-19",
+          "category": "json_record",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "sort-19",
+          "category": "signed_sorting",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "arithmetic-19",
+          "category": "arithmetic",
+          "strict": false,
+          "format": true,
+          "content": null,
+          "truncated": false
+        },
+        {
+          "id": "order-19",
+          "category": "transitive_ordering",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        },
+        {
+          "id": "translation-19",
+          "category": "spanish_number_words",
+          "strict": true,
+          "format": true,
+          "content": true,
+          "truncated": false
+        }
+      ],
+      "gains": [
+        "record-00",
+        "translation-00",
+        "record-01",
+        "sort-01",
+        "record-02",
+        "translation-02",
+        "record-03",
+        "record-04",
+        "sort-04",
+        "translation-04",
+        "record-05",
+        "sort-05",
+        "translation-05",
+        "record-06",
+        "sort-06",
+        "translation-06",
+        "record-07",
+        "record-08",
+        "translation-08",
+        "record-09",
+        "translation-09",
+        "record-10",
+        "translation-10",
+        "record-11",
+        "translation-11",
+        "record-12",
+        "translation-12",
+        "record-13",
+        "translation-13",
+        "record-14",
+        "translation-14",
+        "record-15",
+        "sort-15",
+        "translation-15",
+        "record-16",
+        "record-17",
+        "sort-17",
+        "record-18",
+        "translation-18",
+        "record-19",
+        "sort-19",
+        "translation-19"
+      ],
+      "regressions": [],
+      "net_change": 42,
+      "content_gains": [
+        "translation-00",
+        "sort-01",
+        "translation-02",
+        "sort-04",
+        "translation-04",
+        "sort-05",
+        "translation-05",
+        "sort-06",
+        "translation-06",
+        "translation-08",
+        "translation-09",
+        "translation-10",
+        "translation-11",
+        "translation-12",
+        "translation-13",
+        "translation-14",
+        "sort-15",
+        "translation-15",
+        "sort-17",
+        "translation-18",
+        "sort-19",
+        "translation-19"
+      ],
+      "lost_confirmed_content": []
+    }
+  }
+}

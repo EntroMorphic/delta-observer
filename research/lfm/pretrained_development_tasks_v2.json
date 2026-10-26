@@ -1,0 +1,392 @@
+{
+  "version": 2,
+  "role": "development_only_not_confirmatory",
+  "design_note": "44 tasks; templated families are correlated, not 44 independent capability measurements. Nine manual tasks still await review. No confirmatory aggregate.",
+  "tasks": [
+    {
+      "id": "fact-metal",
+      "category": "factual_explanation",
+      "prompt": "Why does a metal spoon feel colder than a wooden spoon when both have been in the same room overnight? Explain briefly.",
+      "validator": "manual",
+      "rubric": "Explains equal initial temperatures but faster heat transfer from the hand through metal; does not claim the metal must be colder."
+    },
+    {
+      "id": "fact-moon",
+      "category": "factual_explanation",
+      "prompt": "Why do we see different phases of the Moon? Give a short explanation.",
+      "validator": "manual",
+      "rubric": "Describes changing visible fraction of the sunlit Moon as it orbits Earth; does not attribute ordinary phases to Earth's shadow."
+    },
+    {
+      "id": "json-sort",
+      "category": "format_following",
+      "prompt": "Sort these integers from smallest to largest: 17, -4, 9, 0. Return only a JSON array, without Markdown or explanation.",
+      "validator": "json_exact",
+      "expected": [
+        -4,
+        0,
+        9,
+        17
+      ],
+      "content_validator": "json_unfenced"
+    },
+    {
+      "id": "json-record",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly these two keys: city with string value Oslo, and count with integer value 7. Do not use Markdown.",
+      "validator": "json_exact",
+      "expected": {
+        "city": "Oslo",
+        "count": 7
+      },
+      "content_validator": "json_unfenced"
+    },
+    {
+      "id": "arithmetic-boxes",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 7 boxes with 6 pencils in each box. Nine pencils are removed. How many pencils remain? Return only the integer.",
+      "validator": "text_exact",
+      "expected": "33",
+      "content_validator": "boxed_integer"
+    },
+    {
+      "id": "deduction-order",
+      "category": "deduction_arithmetic",
+      "prompt": "The amber box is lighter than the silver box. The silver box is lighter than the violet box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "violet"
+    },
+    {
+      "id": "summary-ferry",
+      "category": "summarization_fidelity",
+      "prompt": "Summarize in one sentence without adding facts: A ferry service added two morning departures in June. Passenger numbers increased, but ticket prices and evening schedules did not change.",
+      "validator": "manual",
+      "rubric": "Preserves added morning departures and increased ridership; preserves unchanged prices/evenings where mentioned; adds no explanation of causality or new facts; one sentence."
+    },
+    {
+      "id": "summary-garden",
+      "category": "summarization_fidelity",
+      "prompt": "Summarize in one sentence: Volunteers planted 40 trees in the park on Saturday. Rain delayed painting the benches until Monday. No trees were removed.",
+      "validator": "manual",
+      "rubric": "Includes tree planting and rain-delayed bench painting with correct timing; does not confuse planting with removal or invent outcomes."
+    },
+    {
+      "id": "code-clamp",
+      "category": "code_generation",
+      "prompt": "Write a Python function clamp(x, low, high) that returns low if x is below low, high if x is above high, and x otherwise. Assume low <= high. Return only the function.",
+      "validator": "manual",
+      "rubric": "Valid Python implementing all three cases, including boundaries. Review only in this initial pass; generated code is not executed. Later executable evaluation must use an isolated runner."
+    },
+    {
+      "id": "code-evens",
+      "category": "code_generation",
+      "prompt": "Write a Python function count_even(values) that returns how many integers in values are even. It must return 0 for an empty list. Return only the function.",
+      "validator": "manual",
+      "rubric": "Valid Python counting even elements (including zero/negative evens), not summing values; handles empty list. Review only; do not execute generated code."
+    },
+    {
+      "id": "uncertainty-envelope",
+      "category": "uncertainty_abstention",
+      "prompt": "I put a handwritten number inside an opaque sealed envelope that you cannot inspect. What number did I write?",
+      "validator": "manual",
+      "rubric": "States that the number cannot be determined from provided information; does not invent a number or claim sensory access."
+    },
+    {
+      "id": "uncertainty-meeting",
+      "category": "uncertainty_abstention",
+      "prompt": "What exact sentence will my colleague say first at our private meeting tomorrow? You have no information about the colleague or meeting.",
+      "validator": "manual",
+      "rubric": "Acknowledges inability to know exact future private speech; any hypothetical example is clearly labeled, not asserted as prediction."
+    },
+    {
+      "id": "spanish-translation",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'cat' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "gato"
+    },
+    {
+      "id": "french-ice",
+      "category": "multilingual_instructions",
+      "prompt": "Explique en français, en une ou deux phrases, pourquoi un glaçon fond dans une pièce chaude.",
+      "validator": "manual",
+      "rubric": "Answers in French with coherent heat transfer/melting explanation and one or two sentences; no incorrect claim that cold escapes as a substance."
+    },
+    {
+      "id": "sort-0",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 13, -8, 0, 30. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -8,
+        0,
+        13,
+        30
+      ]
+    },
+    {
+      "id": "record-0",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Lima, and count with integer value 2. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Lima",
+        "count": 2
+      }
+    },
+    {
+      "id": "arithmetic-0",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 3 boxes with 4 pencils in each. If 2 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "10"
+    },
+    {
+      "id": "deduction-0",
+      "category": "deduction_arithmetic",
+      "prompt": "The red box is heavier than the green box. The white box is heavier than the red box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "white"
+    },
+    {
+      "id": "spanish-0",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'dog' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "perro"
+    },
+    {
+      "id": "sort-1",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 14, -9, 2, 29. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -9,
+        2,
+        14,
+        29
+      ]
+    },
+    {
+      "id": "record-1",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Kyoto, and count with integer value 3. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Kyoto",
+        "count": 3
+      }
+    },
+    {
+      "id": "arithmetic-1",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 4 boxes with 5 pencils in each. If 3 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "17"
+    },
+    {
+      "id": "deduction-1",
+      "category": "deduction_arithmetic",
+      "prompt": "The gold box is heavier than the black box. The pink box is heavier than the gold box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "pink"
+    },
+    {
+      "id": "spanish-1",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'house' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "casa"
+    },
+    {
+      "id": "sort-2",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 15, -10, 4, 28. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -10,
+        4,
+        15,
+        28
+      ]
+    },
+    {
+      "id": "record-2",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Accra, and count with integer value 4. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Accra",
+        "count": 4
+      }
+    },
+    {
+      "id": "arithmetic-2",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 5 boxes with 6 pencils in each. If 4 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "26"
+    },
+    {
+      "id": "deduction-2",
+      "category": "deduction_arithmetic",
+      "prompt": "The brown box is heavier than the orange box. The gray box is heavier than the brown box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "gray"
+    },
+    {
+      "id": "spanish-2",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'book' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "libro"
+    },
+    {
+      "id": "sort-3",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 16, -11, 6, 27. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -11,
+        6,
+        16,
+        27
+      ]
+    },
+    {
+      "id": "record-3",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Riga, and count with integer value 5. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Riga",
+        "count": 5
+      }
+    },
+    {
+      "id": "arithmetic-3",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 6 boxes with 7 pencils in each. If 5 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "37"
+    },
+    {
+      "id": "deduction-3",
+      "category": "deduction_arithmetic",
+      "prompt": "The cyan box is heavier than the beige box. The blue box is heavier than the cyan box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "blue"
+    },
+    {
+      "id": "spanish-3",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'milk' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "leche"
+    },
+    {
+      "id": "sort-4",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 17, -12, 8, 26. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -12,
+        8,
+        17,
+        26
+      ]
+    },
+    {
+      "id": "record-4",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Bern, and count with integer value 6. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Bern",
+        "count": 6
+      }
+    },
+    {
+      "id": "arithmetic-4",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 7 boxes with 8 pencils in each. If 6 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "50"
+    },
+    {
+      "id": "deduction-4",
+      "category": "deduction_arithmetic",
+      "prompt": "The yellow box is heavier than the purple box. The silver box is heavier than the yellow box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "silver"
+    },
+    {
+      "id": "spanish-4",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'bread' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "pan"
+    },
+    {
+      "id": "sort-5",
+      "category": "format_following",
+      "prompt": "Sort these integers in ascending order: 18, -13, 10, 25. Return only a JSON array, with no Markdown or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": [
+        -13,
+        10,
+        18,
+        25
+      ]
+    },
+    {
+      "id": "record-5",
+      "category": "format_following",
+      "prompt": "Return only a JSON object with exactly two keys: city with string value Perth, and count with integer value 7. No Markdown or other text.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "city": "Perth",
+        "count": 7
+      }
+    },
+    {
+      "id": "arithmetic-5",
+      "category": "deduction_arithmetic",
+      "prompt": "There are 8 boxes with 9 pencils in each. If 7 pencils are removed, how many remain? Return only the integer.",
+      "validator": "text_exact",
+      "content_validator": "boxed_integer",
+      "expected": "65"
+    },
+    {
+      "id": "deduction-5",
+      "category": "deduction_arithmetic",
+      "prompt": "The maroon box is heavier than the navy box. The teal box is heavier than the maroon box. Which box is heaviest? Return only its color in lowercase.",
+      "validator": "text_exact",
+      "expected": "teal"
+    },
+    {
+      "id": "spanish-5",
+      "category": "multilingual_instructions",
+      "prompt": "Translate the English word 'sun' into Spanish. Return only the lowercase singular word.",
+      "validator": "text_exact",
+      "expected": "sol"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "paired_prompts": 16,
+  "start_tokens": 8,
+  "full_loss": {
+    "ce": 3.5665071308612823,
+    "kl": 2.9404666870832443
+  },
+  "start_loss": {
+    "ce": 3.861863374710083,
+    "kl": 3.616266369819641
+  },
+  "full_gradient_norm": 5.928921996904081,
+  "start_gradient_norm": 18.662094241385276,
+  "cosine": 0.4232759643452237,
+  "start_weight_at_10pct_norm": 0.031769864197534886,
+  "start_weight_at_25pct_norm": 0.07942466049383722
+}

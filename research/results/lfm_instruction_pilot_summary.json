@@ -1,0 +1,47 @@
+{
+  "experiment": "Observer.D-LFM conversational pilot",
+  "status": "valid negative coherence result",
+  "compression": 12.672249143181372,
+  "initial_checkpoint": "R2 output distillation",
+  "training": {
+    "source": "HuggingFaceH4/ultrachat_200k train_sft user turns with greedy LFM2.5 responses",
+    "sequences": 128,
+    "sequence_length": 128,
+    "assistant_supervised_tokens": 12122,
+    "frozen_prompts_excluded": 8,
+    "teacher_top_k_probability_mass": 0.9866733241053702
+  },
+  "validation": {
+    "source": "HuggingFaceH4/ultrachat_200k test_sft user turns with greedy LFM2.5 responses",
+    "sequences": 32,
+    "assistant_supervised_tokens": 3102,
+    "teacher_cross_entropy": 0.4468451390855932
+  },
+  "checkpoints": {
+    "r2_baseline": {
+      "instruction_ce": 6.054766122023572,
+      "instruction_normalized_ce_retention": 0.47311355795914845,
+      "instruction_teacher_top1_agreement": 0.16634429563713565,
+      "raw_normalized_ce_retention": 0.8033738600874049
+    },
+    "one_instruction_epoch": {
+      "instruction_ce": 5.354075954776668,
+      "instruction_normalized_ce_retention": 0.5389461811927796,
+      "instruction_teacher_top1_agreement": 0.23404255041493516,
+      "raw_ce": 6.281856620684266,
+      "raw_normalized_ce_retention": 0.8001805797744134,
+      "prompt_suite_coherent": 0,
+      "prompt_suite_total": 8
+    },
+    "four_instruction_epochs": {
+      "instruction_ce": 5.1861256630785,
+      "instruction_normalized_ce_retention": 0.5547257779277911,
+      "instruction_teacher_top1_agreement": 0.2720825276226478,
+      "raw_ce": 6.50394587777555,
+      "raw_normalized_ce_retention": 0.7632227811882178,
+      "prompt_suite_coherent": 0,
+      "prompt_suite_total": 8
+    }
+  },
+  "conclusion": "Masked conversational distillation improves held-out teacher-forced instruction prediction, but neither exposure level produces coherent free generation. Four epochs cause substantial raw-language regression. This falsifies the hypothesis that a small instruction-only fine-tune is sufficient. Test an interleaved raw/instruction schedule before deciding whether to fund R3."
+}

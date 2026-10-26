@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": "protect-record-0",
+      "category": "json_record",
+      "split": "protected",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"telescope\" and enabled the boolean true. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "telescope",
+        "enabled": true
+      }
+    },
+    {
+      "id": "protect-record-1",
+      "category": "json_record",
+      "split": "protected",
+      "prompt": "Output a bare JSON object with exactly label and enabled: label must be the string \"anvil\" and enabled the boolean false. No code block or explanation.",
+      "validator": "json_exact",
+      "content_validator": "json_unfenced",
+      "expected": {
+        "label": "anvil",
+        "enabled": false
+      }
+    },
+    {
+      "id": "protect-order-0",
+      "category": "transitive_ordering",
+      "split": "protected",
+      "prompt": "T71001 occurred after S61001. R51001 occurred before S61001. Give only the identifier of the earliest occurrence.",
+      "validator": "text_exact",
+      "expected": "R51001"
+    },
+    {
+      "id": "protect-order-1",
+      "category": "transitive_ordering",
+      "split": "protected",
+      "prompt": "T71002 occurred after S61002. R51002 occurred before S61002. Give only the identifier of the latest occurrence.",
+      "validator": "text_exact",
+      "expected": "T71002"
+    }
+  ]
+}

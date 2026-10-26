@@ -1,0 +1,239 @@
+{
+  "old_training_coverage": {
+    "unique": {
+      "exposures": 128,
+      "normalized_unique_prompts": 128,
+      "item_values": {
+        "clock": 128
+      },
+      "distinct_quantities": 79,
+      "item_entropy_nats": -0.0,
+      "constant_clock_rule_and_copy_rule_both_fit_item_labels": true
+    },
+    "repeated": {
+      "exposures": 128,
+      "normalized_unique_prompts": 16,
+      "item_values": {
+        "clock": 128
+      },
+      "distinct_quantities": 16,
+      "item_entropy_nats": -0.0,
+      "constant_clock_rule_and_copy_rule_both_fit_item_labels": true
+    }
+  },
+  "teacher_forcing": {
+    "baseline": {
+      "arithmetic": {
+        "reference_tokens": 40,
+        "mean_nll": 7.821754479501396,
+        "top1_token_agreement": 0.475,
+        "mean_first_token_margin": -14.77939453125
+      },
+      "json_record": {
+        "reference_tokens": 241,
+        "mean_nll": 0.9471581023171384,
+        "top1_token_agreement": 0.8215767634854771,
+        "mean_first_token_margin": -4.85390625
+      },
+      "signed_sorting": {
+        "reference_tokens": 200,
+        "mean_nll": 1.7630173090141705,
+        "top1_token_agreement": 0.765,
+        "mean_first_token_margin": -8.620703125
+      },
+      "spanish_number_words": {
+        "reference_tokens": 64,
+        "mean_nll": 1.8340932954629068,
+        "top1_token_agreement": 0.578125,
+        "mean_first_token_margin": -2.419921875
+      },
+      "transitive_ordering": {
+        "reference_tokens": 60,
+        "mean_nll": 2.0413220217548464,
+        "top1_token_agreement": 0.6333333333333333,
+        "mean_first_token_margin": -5.51796875
+      }
+    },
+    "repeated": {
+      "arithmetic": {
+        "reference_tokens": 40,
+        "mean_nll": 7.368886531982571,
+        "top1_token_agreement": 0.475,
+        "mean_first_token_margin": -13.759375
+      },
+      "json_record": {
+        "reference_tokens": 241,
+        "mean_nll": 0.0677940673136633,
+        "top1_token_agreement": 0.983402489626556,
+        "mean_first_token_margin": 7.365625
+      },
+      "signed_sorting": {
+        "reference_tokens": 200,
+        "mean_nll": 0.8993963946003799,
+        "top1_token_agreement": 0.77,
+        "mean_first_token_margin": -4.5078125
+      },
+      "spanish_number_words": {
+        "reference_tokens": 64,
+        "mean_nll": 2.414510431549573,
+        "top1_token_agreement": 0.546875,
+        "mean_first_token_margin": -3.840234375
+      },
+      "transitive_ordering": {
+        "reference_tokens": 60,
+        "mean_nll": 1.811935467919769,
+        "top1_token_agreement": 0.65,
+        "mean_first_token_margin": -5.06484375
+      }
+    },
+    "unique": {
+      "arithmetic": {
+        "reference_tokens": 40,
+        "mean_nll": 7.367651911638677,
+        "top1_token_agreement": 0.475,
+        "mean_first_token_margin": -13.75947265625
+      },
+      "json_record": {
+        "reference_tokens": 241,
+        "mean_nll": 0.06758211760960275,
+        "top1_token_agreement": 0.983402489626556,
+        "mean_first_token_margin": 7.4015625
+      },
+      "signed_sorting": {
+        "reference_tokens": 200,
+        "mean_nll": 0.8789340557993143,
+        "top1_token_agreement": 0.775,
+        "mean_first_token_margin": -4.36875
+      },
+      "spanish_number_words": {
+        "reference_tokens": 64,
+        "mean_nll": 2.4498303253842266,
+        "top1_token_agreement": 0.546875,
+        "mean_first_token_margin": -3.909375
+      },
+      "transitive_ordering": {
+        "reference_tokens": 60,
+        "mean_nll": 1.8411985732003207,
+        "top1_token_agreement": 0.65,
+        "mean_first_token_margin": -5.18203125
+      }
+    }
+  },
+  "prefix_causal_counts": {
+    "baseline": {
+      "bare_compact": {
+        "content": 17,
+        "strict": 17,
+        "tasks": 20
+      },
+      "bare_spaced": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "bare_pretty": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "fenced_pretty": {
+        "content": 19,
+        "strict": 0,
+        "tasks": 20
+      },
+      "fenced_compact": {
+        "content": 15,
+        "strict": 0,
+        "tasks": 20
+      }
+    },
+    "repeated": {
+      "bare_compact": {
+        "content": 17,
+        "strict": 17,
+        "tasks": 20
+      },
+      "bare_spaced": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "bare_pretty": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "fenced_pretty": {
+        "content": 0,
+        "strict": 0,
+        "tasks": 20
+      },
+      "fenced_compact": {
+        "content": 17,
+        "strict": 0,
+        "tasks": 20
+      }
+    },
+    "unique": {
+      "bare_compact": {
+        "content": 17,
+        "strict": 17,
+        "tasks": 20
+      },
+      "bare_spaced": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "bare_pretty": {
+        "content": 19,
+        "strict": 19,
+        "tasks": 20
+      },
+      "fenced_pretty": {
+        "content": 1,
+        "strict": 0,
+        "tasks": 20
+      },
+      "fenced_compact": {
+        "content": 17,
+        "strict": 0,
+        "tasks": 20
+      }
+    }
+  },
+  "copy_causal_counts": {
+    "baseline": {
+      "plain_echo": 19,
+      "quoted_value": 20,
+      "renamed_item": 19,
+      "renamed_name": 20
+    },
+    "repeated": {
+      "plain_echo": 19,
+      "quoted_value": 20,
+      "renamed_item": 20,
+      "renamed_name": 20
+    },
+    "unique": {
+      "plain_echo": 19,
+      "quoted_value": 20,
+      "renamed_item": 20,
+      "renamed_name": 20
+    }
+  },
+  "ablation_checks": {
+    "repeated": {
+      "all_off_max_logit_error": 0.0,
+      "single_layer_ablations": 16,
+      "selected_tasks": 6,
+      "single_layer_ablation_strict_repairs": 0
+    },
+    "unique": {
+      "all_off_max_logit_error": 0.0,
+      "single_layer_ablations": 16,
+      "selected_tasks": 6,
+      "single_layer_ablation_strict_repairs": 0
+    }
+  }
+}

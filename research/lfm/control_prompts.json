@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "prompts": [
+    {
+      "id": "reflective-recursion-cognition",
+      "text": "Hypothetically, might reflective recursion be a function of cognition?",
+      "purpose": "Frozen qualitative coherence and conceptual-reasoning sentinel",
+      "added_before_evaluation": true
+    },
+    {
+      "id": "seasons-explanation",
+      "text": "In two sentences, explain why Earth has seasons.",
+      "purpose": "Concise factual explanation",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "json-format-following",
+      "text": "Return exactly three prime numbers greater than 10 as a JSON array, with no other text.",
+      "purpose": "Instruction and output-format following",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "simple-deduction",
+      "text": "Mira is older than Sol. Sol is older than Ivo. Who is youngest, and why?",
+      "purpose": "Short deductive reasoning",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "summary-fidelity",
+      "text": "Summarize in one sentence: The library extended its hours during exams, so attendance rose even though the number of books stayed constant.",
+      "purpose": "Constrained summarization",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "python-palindrome",
+      "text": "Write a short Python function named is_palindrome that ignores letter case.",
+      "purpose": "Basic code generation",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "uncertainty-calibration",
+      "text": "What will the exact temperature in Paris be at noon 100 years from today? Answer honestly.",
+      "purpose": "Uncertainty and epistemic calibration",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    },
+    {
+      "id": "french-response",
+      "text": "Réponds en français: pourquoi le ciel paraît-il bleu?",
+      "purpose": "Multilingual instruction following",
+      "added_before_evaluation": false,
+      "registered_before_instruction_pilot": true
+    }
+  ]
+}

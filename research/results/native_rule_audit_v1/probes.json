@@ -1,0 +1,2242 @@
+[
+  {
+    "id": "arithmetic-00-multiply",
+    "family": "arithmetic",
+    "case": 0,
+    "mode": "multiply",
+    "prompt": "Calculate 9 * 3. Respond with the integer only.",
+    "expected": "27"
+  },
+  {
+    "id": "arithmetic-00-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 0,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 27 - 6. Respond with the integer only.",
+    "expected": "21"
+  },
+  {
+    "id": "arithmetic-00-compound_expression",
+    "family": "arithmetic",
+    "case": 0,
+    "mode": "compound_expression",
+    "prompt": "Calculate (9 * 3) - 6. Respond with the integer only.",
+    "expected": "21"
+  },
+  {
+    "id": "arithmetic-00-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 0,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 27 cups in total. Take away 6 cups. How many cups remain? Reply only with the integer.",
+    "expected": "21"
+  },
+  {
+    "id": "arithmetic-00-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 0,
+    "mode": "explicit_intermediate",
+    "prompt": "9 trays hold 3 cups each, making 27 cups in total. Then 6 cups are removed. Reply only with the number remaining.",
+    "expected": "21"
+  },
+  {
+    "id": "order-00-chronology-earliest",
+    "family": "order",
+    "case": 0,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T401 follows S301, which follows R201. Select the earliest of the three. Output only its identifier.",
+    "expected": "R201"
+  },
+  {
+    "id": "order-00-training_template-earliest",
+    "family": "order",
+    "case": 0,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R201 occurs before S301; T401 occurs after S301. Give only the identifier of the first event.",
+    "expected": "R201"
+  },
+  {
+    "id": "order-00-explicit_chain-earliest",
+    "family": "order",
+    "case": 0,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R201, S301, T401. Which event is earliest? Reply with its identifier only.",
+    "expected": "R201"
+  },
+  {
+    "id": "order-00-permuted_roles-earliest",
+    "family": "order",
+    "case": 0,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R201 follows T401, which follows S301. Select the earliest of the three. Output only its identifier.",
+    "expected": "S301"
+  },
+  {
+    "id": "order-00-chronology-latest",
+    "family": "order",
+    "case": 0,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T401 follows S301, which follows R201. Select the latest of the three. Output only its identifier.",
+    "expected": "T401"
+  },
+  {
+    "id": "order-00-training_template-latest",
+    "family": "order",
+    "case": 0,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R201 occurs before S301; T401 occurs after S301. Give only the identifier of the last event.",
+    "expected": "T401"
+  },
+  {
+    "id": "order-00-explicit_chain-latest",
+    "family": "order",
+    "case": 0,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R201, S301, T401. Which event is latest? Reply with its identifier only.",
+    "expected": "T401"
+  },
+  {
+    "id": "order-00-permuted_roles-latest",
+    "family": "order",
+    "case": 0,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R201 follows T401, which follows S301. Select the latest of the three. Output only its identifier.",
+    "expected": "R201"
+  },
+  {
+    "id": "arithmetic-01-multiply",
+    "family": "arithmetic",
+    "case": 1,
+    "mode": "multiply",
+    "prompt": "Calculate 10 * 4. Respond with the integer only.",
+    "expected": "40"
+  },
+  {
+    "id": "arithmetic-01-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 1,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 40 - 7. Respond with the integer only.",
+    "expected": "33"
+  },
+  {
+    "id": "arithmetic-01-compound_expression",
+    "family": "arithmetic",
+    "case": 1,
+    "mode": "compound_expression",
+    "prompt": "Calculate (10 * 4) - 7. Respond with the integer only.",
+    "expected": "33"
+  },
+  {
+    "id": "arithmetic-01-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 1,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 40 cups in total. Take away 7 cups. How many cups remain? Reply only with the integer.",
+    "expected": "33"
+  },
+  {
+    "id": "arithmetic-01-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 1,
+    "mode": "explicit_intermediate",
+    "prompt": "10 trays hold 4 cups each, making 40 cups in total. Then 7 cups are removed. Reply only with the number remaining.",
+    "expected": "33"
+  },
+  {
+    "id": "order-01-chronology-earliest",
+    "family": "order",
+    "case": 1,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T402 follows S302, which follows R202. Select the earliest of the three. Output only its identifier.",
+    "expected": "R202"
+  },
+  {
+    "id": "order-01-training_template-earliest",
+    "family": "order",
+    "case": 1,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R202 occurs before S302; T402 occurs after S302. Give only the identifier of the first event.",
+    "expected": "R202"
+  },
+  {
+    "id": "order-01-explicit_chain-earliest",
+    "family": "order",
+    "case": 1,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R202, S302, T402. Which event is earliest? Reply with its identifier only.",
+    "expected": "R202"
+  },
+  {
+    "id": "order-01-permuted_roles-earliest",
+    "family": "order",
+    "case": 1,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R202 follows T402, which follows S302. Select the earliest of the three. Output only its identifier.",
+    "expected": "S302"
+  },
+  {
+    "id": "order-01-chronology-latest",
+    "family": "order",
+    "case": 1,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T402 follows S302, which follows R202. Select the latest of the three. Output only its identifier.",
+    "expected": "T402"
+  },
+  {
+    "id": "order-01-training_template-latest",
+    "family": "order",
+    "case": 1,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R202 occurs before S302; T402 occurs after S302. Give only the identifier of the last event.",
+    "expected": "T402"
+  },
+  {
+    "id": "order-01-explicit_chain-latest",
+    "family": "order",
+    "case": 1,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R202, S302, T402. Which event is latest? Reply with its identifier only.",
+    "expected": "T402"
+  },
+  {
+    "id": "order-01-permuted_roles-latest",
+    "family": "order",
+    "case": 1,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R202 follows T402, which follows S302. Select the latest of the three. Output only its identifier.",
+    "expected": "R202"
+  },
+  {
+    "id": "arithmetic-02-multiply",
+    "family": "arithmetic",
+    "case": 2,
+    "mode": "multiply",
+    "prompt": "Calculate 11 * 5. Respond with the integer only.",
+    "expected": "55"
+  },
+  {
+    "id": "arithmetic-02-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 2,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 55 - 8. Respond with the integer only.",
+    "expected": "47"
+  },
+  {
+    "id": "arithmetic-02-compound_expression",
+    "family": "arithmetic",
+    "case": 2,
+    "mode": "compound_expression",
+    "prompt": "Calculate (11 * 5) - 8. Respond with the integer only.",
+    "expected": "47"
+  },
+  {
+    "id": "arithmetic-02-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 2,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 55 cups in total. Take away 8 cups. How many cups remain? Reply only with the integer.",
+    "expected": "47"
+  },
+  {
+    "id": "arithmetic-02-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 2,
+    "mode": "explicit_intermediate",
+    "prompt": "11 trays hold 5 cups each, making 55 cups in total. Then 8 cups are removed. Reply only with the number remaining.",
+    "expected": "47"
+  },
+  {
+    "id": "order-02-chronology-earliest",
+    "family": "order",
+    "case": 2,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T403 follows S303, which follows R203. Select the earliest of the three. Output only its identifier.",
+    "expected": "R203"
+  },
+  {
+    "id": "order-02-training_template-earliest",
+    "family": "order",
+    "case": 2,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R203 occurs before S303; T403 occurs after S303. Give only the identifier of the first event.",
+    "expected": "R203"
+  },
+  {
+    "id": "order-02-explicit_chain-earliest",
+    "family": "order",
+    "case": 2,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R203, S303, T403. Which event is earliest? Reply with its identifier only.",
+    "expected": "R203"
+  },
+  {
+    "id": "order-02-permuted_roles-earliest",
+    "family": "order",
+    "case": 2,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R203 follows T403, which follows S303. Select the earliest of the three. Output only its identifier.",
+    "expected": "S303"
+  },
+  {
+    "id": "order-02-chronology-latest",
+    "family": "order",
+    "case": 2,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T403 follows S303, which follows R203. Select the latest of the three. Output only its identifier.",
+    "expected": "T403"
+  },
+  {
+    "id": "order-02-training_template-latest",
+    "family": "order",
+    "case": 2,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R203 occurs before S303; T403 occurs after S303. Give only the identifier of the last event.",
+    "expected": "T403"
+  },
+  {
+    "id": "order-02-explicit_chain-latest",
+    "family": "order",
+    "case": 2,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R203, S303, T403. Which event is latest? Reply with its identifier only.",
+    "expected": "T403"
+  },
+  {
+    "id": "order-02-permuted_roles-latest",
+    "family": "order",
+    "case": 2,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R203 follows T403, which follows S303. Select the latest of the three. Output only its identifier.",
+    "expected": "R203"
+  },
+  {
+    "id": "arithmetic-03-multiply",
+    "family": "arithmetic",
+    "case": 3,
+    "mode": "multiply",
+    "prompt": "Calculate 12 * 6. Respond with the integer only.",
+    "expected": "72"
+  },
+  {
+    "id": "arithmetic-03-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 3,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 72 - 9. Respond with the integer only.",
+    "expected": "63"
+  },
+  {
+    "id": "arithmetic-03-compound_expression",
+    "family": "arithmetic",
+    "case": 3,
+    "mode": "compound_expression",
+    "prompt": "Calculate (12 * 6) - 9. Respond with the integer only.",
+    "expected": "63"
+  },
+  {
+    "id": "arithmetic-03-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 3,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 72 cups in total. Take away 9 cups. How many cups remain? Reply only with the integer.",
+    "expected": "63"
+  },
+  {
+    "id": "arithmetic-03-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 3,
+    "mode": "explicit_intermediate",
+    "prompt": "12 trays hold 6 cups each, making 72 cups in total. Then 9 cups are removed. Reply only with the number remaining.",
+    "expected": "63"
+  },
+  {
+    "id": "order-03-chronology-earliest",
+    "family": "order",
+    "case": 3,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T404 follows S304, which follows R204. Select the earliest of the three. Output only its identifier.",
+    "expected": "R204"
+  },
+  {
+    "id": "order-03-training_template-earliest",
+    "family": "order",
+    "case": 3,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R204 occurs before S304; T404 occurs after S304. Give only the identifier of the first event.",
+    "expected": "R204"
+  },
+  {
+    "id": "order-03-explicit_chain-earliest",
+    "family": "order",
+    "case": 3,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R204, S304, T404. Which event is earliest? Reply with its identifier only.",
+    "expected": "R204"
+  },
+  {
+    "id": "order-03-permuted_roles-earliest",
+    "family": "order",
+    "case": 3,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R204 follows T404, which follows S304. Select the earliest of the three. Output only its identifier.",
+    "expected": "S304"
+  },
+  {
+    "id": "order-03-chronology-latest",
+    "family": "order",
+    "case": 3,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T404 follows S304, which follows R204. Select the latest of the three. Output only its identifier.",
+    "expected": "T404"
+  },
+  {
+    "id": "order-03-training_template-latest",
+    "family": "order",
+    "case": 3,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R204 occurs before S304; T404 occurs after S304. Give only the identifier of the last event.",
+    "expected": "T404"
+  },
+  {
+    "id": "order-03-explicit_chain-latest",
+    "family": "order",
+    "case": 3,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R204, S304, T404. Which event is latest? Reply with its identifier only.",
+    "expected": "T404"
+  },
+  {
+    "id": "order-03-permuted_roles-latest",
+    "family": "order",
+    "case": 3,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R204 follows T404, which follows S304. Select the latest of the three. Output only its identifier.",
+    "expected": "R204"
+  },
+  {
+    "id": "arithmetic-04-multiply",
+    "family": "arithmetic",
+    "case": 4,
+    "mode": "multiply",
+    "prompt": "Calculate 13 * 7. Respond with the integer only.",
+    "expected": "91"
+  },
+  {
+    "id": "arithmetic-04-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 4,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 91 - 10. Respond with the integer only.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-04-compound_expression",
+    "family": "arithmetic",
+    "case": 4,
+    "mode": "compound_expression",
+    "prompt": "Calculate (13 * 7) - 10. Respond with the integer only.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-04-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 4,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 91 cups in total. Take away 10 cups. How many cups remain? Reply only with the integer.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-04-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 4,
+    "mode": "explicit_intermediate",
+    "prompt": "13 trays hold 7 cups each, making 91 cups in total. Then 10 cups are removed. Reply only with the number remaining.",
+    "expected": "81"
+  },
+  {
+    "id": "order-04-chronology-earliest",
+    "family": "order",
+    "case": 4,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T405 follows S305, which follows R205. Select the earliest of the three. Output only its identifier.",
+    "expected": "R205"
+  },
+  {
+    "id": "order-04-training_template-earliest",
+    "family": "order",
+    "case": 4,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R205 occurs before S305; T405 occurs after S305. Give only the identifier of the first event.",
+    "expected": "R205"
+  },
+  {
+    "id": "order-04-explicit_chain-earliest",
+    "family": "order",
+    "case": 4,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R205, S305, T405. Which event is earliest? Reply with its identifier only.",
+    "expected": "R205"
+  },
+  {
+    "id": "order-04-permuted_roles-earliest",
+    "family": "order",
+    "case": 4,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R205 follows T405, which follows S305. Select the earliest of the three. Output only its identifier.",
+    "expected": "S305"
+  },
+  {
+    "id": "order-04-chronology-latest",
+    "family": "order",
+    "case": 4,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T405 follows S305, which follows R205. Select the latest of the three. Output only its identifier.",
+    "expected": "T405"
+  },
+  {
+    "id": "order-04-training_template-latest",
+    "family": "order",
+    "case": 4,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R205 occurs before S305; T405 occurs after S305. Give only the identifier of the last event.",
+    "expected": "T405"
+  },
+  {
+    "id": "order-04-explicit_chain-latest",
+    "family": "order",
+    "case": 4,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R205, S305, T405. Which event is latest? Reply with its identifier only.",
+    "expected": "T405"
+  },
+  {
+    "id": "order-04-permuted_roles-latest",
+    "family": "order",
+    "case": 4,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R205 follows T405, which follows S305. Select the latest of the three. Output only its identifier.",
+    "expected": "R205"
+  },
+  {
+    "id": "arithmetic-05-multiply",
+    "family": "arithmetic",
+    "case": 5,
+    "mode": "multiply",
+    "prompt": "Calculate 14 * 8. Respond with the integer only.",
+    "expected": "112"
+  },
+  {
+    "id": "arithmetic-05-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 5,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 112 - 11. Respond with the integer only.",
+    "expected": "101"
+  },
+  {
+    "id": "arithmetic-05-compound_expression",
+    "family": "arithmetic",
+    "case": 5,
+    "mode": "compound_expression",
+    "prompt": "Calculate (14 * 8) - 11. Respond with the integer only.",
+    "expected": "101"
+  },
+  {
+    "id": "arithmetic-05-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 5,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 112 cups in total. Take away 11 cups. How many cups remain? Reply only with the integer.",
+    "expected": "101"
+  },
+  {
+    "id": "arithmetic-05-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 5,
+    "mode": "explicit_intermediate",
+    "prompt": "14 trays hold 8 cups each, making 112 cups in total. Then 11 cups are removed. Reply only with the number remaining.",
+    "expected": "101"
+  },
+  {
+    "id": "order-05-chronology-earliest",
+    "family": "order",
+    "case": 5,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T406 follows S306, which follows R206. Select the earliest of the three. Output only its identifier.",
+    "expected": "R206"
+  },
+  {
+    "id": "order-05-training_template-earliest",
+    "family": "order",
+    "case": 5,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R206 occurs before S306; T406 occurs after S306. Give only the identifier of the first event.",
+    "expected": "R206"
+  },
+  {
+    "id": "order-05-explicit_chain-earliest",
+    "family": "order",
+    "case": 5,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R206, S306, T406. Which event is earliest? Reply with its identifier only.",
+    "expected": "R206"
+  },
+  {
+    "id": "order-05-permuted_roles-earliest",
+    "family": "order",
+    "case": 5,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R206 follows T406, which follows S306. Select the earliest of the three. Output only its identifier.",
+    "expected": "S306"
+  },
+  {
+    "id": "order-05-chronology-latest",
+    "family": "order",
+    "case": 5,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T406 follows S306, which follows R206. Select the latest of the three. Output only its identifier.",
+    "expected": "T406"
+  },
+  {
+    "id": "order-05-training_template-latest",
+    "family": "order",
+    "case": 5,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R206 occurs before S306; T406 occurs after S306. Give only the identifier of the last event.",
+    "expected": "T406"
+  },
+  {
+    "id": "order-05-explicit_chain-latest",
+    "family": "order",
+    "case": 5,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R206, S306, T406. Which event is latest? Reply with its identifier only.",
+    "expected": "T406"
+  },
+  {
+    "id": "order-05-permuted_roles-latest",
+    "family": "order",
+    "case": 5,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R206 follows T406, which follows S306. Select the latest of the three. Output only its identifier.",
+    "expected": "R206"
+  },
+  {
+    "id": "arithmetic-06-multiply",
+    "family": "arithmetic",
+    "case": 6,
+    "mode": "multiply",
+    "prompt": "Calculate 15 * 9. Respond with the integer only.",
+    "expected": "135"
+  },
+  {
+    "id": "arithmetic-06-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 6,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 135 - 12. Respond with the integer only.",
+    "expected": "123"
+  },
+  {
+    "id": "arithmetic-06-compound_expression",
+    "family": "arithmetic",
+    "case": 6,
+    "mode": "compound_expression",
+    "prompt": "Calculate (15 * 9) - 12. Respond with the integer only.",
+    "expected": "123"
+  },
+  {
+    "id": "arithmetic-06-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 6,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 135 cups in total. Take away 12 cups. How many cups remain? Reply only with the integer.",
+    "expected": "123"
+  },
+  {
+    "id": "arithmetic-06-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 6,
+    "mode": "explicit_intermediate",
+    "prompt": "15 trays hold 9 cups each, making 135 cups in total. Then 12 cups are removed. Reply only with the number remaining.",
+    "expected": "123"
+  },
+  {
+    "id": "order-06-chronology-earliest",
+    "family": "order",
+    "case": 6,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T407 follows S307, which follows R207. Select the earliest of the three. Output only its identifier.",
+    "expected": "R207"
+  },
+  {
+    "id": "order-06-training_template-earliest",
+    "family": "order",
+    "case": 6,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R207 occurs before S307; T407 occurs after S307. Give only the identifier of the first event.",
+    "expected": "R207"
+  },
+  {
+    "id": "order-06-explicit_chain-earliest",
+    "family": "order",
+    "case": 6,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R207, S307, T407. Which event is earliest? Reply with its identifier only.",
+    "expected": "R207"
+  },
+  {
+    "id": "order-06-permuted_roles-earliest",
+    "family": "order",
+    "case": 6,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R207 follows T407, which follows S307. Select the earliest of the three. Output only its identifier.",
+    "expected": "S307"
+  },
+  {
+    "id": "order-06-chronology-latest",
+    "family": "order",
+    "case": 6,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T407 follows S307, which follows R207. Select the latest of the three. Output only its identifier.",
+    "expected": "T407"
+  },
+  {
+    "id": "order-06-training_template-latest",
+    "family": "order",
+    "case": 6,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R207 occurs before S307; T407 occurs after S307. Give only the identifier of the last event.",
+    "expected": "T407"
+  },
+  {
+    "id": "order-06-explicit_chain-latest",
+    "family": "order",
+    "case": 6,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R207, S307, T407. Which event is latest? Reply with its identifier only.",
+    "expected": "T407"
+  },
+  {
+    "id": "order-06-permuted_roles-latest",
+    "family": "order",
+    "case": 6,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R207 follows T407, which follows S307. Select the latest of the three. Output only its identifier.",
+    "expected": "R207"
+  },
+  {
+    "id": "arithmetic-07-multiply",
+    "family": "arithmetic",
+    "case": 7,
+    "mode": "multiply",
+    "prompt": "Calculate 16 * 10. Respond with the integer only.",
+    "expected": "160"
+  },
+  {
+    "id": "arithmetic-07-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 7,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 160 - 13. Respond with the integer only.",
+    "expected": "147"
+  },
+  {
+    "id": "arithmetic-07-compound_expression",
+    "family": "arithmetic",
+    "case": 7,
+    "mode": "compound_expression",
+    "prompt": "Calculate (16 * 10) - 13. Respond with the integer only.",
+    "expected": "147"
+  },
+  {
+    "id": "arithmetic-07-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 7,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 160 cups in total. Take away 13 cups. How many cups remain? Reply only with the integer.",
+    "expected": "147"
+  },
+  {
+    "id": "arithmetic-07-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 7,
+    "mode": "explicit_intermediate",
+    "prompt": "16 trays hold 10 cups each, making 160 cups in total. Then 13 cups are removed. Reply only with the number remaining.",
+    "expected": "147"
+  },
+  {
+    "id": "order-07-chronology-earliest",
+    "family": "order",
+    "case": 7,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T408 follows S308, which follows R208. Select the earliest of the three. Output only its identifier.",
+    "expected": "R208"
+  },
+  {
+    "id": "order-07-training_template-earliest",
+    "family": "order",
+    "case": 7,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R208 occurs before S308; T408 occurs after S308. Give only the identifier of the first event.",
+    "expected": "R208"
+  },
+  {
+    "id": "order-07-explicit_chain-earliest",
+    "family": "order",
+    "case": 7,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R208, S308, T408. Which event is earliest? Reply with its identifier only.",
+    "expected": "R208"
+  },
+  {
+    "id": "order-07-permuted_roles-earliest",
+    "family": "order",
+    "case": 7,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R208 follows T408, which follows S308. Select the earliest of the three. Output only its identifier.",
+    "expected": "S308"
+  },
+  {
+    "id": "order-07-chronology-latest",
+    "family": "order",
+    "case": 7,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T408 follows S308, which follows R208. Select the latest of the three. Output only its identifier.",
+    "expected": "T408"
+  },
+  {
+    "id": "order-07-training_template-latest",
+    "family": "order",
+    "case": 7,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R208 occurs before S308; T408 occurs after S308. Give only the identifier of the last event.",
+    "expected": "T408"
+  },
+  {
+    "id": "order-07-explicit_chain-latest",
+    "family": "order",
+    "case": 7,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R208, S308, T408. Which event is latest? Reply with its identifier only.",
+    "expected": "T408"
+  },
+  {
+    "id": "order-07-permuted_roles-latest",
+    "family": "order",
+    "case": 7,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R208 follows T408, which follows S308. Select the latest of the three. Output only its identifier.",
+    "expected": "R208"
+  },
+  {
+    "id": "arithmetic-08-multiply",
+    "family": "arithmetic",
+    "case": 8,
+    "mode": "multiply",
+    "prompt": "Calculate 17 * 3. Respond with the integer only.",
+    "expected": "51"
+  },
+  {
+    "id": "arithmetic-08-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 8,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 51 - 14. Respond with the integer only.",
+    "expected": "37"
+  },
+  {
+    "id": "arithmetic-08-compound_expression",
+    "family": "arithmetic",
+    "case": 8,
+    "mode": "compound_expression",
+    "prompt": "Calculate (17 * 3) - 14. Respond with the integer only.",
+    "expected": "37"
+  },
+  {
+    "id": "arithmetic-08-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 8,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 51 cups in total. Take away 14 cups. How many cups remain? Reply only with the integer.",
+    "expected": "37"
+  },
+  {
+    "id": "arithmetic-08-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 8,
+    "mode": "explicit_intermediate",
+    "prompt": "17 trays hold 3 cups each, making 51 cups in total. Then 14 cups are removed. Reply only with the number remaining.",
+    "expected": "37"
+  },
+  {
+    "id": "order-08-chronology-earliest",
+    "family": "order",
+    "case": 8,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T409 follows S309, which follows R209. Select the earliest of the three. Output only its identifier.",
+    "expected": "R209"
+  },
+  {
+    "id": "order-08-training_template-earliest",
+    "family": "order",
+    "case": 8,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R209 occurs before S309; T409 occurs after S309. Give only the identifier of the first event.",
+    "expected": "R209"
+  },
+  {
+    "id": "order-08-explicit_chain-earliest",
+    "family": "order",
+    "case": 8,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R209, S309, T409. Which event is earliest? Reply with its identifier only.",
+    "expected": "R209"
+  },
+  {
+    "id": "order-08-permuted_roles-earliest",
+    "family": "order",
+    "case": 8,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R209 follows T409, which follows S309. Select the earliest of the three. Output only its identifier.",
+    "expected": "S309"
+  },
+  {
+    "id": "order-08-chronology-latest",
+    "family": "order",
+    "case": 8,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T409 follows S309, which follows R209. Select the latest of the three. Output only its identifier.",
+    "expected": "T409"
+  },
+  {
+    "id": "order-08-training_template-latest",
+    "family": "order",
+    "case": 8,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R209 occurs before S309; T409 occurs after S309. Give only the identifier of the last event.",
+    "expected": "T409"
+  },
+  {
+    "id": "order-08-explicit_chain-latest",
+    "family": "order",
+    "case": 8,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R209, S309, T409. Which event is latest? Reply with its identifier only.",
+    "expected": "T409"
+  },
+  {
+    "id": "order-08-permuted_roles-latest",
+    "family": "order",
+    "case": 8,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R209 follows T409, which follows S309. Select the latest of the three. Output only its identifier.",
+    "expected": "R209"
+  },
+  {
+    "id": "arithmetic-09-multiply",
+    "family": "arithmetic",
+    "case": 9,
+    "mode": "multiply",
+    "prompt": "Calculate 18 * 4. Respond with the integer only.",
+    "expected": "72"
+  },
+  {
+    "id": "arithmetic-09-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 9,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 72 - 15. Respond with the integer only.",
+    "expected": "57"
+  },
+  {
+    "id": "arithmetic-09-compound_expression",
+    "family": "arithmetic",
+    "case": 9,
+    "mode": "compound_expression",
+    "prompt": "Calculate (18 * 4) - 15. Respond with the integer only.",
+    "expected": "57"
+  },
+  {
+    "id": "arithmetic-09-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 9,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 72 cups in total. Take away 15 cups. How many cups remain? Reply only with the integer.",
+    "expected": "57"
+  },
+  {
+    "id": "arithmetic-09-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 9,
+    "mode": "explicit_intermediate",
+    "prompt": "18 trays hold 4 cups each, making 72 cups in total. Then 15 cups are removed. Reply only with the number remaining.",
+    "expected": "57"
+  },
+  {
+    "id": "order-09-chronology-earliest",
+    "family": "order",
+    "case": 9,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T410 follows S310, which follows R210. Select the earliest of the three. Output only its identifier.",
+    "expected": "R210"
+  },
+  {
+    "id": "order-09-training_template-earliest",
+    "family": "order",
+    "case": 9,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R210 occurs before S310; T410 occurs after S310. Give only the identifier of the first event.",
+    "expected": "R210"
+  },
+  {
+    "id": "order-09-explicit_chain-earliest",
+    "family": "order",
+    "case": 9,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R210, S310, T410. Which event is earliest? Reply with its identifier only.",
+    "expected": "R210"
+  },
+  {
+    "id": "order-09-permuted_roles-earliest",
+    "family": "order",
+    "case": 9,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R210 follows T410, which follows S310. Select the earliest of the three. Output only its identifier.",
+    "expected": "S310"
+  },
+  {
+    "id": "order-09-chronology-latest",
+    "family": "order",
+    "case": 9,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T410 follows S310, which follows R210. Select the latest of the three. Output only its identifier.",
+    "expected": "T410"
+  },
+  {
+    "id": "order-09-training_template-latest",
+    "family": "order",
+    "case": 9,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R210 occurs before S310; T410 occurs after S310. Give only the identifier of the last event.",
+    "expected": "T410"
+  },
+  {
+    "id": "order-09-explicit_chain-latest",
+    "family": "order",
+    "case": 9,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R210, S310, T410. Which event is latest? Reply with its identifier only.",
+    "expected": "T410"
+  },
+  {
+    "id": "order-09-permuted_roles-latest",
+    "family": "order",
+    "case": 9,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R210 follows T410, which follows S310. Select the latest of the three. Output only its identifier.",
+    "expected": "R210"
+  },
+  {
+    "id": "arithmetic-10-multiply",
+    "family": "arithmetic",
+    "case": 10,
+    "mode": "multiply",
+    "prompt": "Calculate 19 * 5. Respond with the integer only.",
+    "expected": "95"
+  },
+  {
+    "id": "arithmetic-10-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 10,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 95 - 16. Respond with the integer only.",
+    "expected": "79"
+  },
+  {
+    "id": "arithmetic-10-compound_expression",
+    "family": "arithmetic",
+    "case": 10,
+    "mode": "compound_expression",
+    "prompt": "Calculate (19 * 5) - 16. Respond with the integer only.",
+    "expected": "79"
+  },
+  {
+    "id": "arithmetic-10-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 10,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 95 cups in total. Take away 16 cups. How many cups remain? Reply only with the integer.",
+    "expected": "79"
+  },
+  {
+    "id": "arithmetic-10-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 10,
+    "mode": "explicit_intermediate",
+    "prompt": "19 trays hold 5 cups each, making 95 cups in total. Then 16 cups are removed. Reply only with the number remaining.",
+    "expected": "79"
+  },
+  {
+    "id": "order-10-chronology-earliest",
+    "family": "order",
+    "case": 10,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T411 follows S311, which follows R211. Select the earliest of the three. Output only its identifier.",
+    "expected": "R211"
+  },
+  {
+    "id": "order-10-training_template-earliest",
+    "family": "order",
+    "case": 10,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R211 occurs before S311; T411 occurs after S311. Give only the identifier of the first event.",
+    "expected": "R211"
+  },
+  {
+    "id": "order-10-explicit_chain-earliest",
+    "family": "order",
+    "case": 10,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R211, S311, T411. Which event is earliest? Reply with its identifier only.",
+    "expected": "R211"
+  },
+  {
+    "id": "order-10-permuted_roles-earliest",
+    "family": "order",
+    "case": 10,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R211 follows T411, which follows S311. Select the earliest of the three. Output only its identifier.",
+    "expected": "S311"
+  },
+  {
+    "id": "order-10-chronology-latest",
+    "family": "order",
+    "case": 10,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T411 follows S311, which follows R211. Select the latest of the three. Output only its identifier.",
+    "expected": "T411"
+  },
+  {
+    "id": "order-10-training_template-latest",
+    "family": "order",
+    "case": 10,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R211 occurs before S311; T411 occurs after S311. Give only the identifier of the last event.",
+    "expected": "T411"
+  },
+  {
+    "id": "order-10-explicit_chain-latest",
+    "family": "order",
+    "case": 10,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R211, S311, T411. Which event is latest? Reply with its identifier only.",
+    "expected": "T411"
+  },
+  {
+    "id": "order-10-permuted_roles-latest",
+    "family": "order",
+    "case": 10,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R211 follows T411, which follows S311. Select the latest of the three. Output only its identifier.",
+    "expected": "R211"
+  },
+  {
+    "id": "arithmetic-11-multiply",
+    "family": "arithmetic",
+    "case": 11,
+    "mode": "multiply",
+    "prompt": "Calculate 20 * 6. Respond with the integer only.",
+    "expected": "120"
+  },
+  {
+    "id": "arithmetic-11-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 11,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 120 - 17. Respond with the integer only.",
+    "expected": "103"
+  },
+  {
+    "id": "arithmetic-11-compound_expression",
+    "family": "arithmetic",
+    "case": 11,
+    "mode": "compound_expression",
+    "prompt": "Calculate (20 * 6) - 17. Respond with the integer only.",
+    "expected": "103"
+  },
+  {
+    "id": "arithmetic-11-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 11,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 120 cups in total. Take away 17 cups. How many cups remain? Reply only with the integer.",
+    "expected": "103"
+  },
+  {
+    "id": "arithmetic-11-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 11,
+    "mode": "explicit_intermediate",
+    "prompt": "20 trays hold 6 cups each, making 120 cups in total. Then 17 cups are removed. Reply only with the number remaining.",
+    "expected": "103"
+  },
+  {
+    "id": "order-11-chronology-earliest",
+    "family": "order",
+    "case": 11,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T412 follows S312, which follows R212. Select the earliest of the three. Output only its identifier.",
+    "expected": "R212"
+  },
+  {
+    "id": "order-11-training_template-earliest",
+    "family": "order",
+    "case": 11,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R212 occurs before S312; T412 occurs after S312. Give only the identifier of the first event.",
+    "expected": "R212"
+  },
+  {
+    "id": "order-11-explicit_chain-earliest",
+    "family": "order",
+    "case": 11,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R212, S312, T412. Which event is earliest? Reply with its identifier only.",
+    "expected": "R212"
+  },
+  {
+    "id": "order-11-permuted_roles-earliest",
+    "family": "order",
+    "case": 11,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R212 follows T412, which follows S312. Select the earliest of the three. Output only its identifier.",
+    "expected": "S312"
+  },
+  {
+    "id": "order-11-chronology-latest",
+    "family": "order",
+    "case": 11,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T412 follows S312, which follows R212. Select the latest of the three. Output only its identifier.",
+    "expected": "T412"
+  },
+  {
+    "id": "order-11-training_template-latest",
+    "family": "order",
+    "case": 11,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R212 occurs before S312; T412 occurs after S312. Give only the identifier of the last event.",
+    "expected": "T412"
+  },
+  {
+    "id": "order-11-explicit_chain-latest",
+    "family": "order",
+    "case": 11,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R212, S312, T412. Which event is latest? Reply with its identifier only.",
+    "expected": "T412"
+  },
+  {
+    "id": "order-11-permuted_roles-latest",
+    "family": "order",
+    "case": 11,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R212 follows T412, which follows S312. Select the latest of the three. Output only its identifier.",
+    "expected": "R212"
+  },
+  {
+    "id": "arithmetic-12-multiply",
+    "family": "arithmetic",
+    "case": 12,
+    "mode": "multiply",
+    "prompt": "Calculate 21 * 7. Respond with the integer only.",
+    "expected": "147"
+  },
+  {
+    "id": "arithmetic-12-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 12,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 147 - 18. Respond with the integer only.",
+    "expected": "129"
+  },
+  {
+    "id": "arithmetic-12-compound_expression",
+    "family": "arithmetic",
+    "case": 12,
+    "mode": "compound_expression",
+    "prompt": "Calculate (21 * 7) - 18. Respond with the integer only.",
+    "expected": "129"
+  },
+  {
+    "id": "arithmetic-12-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 12,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 147 cups in total. Take away 18 cups. How many cups remain? Reply only with the integer.",
+    "expected": "129"
+  },
+  {
+    "id": "arithmetic-12-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 12,
+    "mode": "explicit_intermediate",
+    "prompt": "21 trays hold 7 cups each, making 147 cups in total. Then 18 cups are removed. Reply only with the number remaining.",
+    "expected": "129"
+  },
+  {
+    "id": "order-12-chronology-earliest",
+    "family": "order",
+    "case": 12,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T413 follows S313, which follows R213. Select the earliest of the three. Output only its identifier.",
+    "expected": "R213"
+  },
+  {
+    "id": "order-12-training_template-earliest",
+    "family": "order",
+    "case": 12,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R213 occurs before S313; T413 occurs after S313. Give only the identifier of the first event.",
+    "expected": "R213"
+  },
+  {
+    "id": "order-12-explicit_chain-earliest",
+    "family": "order",
+    "case": 12,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R213, S313, T413. Which event is earliest? Reply with its identifier only.",
+    "expected": "R213"
+  },
+  {
+    "id": "order-12-permuted_roles-earliest",
+    "family": "order",
+    "case": 12,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R213 follows T413, which follows S313. Select the earliest of the three. Output only its identifier.",
+    "expected": "S313"
+  },
+  {
+    "id": "order-12-chronology-latest",
+    "family": "order",
+    "case": 12,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T413 follows S313, which follows R213. Select the latest of the three. Output only its identifier.",
+    "expected": "T413"
+  },
+  {
+    "id": "order-12-training_template-latest",
+    "family": "order",
+    "case": 12,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R213 occurs before S313; T413 occurs after S313. Give only the identifier of the last event.",
+    "expected": "T413"
+  },
+  {
+    "id": "order-12-explicit_chain-latest",
+    "family": "order",
+    "case": 12,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R213, S313, T413. Which event is latest? Reply with its identifier only.",
+    "expected": "T413"
+  },
+  {
+    "id": "order-12-permuted_roles-latest",
+    "family": "order",
+    "case": 12,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R213 follows T413, which follows S313. Select the latest of the three. Output only its identifier.",
+    "expected": "R213"
+  },
+  {
+    "id": "arithmetic-13-multiply",
+    "family": "arithmetic",
+    "case": 13,
+    "mode": "multiply",
+    "prompt": "Calculate 22 * 8. Respond with the integer only.",
+    "expected": "176"
+  },
+  {
+    "id": "arithmetic-13-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 13,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 176 - 19. Respond with the integer only.",
+    "expected": "157"
+  },
+  {
+    "id": "arithmetic-13-compound_expression",
+    "family": "arithmetic",
+    "case": 13,
+    "mode": "compound_expression",
+    "prompt": "Calculate (22 * 8) - 19. Respond with the integer only.",
+    "expected": "157"
+  },
+  {
+    "id": "arithmetic-13-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 13,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 176 cups in total. Take away 19 cups. How many cups remain? Reply only with the integer.",
+    "expected": "157"
+  },
+  {
+    "id": "arithmetic-13-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 13,
+    "mode": "explicit_intermediate",
+    "prompt": "22 trays hold 8 cups each, making 176 cups in total. Then 19 cups are removed. Reply only with the number remaining.",
+    "expected": "157"
+  },
+  {
+    "id": "order-13-chronology-earliest",
+    "family": "order",
+    "case": 13,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T414 follows S314, which follows R214. Select the earliest of the three. Output only its identifier.",
+    "expected": "R214"
+  },
+  {
+    "id": "order-13-training_template-earliest",
+    "family": "order",
+    "case": 13,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R214 occurs before S314; T414 occurs after S314. Give only the identifier of the first event.",
+    "expected": "R214"
+  },
+  {
+    "id": "order-13-explicit_chain-earliest",
+    "family": "order",
+    "case": 13,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R214, S314, T414. Which event is earliest? Reply with its identifier only.",
+    "expected": "R214"
+  },
+  {
+    "id": "order-13-permuted_roles-earliest",
+    "family": "order",
+    "case": 13,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R214 follows T414, which follows S314. Select the earliest of the three. Output only its identifier.",
+    "expected": "S314"
+  },
+  {
+    "id": "order-13-chronology-latest",
+    "family": "order",
+    "case": 13,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T414 follows S314, which follows R214. Select the latest of the three. Output only its identifier.",
+    "expected": "T414"
+  },
+  {
+    "id": "order-13-training_template-latest",
+    "family": "order",
+    "case": 13,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R214 occurs before S314; T414 occurs after S314. Give only the identifier of the last event.",
+    "expected": "T414"
+  },
+  {
+    "id": "order-13-explicit_chain-latest",
+    "family": "order",
+    "case": 13,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R214, S314, T414. Which event is latest? Reply with its identifier only.",
+    "expected": "T414"
+  },
+  {
+    "id": "order-13-permuted_roles-latest",
+    "family": "order",
+    "case": 13,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R214 follows T414, which follows S314. Select the latest of the three. Output only its identifier.",
+    "expected": "R214"
+  },
+  {
+    "id": "arithmetic-14-multiply",
+    "family": "arithmetic",
+    "case": 14,
+    "mode": "multiply",
+    "prompt": "Calculate 23 * 9. Respond with the integer only.",
+    "expected": "207"
+  },
+  {
+    "id": "arithmetic-14-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 14,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 207 - 20. Respond with the integer only.",
+    "expected": "187"
+  },
+  {
+    "id": "arithmetic-14-compound_expression",
+    "family": "arithmetic",
+    "case": 14,
+    "mode": "compound_expression",
+    "prompt": "Calculate (23 * 9) - 20. Respond with the integer only.",
+    "expected": "187"
+  },
+  {
+    "id": "arithmetic-14-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 14,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 207 cups in total. Take away 20 cups. How many cups remain? Reply only with the integer.",
+    "expected": "187"
+  },
+  {
+    "id": "arithmetic-14-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 14,
+    "mode": "explicit_intermediate",
+    "prompt": "23 trays hold 9 cups each, making 207 cups in total. Then 20 cups are removed. Reply only with the number remaining.",
+    "expected": "187"
+  },
+  {
+    "id": "order-14-chronology-earliest",
+    "family": "order",
+    "case": 14,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T415 follows S315, which follows R215. Select the earliest of the three. Output only its identifier.",
+    "expected": "R215"
+  },
+  {
+    "id": "order-14-training_template-earliest",
+    "family": "order",
+    "case": 14,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R215 occurs before S315; T415 occurs after S315. Give only the identifier of the first event.",
+    "expected": "R215"
+  },
+  {
+    "id": "order-14-explicit_chain-earliest",
+    "family": "order",
+    "case": 14,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R215, S315, T415. Which event is earliest? Reply with its identifier only.",
+    "expected": "R215"
+  },
+  {
+    "id": "order-14-permuted_roles-earliest",
+    "family": "order",
+    "case": 14,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R215 follows T415, which follows S315. Select the earliest of the three. Output only its identifier.",
+    "expected": "S315"
+  },
+  {
+    "id": "order-14-chronology-latest",
+    "family": "order",
+    "case": 14,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T415 follows S315, which follows R215. Select the latest of the three. Output only its identifier.",
+    "expected": "T415"
+  },
+  {
+    "id": "order-14-training_template-latest",
+    "family": "order",
+    "case": 14,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R215 occurs before S315; T415 occurs after S315. Give only the identifier of the last event.",
+    "expected": "T415"
+  },
+  {
+    "id": "order-14-explicit_chain-latest",
+    "family": "order",
+    "case": 14,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R215, S315, T415. Which event is latest? Reply with its identifier only.",
+    "expected": "T415"
+  },
+  {
+    "id": "order-14-permuted_roles-latest",
+    "family": "order",
+    "case": 14,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R215 follows T415, which follows S315. Select the latest of the three. Output only its identifier.",
+    "expected": "R215"
+  },
+  {
+    "id": "arithmetic-15-multiply",
+    "family": "arithmetic",
+    "case": 15,
+    "mode": "multiply",
+    "prompt": "Calculate 24 * 10. Respond with the integer only.",
+    "expected": "240"
+  },
+  {
+    "id": "arithmetic-15-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 15,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 240 - 21. Respond with the integer only.",
+    "expected": "219"
+  },
+  {
+    "id": "arithmetic-15-compound_expression",
+    "family": "arithmetic",
+    "case": 15,
+    "mode": "compound_expression",
+    "prompt": "Calculate (24 * 10) - 21. Respond with the integer only.",
+    "expected": "219"
+  },
+  {
+    "id": "arithmetic-15-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 15,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 240 cups in total. Take away 21 cups. How many cups remain? Reply only with the integer.",
+    "expected": "219"
+  },
+  {
+    "id": "arithmetic-15-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 15,
+    "mode": "explicit_intermediate",
+    "prompt": "24 trays hold 10 cups each, making 240 cups in total. Then 21 cups are removed. Reply only with the number remaining.",
+    "expected": "219"
+  },
+  {
+    "id": "order-15-chronology-earliest",
+    "family": "order",
+    "case": 15,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T416 follows S316, which follows R216. Select the earliest of the three. Output only its identifier.",
+    "expected": "R216"
+  },
+  {
+    "id": "order-15-training_template-earliest",
+    "family": "order",
+    "case": 15,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R216 occurs before S316; T416 occurs after S316. Give only the identifier of the first event.",
+    "expected": "R216"
+  },
+  {
+    "id": "order-15-explicit_chain-earliest",
+    "family": "order",
+    "case": 15,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R216, S316, T416. Which event is earliest? Reply with its identifier only.",
+    "expected": "R216"
+  },
+  {
+    "id": "order-15-permuted_roles-earliest",
+    "family": "order",
+    "case": 15,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R216 follows T416, which follows S316. Select the earliest of the three. Output only its identifier.",
+    "expected": "S316"
+  },
+  {
+    "id": "order-15-chronology-latest",
+    "family": "order",
+    "case": 15,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T416 follows S316, which follows R216. Select the latest of the three. Output only its identifier.",
+    "expected": "T416"
+  },
+  {
+    "id": "order-15-training_template-latest",
+    "family": "order",
+    "case": 15,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R216 occurs before S316; T416 occurs after S316. Give only the identifier of the last event.",
+    "expected": "T416"
+  },
+  {
+    "id": "order-15-explicit_chain-latest",
+    "family": "order",
+    "case": 15,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R216, S316, T416. Which event is latest? Reply with its identifier only.",
+    "expected": "T416"
+  },
+  {
+    "id": "order-15-permuted_roles-latest",
+    "family": "order",
+    "case": 15,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R216 follows T416, which follows S316. Select the latest of the three. Output only its identifier.",
+    "expected": "R216"
+  },
+  {
+    "id": "arithmetic-16-multiply",
+    "family": "arithmetic",
+    "case": 16,
+    "mode": "multiply",
+    "prompt": "Calculate 25 * 3. Respond with the integer only.",
+    "expected": "75"
+  },
+  {
+    "id": "arithmetic-16-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 16,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 75 - 22. Respond with the integer only.",
+    "expected": "53"
+  },
+  {
+    "id": "arithmetic-16-compound_expression",
+    "family": "arithmetic",
+    "case": 16,
+    "mode": "compound_expression",
+    "prompt": "Calculate (25 * 3) - 22. Respond with the integer only.",
+    "expected": "53"
+  },
+  {
+    "id": "arithmetic-16-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 16,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 75 cups in total. Take away 22 cups. How many cups remain? Reply only with the integer.",
+    "expected": "53"
+  },
+  {
+    "id": "arithmetic-16-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 16,
+    "mode": "explicit_intermediate",
+    "prompt": "25 trays hold 3 cups each, making 75 cups in total. Then 22 cups are removed. Reply only with the number remaining.",
+    "expected": "53"
+  },
+  {
+    "id": "order-16-chronology-earliest",
+    "family": "order",
+    "case": 16,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T417 follows S317, which follows R217. Select the earliest of the three. Output only its identifier.",
+    "expected": "R217"
+  },
+  {
+    "id": "order-16-training_template-earliest",
+    "family": "order",
+    "case": 16,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R217 occurs before S317; T417 occurs after S317. Give only the identifier of the first event.",
+    "expected": "R217"
+  },
+  {
+    "id": "order-16-explicit_chain-earliest",
+    "family": "order",
+    "case": 16,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R217, S317, T417. Which event is earliest? Reply with its identifier only.",
+    "expected": "R217"
+  },
+  {
+    "id": "order-16-permuted_roles-earliest",
+    "family": "order",
+    "case": 16,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R217 follows T417, which follows S317. Select the earliest of the three. Output only its identifier.",
+    "expected": "S317"
+  },
+  {
+    "id": "order-16-chronology-latest",
+    "family": "order",
+    "case": 16,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T417 follows S317, which follows R217. Select the latest of the three. Output only its identifier.",
+    "expected": "T417"
+  },
+  {
+    "id": "order-16-training_template-latest",
+    "family": "order",
+    "case": 16,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R217 occurs before S317; T417 occurs after S317. Give only the identifier of the last event.",
+    "expected": "T417"
+  },
+  {
+    "id": "order-16-explicit_chain-latest",
+    "family": "order",
+    "case": 16,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R217, S317, T417. Which event is latest? Reply with its identifier only.",
+    "expected": "T417"
+  },
+  {
+    "id": "order-16-permuted_roles-latest",
+    "family": "order",
+    "case": 16,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R217 follows T417, which follows S317. Select the latest of the three. Output only its identifier.",
+    "expected": "R217"
+  },
+  {
+    "id": "arithmetic-17-multiply",
+    "family": "arithmetic",
+    "case": 17,
+    "mode": "multiply",
+    "prompt": "Calculate 26 * 4. Respond with the integer only.",
+    "expected": "104"
+  },
+  {
+    "id": "arithmetic-17-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 17,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 104 - 23. Respond with the integer only.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-17-compound_expression",
+    "family": "arithmetic",
+    "case": 17,
+    "mode": "compound_expression",
+    "prompt": "Calculate (26 * 4) - 23. Respond with the integer only.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-17-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 17,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 104 cups in total. Take away 23 cups. How many cups remain? Reply only with the integer.",
+    "expected": "81"
+  },
+  {
+    "id": "arithmetic-17-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 17,
+    "mode": "explicit_intermediate",
+    "prompt": "26 trays hold 4 cups each, making 104 cups in total. Then 23 cups are removed. Reply only with the number remaining.",
+    "expected": "81"
+  },
+  {
+    "id": "order-17-chronology-earliest",
+    "family": "order",
+    "case": 17,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T418 follows S318, which follows R218. Select the earliest of the three. Output only its identifier.",
+    "expected": "R218"
+  },
+  {
+    "id": "order-17-training_template-earliest",
+    "family": "order",
+    "case": 17,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R218 occurs before S318; T418 occurs after S318. Give only the identifier of the first event.",
+    "expected": "R218"
+  },
+  {
+    "id": "order-17-explicit_chain-earliest",
+    "family": "order",
+    "case": 17,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R218, S318, T418. Which event is earliest? Reply with its identifier only.",
+    "expected": "R218"
+  },
+  {
+    "id": "order-17-permuted_roles-earliest",
+    "family": "order",
+    "case": 17,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R218 follows T418, which follows S318. Select the earliest of the three. Output only its identifier.",
+    "expected": "S318"
+  },
+  {
+    "id": "order-17-chronology-latest",
+    "family": "order",
+    "case": 17,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T418 follows S318, which follows R218. Select the latest of the three. Output only its identifier.",
+    "expected": "T418"
+  },
+  {
+    "id": "order-17-training_template-latest",
+    "family": "order",
+    "case": 17,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R218 occurs before S318; T418 occurs after S318. Give only the identifier of the last event.",
+    "expected": "T418"
+  },
+  {
+    "id": "order-17-explicit_chain-latest",
+    "family": "order",
+    "case": 17,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R218, S318, T418. Which event is latest? Reply with its identifier only.",
+    "expected": "T418"
+  },
+  {
+    "id": "order-17-permuted_roles-latest",
+    "family": "order",
+    "case": 17,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R218 follows T418, which follows S318. Select the latest of the three. Output only its identifier.",
+    "expected": "R218"
+  },
+  {
+    "id": "arithmetic-18-multiply",
+    "family": "arithmetic",
+    "case": 18,
+    "mode": "multiply",
+    "prompt": "Calculate 27 * 5. Respond with the integer only.",
+    "expected": "135"
+  },
+  {
+    "id": "arithmetic-18-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 18,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 135 - 24. Respond with the integer only.",
+    "expected": "111"
+  },
+  {
+    "id": "arithmetic-18-compound_expression",
+    "family": "arithmetic",
+    "case": 18,
+    "mode": "compound_expression",
+    "prompt": "Calculate (27 * 5) - 24. Respond with the integer only.",
+    "expected": "111"
+  },
+  {
+    "id": "arithmetic-18-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 18,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 135 cups in total. Take away 24 cups. How many cups remain? Reply only with the integer.",
+    "expected": "111"
+  },
+  {
+    "id": "arithmetic-18-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 18,
+    "mode": "explicit_intermediate",
+    "prompt": "27 trays hold 5 cups each, making 135 cups in total. Then 24 cups are removed. Reply only with the number remaining.",
+    "expected": "111"
+  },
+  {
+    "id": "order-18-chronology-earliest",
+    "family": "order",
+    "case": 18,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T419 follows S319, which follows R219. Select the earliest of the three. Output only its identifier.",
+    "expected": "R219"
+  },
+  {
+    "id": "order-18-training_template-earliest",
+    "family": "order",
+    "case": 18,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R219 occurs before S319; T419 occurs after S319. Give only the identifier of the first event.",
+    "expected": "R219"
+  },
+  {
+    "id": "order-18-explicit_chain-earliest",
+    "family": "order",
+    "case": 18,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R219, S319, T419. Which event is earliest? Reply with its identifier only.",
+    "expected": "R219"
+  },
+  {
+    "id": "order-18-permuted_roles-earliest",
+    "family": "order",
+    "case": 18,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R219 follows T419, which follows S319. Select the earliest of the three. Output only its identifier.",
+    "expected": "S319"
+  },
+  {
+    "id": "order-18-chronology-latest",
+    "family": "order",
+    "case": 18,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T419 follows S319, which follows R219. Select the latest of the three. Output only its identifier.",
+    "expected": "T419"
+  },
+  {
+    "id": "order-18-training_template-latest",
+    "family": "order",
+    "case": 18,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R219 occurs before S319; T419 occurs after S319. Give only the identifier of the last event.",
+    "expected": "T419"
+  },
+  {
+    "id": "order-18-explicit_chain-latest",
+    "family": "order",
+    "case": 18,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R219, S319, T419. Which event is latest? Reply with its identifier only.",
+    "expected": "T419"
+  },
+  {
+    "id": "order-18-permuted_roles-latest",
+    "family": "order",
+    "case": 18,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R219 follows T419, which follows S319. Select the latest of the three. Output only its identifier.",
+    "expected": "R219"
+  },
+  {
+    "id": "arithmetic-19-multiply",
+    "family": "arithmetic",
+    "case": 19,
+    "mode": "multiply",
+    "prompt": "Calculate 28 * 6. Respond with the integer only.",
+    "expected": "168"
+  },
+  {
+    "id": "arithmetic-19-subtract_oracle_product",
+    "family": "arithmetic",
+    "case": 19,
+    "mode": "subtract_oracle_product",
+    "prompt": "Calculate 168 - 25. Respond with the integer only.",
+    "expected": "143"
+  },
+  {
+    "id": "arithmetic-19-compound_expression",
+    "family": "arithmetic",
+    "case": 19,
+    "mode": "compound_expression",
+    "prompt": "Calculate (28 * 6) - 25. Respond with the integer only.",
+    "expected": "143"
+  },
+  {
+    "id": "arithmetic-19-prose_oracle_product",
+    "family": "arithmetic",
+    "case": 19,
+    "mode": "prose_oracle_product",
+    "prompt": "There are 168 cups in total. Take away 25 cups. How many cups remain? Reply only with the integer.",
+    "expected": "143"
+  },
+  {
+    "id": "arithmetic-19-explicit_intermediate",
+    "family": "arithmetic",
+    "case": 19,
+    "mode": "explicit_intermediate",
+    "prompt": "28 trays hold 6 cups each, making 168 cups in total. Then 25 cups are removed. Reply only with the number remaining.",
+    "expected": "143"
+  },
+  {
+    "id": "order-19-chronology-earliest",
+    "family": "order",
+    "case": 19,
+    "mode": "chronology",
+    "requested": "earliest",
+    "prompt": "Chronology: T420 follows S320, which follows R220. Select the earliest of the three. Output only its identifier.",
+    "expected": "R220"
+  },
+  {
+    "id": "order-19-training_template-earliest",
+    "family": "order",
+    "case": 19,
+    "mode": "training_template",
+    "requested": "earliest",
+    "prompt": "R220 occurs before S320; T420 occurs after S320. Give only the identifier of the first event.",
+    "expected": "R220"
+  },
+  {
+    "id": "order-19-explicit_chain-earliest",
+    "family": "order",
+    "case": 19,
+    "mode": "explicit_chain",
+    "requested": "earliest",
+    "prompt": "Temporal order from first to last: R220, S320, T420. Which event is earliest? Reply with its identifier only.",
+    "expected": "R220"
+  },
+  {
+    "id": "order-19-permuted_roles-earliest",
+    "family": "order",
+    "case": 19,
+    "mode": "permuted_roles",
+    "requested": "earliest",
+    "prompt": "Chronology: R220 follows T420, which follows S320. Select the earliest of the three. Output only its identifier.",
+    "expected": "S320"
+  },
+  {
+    "id": "order-19-chronology-latest",
+    "family": "order",
+    "case": 19,
+    "mode": "chronology",
+    "requested": "latest",
+    "prompt": "Chronology: T420 follows S320, which follows R220. Select the latest of the three. Output only its identifier.",
+    "expected": "T420"
+  },
+  {
+    "id": "order-19-training_template-latest",
+    "family": "order",
+    "case": 19,
+    "mode": "training_template",
+    "requested": "latest",
+    "prompt": "R220 occurs before S320; T420 occurs after S320. Give only the identifier of the last event.",
+    "expected": "T420"
+  },
+  {
+    "id": "order-19-explicit_chain-latest",
+    "family": "order",
+    "case": 19,
+    "mode": "explicit_chain",
+    "requested": "latest",
+    "prompt": "Temporal order from first to last: R220, S320, T420. Which event is latest? Reply with its identifier only.",
+    "expected": "T420"
+  },
+  {
+    "id": "order-19-permuted_roles-latest",
+    "family": "order",
+    "case": 19,
+    "mode": "permuted_roles",
+    "requested": "latest",
+    "prompt": "Chronology: R220 follows T420, which follows S320. Select the latest of the three. Output only its identifier.",
+    "expected": "R220"
+  }
+]

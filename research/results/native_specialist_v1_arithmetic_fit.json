@@ -1,0 +1,2723 @@
+{
+  "scope": "in-sample generation diagnostic, not generalization",
+  "modes": {
+    "multiply": {
+      "examples": 128,
+      "strict_passes": 128
+    },
+    "subtract": {
+      "examples": 128,
+      "strict_passes": 128
+    },
+    "compound_final": {
+      "examples": 128,
+      "strict_passes": 77
+    },
+    "chronology": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "relations": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "chain": {
+      "examples": 0,
+      "strict_passes": 0
+    },
+    "inverted": {
+      "examples": 0,
+      "strict_passes": 0
+    }
+  },
+  "rows": [
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 10. Reply with only the integer.",
+      "expected": "90",
+      "response": "90",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 6. Reply with only the integer.",
+      "expected": "180",
+      "response": "180",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 9. Reply with only the integer.",
+      "expected": "198",
+      "response": "198",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 23 * 7. Reply with only the integer.",
+      "expected": "161",
+      "response": "161",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 2. Reply with only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 5. Reply with only the integer.",
+      "expected": "70",
+      "response": "70",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 8. Reply with only the integer.",
+      "expected": "72",
+      "response": "72",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 20 * 10. Reply with only the integer.",
+      "expected": "200",
+      "response": "200",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 4. Reply with only the integer.",
+      "expected": "48",
+      "response": "48",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 4 * 4. Reply with only the integer.",
+      "expected": "16",
+      "response": "16",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 26 * 3. Reply with only the integer.",
+      "expected": "78",
+      "response": "78",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 10 * 12. Reply with only the integer.",
+      "expected": "120",
+      "response": "120",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 3 * 6. Reply with only the integer.",
+      "expected": "18",
+      "response": "18",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 10. Reply with only the integer.",
+      "expected": "110",
+      "response": "110",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 15 * 12. Reply with only the integer.",
+      "expected": "180",
+      "response": "180",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 11. Reply with only the integer.",
+      "expected": "198",
+      "response": "198",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 20 * 8. Reply with only the integer.",
+      "expected": "160",
+      "response": "160",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 4 * 9. Reply with only the integer.",
+      "expected": "36",
+      "response": "36",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 7. Reply with only the integer.",
+      "expected": "154",
+      "response": "154",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 6 * 5. Reply with only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 9. Reply with only the integer.",
+      "expected": "144",
+      "response": "144",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 15 * 4. Reply with only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 4 * 11. Reply with only the integer.",
+      "expected": "44",
+      "response": "44",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 11. Reply with only the integer.",
+      "expected": "121",
+      "response": "121",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 26 * 3. Reply with only the integer.",
+      "expected": "78",
+      "response": "78",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 6 * 4. Reply with only the integer.",
+      "expected": "24",
+      "response": "24",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 7. Reply with only the integer.",
+      "expected": "84",
+      "response": "84",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 7. Reply with only the integer.",
+      "expected": "112",
+      "response": "112",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 9. Reply with only the integer.",
+      "expected": "198",
+      "response": "198",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 8. Reply with only the integer.",
+      "expected": "216",
+      "response": "216",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 20 * 6. Reply with only the integer.",
+      "expected": "120",
+      "response": "120",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 24 * 8. Reply with only the integer.",
+      "expected": "192",
+      "response": "192",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 6. Reply with only the integer.",
+      "expected": "96",
+      "response": "96",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 26 * 5. Reply with only the integer.",
+      "expected": "130",
+      "response": "130",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 15 * 8. Reply with only the integer.",
+      "expected": "120",
+      "response": "120",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 13 * 8. Reply with only the integer.",
+      "expected": "104",
+      "response": "104",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 29 * 4. Reply with only the integer.",
+      "expected": "116",
+      "response": "116",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 20 * 9. Reply with only the integer.",
+      "expected": "180",
+      "response": "180",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 28 * 11. Reply with only the integer.",
+      "expected": "308",
+      "response": "308",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 24 * 5. Reply with only the integer.",
+      "expected": "120",
+      "response": "120",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 29 * 8. Reply with only the integer.",
+      "expected": "232",
+      "response": "232",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 28 * 3. Reply with only the integer.",
+      "expected": "84",
+      "response": "84",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 2. Reply with only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 12. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 24 * 6. Reply with only the integer.",
+      "expected": "144",
+      "response": "144",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 6. Reply with only the integer.",
+      "expected": "96",
+      "response": "96",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 6 * 12. Reply with only the integer.",
+      "expected": "72",
+      "response": "72",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 17 * 7. Reply with only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 23 * 10. Reply with only the integer.",
+      "expected": "230",
+      "response": "230",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 24 * 7. Reply with only the integer.",
+      "expected": "168",
+      "response": "168",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 6. Reply with only the integer.",
+      "expected": "84",
+      "response": "84",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 8. Reply with only the integer.",
+      "expected": "216",
+      "response": "216",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 12. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 26 * 6. Reply with only the integer.",
+      "expected": "156",
+      "response": "156",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 10. Reply with only the integer.",
+      "expected": "110",
+      "response": "110",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 13 * 12. Reply with only the integer.",
+      "expected": "156",
+      "response": "156",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 3. Reply with only the integer.",
+      "expected": "36",
+      "response": "36",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 28 * 4. Reply with only the integer.",
+      "expected": "112",
+      "response": "112",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 5. Reply with only the integer.",
+      "expected": "90",
+      "response": "90",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 12. Reply with only the integer.",
+      "expected": "264",
+      "response": "264",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 7 * 9. Reply with only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 6. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 6 * 5. Reply with only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 2. Reply with only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 7 * 12. Reply with only the integer.",
+      "expected": "84",
+      "response": "84",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 4. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 5. Reply with only the integer.",
+      "expected": "70",
+      "response": "70",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 13 * 11. Reply with only the integer.",
+      "expected": "143",
+      "response": "143",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 2. Reply with only the integer.",
+      "expected": "44",
+      "response": "44",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 2. Reply with only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 2. Reply with only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 10. Reply with only the integer.",
+      "expected": "120",
+      "response": "120",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 7. Reply with only the integer.",
+      "expected": "98",
+      "response": "98",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 3 * 8. Reply with only the integer.",
+      "expected": "24",
+      "response": "24",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 8 * 10. Reply with only the integer.",
+      "expected": "80",
+      "response": "80",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 20 * 11. Reply with only the integer.",
+      "expected": "220",
+      "response": "220",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 11. Reply with only the integer.",
+      "expected": "132",
+      "response": "132",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 3. Reply with only the integer.",
+      "expected": "33",
+      "response": "33",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 13 * 2. Reply with only the integer.",
+      "expected": "26",
+      "response": "26",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 2. Reply with only the integer.",
+      "expected": "54",
+      "response": "54",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 11. Reply with only the integer.",
+      "expected": "330",
+      "response": "330",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 2. Reply with only the integer.",
+      "expected": "54",
+      "response": "54",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 12. Reply with only the integer.",
+      "expected": "192",
+      "response": "192",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 17 * 2. Reply with only the integer.",
+      "expected": "34",
+      "response": "34",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 29 * 10. Reply with only the integer.",
+      "expected": "290",
+      "response": "290",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 6. Reply with only the integer.",
+      "expected": "162",
+      "response": "162",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 10 * 7. Reply with only the integer.",
+      "expected": "70",
+      "response": "70",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 12. Reply with only the integer.",
+      "expected": "360",
+      "response": "360",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 3 * 5. Reply with only the integer.",
+      "expected": "15",
+      "response": "15",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 25 * 5. Reply with only the integer.",
+      "expected": "125",
+      "response": "125",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 29 * 7. Reply with only the integer.",
+      "expected": "203",
+      "response": "203",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 3 * 11. Reply with only the integer.",
+      "expected": "33",
+      "response": "33",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 6. Reply with only the integer.",
+      "expected": "96",
+      "response": "96",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 4 * 9. Reply with only the integer.",
+      "expected": "36",
+      "response": "36",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 13 * 11. Reply with only the integer.",
+      "expected": "143",
+      "response": "143",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 27 * 11. Reply with only the integer.",
+      "expected": "297",
+      "response": "297",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 5 * 10. Reply with only the integer.",
+      "expected": "50",
+      "response": "50",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 10. Reply with only the integer.",
+      "expected": "180",
+      "response": "180",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 9. Reply with only the integer.",
+      "expected": "126",
+      "response": "126",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 15 * 2. Reply with only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 7. Reply with only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 16 * 3. Reply with only the integer.",
+      "expected": "48",
+      "response": "48",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 5 * 2. Reply with only the integer.",
+      "expected": "10",
+      "response": "10",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 6. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 6. Reply with only the integer.",
+      "expected": "66",
+      "response": "66",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 23 * 9. Reply with only the integer.",
+      "expected": "207",
+      "response": "207",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 3. Reply with only the integer.",
+      "expected": "90",
+      "response": "90",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 22 * 11. Reply with only the integer.",
+      "expected": "242",
+      "response": "242",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 14 * 10. Reply with only the integer.",
+      "expected": "140",
+      "response": "140",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 2. Reply with only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 19 * 12. Reply with only the integer.",
+      "expected": "228",
+      "response": "228",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 15 * 12. Reply with only the integer.",
+      "expected": "180",
+      "response": "180",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 7 * 8. Reply with only the integer.",
+      "expected": "56",
+      "response": "56",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 19 * 8. Reply with only the integer.",
+      "expected": "152",
+      "response": "152",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 18 * 7. Reply with only the integer.",
+      "expected": "126",
+      "response": "126",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 26 * 5. Reply with only the integer.",
+      "expected": "130",
+      "response": "130",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 28 * 7. Reply with only the integer.",
+      "expected": "196",
+      "response": "196",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 4 * 4. Reply with only the integer.",
+      "expected": "16",
+      "response": "16",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 10. Reply with only the integer.",
+      "expected": "110",
+      "response": "110",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 3 * 5. Reply with only the integer.",
+      "expected": "15",
+      "response": "15",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 6. Reply with only the integer.",
+      "expected": "72",
+      "response": "72",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 12 * 11. Reply with only the integer.",
+      "expected": "132",
+      "response": "132",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 11 * 10. Reply with only the integer.",
+      "expected": "110",
+      "response": "110",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 9 * 9. Reply with only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 30 * 10. Reply with only the integer.",
+      "expected": "300",
+      "response": "300",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 7 * 9. Reply with only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 5 * 11. Reply with only the integer.",
+      "expected": "55",
+      "response": "55",
+      "strict": true
+    },
+    {
+      "mode": "multiply",
+      "prompt": "Calculate 8 * 12. Reply with only the integer.",
+      "expected": "96",
+      "response": "96",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 90 - 1. Reply with only the integer.",
+      "expected": "89",
+      "response": "89",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 180 - 1. Reply with only the integer.",
+      "expected": "179",
+      "response": "179",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 198 - 5. Reply with only the integer.",
+      "expected": "193",
+      "response": "193",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 161 - 3. Reply with only the integer.",
+      "expected": "158",
+      "response": "158",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 22 - 5. Reply with only the integer.",
+      "expected": "17",
+      "response": "17",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 70 - 3. Reply with only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 72 - 3. Reply with only the integer.",
+      "expected": "69",
+      "response": "69",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 200 - 2. Reply with only the integer.",
+      "expected": "198",
+      "response": "198",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 48 - 5. Reply with only the integer.",
+      "expected": "43",
+      "response": "43",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 16 - 1. Reply with only the integer.",
+      "expected": "15",
+      "response": "15",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 78 - 1. Reply with only the integer.",
+      "expected": "77",
+      "response": "77",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 120 - 1. Reply with only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 18 - 5. Reply with only the integer.",
+      "expected": "13",
+      "response": "13",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 110 - 2. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 180 - 4. Reply with only the integer.",
+      "expected": "176",
+      "response": "176",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 198 - 4. Reply with only the integer.",
+      "expected": "194",
+      "response": "194",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 160 - 4. Reply with only the integer.",
+      "expected": "156",
+      "response": "156",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 36 - 4. Reply with only the integer.",
+      "expected": "32",
+      "response": "32",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 154 - 1. Reply with only the integer.",
+      "expected": "153",
+      "response": "153",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 30 - 1. Reply with only the integer.",
+      "expected": "29",
+      "response": "29",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 144 - 2. Reply with only the integer.",
+      "expected": "142",
+      "response": "142",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 60 - 1. Reply with only the integer.",
+      "expected": "59",
+      "response": "59",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 44 - 5. Reply with only the integer.",
+      "expected": "39",
+      "response": "39",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 121 - 2. Reply with only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 78 - 5. Reply with only the integer.",
+      "expected": "73",
+      "response": "73",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 24 - 3. Reply with only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 84 - 3. Reply with only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 112 - 4. Reply with only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 198 - 3. Reply with only the integer.",
+      "expected": "195",
+      "response": "195",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 216 - 4. Reply with only the integer.",
+      "expected": "212",
+      "response": "212",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 120 - 2. Reply with only the integer.",
+      "expected": "118",
+      "response": "118",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 192 - 5. Reply with only the integer.",
+      "expected": "187",
+      "response": "187",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 96 - 4. Reply with only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 130 - 5. Reply with only the integer.",
+      "expected": "125",
+      "response": "125",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 120 - 1. Reply with only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 104 - 5. Reply with only the integer.",
+      "expected": "99",
+      "response": "99",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 116 - 2. Reply with only the integer.",
+      "expected": "114",
+      "response": "114",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 180 - 5. Reply with only the integer.",
+      "expected": "175",
+      "response": "175",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 308 - 1. Reply with only the integer.",
+      "expected": "307",
+      "response": "307",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 120 - 5. Reply with only the integer.",
+      "expected": "115",
+      "response": "115",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 232 - 1. Reply with only the integer.",
+      "expected": "231",
+      "response": "231",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 84 - 5. Reply with only the integer.",
+      "expected": "79",
+      "response": "79",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 22 - 3. Reply with only the integer.",
+      "expected": "19",
+      "response": "19",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 108 - 4. Reply with only the integer.",
+      "expected": "104",
+      "response": "104",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 144 - 3. Reply with only the integer.",
+      "expected": "141",
+      "response": "141",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 96 - 1. Reply with only the integer.",
+      "expected": "95",
+      "response": "95",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 72 - 1. Reply with only the integer.",
+      "expected": "71",
+      "response": "71",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 119 - 4. Reply with only the integer.",
+      "expected": "115",
+      "response": "115",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 230 - 1. Reply with only the integer.",
+      "expected": "229",
+      "response": "229",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 168 - 5. Reply with only the integer.",
+      "expected": "163",
+      "response": "163",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 84 - 3. Reply with only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 216 - 3. Reply with only the integer.",
+      "expected": "213",
+      "response": "213",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 108 - 3. Reply with only the integer.",
+      "expected": "105",
+      "response": "105",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 156 - 2. Reply with only the integer.",
+      "expected": "154",
+      "response": "154",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 110 - 1. Reply with only the integer.",
+      "expected": "109",
+      "response": "109",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 156 - 3. Reply with only the integer.",
+      "expected": "153",
+      "response": "153",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 36 - 5. Reply with only the integer.",
+      "expected": "31",
+      "response": "31",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 112 - 2. Reply with only the integer.",
+      "expected": "110",
+      "response": "110",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 90 - 2. Reply with only the integer.",
+      "expected": "88",
+      "response": "88",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 264 - 5. Reply with only the integer.",
+      "expected": "259",
+      "response": "259",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 63 - 3. Reply with only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 108 - 5. Reply with only the integer.",
+      "expected": "103",
+      "response": "103",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 30 - 4. Reply with only the integer.",
+      "expected": "26",
+      "response": "26",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 60 - 5. Reply with only the integer.",
+      "expected": "55",
+      "response": "55",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 84 - 3. Reply with only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 108 - 5. Reply with only the integer.",
+      "expected": "103",
+      "response": "103",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 70 - 3. Reply with only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 143 - 2. Reply with only the integer.",
+      "expected": "141",
+      "response": "141",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 44 - 3. Reply with only the integer.",
+      "expected": "41",
+      "response": "41",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 22 - 5. Reply with only the integer.",
+      "expected": "17",
+      "response": "17",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 60 - 3. Reply with only the integer.",
+      "expected": "57",
+      "response": "57",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 120 - 2. Reply with only the integer.",
+      "expected": "118",
+      "response": "118",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 98 - 3. Reply with only the integer.",
+      "expected": "95",
+      "response": "95",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 24 - 3. Reply with only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 80 - 5. Reply with only the integer.",
+      "expected": "75",
+      "response": "75",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 220 - 5. Reply with only the integer.",
+      "expected": "215",
+      "response": "215",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 132 - 5. Reply with only the integer.",
+      "expected": "127",
+      "response": "127",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 33 - 3. Reply with only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 26 - 4. Reply with only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 54 - 2. Reply with only the integer.",
+      "expected": "52",
+      "response": "52",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 330 - 1. Reply with only the integer.",
+      "expected": "329",
+      "response": "329",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 54 - 2. Reply with only the integer.",
+      "expected": "52",
+      "response": "52",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 192 - 2. Reply with only the integer.",
+      "expected": "190",
+      "response": "190",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 34 - 5. Reply with only the integer.",
+      "expected": "29",
+      "response": "29",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 290 - 3. Reply with only the integer.",
+      "expected": "287",
+      "response": "287",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 162 - 4. Reply with only the integer.",
+      "expected": "158",
+      "response": "158",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 70 - 5. Reply with only the integer.",
+      "expected": "65",
+      "response": "65",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 360 - 2. Reply with only the integer.",
+      "expected": "358",
+      "response": "358",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 15 - 1. Reply with only the integer.",
+      "expected": "14",
+      "response": "14",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 125 - 4. Reply with only the integer.",
+      "expected": "121",
+      "response": "121",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 203 - 4. Reply with only the integer.",
+      "expected": "199",
+      "response": "199",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 33 - 3. Reply with only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 96 - 4. Reply with only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 36 - 2. Reply with only the integer.",
+      "expected": "34",
+      "response": "34",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 143 - 1. Reply with only the integer.",
+      "expected": "142",
+      "response": "142",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 297 - 5. Reply with only the integer.",
+      "expected": "292",
+      "response": "292",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 50 - 3. Reply with only the integer.",
+      "expected": "47",
+      "response": "47",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 180 - 2. Reply with only the integer.",
+      "expected": "178",
+      "response": "178",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 126 - 3. Reply with only the integer.",
+      "expected": "123",
+      "response": "123",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 30 - 5. Reply with only the integer.",
+      "expected": "25",
+      "response": "25",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 63 - 5. Reply with only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 48 - 3. Reply with only the integer.",
+      "expected": "45",
+      "response": "45",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 10 - 5. Reply with only the integer.",
+      "expected": "5",
+      "response": "5",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 108 - 1. Reply with only the integer.",
+      "expected": "107",
+      "response": "107",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 66 - 3. Reply with only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 207 - 1. Reply with only the integer.",
+      "expected": "206",
+      "response": "206",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 90 - 3. Reply with only the integer.",
+      "expected": "87",
+      "response": "87",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 242 - 1. Reply with only the integer.",
+      "expected": "241",
+      "response": "241",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 140 - 1. Reply with only the integer.",
+      "expected": "139",
+      "response": "139",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 22 - 2. Reply with only the integer.",
+      "expected": "20",
+      "response": "20",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 228 - 1. Reply with only the integer.",
+      "expected": "227",
+      "response": "227",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 180 - 4. Reply with only the integer.",
+      "expected": "176",
+      "response": "176",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 56 - 3. Reply with only the integer.",
+      "expected": "53",
+      "response": "53",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 152 - 2. Reply with only the integer.",
+      "expected": "150",
+      "response": "150",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 126 - 2. Reply with only the integer.",
+      "expected": "124",
+      "response": "124",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 130 - 2. Reply with only the integer.",
+      "expected": "128",
+      "response": "128",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 196 - 3. Reply with only the integer.",
+      "expected": "193",
+      "response": "193",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 16 - 2. Reply with only the integer.",
+      "expected": "14",
+      "response": "14",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 110 - 5. Reply with only the integer.",
+      "expected": "105",
+      "response": "105",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 15 - 5. Reply with only the integer.",
+      "expected": "10",
+      "response": "10",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 72 - 5. Reply with only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 132 - 4. Reply with only the integer.",
+      "expected": "128",
+      "response": "128",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 110 - 4. Reply with only the integer.",
+      "expected": "106",
+      "response": "106",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 81 - 3. Reply with only the integer.",
+      "expected": "78",
+      "response": "78",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 300 - 2. Reply with only the integer.",
+      "expected": "298",
+      "response": "298",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 63 - 5. Reply with only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 55 - 5. Reply with only the integer.",
+      "expected": "50",
+      "response": "50",
+      "strict": true
+    },
+    {
+      "mode": "subtract",
+      "prompt": "Calculate 96 - 5. Reply with only the integer.",
+      "expected": "91",
+      "response": "91",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "89",
+      "response": "89",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "179",
+      "response": "179",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "193",
+      "response": "193",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "158",
+      "response": "158",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "17",
+      "response": "17",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "69",
+      "response": "75",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "198",
+      "response": "198",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "43",
+      "response": "43",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 4 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "15",
+      "response": "15",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 3 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "77",
+      "response": "71",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 10 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "13",
+      "response": "17",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "176",
+      "response": "164",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 11 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "194",
+      "response": "158",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "156",
+      "response": "152",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 9 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "32",
+      "response": "32",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 7 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "153",
+      "response": "153",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "29",
+      "response": "29",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 9 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "142",
+      "response": "142",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 4 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "59",
+      "response": "57",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "39",
+      "response": "39",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 11 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "109",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "73",
+      "response": "73",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 4 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "195",
+      "response": "195",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "212",
+      "response": "224",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 6 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "118",
+      "response": "118",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 8 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "187",
+      "response": "173",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "125",
+      "response": "105",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 8 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 8 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "99",
+      "response": "101",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "114",
+      "response": "106",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "175",
+      "response": "175",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "307",
+      "response": "307",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "115",
+      "response": "115",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 8 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "231",
+      "response": "227",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "79",
+      "response": "79",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "19",
+      "response": "19",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "104",
+      "response": "104",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "141",
+      "response": "135",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "95",
+      "response": "115",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "71",
+      "response": "71",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 17 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "115",
+      "response": "121",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "229",
+      "response": "229",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "163",
+      "response": "167",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "213",
+      "response": "195",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "105",
+      "response": "105",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 6 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "154",
+      "response": "154",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "109",
+      "response": "109",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "153",
+      "response": "126",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "31",
+      "response": "31",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "110",
+      "response": "106",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 5 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "88",
+      "response": "86",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 12 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "259",
+      "response": "211",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "103",
+      "response": "107",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 5 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "26",
+      "response": "26",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "55",
+      "response": "55",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "103",
+      "response": "107",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 11 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "141",
+      "response": "127",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "41",
+      "response": "41",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "17",
+      "response": "17",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "57",
+      "response": "57",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "118",
+      "response": "110",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "95",
+      "response": "91",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 8 trays holding 10 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "75",
+      "response": "75",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "215",
+      "response": "195",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "127",
+      "response": "107",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 2 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "22",
+      "response": "22",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "52",
+      "response": "50",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "329",
+      "response": "329",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "52",
+      "response": "50",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 12 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "190",
+      "response": "154",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 17 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "29",
+      "response": "29",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 10 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "287",
+      "response": "277",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "158",
+      "response": "178",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 10 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "65",
+      "response": "65",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 12 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "358",
+      "response": "350",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "14",
+      "response": "14",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 25 trays holding 5 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "121",
+      "response": "121",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "199",
+      "response": "203",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 11 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 9 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "34",
+      "response": "34",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "142",
+      "response": "142",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "292",
+      "response": "232",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 10 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "47",
+      "response": "47",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "178",
+      "response": "178",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "123",
+      "response": "105",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "25",
+      "response": "25",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "45",
+      "response": "45",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "5",
+      "response": "5",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "107",
+      "response": "53",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 9 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "206",
+      "response": "208",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "87",
+      "response": "81",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "241",
+      "response": "241",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "139",
+      "response": "139",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "20",
+      "response": "20",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 19 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "227",
+      "response": "227",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "176",
+      "response": "164",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "53",
+      "response": "53",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 19 trays holding 8 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "150",
+      "response": "150",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 7 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "124",
+      "response": "130",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 5 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "128",
+      "response": "124",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "193",
+      "response": "205",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "14",
+      "response": "14",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "105",
+      "response": "95",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "10",
+      "response": "10",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "77",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 11 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "128",
+      "response": "128",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "106",
+      "response": "106",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "78",
+      "response": "72",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "298",
+      "response": "28",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "50",
+      "response": "50",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 8 trays holding 12 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "91",
+      "response": "89",
+      "strict": false
+    }
+  ]
+}

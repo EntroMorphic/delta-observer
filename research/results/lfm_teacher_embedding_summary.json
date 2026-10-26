@@ -1,0 +1,35 @@
+{
+  "experiment": "Observer.D teacher-derived token geometry",
+  "status": "small quantitative gain; coherence gate failed",
+  "compression": 12.672249143181372,
+  "method": "JL project LFM embeddings from 1024 to 384 dimensions, orthogonal-Procrustes align to the R2 Observer.D basis, and blend into the tied embedding table",
+  "projection_sha256": "64b909d21c7b2c62f05a528d721ed18ecf2c18ff62fae45b444962c5167e11ef",
+  "controls": {
+    "blend_0.5_before_adaptation": {
+      "raw_normalized_ce_retention": 0.6576368202614491,
+      "instruction_normalized_ce_retention": 0.38144597586339507,
+      "conclusion": "Too disruptive"
+    },
+    "blend_0.1_before_adaptation": {
+      "raw_normalized_ce_retention": 0.812832667004917,
+      "instruction_normalized_ce_retention": 0.4761778007026409
+    },
+    "blend_0.1_after_matched_adaptation": {
+      "raw_cross_entropy": 5.935973731800914,
+      "raw_normalized_ce_retention": 0.857738834996584,
+      "raw_teacher_top1_agreement": 0.2594757080078125,
+      "instruction_cross_entropy": 4.710785534057519,
+      "instruction_normalized_ce_retention": 0.5993858703401299,
+      "instruction_teacher_top1_agreement": 0.29045776972879833,
+      "prompt_suite_coherent": 0,
+      "prompt_suite_total": 8
+    }
+  },
+  "matched_delta_vs_no_embedding_transfer": {
+    "raw_normalized_ce_retention": 0.0033894060755764,
+    "instruction_normalized_ce_retention": 0.0023126149524456,
+    "instruction_teacher_top1_agreement": 0.0025789786507282
+  },
+  "source_free_after_export": true,
+  "conclusion": "A conservative 10% teacher-geometry blend gives small, consistent teacher-forced gains before and after matched adaptation without changing deployment size. A 50% blend breaks the learned interface. Neither setting establishes coherent behavioral retention; retain 10% as an R3 mechanism, not as a success claim."
+}

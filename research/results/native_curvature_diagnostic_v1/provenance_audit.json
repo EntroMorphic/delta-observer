@@ -1,0 +1,6 @@
+{
+  "scope": "post-run artifact and input integrity record",
+  "curvature_artifact_sha256": "937680da463443fbdcb00c096682e4809ea3eaf29f82104d757e9fe23fc42b51",
+  "checkpoint_sha256": "a4e5726b01a645c8f4af18500c31d7f6ab04cdb7bf6017eb0464b7eb78d7bd16",
+  "data_sha256": "454d6263b07d12db5b22bdbeae7ebdfd5176e4f457de88be61664dcbfbe38d05"
+}

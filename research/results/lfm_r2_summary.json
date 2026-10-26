@@ -1,0 +1,56 @@
+{
+  "experiment": "Observer.D-LFM R2",
+  "status": "valid scaling result; qualitative coherence gate failed",
+  "compression": 12.672249143181372,
+  "training_tokens": 1048576,
+  "validation_tokens": 65536,
+  "teacher": {
+    "cross_entropy": 5.081088493578136,
+    "top_k_probability_mass": 0.9355378127656877
+  },
+  "arms": {
+    "direct": {
+      "seconds": 617.7768799999976,
+      "validation_ce": 6.770061871036887,
+      "normalized_ce_retention": 0.7189385082417086,
+      "perplexity_ratio_to_teacher": 5.413919799041638,
+      "teacher_top1_agreement": 0.1623077392578125
+    },
+    "distill": {
+      "seconds": 647.0115115000008,
+      "validation_ce": 6.262667348608375,
+      "normalized_ce_retention": 0.8033738600874049,
+      "perplexity_ratio_to_teacher": 3.2595164463304354,
+      "teacher_top1_agreement": 0.227264404296875
+    },
+    "trajectory": {
+      "seconds": 722.62292075,
+      "validation_ce": 6.26020297780633,
+      "normalized_ce_retention": 0.8037839552038302,
+      "perplexity_ratio_to_teacher": 3.25149367876865,
+      "teacher_top1_agreement": 0.22540283203125,
+      "state_loss": 0.007737108933724812,
+      "delta_loss": 0.010212047589448048
+    }
+  },
+  "trajectory_delta_vs_distill": {
+    "validation_ce": -0.002464370802044202,
+    "normalized_ce_retention": 0.00041009511642530616,
+    "teacher_top1_agreement": -0.001861572265625,
+    "credible_advantage": false
+  },
+  "qualitative_controls": {
+    "prompt_id": "reflective-recursion-cognition",
+    "distill": {
+      "passed": false,
+      "failure": "Repetitive 'The result of the color of the color ...' generation loop",
+      "result": "research/results/lfm_r2_control_prompt_distill.json"
+    },
+    "trajectory": {
+      "passed": false,
+      "failure": "Repetitive 'The color of the color ...' generation loop",
+      "result": "research/results/lfm_r2_control_prompt_trajectory.json"
+    }
+  },
+  "conclusion": "Scaling to 1,048,576 raw-language tokens raised output-distilled normalized CE retention to 80.34% at 12.67x compression. The trajectory arm's 0.0025 CE difference is too small and conflicts with its lower top-1 agreement, so it is not evidence of a trajectory advantage. Both distilled checkpoints fail the frozen instruction-coherence sentinel. FineWeb-only scaling is insufficient to establish instruction retention; test teacher-generated conversational supervision before R3."
+}

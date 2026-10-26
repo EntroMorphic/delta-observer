@@ -1,0 +1,7 @@
+{
+  "tasks": 100,
+  "tasks_sha256": "a25c3a9d0cdd9b55889599dc60e6709e039183e32417bd5091345f0770524d6d",
+  "training_manifest_sha256": "00fedde55580dc13994be37a6e75c8a47be9f122eee61d8f099e5e5b7cf086ac",
+  "created_before_training": true,
+  "selection": "fixed final endpoint, no intermediate test evaluations"
+}

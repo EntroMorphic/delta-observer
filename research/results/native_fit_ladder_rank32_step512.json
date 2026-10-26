@@ -1,0 +1,907 @@
+{
+  "scope": "in-sample generation diagnostic, not generalization",
+  "modes": {
+    "compound_final": {
+      "examples": 128,
+      "strict_passes": 58
+    }
+  },
+  "rows": [
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "89",
+      "response": "82",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "179",
+      "response": "85",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "193",
+      "response": "193",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "158",
+      "response": "158",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "17",
+      "response": "23",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "69",
+      "response": "63",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "198",
+      "response": "238",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "43",
+      "response": "43",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 4 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "15",
+      "response": "11",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 3 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "77",
+      "response": "79",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 10 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "109",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "13",
+      "response": "13",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "108",
+      "response": "108",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "176",
+      "response": "176",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 11 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "194",
+      "response": "194",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "156",
+      "response": "144",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 9 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "32",
+      "response": "20",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 7 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "153",
+      "response": "153",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "29",
+      "response": "34",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 9 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "142",
+      "response": "130",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 4 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "59",
+      "response": "55",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "39",
+      "response": "33",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 11 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "119",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "73",
+      "response": "73",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 4 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "87",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "108",
+      "response": "112",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "195",
+      "response": "195",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 8 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "212",
+      "response": "208",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 6 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "118",
+      "response": "112",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 8 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "187",
+      "response": "217",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "125",
+      "response": "125",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 8 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "119",
+      "response": "112",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 8 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "99",
+      "response": "75",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "114",
+      "response": "106",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "175",
+      "response": "170",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "307",
+      "response": "307",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "115",
+      "response": "110",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 8 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "231",
+      "response": "217",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "79",
+      "response": "81",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "19",
+      "response": "23",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "104",
+      "response": "104",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "141",
+      "response": "135",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "95",
+      "response": "91",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "71",
+      "response": "65",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 17 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "115",
+      "response": "119",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "229",
+      "response": "528",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 24 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "163",
+      "response": "167",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "81",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "213",
+      "response": "213",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "105",
+      "response": "105",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 6 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "154",
+      "response": "154",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "109",
+      "response": "119",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "153",
+      "response": "147",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 3 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "31",
+      "response": "31",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "110",
+      "response": "102",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 5 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "88",
+      "response": "84",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 12 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "259",
+      "response": "259",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "60",
+      "response": "60",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "103",
+      "response": "103",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 6 trays holding 5 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "26",
+      "response": "26",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "55",
+      "response": "55",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 12 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "81",
+      "response": "63",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 4 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "103",
+      "response": "103",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 5 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 11 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "141",
+      "response": "145",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "41",
+      "response": "47",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "17",
+      "response": "23",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 2 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "57",
+      "response": "57",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "118",
+      "response": "110",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "95",
+      "response": "91",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "21",
+      "response": "21",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 8 trays holding 10 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "75",
+      "response": "55",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 20 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "215",
+      "response": "215",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "127",
+      "response": "133",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 2 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "22",
+      "response": "26",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "52",
+      "response": "52",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "329",
+      "response": "329",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "52",
+      "response": "52",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 12 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "190",
+      "response": "182",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 17 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "29",
+      "response": "29",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 10 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "287",
+      "response": "271",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "158",
+      "response": "158",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 10 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "65",
+      "response": "65",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 12 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "358",
+      "response": "350",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 5 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "14",
+      "response": "14",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 25 trays holding 5 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "121",
+      "response": "141",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 29 trays holding 7 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "199",
+      "response": "197",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 11 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "30",
+      "response": "30",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 6 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "92",
+      "response": "92",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 9 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "34",
+      "response": "14",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 13 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "142",
+      "response": "142",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 27 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "292",
+      "response": "302",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 10 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "47",
+      "response": "46",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "178",
+      "response": "170",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "123",
+      "response": "123",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "25",
+      "response": "35",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 7 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 16 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "45",
+      "response": "45",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 2 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "5",
+      "response": "10",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 6 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "107",
+      "response": "53",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 6 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "63",
+      "response": "63",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 23 trays holding 9 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "206",
+      "response": "205",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 3 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "87",
+      "response": "87",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 22 trays holding 11 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "241",
+      "response": "241",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 14 trays holding 10 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "139",
+      "response": "165",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 2 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "20",
+      "response": "26",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 19 trays holding 12 cups each. Then 1 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "227",
+      "response": "278",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 15 trays holding 12 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "176",
+      "response": "176",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 8 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "53",
+      "response": "53",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 19 trays holding 8 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "150",
+      "response": "142",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 18 trays holding 7 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "124",
+      "response": "158",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 26 trays holding 5 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "128",
+      "response": "134",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 28 trays holding 7 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "193",
+      "response": "197",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 4 trays holding 4 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "14",
+      "response": "10",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "105",
+      "response": "105",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 3 trays holding 5 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "10",
+      "response": "10",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 6 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "67",
+      "response": "67",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 12 trays holding 11 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "128",
+      "response": "128",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 11 trays holding 10 cups each. Then 4 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "106",
+      "response": "106",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 9 trays holding 9 cups each. Then 3 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "78",
+      "response": "60",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 30 trays holding 10 cups each. Then 2 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "298",
+      "response": "278",
+      "strict": false
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 7 trays holding 9 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "58",
+      "response": "58",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 5 trays holding 11 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "50",
+      "response": "50",
+      "strict": true
+    },
+    {
+      "mode": "compound_final",
+      "prompt": "A delivery contains 8 trays holding 12 cups each. Then 5 cups are removed from the delivery. How many remain? Return only the integer.",
+      "expected": "91",
+      "response": "71",
+      "strict": false
+    }
+  ]
+}

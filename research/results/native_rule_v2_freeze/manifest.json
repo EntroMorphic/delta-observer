@@ -1,0 +1,32 @@
+{
+  "model": "LiquidAI/LFM2.5-350M",
+  "revision": "9e6c6ccf47cd318696e137d381a7ded8fe4df09f",
+  "arms": {
+    "remediation": {
+      "path": "remediation.json",
+      "sha256": "655014828f945630ec998cb4dbe29927b895f7bebfe8c08b159c3cae63a6a8ca",
+      "examples": 1216,
+      "input_tokens": 53245,
+      "supervised_tokens": 8671,
+      "category_counts": {
+        "json_record": 128,
+        "signed_sorting": 128,
+        "spanish_number_words": 128,
+        "arithmetic": 512,
+        "transitive_ordering": 320
+      },
+      "mode_counts": {
+        "retention": 384,
+        "multiply": 128,
+        "subtract": 128,
+        "compound_final": 128,
+        "compound_work": 128,
+        "chronology": 80,
+        "relations": 80,
+        "chain": 80,
+        "inverted": 80
+      }
+    }
+  },
+  "scope": "explicit composition + paired wording + retention, not matched to smaller previous budgets"
+}

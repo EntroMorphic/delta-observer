@@ -1,0 +1,41 @@
+{
+  "experiment": "Observer.D-LFM matched conversational-diversity control",
+  "status": "valid negative coherence result; diversity improves teacher-forced metrics",
+  "compression": 12.672249143181372,
+  "initial_checkpoint": "R2 output distillation",
+  "schedule": {
+    "raw_sequences": 8192,
+    "instruction_sequences": 1024,
+    "unique_instruction_sequences": 1024,
+    "instruction_repetition": 1,
+    "instruction_batch_fraction": 0.1111111111111111,
+    "steps": 4608,
+    "elapsed_seconds": 861.5078090829993,
+    "learning_rate": 0.0001
+  },
+  "instruction_validation": {
+    "cross_entropy": 4.735399873851577,
+    "normalized_ce_retention": 0.5970732553876843,
+    "teacher_top1_agreement": 0.2878787910780701,
+    "teacher_cross_entropy": 0.4468451390855932
+  },
+  "raw_validation": {
+    "cross_entropy": 5.956341575831175,
+    "normalized_ce_retention": 0.8543494289210076,
+    "teacher_top1_agreement": 0.259002685546875,
+    "teacher_cross_entropy": 5.081088493578136
+  },
+  "matched_delta_vs_repeated_128": {
+    "instruction_normalized_ce_retention": 0.0095759824652055,
+    "instruction_teacher_top1_agreement": 0.00676982839268156,
+    "raw_normalized_ce_retention": 0.0051766249119687
+  },
+  "prompt_suite": {
+    "suite_version": 2,
+    "coherent": 0,
+    "total": 8,
+    "result": "research/results/lfm_mixed_diversity_1k_prompts.json",
+    "frozen_prompt_passed": false
+  },
+  "conclusion": "Replacing eight repetitions of 128 conversations with 1,024 unique conversations improves held-out instruction retention by 0.96 percentage points and raw retention by 0.52 points under a matched schedule. Diversity helps teacher-forced prediction, but free generation remains incoherent on all eight prompts. Do not claim behavioral retention or fund brute-force R3 without testing stronger observer-derived initialization."
+}

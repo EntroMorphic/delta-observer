@@ -1,0 +1,27 @@
+{
+  "tasks": 100,
+  "categories": 5,
+  "tasks_per_category": 20,
+  "tasks_sha256": "db4c9543facb990be6644d74eade05d0d84ede837d22ddfdcef73b4fc547255d",
+  "prior_sources": [
+    {
+      "path": "research/lfm/pretrained_development_tasks_v2.json",
+      "sha256": "890f2781c17d85765bb3b5f688d6c2322f276581da44eea9f09b7f192f2fd63d"
+    },
+    {
+      "path": "research/lfm/control_prompts.json",
+      "sha256": "79763bba7bea44a29d690a1158eda215d69d637d19f80a089f45aabfd9fc46ef"
+    },
+    {
+      "path": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/native-lfm-pilot-data-v1/unique.json",
+      "sha256": "c463df7cf1ec81754cd5532ef8baa8b9d337790ec111632fb61b6a5630b5cf35"
+    },
+    {
+      "path": "/private/var/folders/zq/1xg6mmv1627btc7ghn90_hlh0000gn/T/opencode/native-lfm-pilot-data-v1/repeated.json",
+      "sha256": "afac99ba7a64f683141ca795d3bc4449bf2bac5eddef2057494e42a6be384e83"
+    }
+  ],
+  "normalized_exact_or_5gram_jaccard_08_overlaps": [],
+  "max_prior_5gram_jaccard": 0.0,
+  "caveat": "Lexical overlap audit does not prove semantic independence or upstream pretraining decontamination"
+}
