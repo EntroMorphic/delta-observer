@@ -81,3 +81,44 @@ unequal-sized carry classes is a coarse clustering measure. A null result
 for a factor means "not detected at this sample size", not "irrelevant".
 Nothing here tests whether transient clustering occurs in other tasks or
 architectures.
+
+## Addendum A — observer decomposition and observer-free measurement
+
+Frozen after reading the v1 sweep (`research/results/scaffolding_ablation_v1.json`)
+and before running anything below. Exploratory and post-hoc: motivated by the
+v1 observation that replacing the paper observer with the notebook observer
+(`P/observer`) left final silhouette at +0.12 to +0.15 on all five seeds
+instead of about −0.02.
+
+### Question
+
+Does dissolution in the paper configuration depend on the observer's
+objective rather than on the source networks? Two parts:
+
+1. **Decomposition.** The `observer` factor bundles two differences. Split
+   them on the paper baseline: `P/obs-nobit` removes only the bit-position
+   cross-entropy head (keeps cosine LR); `P/obs-constlr` keeps the head and
+   uses a constant observer LR. `P` and `P/observer` are rerun alongside.
+2. **Observer-free measurement.** Every epoch, also compute the carry-count
+   silhouette of the sources' own activations: the concatenated
+   monolithic + compositional activations (128-D, standardized per feature),
+   and the monolithic and compositional activations separately. The observer
+   cannot influence these: the sources never see the observer.
+   Configurations: `P`, `P/observer`, `N`.
+
+Same seeds (0–4), epochs, presence rule and decision rule as v1, applied
+to each measurement.
+
+### Predictions (recorded before running)
+
+- The bit-position head, not the LR schedule, accounts for most of the
+  non-dissolution: `P/obs-nobit` final silhouette > 0.08 in ≥ 4/5 seeds;
+  `P/obs-constlr` dissolves (presence rule) in ≥ 4/5 seeds.
+- Uncertain, stated anyway: the sources' own activations show weaker
+  transient structure than the observer latent in `P` (lower peak or no
+  dissolution).
+
+### Interpretation limits
+
+As v1. The source measurements use standardized raw activations; other
+feature scalings could give different silhouettes.
