@@ -122,3 +122,35 @@ to each measurement.
 
 As v1. The source measurements use standardized raw activations; other
 feature scalings could give different silhouettes.
+
+## Addendum B — supervision and observer-free subspace
+
+Frozen after reading addendum A (`research/results/scaffolding_ablation_addendum_a.json`)
+and before running anything below. Exploratory and post-hoc.
+
+Addendum A found that (1) removing the observer's bit-position head stops
+dissolution (final silhouette 0.16–0.22, 5/5 seeds), and (2) the sources' own
+standardized activations show no transient carry-count clustering (silhouette
+≈ 0.03, peaking at the end of training). The paper's observer is also
+supervised on carry count (`0.1 · MSE` carry regression; paper Algorithm 1:
+"reconstruct activations + predict carry count"), so carry-count structure in
+its latent may be imposed by that objective. Measurement (2) used the full
+activation space, where structure in a subspace could be diluted.
+
+### Question
+
+1. **Supervision.** `P/obs-unsup`: the paper observer with reconstruction
+   loss only (no bit-position head, no carry head; cosine LR kept). Compared
+   with `P` (recon + carry + bit) and `P/obs-nobit` (recon + carry).
+2. **Observer-free subspace.** Every epoch, a 16-component PCA (refit each
+   epoch, unsupervised) of the standardized concatenated source activations:
+   carry-count silhouette (`src_pca16`) and linear R².
+
+Configurations: `P`, `P/obs-nobit`, `P/obs-unsup`, `N`. Seeds 0–4; rules as v1.
+
+### Predictions (recorded before running)
+
+- `P/obs-unsup`: `online_minus_pca ≤ 0` in ≥ 4/5 seeds, and observer-latent
+  peak silhouette < 0.10 in ≥ 4/5 seeds (carry-count structure in the latent
+  comes from carry supervision).
+- `src_pca16` in `P`: transient clustering absent (presence rule) in ≥ 4/5 seeds.
