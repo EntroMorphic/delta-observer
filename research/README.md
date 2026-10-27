@@ -66,6 +66,9 @@ candidate research gap that came out of it, with its kill criteria.
 [`reports/interface_sweep_v0.md`](reports/interface_sweep_v0.md) is an
 exploratory follow-up: how message width and locality decide how much
 staleness a modular network absorbs.
+[`reports/contract_experiments_v0.md`](reports/contract_experiments_v0.md)
+tests the follow-up idea that interfaces have a lifecycle and tolerate
+asynchrony once settled.
 
 ## Run
 

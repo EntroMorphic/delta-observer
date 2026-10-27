@@ -39,6 +39,7 @@ PIPE_WIDTH = 64
 # arm -> (stage kind, message width, message quantizer, message extrapolation)
 ARMS = {
     "A_cont_w1": ("adder", 1, None, False),
+    "B_cont_w2": ("adder", 2, None, False),
     "B_cont_w4": ("adder", 4, None, False),
     "B_cont_w16": ("adder", 16, None, False),
     "C_round_w1": ("adder", 1, "round", False),
@@ -78,14 +79,15 @@ class StagedNet(nn.Module):
     pipeline: a monolithic MLP cut at its hidden layers; only the last stage emits.
     """
 
-    def __init__(self, kind, width, quantizer=None):
+    def __init__(self, kind, width, quantizer=None, hidden=WIDTHS):
         super().__init__()
-        self.kind, self.width, self.quantizer, self.n = kind, width, quantizer, len(WIDTHS)
+        self.kind, self.width, self.quantizer, self.n = kind, width, quantizer, len(hidden)
+        self.snap = None  # per stage (threshold, low, high): snap messages to two levels, no gradient
         if kind == "adder":
             self.stages = nn.ModuleList(
                 nn.Sequential(nn.Linear(2 + width, h), nn.ReLU(), nn.Linear(h, h), nn.ReLU(),
                               nn.Linear(h, 2 if s == self.n - 1 else 1 + width))
-                for s, h in enumerate(WIDTHS))
+                for s, h in enumerate(hidden))
         elif kind == "pipeline_local":
             self.stages = nn.ModuleList(
                 LocalStage(2 * N_BITS + 1 if s == 0 else width, width, 2 if s == self.n - 1 else 1)
@@ -115,6 +117,9 @@ class StagedNet(nn.Module):
         out = functional_call(module, params, (torch.cat([x[:, s:s + 1], x[:, s + self.n:s + self.n + 1], message], 1),))
         if s == self.n - 1:
             return slice(s, s + 2), out, None
+        if self.snap is not None:
+            threshold, low, high = self.snap[s]
+            return slice(s, s + 1), out[:, :1], torch.where(out[:, 1:] > threshold, high, low).detach()
         return slice(s, s + 1), out[:, :1], straight_through(out[:, 1:], self.quantizer)
 
 
@@ -146,12 +151,15 @@ def predict(new, old):
 
 
 class Trainer:
-    def __init__(self, arm, seed, delay, order_offset=0):
+    def __init__(self, arm, seed, delay, order_offset=0, dataset=None, hidden=WIDTHS):
+        """`dataset` replaces the adder with any task laid out the same way:
+        stage s reads columns s and s + 6, column 12 seeds the first message."""
         self.arm, (kind, width, quantizer, self.extrapolate) = arm, ARMS[arm]
         self.delay = delay
         torch.manual_seed(seed)
-        self.inputs, self.outputs = adder_dataset()
-        self.net = StagedNet(kind, width, quantizer)
+        self.inputs, self.outputs = adder_dataset() if dataset is None else dataset
+        self.is_adder = dataset is None
+        self.net = StagedNet(kind, width, quantizer, hidden)
         self.order = torch.Generator().manual_seed(seed + 10_000 + 1_000 * order_offset)
         self.steps_per_epoch = len(self.inputs) // BATCH
         self.opt = torch.optim.Adam(self.net.parameters(), lr=PEAK_LR)
@@ -222,7 +230,7 @@ class Trainer:
 
     def interface_meaning(self):
         """R^2 of the true carry into each adder stage from the message (linear fit)."""
-        if self.net.kind != "adder":
+        if self.net.kind != "adder" or not self.is_adder:
             return None
         x, n = self.inputs, self.net.n
         messages = incoming_messages(self.net, [{k: p.detach() for k, p in v.items()} for v in self.live()], x)
