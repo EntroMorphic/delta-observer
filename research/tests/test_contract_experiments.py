@@ -46,6 +46,26 @@ class ContractExperimentTests(unittest.TestCase):
         for p, s, f in zip(perm.gradients(x, y), stale.gradients(x, y), fresh.gradients(x, y)):
             torch.testing.assert_close((p - f).reshape(-1).sort().values, (s - f).reshape(-1).sort().values)
 
+    def test_correlated_noise_has_set_size_and_memory(self):
+        from research.experiments.contract_experiments import CorrelatedNoiseTrainer
+        noisy, fresh = CorrelatedNoiseTrainer("A_cont_w1", 0, 0), Trainer("A_cont_w1", 0, 0)
+        x, y = noisy.inputs[:64], noisy.outputs[:64]
+        f = fresh.gradients(x, y)
+        first = [n - g for n, g in zip(noisy.gradients(x, y), f)]
+        second = [n - g for n, g in zip(noisy.gradients(x, y), f)]
+        for a, g in zip(first, f):
+            torch.testing.assert_close(a.norm(), 0.3 * g.norm())
+        cos = torch.nn.functional.cosine_similarity(first[2].reshape(-1), second[2].reshape(-1), dim=0)
+        self.assertGreater(float(cos), 0.5)  # rho = 0.75 for tau = 4
+
+    def test_split_is_disjoint_and_covers(self):
+        from research.experiments.contract_experiments import split
+        from research.experiments.second_star_slip_v2 import adder_dataset
+        (tx, _), (vx, _) = split(adder_dataset(), 3)
+        self.assertEqual(len(tx) + len(vx), 8192)
+        rows = {tuple(r.tolist()) for r in tx}
+        self.assertFalse(any(tuple(r.tolist()) in rows for r in vx[:500]))
+
     def test_automaton_arms_build(self):
         data = automaton_dataset(1)
         for arm in ["A_cont_w1", "G_cont_w64", "F_pipeline_w64"]:

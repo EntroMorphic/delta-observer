@@ -114,6 +114,60 @@ This is worth its own look, with prior art first: anticorrelated noise
 injection (Orvieto et al., 2022), and work on how noise correlated in time
 interacts with Adam's moment estimates.
 
+## Held-out test: does the perturbation help learning, or only fitting?
+
+Each seed (200–209) trains on a random 25% of the cases and tests exact-match
+accuracy on the other 75%. Training stops at 100% train accuracy or after 200
+epochs.
+
+Conditions:
+- **Fresh.**
+- **Permuted staleness error (d=4).**
+- **White noise** matched to the staleness error (d=4).
+- **Synthetic correlated noise:** AR(1) with a correlation time of 4 steps, at
+  a per-tensor norm of 0.3× the gradient norm. There is no staleness in this
+  arm. The 0.3 comes from a measurement: after warmup, the staleness error is
+  0.3–0.5× the gradient per tensor.
+
+| Task / arm | Condition | Train fits | Median fit epoch | Median test accuracy | Test wins / losses against fresh |
+|---|---|---|---|---|---|
+| Adder, chain w1 | Fresh | 8/10 | 34.5 | 1.000 | – |
+| | Permuted | **10/10** | 36 | 1.000 | 2 / 0 |
+| | White | 9/10 | 34 | 1.000 | 1 / 0 |
+| | Correlated | 9/10 | 37 | 1.000 | 1 / 1 |
+| Adder, chain w4 | Fresh | 9/10 | 40 | 1.000 | – |
+| | Correlated | **10/10** | 36 | 1.000 | 1 / 0 |
+| Automaton, chain w16 | Fresh | 9/10 | 88 | 0.993 | – |
+| | Permuted | 10/10 | 97 | 0.994 | 2 / 1 |
+| | White | 8/10 | 127 | 0.992 | 1 / 4 |
+| | Correlated | 10/10 | 82 | 0.996 | 2 / 0 |
+| Adder, plain pipeline | Fresh | 10/10 | 81.5 | **0.991** | – |
+| | Permuted | 10/10 | 71 | 0.986 | 1 / 6 |
+| | White | 7/10 | 162 | 0.986 | 1 / 6 |
+| | Correlated | 10/10 | 105 | 0.971 | **0 / 9** |
+
+"Wins" and "losses" count seeds whose test accuracy differs from fresh by more
+than 0.005. The omitted w4 rows (permuted and white) match fresh to within one
+seed.
+
+- **The modular chains generalize almost perfectly under every condition.**
+  Each stage sees only its local inputs, so the architecture does the
+  generalizing. The perturbations make the train fit slightly more reliable
+  (10/10 against 8–9/10) and do nothing measurable to test accuracy.
+- **The full-data speed-up does not replicate.** On a 25% split, median fit
+  times are about the same with and without the perturbations.
+- **The perturbations hurt generalization where it is non-trivial.** In the
+  monolithic pipeline, all three make test accuracy worse. Synthetic
+  correlated noise loses on 9 of 9 seeds that differ, by a median of 2.1
+  points.
+  - The permuted error fits faster (71 against 81.5 epochs) but generalizes
+    worse.
+
+**Verdict:** the perturbation helps *fitting*, a little and inconsistently. It
+does not help *learning*, and where learning is hard it hurts. What
+generalizes here is the architecture: stages with local inputs and outputs
+that match the task's structure.
+
 ## X1. Lifecycle along a fresh trajectory
 
 Adder chain, widths 1 and 4, seeds 200–209. Every 16 steps for 16 epochs,
@@ -239,8 +293,10 @@ message values. That uses no labels, and no gradient crosses the boundary.
    - A per-interface switch did *not* beat the best global one (X2). This
      was the part that would have been new.
 3. **Slowly varying, misaligned gradient perturbations rescue stalled Adam
-   runs** and speed up healthy ones (the permutation control). This is
-   unexplained, possibly an optimizer finding, and needs a prior-art check.
+   runs** on full-data fitting (the permutation control). On a held-out split
+   they make fitting slightly more reliable, but they do not improve test
+   accuracy, and in the monolithic network they reduce it. This is a fitting
+   trick, not a learning one.
 
 ## Reproduce
 
@@ -249,6 +305,7 @@ python -m unittest research.tests.test_contract_experiments research.tests.test_
 python -m research.experiments.contract_experiments rescue
 python -m research.experiments.contract_experiments automaton
 python -m research.experiments.contract_experiments discretize
+python -m research.experiments.contract_experiments generalize
 python -m research.experiments.contract_lifecycle
 python -m research.experiments.contract_switch
 python -m research.experiments.contract_experiments rescue --kinds permuted \

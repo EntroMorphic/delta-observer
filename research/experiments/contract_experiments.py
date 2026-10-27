@@ -8,6 +8,8 @@
                snap every message to two levels found by 1-D 2-means
                (no labels; no gradient crosses) and/or switch
                every interface to delay 256 or 1024.
+    generalize train on 25% of cases, test on the rest: does a perturbation
+               that speeds fitting also help held-out accuracy?
     automaton  X5: an interface the student is not told. Each stage reads a
                2-bit symbol; a random 6-state machine moves; each stage emits a
                random 1-bit label of the state. Width and staleness sweep.
@@ -31,6 +33,7 @@ import torch
 
 from research.experiments.curvature_dynamics import sha256
 from research.experiments.interface_sweep import BATCH, MAX_EPOCHS, Trainer, incoming_messages
+from research.experiments.second_star_slip_v2 import WIDTHS, adder_dataset
 
 ROOT = Path(__file__).resolve().parents[2]
 N_STAGES, N_STATES = 6, 6
@@ -103,6 +106,28 @@ class PermutedErrorTrainer(Trainer):
         return [f + (s - f).reshape(-1)[perm].reshape(f.shape) for f, s, perm in zip(fresh, stale, self.perms)]
 
 
+class CorrelatedNoiseTrainer(Trainer):
+    """Fresh gradients plus synthetic AR(1) noise: correlation time TAU steps,
+    per-tensor norm ALPHA x the fresh gradient norm. No staleness involved."""
+
+    ALPHA, TAU = 0.3, 4.0
+
+    def gradients(self, x, y):
+        delay, self.delay = self.delay, 0
+        fresh = super().gradients(x, y)
+        self.delay = delay
+        rho = 1 - 1 / self.TAU
+        if not hasattr(self, "noise"):
+            self.noise_rng = torch.Generator().manual_seed(54321)
+            self.noise = [torch.randn(f.shape, generator=self.noise_rng) for f in fresh]
+        out = []
+        for k, f in enumerate(fresh):
+            self.noise[k] = rho * self.noise[k] + (1 - rho ** 2) ** 0.5 * torch.randn(f.shape, generator=self.noise_rng)
+            n = self.noise[k]
+            out.append(f + n * (self.ALPHA * f.norm() / n.norm().clamp_min(1e-12)))
+        return out
+
+
 def participation_ratio(messages):
     """Effective dimension of what crosses each interface: (sum λ)² / sum λ²."""
     ratios = []
@@ -169,9 +194,57 @@ def discretize_job(job):
             "accuracy_curve": curve, "seconds": time.time() - started}
 
 
+TRAIN_FRACTION = 0.25
+GENERALIZE_TASKS = [("adder", "A_cont_w1"), ("adder", "B_cont_w4"), ("automaton", "B_cont_w16"),
+                    ("adder", "F_pipeline_w64")]
+GENERALIZE_CONDITIONS = {"fresh": (Trainer, 0), "permuted": (PermutedErrorTrainer, 4),
+                         "white": (NoiseTrainer, 4), "correlated": (CorrelatedNoiseTrainer, 0)}
+
+
+def split(dataset, seed):
+    x, y = dataset
+    order = torch.randperm(len(x), generator=torch.Generator().manual_seed(seed + 777))
+    cut = int(TRAIN_FRACTION * len(x))
+    return (x[order[:cut]], y[order[:cut]]), (x[order[cut:]], y[order[cut:]])
+
+
+def exact_accuracy(trainer, x, y):
+    inputs, outputs = trainer.inputs, trainer.outputs
+    trainer.inputs, trainer.outputs = x, y
+    score = trainer.accuracy()
+    trainer.inputs, trainer.outputs = inputs, outputs
+    return score
+
+
+def generalize_job(job):
+    _, task, arm, seed, condition = job
+    torch.set_num_threads(1)
+    started = time.time()
+    full = automaton_dataset(seed) if task == "automaton" else adder_dataset()
+    train, test = split(full, seed)
+    cls, delay = GENERALIZE_CONDITIONS[condition]
+    trainer = cls(arm, seed, delay, 0, train, AUTOMATON_HIDDEN if task == "automaton" else WIDTHS)
+    train_curve, test_curve, fit_epoch = [], [], None
+    for epoch in range(1, MAX_EPOCHS + 1):
+        order = torch.randperm(len(trainer.inputs), generator=trainer.order)
+        for i in range(0, len(order), BATCH):
+            trainer.step(order[i:i + BATCH])
+        train_curve.append(trainer.accuracy())
+        test_curve.append(exact_accuracy(trainer, *test))
+        if train_curve[-1] == 1.0:
+            fit_epoch = epoch
+            break
+    return {"kind": "generalize", "task": task, "arm": arm, "seed": seed, "condition": condition,
+            "delay": delay, "order_offset": 0, "fit_epoch": fit_epoch, "final_accuracy": train_curve[-1],
+            "test_at_end": test_curve[-1], "best_test": max(test_curve), "train_curve": train_curve,
+            "test_curve": test_curve, "seconds": time.time() - started}
+
+
 def run_job(job):
     if job[0] == "discretize":
         return discretize_job(job)
+    if job[0] == "generalize":
+        return generalize_job(job)
     kind, arm, seed, delay, order_offset = job
     torch.set_num_threads(1)
     started = time.time()
@@ -217,6 +290,9 @@ def jobs_for(experiment, seeds):
             for k in (0, 1, 2):
                 jobs += [(kind, arm, seed, delay, k) for kind in RESCUE_KINDS]
         return jobs
+    if experiment == "generalize":
+        return [("generalize", task, arm, seed, c) for task, arm in GENERALIZE_TASKS for seed in seeds
+                for c in GENERALIZE_CONDITIONS]
     if experiment == "discretize":
         return [("discretize", "A_cont_w1", seed, d, mode) for seed in seeds
                 for d in (0, 256, 1024) for mode in MODES]
@@ -225,7 +301,7 @@ def jobs_for(experiment, seeds):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("experiment", choices=["rescue", "automaton", "discretize"])
+    parser.add_argument("experiment", choices=["rescue", "automaton", "discretize", "generalize"])
     parser.add_argument("--seeds", nargs="+", type=int, default=None,
                         help="default 200-204; 200-209 for discretize")
     parser.add_argument("--modes", nargs="+", default=None, help="discretize only")
@@ -234,8 +310,10 @@ def main():
     parser.add_argument("--workers", type=int, default=9)
     args = parser.parse_args()
     if args.seeds is None:
-        args.seeds = list(range(200, 210 if args.experiment == "discretize" else 205))
-    jobs = sorted(jobs_for(args.experiment, args.seeds), key=lambda j: -j[3])
+        args.seeds = list(range(200, 210 if args.experiment in ("discretize", "generalize") else 205))
+    jobs = jobs_for(args.experiment, args.seeds)
+    if args.experiment != "generalize":
+        jobs.sort(key=lambda j: -j[3])
     if args.kinds:
         jobs = [j for j in jobs if j[0] in args.kinds]
     if args.modes:
@@ -244,14 +322,16 @@ def main():
     with get_context("spawn").Pool(args.workers) as pool:
         for row in pool.imap_unordered(run_job, jobs):
             rows.append(row)
-            print(f"{row['kind']:>9} {row['arm']:>21} seed {row['seed']} d {row['delay']:>3} order {row['order_offset']}: "
+            print(f"{row['kind']:>9} {row.get('condition', ''):>10} {row['arm']:>21} seed {row['seed']} d {row['delay']:>3} order {row['order_offset']}: "
                   f"fit {row['fit_epoch']} (final {row['final_accuracy']:.3f}, {row['seconds']:.0f}s)", flush=True)
     commit = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, cwd=ROOT).stdout.strip()
     report = {"status": "exploratory", "plan": "journal/paradigm_synth.md (gitignored)", "experiment": args.experiment,
               "script_sha256": sha256(__file__), "git_commit": commit, "started": started,
               "finished": time.strftime("%Y-%m-%dT%H:%M:%S"),
               "environment": {"python": platform.python_version(), "torch": torch.__version__, "numpy": np.__version__},
-              "settings": {"discretize_epoch": DISCRETIZE_EPOCH, "seeds": args.seeds, "n_states": N_STATES, "automaton_hidden": AUTOMATON_HIDDEN},
+              "settings": {"train_fraction": TRAIN_FRACTION,
+                           "correlated_noise": {"alpha": CorrelatedNoiseTrainer.ALPHA, "tau": CorrelatedNoiseTrainer.TAU},
+                           "discretize_epoch": DISCRETIZE_EPOCH, "seeds": args.seeds, "n_states": N_STATES, "automaton_hidden": AUTOMATON_HIDDEN},
               "rows": rows}
     out = ROOT / (args.output or f"research/results/contract_{args.experiment}_v0.json")
     out.write_text(json.dumps(report, indent=1))
