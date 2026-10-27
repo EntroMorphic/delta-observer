@@ -177,3 +177,70 @@ python -m unittest research.tests.test_optimizer_maths research.tests.test_curva
 python -m research.experiments.curvature_dynamics --workers 3   # ~35 min on 3 cores
 python -m research.experiments.plot_curvature_dynamics
 ```
+
+## Addendum — block structure (exploratory, not pre-registered)
+
+Prompted by the results above and run afterwards; no predictions were frozen.
+Harness: `research/experiments/curvature_structure.py`; tests:
+`research/tests/test_curvature_structure.py`; raw results:
+`research/results/curvature_structure_v1.json`. Seeds 0–2, same checkpoints.
+Blocks are the top-level modules: the four full adders (compositional) or the
+four layers (monolithic). "Within share" is the fraction of the Hessian's
+squared Frobenius norm inside the diagonal blocks.
+
+### Compositional model: local curvature, coupled while learning
+
+| Seed | Within share, epoch 0 | Minimum (epoch) | Epoch 200 | Block-only λ_max / full λ_max, epoch 200 | Final loss |
+|---|---|---|---|---|---|
+| 0 | 0.99 | 0.74 (20) | 0.78 | 0.67 | 8e-15 |
+| 2 | 0.99 | 0.82 (15) | 0.87 | 0.95 | 4e-10 |
+| 1 | 0.99 | 0.85 (10) | 0.88 | 0.98 | 6e-7 |
+
+A random four-way split would give 0.25. The near-total locality at
+initialization follows from the wiring: modules touch only through the carry.
+Coupling rises while the carry chain is learned, then partly recedes. The
+seed that fit most tightly kept the most coupling, in all three seeds; three
+seeds fall in a given order by chance one time in six.
+
+### Monolithic model: curvature starts between layers
+
+Within-layer share is 0.03 at initialization against a 0.41 random baseline,
+then 0.47–0.50 at epoch 200. The cause is exact and already known:
+
+Write `H = G + R`, with `G` the Gauss–Newton part (positive semi-definite) and
+`R` the residual part weighted by the errors. Inside one linear region, a ReLU
+network's output is linear in each layer's parameters taken alone, so `R` is
+zero on every within-layer block ("block-hollow"; Singh, Bachmann & Hofmann,
+NeurIPS 2021; Singh, Hofmann & Schölkopf, ICML 2023). The exact within-layer
+blocks of `H` therefore equal those of `G`, which also follows from the layer
+recursion in Botev, Ritter & Barber (ICML 2017).
+
+| Monolithic, seeds 0–2 | Epoch 0 | Epoch 2 | Epoch 20 | Epoch 200 |
+|---|---|---|---|---|
+| ‖R‖ / ‖H‖ | 0.97–0.98 | 0.36–0.41 | 0.03–0.07 | < 0.001 |
+| Within-layer share of `R` | ≤ 2e-29 | ≤ 2e-29 | ≤ 1e-27 | ≤ 1e-23 |
+| Within-layer share of `G` | 0.60–0.65 | 0.58–0.62 | 0.41–0.47 | 0.47–0.50 |
+| Negative / positive eigenvalues of `R` | 3,000–3,117 each, equal | equal ± 1 | equal ± 2 | equal |
+
+Because `R` has zero diagonal blocks it has zero trace, so its eigenvalues
+sum to zero; the counts of negative and positive eigenvalues came out equal
+(to within 2) at every checkpoint. At initialization `R` is 97% of `H`, which
+explains the "half the eigenvalues are negative" result in Part B. As the
+errors shrink, `R` vanishes and `H` becomes `G`.
+
+In the compositional model each adder has three layers, so `R` is not zero
+within a module; it is 98–99% within-module at initialization and falls to
+0.17–0.51 by epoch 200, by which point `R` is under 0.1% of `H`.
+
+### What this adds
+
+Nothing here is new as mathematics; the zero blocks and the equality of
+within-layer Hessian and Gauss–Newton blocks are known. New for this
+repository: the coupling between modules is measurable, concentrated on the
+carry, and largest while the carry chain is being learned. That observation
+motivated [`second_star_slip.md`](second_star_slip.md).
+
+```bash
+python -m unittest research.tests.test_curvature_structure
+python -m research.experiments.curvature_structure --workers 3   # ~40 min on 3 cores
+```
