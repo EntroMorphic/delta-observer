@@ -3,7 +3,7 @@
 
     rescue     X3: on adder seeds that stall fresh, is staleness better than
                isotropic gradient noise matched per step and per tensor to the
-               staleness error?
+               staleness error, or than that error with its entries permuted?
     discretize X4: adder chain, width 1, fresh until epoch 10; then optionally
                snap every message to two levels found by 1-D 2-means
                (no labels; no gradient crosses) and/or switch
@@ -85,6 +85,24 @@ class NoiseTrainer(Trainer):
         return out
 
 
+class PermutedErrorTrainer(Trainer):
+    """Fresh gradients plus the true staleness error with each tensor's entries
+    scrambled by a fixed random permutation: same norm, same entries, same
+    correlation over time; only its alignment with the network is destroyed."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        generator = torch.Generator().manual_seed(12345)
+        self.perms = [torch.randperm(p.numel(), generator=generator) for p in self.net.parameters()]
+
+    def gradients(self, x, y):
+        stale = super().gradients(x, y)
+        delay, self.delay = self.delay, 0
+        fresh = super().gradients(x, y)
+        self.delay = delay
+        return [f + (s - f).reshape(-1)[perm].reshape(f.shape) for f, s, perm in zip(fresh, stale, self.perms)]
+
+
 def participation_ratio(messages):
     """Effective dimension of what crosses each interface: (sum λ)² / sum λ²."""
     ratios = []
@@ -161,6 +179,8 @@ def run_job(job):
         trainer = Trainer(arm, seed, delay, order_offset, automaton_dataset(seed), AUTOMATON_HIDDEN)
     elif kind == "noise":
         trainer = NoiseTrainer(arm, seed, delay, order_offset)
+    elif kind == "permuted":
+        trainer = PermutedErrorTrainer(arm, seed, delay, order_offset)
     else:
         trainer = Trainer(arm, seed, delay, order_offset)
     curve, fit_epoch = [], None
@@ -184,6 +204,7 @@ def run_job(job):
 
 
 RESCUE_CASES = [("A_cont_w1", 100, 4), ("A_cont_w1", 104, 16), ("B_cont_w16", 102, 4), ("B_cont_w16", 104, 16)]
+RESCUE_KINDS = ["stale", "noise", "permuted"]
 HEALTHY_CASES = [("A_cont_w1", 101, 4), ("A_cont_w1", 102, 4), ("A_cont_w1", 103, 4)]
 AUTOMATON_ARMS = ["A_cont_w1", "B_cont_w2", "B_cont_w4", "B_cont_w16", "G_cont_w64",
                   "H_pipeline_local_w64", "F_pipeline_w64"]
@@ -194,7 +215,7 @@ def jobs_for(experiment, seeds):
         jobs = []
         for arm, seed, delay in RESCUE_CASES + HEALTHY_CASES:
             for k in (0, 1, 2):
-                jobs += [("stale", arm, seed, delay, k), ("noise", arm, seed, delay, k)]
+                jobs += [(kind, arm, seed, delay, k) for kind in RESCUE_KINDS]
         return jobs
     if experiment == "discretize":
         return [("discretize", "A_cont_w1", seed, d, mode) for seed in seeds
@@ -208,12 +229,15 @@ def main():
     parser.add_argument("--seeds", nargs="+", type=int, default=None,
                         help="default 200-204; 200-209 for discretize")
     parser.add_argument("--modes", nargs="+", default=None, help="discretize only")
+    parser.add_argument("--kinds", nargs="+", default=None, help="rescue only")
     parser.add_argument("--output", default=None)
     parser.add_argument("--workers", type=int, default=9)
     args = parser.parse_args()
     if args.seeds is None:
         args.seeds = list(range(200, 210 if args.experiment == "discretize" else 205))
     jobs = sorted(jobs_for(args.experiment, args.seeds), key=lambda j: -j[3])
+    if args.kinds:
+        jobs = [j for j in jobs if j[0] in args.kinds]
     if args.modes:
         jobs = [j for j in jobs if j[0] != "discretize" or j[4] in args.modes]
     started, rows = time.strftime("%Y-%m-%dT%H:%M:%S"), []

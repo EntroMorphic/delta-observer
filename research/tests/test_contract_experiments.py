@@ -36,6 +36,16 @@ class ContractExperimentTests(unittest.TestCase):
         for n, s, f in zip(noisy.gradients(x, y), stale.gradients(x, y), fresh.gradients(x, y)):
             torch.testing.assert_close((n - f).norm(), (s - f).norm())
 
+    def test_permuted_error_keeps_entries_and_norm(self):
+        from research.experiments.contract_experiments import PermutedErrorTrainer
+        perm, stale, fresh = PermutedErrorTrainer("A_cont_w1", 0, 2), Trainer("A_cont_w1", 0, 2), Trainer("A_cont_w1", 0, 0)
+        for t in (perm, stale, fresh):
+            for k in range(3):
+                t.history.append([{n: p + 0.01 * (k + 1) for n, p in v.items()} for v in t.history[-1]])
+        x, y = perm.inputs[:64], perm.outputs[:64]
+        for p, s, f in zip(perm.gradients(x, y), stale.gradients(x, y), fresh.gradients(x, y)):
+            torch.testing.assert_close((p - f).reshape(-1).sort().values, (s - f).reshape(-1).sort().values)
+
     def test_automaton_arms_build(self):
         data = automaton_dataset(1)
         for arm in ["A_cont_w1", "G_cont_w64", "F_pipeline_w64"]:

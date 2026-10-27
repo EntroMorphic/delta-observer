@@ -8,7 +8,9 @@
 - Harnesses: `research/experiments/contract_experiments.py` and
   `research/experiments/contract_lifecycle.py`, with tests in
   `research/tests/test_contract_*.py`.
-- Raw results: `research/results/contract_{rescue,automaton,lifecycle,discretize}_v0.json`.
+- X2 harness: `research/experiments/contract_switch.py`.
+- Raw results: `research/results/contract_{rescue,automaton,lifecycle,discretize,switch}_v0.json`
+  and `research/results/contract_rescue_v0_permuted.json`.
 
 ## The idea under test
 
@@ -31,8 +33,8 @@ Training recipe, as in the sweep:
 |---|---|---|---|
 | 1 | Staleness tolerance switches on after the transition | 85% | **Held**. After 10 synchronous epochs, 256-step staleness on every interface is free. From step 0, 64 steps stopped every seed. |
 | 2 | A settlement signal that needs no knowledge of the true carry rises *before* harm collapses | 45% | **Killed**. It lags by a median 0.75 epochs at width 1 and shows no consistent order at width 4. |
-| 3 | Per-interface decoupling beats the best global switch | 25% | **Not run**. Its gate was claim 2. |
-| 4 | Staleness rescues stalled runs better than matched noise | 35% | **Held, weakly**. Staleness is fast in 9/9 rescue runs, matched noise in 4/9. |
+| 3 | Per-interface decoupling beats the best global switch | 25% | **Killed** (X2, run in a second round). Triggers fire too early on some interfaces and lose fit rate. |
+| 4 | Staleness rescues stalled runs because it desynchronises *structure* | 35% | **Killed** by the permutation control. The same error with its entries scrambled rescues *better*. |
 | 5 | Snapping a settled interface to two levels keeps the fit and makes it staleness-proof | 50% | **Killed**. Snapping freezes wrong contracts, and it lowers tolerance at d=1024. |
 | 6 | Staleness lowers the effective dimension of wide interfaces, on a task with no designed latent | 20% | **Killed**. The participation ratio rises slightly at d=4 and d=16. |
 | — | Narrow interfaces are better (from the sweep), on an unknown-interface task | — | **Not replicated**. Width has a sweet spot; only *locality* replicated. |
@@ -86,10 +88,31 @@ the norm of the error that staleness would cause.
 | Width 16, seed 104, d=16 | none ×3 | 130, none, none | none, 18, none |
 | Healthy width-1 seeds 101–103, d=4 | 9–14 | 11–16 | 9–55 |
 
-Staleness rescues more reliably than matched noise, but noise often rescues
-too. The noise here is independent across steps, while staleness error is
-correlated in time. A fairer control would use temporally correlated noise,
-so "structured desynchronisation beats noise" is not established.
+In the first round, staleness rescued more reliably than white noise of matched
+norm. White noise is independent across steps, though, while staleness error
+is correlated in time. So I added a sharper control in a second round: the
+true staleness error with each tensor's entries scrambled by a fixed random
+permutation. That keeps its norm, its entries and its correlation over time,
+and destroys only its alignment with the network.
+
+| Case | Stale | White noise | Permuted stale error |
+|---|---|---|---|
+| Width 1, seed 100, d=4 | 14, 12, 11 | 58, 13, 12 | **7, 7, 7** |
+| Width 1, seed 104, d=16 | 49, 29, 33 | 135, 46, 153 | **13, 10, 21** |
+| Width 16, seed 102, d=4 | 14, 15, 14 | 31, 41, 16 | 9, 25, 17 |
+| Width 16, seed 104, d=16 | 130, none, none | none, 18, none | none, 15, none |
+| Healthy width-1 seeds 101–103, d=4 | 11–16 | 9–55 | **8–13** |
+
+- **The permuted error rescues better than staleness itself.** It also
+  speeds up healthy seeds, fitting in 7–8 epochs against 9–14 fresh.
+- **Alignment with the network costs something.** The helpful ingredient is a
+  perturbation of the right size that varies slowly over time.
+- **This looks like an optimizer effect, not an interface effect.** It is
+  probably about how Adam responds to slowly varying gradient noise.
+
+This is worth its own look, with prior art first: anticorrelated noise
+injection (Orvieto et al., 2022), and work on how noise correlated in time
+interacts with Adam's moment estimates.
 
 ## X1. Lifecycle along a fresh trajectory
 
@@ -129,8 +152,49 @@ Results:
 The plan said a lagging signal would make the detector useless. For
 *decoupling*, a signal that fires late is safe; it only spends some extra
 communication. The real defect is firing *early*, which happens 18–49% of
-the time. I kept the plan's gate and did not run X2, but the gate was badly
-chosen.
+the time. I kept the plan's gate and did not run X2 in the first round. The gate was
+badly chosen, so X2 was run in a second round, below.
+
+## X2. Cut the wire, per interface against global
+
+Adder chain, widths 1 and 4, seeds 200–209.
+- **Mechanics:** training starts synchronous. A decoupled interface goes to
+  delay 256 and stays there. Stages see each other live within a run of
+  coupled interfaces, and 256 steps old across any decoupled one.
+- **Policies:**
+  - Always synchronous.
+  - Global switch after E epochs, for E in 2, 4, 6, 8, 10, 12 and 16.
+  - Per-interface trigger: decouple interface *i* once its coupling signal
+    has been below *f* × its running peak for *k* consecutive checks (every 16
+    steps), with *f* ∈ {0.1, 0.25} and *k* ∈ {2, 4, 8}.
+- **Selection rule, fixed before looking:** on tune seeds 200–202, keep the
+  policies whose fit count is at least the synchronous one and whose median
+  time to fit is within 1.2× of it. Among those, choose the lowest
+  synchronous cost, then report on seeds 203–209.
+
+| Width | Policy | Fits (10 seeds) | Median fit | Decoupling epochs (median, earliest) |
+|---|---|---|---|---|
+| 1 | Synchronous | 7/10 | 11 | – |
+| 1 | Global at 10 (selected) | **8/10** | 11 | 10, 10 |
+| 1 | Best trigger (*f* 0.1, *k* 8) | 6/10 | 10.5 | 9.75, **4.75** |
+| 4 | Synchronous | 9/10 | 12 | – |
+| 4 | Global at 8 | 7/10 | 11 | 8, 8 |
+| 4 | Best trigger (*f* 0.1, *k* 8) | 5/10 | 11 | 9.25, **4.5** |
+
+- **No trigger passed the selection rule** on either width.
+- **No global switch passed it at width 4**, where synchronous training fit
+  3/3 tune seeds.
+- **At width 1 the selected global switch generalised.** On test seeds it fit
+  5/7, against 4/7 for synchronous training.
+- **Why the triggers lose:** each has a median decoupling time close to the
+  right epoch, but fires as early as epochs 3.5–4.75 on some interfaces. That
+  is during negotiation, and each such early cut can cost a seed. Per-interface
+  timing does not pay for that risk here.
+- **A caveat on the toy.** Contracts settle only a few epochs before the
+  run fits, so even a perfect switch saves little communication. The idea
+  matters only where most training happens after settlement, as in long
+  training runs. That regime is the territory of global methods like
+  DiLoCo, which this result does not beat.
 
 ## X4. Decouple, and optionally snap, after settlement
 
@@ -167,23 +231,26 @@ message values. That uses no labels, and no gradient crosses the boundary.
    with their own inputs and outputs. This holds on two tasks. Message width
    matters only through capacity: too narrow cannot learn, and excess width
    costs some tolerance.
-2. **Asynchrony tolerance is a phase of training.** Settled contracts tolerate
+2. **Asynchrony tolerance is a phase of training** (the global form). Settled contracts tolerate
    at least 4× more delay than unsettled ones. That gap is the difference
    between "16 steps doubles the time" and "256 steps is free".
    - The global form of this, "sync early, async later", is known (post-local
      SGD, DiLoCo-style warm starts).
-   - The open question is whether a per-interface switch beats the best
-     global one. Interfaces do settle 4–8 epochs apart. No early-firing
-     detector exists yet.
-3. **Staleness rescues stalled runs** more reliably than white noise of matched
-   norm. Temporally correlated noise has not been tested.
+   - A per-interface switch did *not* beat the best global one (X2). This
+     was the part that would have been new.
+3. **Slowly varying, misaligned gradient perturbations rescue stalled Adam
+   runs** and speed up healthy ones (the permutation control). This is
+   unexplained, possibly an optimizer finding, and needs a prior-art check.
 
 ## Reproduce
 
 ```bash
-python -m unittest research.tests.test_contract_experiments research.tests.test_contract_lifecycle
+python -m unittest research.tests.test_contract_experiments research.tests.test_contract_lifecycle research.tests.test_contract_switch
 python -m research.experiments.contract_experiments rescue
 python -m research.experiments.contract_experiments automaton
 python -m research.experiments.contract_experiments discretize
 python -m research.experiments.contract_lifecycle
+python -m research.experiments.contract_switch
+python -m research.experiments.contract_experiments rescue --kinds permuted \
+    --output research/results/contract_rescue_v0_permuted.json
 ```
