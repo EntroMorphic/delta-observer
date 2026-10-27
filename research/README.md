@@ -61,6 +61,8 @@ environment (root `requirements.txt`); see the report for commands.
 optimizer identities (AdamW, Muon, Newton, Gauss–Newton) and measures exact
 Hessians of the paper's source models over training
 ([protocol](reports/curvature_protocol.md)). Run in the paper environment.
+[`reports/second_star_slip.md`](reports/second_star_slip.md) documents a
+candidate research gap that came out of it, with its kill criteria.
 
 ## Run
 
