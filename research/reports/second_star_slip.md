@@ -1,9 +1,10 @@
 # The Second Star Slip
 
-A candidate gap, documented on 2026-10-27. **Status: v1 killed under its
-pre-registered criterion; a narrower within-moment version is open** (see
-[`second_star_slip_results.md`](second_star_slip_results.md)). Not shown to be
-novel. This file records what the gap is, how it differs from the
+A candidate gap, documented on 2026-10-27. **Status: killed twice under
+pre-registered criteria** (v1: [`second_star_slip_results.md`](second_star_slip_results.md);
+v2, with a repeatable target: [`second_star_slip_v2_results.md`](second_star_slip_v2_results.md)).
+Cross-module error ranks interface cost above chance but weakly (ρ ≈ 0.2–0.3)
+and no better than cheap alternatives. This file records what the gap is, how it differs from the
 nearest prior work, what evidence prompted it, and how to kill it.
 
 ## The idea
