@@ -96,6 +96,13 @@ Each step gets a frozen protocol before it runs.
 
 ## Novelty checks still owed
 
+Found since v1: DC-ASGD (Zheng et al., ICML 2017,
+[arXiv 1609.08326](https://arxiv.org/abs/1609.08326)) corrects stale gradients
+with the first-order term `H (w_t − w_τ)` in data-parallel training. The
+v1 diagnostics show that staleness error across a module interface is exactly
+this term restricted to the cross-module block, so the mechanism is known;
+only its per-interface use for scheduling or correction remains a candidate.
+
 The search behind this note was about a dozen queries, several answered from
 abstracts. Before any novelty claim:
 

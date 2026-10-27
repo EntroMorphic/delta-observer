@@ -108,9 +108,104 @@ they were chosen after seeing the data. They motivate a test; they are not one.
   signal to find. A fair test needs interfaces that differ, such as unequal
   widths, depths or learning speeds.
 
+## Failure anatomy (exploratory, not pre-registered)
+
+Harness: `research/experiments/second_star_slip_diagnostics.py`; raw results:
+`research/results/second_star_slip_diagnostics_v1.json`. It rebuilds every v1
+onset state (the fresh run is deterministic and matches v1 exactly) and
+measures the mechanism linking staleness to harm. Five findings, in order of
+how much they explain.
+
+### 1. The harm measure mostly tracked training progress
+
+Harm was a log ratio of losses one epoch later. The fresh run's own loss at
+the onset predicts it about as well as or better than any candidate
+(ρ = −0.70, −0.52, −0.64 at delays 1, 10, 100). The same absolute slip counts
+for more as the loss shrinks: mean absolute harm peaks at epoch 10, log harm
+at epochs 20–60. Coupling and the top eigenvalue both rise as the model
+learns, so both inherit this correlation. That is why they tied: the pooled
+test asked which signal tracks progress, and nearly any curvature signal
+does.
+
+### 2. One-epoch harm does not predict the long-run cost
+
+Matched against Part 1 runs with the same seed, interface, delay and onset
+(135 pairs), one-epoch harm does not predict how much later the model first
+reaches lasting 100% accuracy (ρ = −0.03 overall; −0.25, 0.52 and −0.37 at
+each delay). It correlates moderately with loss spikes (ρ = 0.51), which are
+the same kind of relative loss jump. The v1 target measured local damage
+that training mostly recovers from.
+
+### 3. The interface ranking is mostly noise at short delays
+
+Replaying each window with two other batch orders (same state, same
+staleness), the within-moment ranking of the three interfaces repeats with
+mean Spearman 0.40 ± 0.09 (delay 1), 0.48 ± 0.10 (delay 10) and 0.77 ± 0.05
+(delay 100). At delays 1 and 10 no predictor could rank interfaces much better
+than chance, because the target does not repeat. Coupling's +0.52 at delay 1
+falls to +0.32 ± 0.12 against harm averaged over the three batch orders. Only
+delay 100 has a "which interface" signal worth measuring.
+
+### 4. The mechanism is right; the v1 signal discarded half of it
+
+The gradient error that staleness causes is, to first order,
+`e = −H_AB Δθ_B`: cross-module curvature applied to how far the other side has
+moved. Measured directly against the exact error, this linearization has
+median cosine 0.99, 0.96 and 0.74 at delays 1, 10 and 100, with magnitude
+ratio 0.95–1.02. So the Second Star Slip's physical picture holds.
+
+The v1 signal κ_cut is a ratio of *norms*. It ignores the movement vector
+`Δθ_B`, and within a moment it ranks the actual cross-module error poorly
+(ρ = 0.28, 0.28, 0.18). At delay 100, against the averaged harm, the
+vector-form error ranks interfaces at +0.38 ± 0.12 (linearized) and
++0.40 ± 0.14 (exact). Message drift ranks them at +0.46 ± 0.14 and κ_cut at
+−0.12 ± 0.13.
+
+Pooled, the relative gradient error predicts harm better than the top
+eigenvalue at delays 10 and 100 (ρ = 0.67 and 0.83, against 0.57 and 0.71).
+But it still shares finding 1's confound, since its denominator shrinks with
+the gradient.
+
+### 5. Not explained by Adam or instability
+
+Adam-preconditioned coupling predicts worse than raw coupling (pooled
+ρ = 0.45–0.52). Adam's preconditioned sharpness, lr × λ_max(PH), stays at
+2–15, below the roughly 38 at which Adam with β₁ = 0.9 reaches its edge of
+stability (Cohen et al., 2022). So the windows are not instability events.
+
+### What this means
+
+The v1 failure is mostly a failure of the experiment, not a refutation of the
+mechanism. The target was confounded by progress, did not predict long-run
+cost, and was too noisy to rank interfaces at short delays. In a testbed
+whose three interfaces are nearly identical, the signal was the scalar half of
+a vector quantity.
+
+The vector form `H_AB Δθ_B` has a known relative: DC-ASGD (Zheng et al.,
+ICML 2017) *corrects* stale gradients in data-parallel training with a
+first-order Taylor term `H (w_t − w_τ)`, using a cheap Hessian approximation.
+The candidate gap therefore narrows again. What remains open is using the
+*cross-module* part of that term to decide, interface by interface, when to
+communicate, or to correct a stale interface instead of communicating.
+
+A v2 should:
+
+1. Use a target that predicts long-run cost: matched-budget time-to-fit or
+   loss at a fixed horizon, normalized for progress.
+2. Measure the target's test-retest reliability first, and score predictors
+   only where it is at least 0.7.
+3. Use the vector signal `‖H_AB Δθ_B‖`. It costs one Hessian-vector product
+   per interface on the recent movement, with message drift as the cheap
+   rival to beat.
+4. Use interfaces that differ in width, depth or learning speed, so "which
+   interface" has an answer.
+5. Include the corrective alternative: DC-ASGD-style compensation across
+   interfaces, compared with scheduling.
+
 ## Reproduce
 
 ```bash
 python -m unittest research.tests.test_second_star_slip
 python -m research.experiments.second_star_slip --workers 6   # ~15 min on 6 cores
+python -m research.experiments.second_star_slip_diagnostics     # ~10 min
 ```
