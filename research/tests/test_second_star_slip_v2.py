@@ -1,6 +1,5 @@
 """Harness checks for research/reports/second_star_slip_v2_protocol.md."""
 
-import copy
 import unittest
 
 import torch
