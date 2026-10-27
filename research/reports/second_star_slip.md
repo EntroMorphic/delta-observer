@@ -35,9 +35,8 @@ modular training.
 
 ## Why it surfaced here
 
-From `curvature_results.md` and exploratory follow-up measurements
-(`research/experiments/curvature_structure.py`; 3 seeds, a 4-bit adder; not
-pre-registered; the committed results addendum will follow its run):
+From `curvature_results.md` and its exploratory block-structure addendum
+(3 seeds, a 4-bit adder; not pre-registered):
 
 - In the compositional model, cross-module curvature can only pass through the
   carry wire. At initialization 99% of curvature is within modules.
