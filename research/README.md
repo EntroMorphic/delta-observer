@@ -63,6 +63,9 @@ Hessians of the paper's source models over training
 ([protocol](reports/curvature_protocol.md)). Run in the paper environment.
 [`reports/second_star_slip.md`](reports/second_star_slip.md) documents a
 candidate research gap that came out of it, with its kill criteria.
+[`reports/interface_sweep_v0.md`](reports/interface_sweep_v0.md) is an
+exploratory follow-up: how message width and locality decide how much
+staleness a modular network absorbs.
 
 ## Run
 
