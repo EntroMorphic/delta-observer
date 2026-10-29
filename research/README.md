@@ -76,6 +76,8 @@ is the pre-registered confirmation of the two candidates that survived a
 reruns the underpowered tests at power-checked delays.
 [`reports/staleness_floor_v0.md`](reports/staleness_floor_v0.md) maps where
 staleness becomes lethal and how far the directional effect moves that floor.
+[`reports/hybrid_staleness_v0.md`](reports/hybrid_staleness_v0.md) tests
+Muon/Adam hybrids at the optimizer crossover.
 
 ## Run
 

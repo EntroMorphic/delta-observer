@@ -95,6 +95,12 @@ Curvature here is eᵀHe/|e|² for error e and full-batch Hessian H.
 
 ## 3. Mechanism: what each optimizer does with the error
 
+> **Caveat added later.** The impulse probe in
+> [`hybrid_staleness_v0.md`](hybrid_staleness_v0.md) shows that Muon at
+> lr 0.03 oscillates from step to step even without injection. Its one-step
+> loss changes below mix phase with harm. The Muon row should not be read as
+> damage. The Adam and SGD rows are from non-oscillatory regimes.
+
 At each probe point the network and optimizer state are copied, and one step
 is taken with f, with f + real error, and with f + permuted error. Here f is
 the fresh gradient. The table describes the update error δ = step(f + error) −
