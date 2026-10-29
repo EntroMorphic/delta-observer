@@ -1,0 +1,112 @@
+{
+ "status": "exploratory",
+ "script_sha256": "bb1f3c84c453f6b13260d98405e3dc807fcbea1738f973b657fb229e2a2195b9",
+ "rows": [
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "a_peak_median": 34.04305078124999,
+   "a_peak_range": [
+    15.759408854166663,
+    175.03172499999997
+   ],
+   "beta": 0.9,
+   "predicted_floor": 0,
+   "measured_floor": 4,
+   "within_2x": false
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.01,
+   "a_peak_median": 217.60917499999996,
+   "a_peak_range": [
+    76.69034999999998,
+    352.1461124999999
+   ],
+   "beta": 0.9,
+   "predicted_floor": 0,
+   "measured_floor": 4,
+   "within_2x": false
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.1,
+   "a_peak_median": 0.787152099609375,
+   "a_peak_range": [
+    0.5224370956420898,
+    0.8590326309204102
+   ],
+   "beta": 0.9,
+   "predicted_floor": 0,
+   "measured_floor": 4,
+   "within_2x": false
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "a_peak_median": 1.935647964477539,
+   "a_peak_range": [
+    1.4608559131622314,
+    2.5652950286865233
+   ],
+   "beta": 0.9,
+   "predicted_floor": 0,
+   "measured_floor": 1,
+   "within_2x": false
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.01,
+   "a_peak_median": 11.747615169556433,
+   "a_peak_range": [
+    10.052907250547191,
+    19.502926111559887
+   ],
+   "beta": 0.0,
+   "predicted_floor": 0,
+   "measured_floor": 8,
+   "predicted_floor_beta_0.95": 0,
+   "within_2x": false
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "a_peak_median": 14.64266095384236,
+   "a_peak_range": [
+    14.621293466725673,
+    18.756022735691907
+   ],
+   "beta": 0.0,
+   "predicted_floor": 0,
+   "measured_floor": 4,
+   "predicted_floor_beta_0.95": 0,
+   "within_2x": false
+  },
+  {
+   "optimizer": "sgd0",
+   "lr": 1.0,
+   "a_peak_median": 3.4936907291412354,
+   "a_peak_range": [
+    2.823512077331543,
+    5.876743316650391
+   ],
+   "beta": 0.0,
+   "predicted_floor": 0,
+   "measured_floor": 8,
+   "within_2x": false
+  },
+  {
+   "optimizer": "sgd0",
+   "lr": 3.0,
+   "a_peak_median": 9.042453289031982,
+   "a_peak_range": [
+    6.915080308914185,
+    32.21224594116211
+   ],
+   "beta": 0.0,
+   "predicted_floor": 0,
+   "measured_floor": 0,
+   "within_2x": false
+  }
+ ]
+}
