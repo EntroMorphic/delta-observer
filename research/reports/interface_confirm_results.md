@@ -11,7 +11,7 @@ runs.
 |---|---|
 | **H1a.** Locality: the wide chain fits sooner than the same-width plain pipeline at d=16 | **Not supported on either task.** The kill criterion is formally met, but the test had almost no power (see below). |
 | **H1b.** Width: the narrow-but-sufficient chain fits sooner than the wide chain at d=16 | **Confirmed on both tasks** |
-| **H2.** Directional harm: the permuted error fits sooner than the real staleness error | **Supported for Adam only.** By the protocol, this makes it an optimizer quirk, not a general property of staleness. |
+| **H2.** Directional harm: the permuted error fits sooner than the real staleness error | **Supported for Adam only.** The rule classifies this as Adam-specific. For SGD and Muon the test was untestable (floor effect, below), not refuted. |
 
 ## H1: fits out of 10, median epochs to fit
 
@@ -86,8 +86,11 @@ frozen protocol and fresh seeds before it counts.
     networks, and calibrated constant learning rates. So this is a contrast,
     not a contradiction.
 
-**How to read this:** the directional finding is real for Adam and does not
-generalize. One explanation fits the data:
+**How to read this:** the directional finding is real for Adam. For SGD and
+Muon it is **undetermined, not refuted**: with stale 0/20 and permuted 1/20,
+only 1 pair is informative, so p = 0.5 was the best possible outcome. Testing
+those optimizers needs a delay at which stale runs still fit. One explanation
+fits the Adam data:
 - Adam normalizes each coordinate, which caps the error's per-coordinate
   size. What remains to do harm is then the error's alignment.
 - SGD and Muon pass the error's full magnitude into the update, and that
@@ -104,9 +107,32 @@ That explanation is a hypothesis; this test does not establish it.
    outputs) tolerates more staleness than a same-width pipeline. The effect
    is large at d=4, but the pre-registered primary at d=16 was underpowered
    by my design.
-3. **Adam-specific:** staleness harm under Adam comes from the error's
-   direction; under SGD and Muon its size is already lethal. The paper's angle
-   here is the optimizer dependence, as the kill criterion said.
+3. **Shown for Adam only:** staleness harm under Adam comes from the error's
+   direction. Under SGD and Muon its size is lethal at d=16, so direction could
+   not be tested there. A lower delay is needed before calling it
+   Adam-specific.
+
+## The nature of the two non-confirmations
+
+Both are **floor effects**. The code and its tests behaved correctly, and
+the test design is what failed.
+
+- **The scoring rule:** a run that never fits is censored at 201 epochs, and
+  a seed where both arms are censored is a tie. The Wilcoxon test drops ties.
+- **The resulting limit:** with n informative pairs, the smallest one-sided
+  p is 1/2ⁿ. Passing at p < 0.05 needs at least 5 informative pairs, all
+  pointing the same way. The rule's median-log-ratio condition also fails
+  when most pairs are tied at 0.
+- **H1a:** 1 and 3 informative pairs, every one favouring the chain. The test
+  could not pass at any effect size.
+- **H2 under SGD and Muon:** 1 informative pair each, so the same applies.
+- **Cause:** I chose d=16 without checking that the arms in each comparison
+  could still train at that delay. Exploration had already shown the
+  width-64 chain failing at d=16.
+- **Fix for any rerun:** pick each primary delay on calibration seeds, so
+  that the stronger arm in each comparison fits on most seeds. This is a
+  power check made before freezing, without looking at the comparison
+  itself.
 
 ## Reproduce
 
