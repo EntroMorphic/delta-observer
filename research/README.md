@@ -74,6 +74,8 @@ is the pre-registered confirmation of the two candidates that survived a
 [prior-art check](reports/prior_art_check_v0.md).
 [`reports/interface_confirm_v2_results.md`](reports/interface_confirm_v2_results.md)
 reruns the underpowered tests at power-checked delays.
+[`reports/staleness_floor_v0.md`](reports/staleness_floor_v0.md) maps where
+staleness becomes lethal and how far the directional effect moves that floor.
 
 ## Run
 

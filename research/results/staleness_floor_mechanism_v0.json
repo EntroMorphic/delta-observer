@@ -1,0 +1,6449 @@
+{
+ "status": "exploratory",
+ "mode": "mechanism",
+ "script_sha256": "bfeaa7b35662ec1aca803665e749cf2a35cbea4ecf332422b6628ea5ec5c30de",
+ "git_commit": "f4ca256ad149a6d39b61d55e9661bca74923a8a2",
+ "started": "2026-10-29T07:29:24",
+ "finished": "2026-10-29T07:30:15",
+ "environment": {
+  "python": "3.9.6",
+  "torch": "2.8.0",
+  "numpy": "2.0.2"
+ },
+ "settings": {
+  "seeds": [
+   400,
+   401,
+   402,
+   403,
+   404
+  ],
+  "floor_epochs": 120,
+  "delays": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "settings": [
+   [
+    "adam",
+    0.0033333333333333335
+   ],
+   [
+    "adam",
+    0.01
+   ],
+   [
+    "sgd",
+    0.1
+   ],
+   [
+    "sgd",
+    0.3
+   ],
+   [
+    "muon",
+    0.01
+   ],
+   [
+    "muon",
+    0.03
+   ]
+  ],
+  "mechanism": [
+   [
+    "adam",
+    0.0033333333333333335,
+    16
+   ],
+   [
+    "sgd",
+    0.3,
+    2
+   ],
+   [
+    "muon",
+    0.03,
+    4
+   ]
+  ]
+ },
+ "rows": [
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "A_cont_w1",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0009765625,
+     "real": {
+      "norm": 0.004491568314079287,
+      "cos_with_gradient": 0.012501051649451256,
+      "curvature": 0.002287410897480055
+     },
+     "permuted": {
+      "norm": 0.004491568314079287,
+      "cos_with_gradient": 0.08690513670444489,
+      "curvature": 0.1833078604431246
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0009765625,
+     "real": {
+      "norm": 0.004356103260042243,
+      "cos_with_gradient": 0.19990387558937073,
+      "curvature": 0.2956384252019226
+     },
+     "permuted": {
+      "norm": 0.004356103051255933,
+      "cos_with_gradient": -0.007330958731472492,
+      "curvature": 0.04639488461665659
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.00390625,
+     "real": {
+      "norm": 0.008041248374714548,
+      "cos_with_gradient": -0.05264134332537651,
+      "curvature": 0.9359213024189288
+     },
+     "permuted": {
+      "norm": 0.008041248374714548,
+      "cos_with_gradient": 0.011287069879472256,
+      "curvature": 0.027425291292380707
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.00537109375,
+     "real": {
+      "norm": 0.010676226842626108,
+      "cos_with_gradient": 0.22201840579509735,
+      "curvature": 0.12239634766546859
+     },
+     "permuted": {
+      "norm": 0.010676226842626108,
+      "cos_with_gradient": 0.1878046989440918,
+      "curvature": 0.0640119170469812
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0126953125,
+     "real": {
+      "norm": 0.012349427695576705,
+      "cos_with_gradient": -0.1753004789352417,
+      "curvature": 0.45668285100753364
+     },
+     "permuted": {
+      "norm": 0.012349427106403023,
+      "cos_with_gradient": 0.06414394825696945,
+      "curvature": 0.09528413515880375
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.0289306640625,
+     "real": {
+      "norm": 0.02292877158881544,
+      "cos_with_gradient": -0.49580568075180054,
+      "curvature": 0.41326179025831417
+     },
+     "permuted": {
+      "norm": 0.022928774127445015,
+      "cos_with_gradient": -0.12753184139728546,
+      "curvature": 0.031385941020488375
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.033447265625,
+     "real": {
+      "norm": 0.0159187412878977,
+      "cos_with_gradient": -0.20117685198783875,
+      "curvature": 0.626553653823515
+     },
+     "permuted": {
+      "norm": 0.01591874220203498,
+      "cos_with_gradient": 0.031006893143057823,
+      "curvature": 0.08523076783489468
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.063720703125,
+     "real": {
+      "norm": 0.052920351313559,
+      "cos_with_gradient": -0.8597832918167114,
+      "curvature": 1.2555431431913777
+     },
+     "permuted": {
+      "norm": 0.052920349113737546,
+      "cos_with_gradient": -0.26097118854522705,
+      "curvature": 0.16226752379881892
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.1883544921875,
+     "real": {
+      "norm": 0.18005656611878162,
+      "cos_with_gradient": -0.9301186800003052,
+      "curvature": 1.5191272302079244
+     },
+     "permuted": {
+      "norm": 0.18005656611878162,
+      "cos_with_gradient": -0.18975774943828583,
+      "curvature": 0.14655086779207002
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.263671875,
+     "real": {
+      "norm": 0.1950377057068609,
+      "cos_with_gradient": -0.8135812878608704,
+      "curvature": 2.0138146267933483
+     },
+     "permuted": {
+      "norm": 0.1950377057068609,
+      "cos_with_gradient": -0.13560359179973602,
+      "curvature": 0.1392687357399312
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.0234375,
+     "real": {
+      "norm": 1.105365330471878,
+      "cos_with_gradient": -0.9775445461273193,
+      "curvature": 11.08742634012243
+     },
+     "permuted": {
+      "norm": 1.1053652765488495,
+      "cos_with_gradient": -0.07556916028261185,
+      "curvature": 0.16521964104886172
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.234375,
+     "real": {
+      "norm": 0.37785439147805117,
+      "cos_with_gradient": -0.4066469669342041,
+      "curvature": 1.1317720161266671
+     },
+     "permuted": {
+      "norm": 0.3778544111961769,
+      "cos_with_gradient": -0.11611618101596832,
+      "curvature": 0.23318152528472358
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.0118408203125,
+     "real": {
+      "norm": 1.0779931913879193,
+      "cos_with_gradient": -0.9832512736320496,
+      "curvature": 13.346683430199636
+     },
+     "permuted": {
+      "norm": 1.0779931913879193,
+      "cos_with_gradient": -0.0467650331556797,
+      "curvature": 0.07389969567540242
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.0562744140625,
+     "real": {
+      "norm": 0.5228813120173501,
+      "cos_with_gradient": -0.9704203605651855,
+      "curvature": 7.243989363354587
+     },
+     "permuted": {
+      "norm": 0.5228813120173501,
+      "cos_with_gradient": -0.044503360986709595,
+      "curvature": 0.12580913936152877
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.1939697265625,
+     "real": {
+      "norm": 0.4814228106766928,
+      "cos_with_gradient": -0.7546742558479309,
+      "curvature": 1.7133417026270692
+     },
+     "permuted": {
+      "norm": 0.4814228106766928,
+      "cos_with_gradient": -0.049649130553007126,
+      "curvature": 0.08035113486311472
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.083984375,
+     "real": {
+      "norm": 0.6152643832199934,
+      "cos_with_gradient": -0.9368152022361755,
+      "curvature": 4.807153875058957
+     },
+     "permuted": {
+      "norm": 0.6152643832199934,
+      "cos_with_gradient": -0.09398862719535828,
+      "curvature": 0.07425900774670902
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.0430908203125,
+     "real": {
+      "norm": 0.9907141130961744,
+      "cos_with_gradient": -0.9880868196487427,
+      "curvature": 7.081581919806061
+     },
+     "permuted": {
+      "norm": 0.9907141130961744,
+      "cos_with_gradient": -0.07939287275075912,
+      "curvature": 0.16505333671786376
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.1951904296875,
+     "real": {
+      "norm": 0.22570311405370677,
+      "cos_with_gradient": -0.7274321913719177,
+      "curvature": 2.199283182534406
+     },
+     "permuted": {
+      "norm": 0.22570311405370677,
+      "cos_with_gradient": -0.04303475469350815,
+      "curvature": 0.06988657666386269
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.2054443359375,
+     "real": {
+      "norm": 0.5074454815243078,
+      "cos_with_gradient": -0.9394543766975403,
+      "curvature": 2.212079052375167
+     },
+     "permuted": {
+      "norm": 0.5074454815243078,
+      "cos_with_gradient": -0.20766222476959229,
+      "curvature": 0.22445950063985068
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.06396484375,
+     "real": {
+      "norm": 0.5137131242906404,
+      "cos_with_gradient": -0.9436396360397339,
+      "curvature": 5.675426485259153
+     },
+     "permuted": {
+      "norm": 0.5137131242906404,
+      "cos_with_gradient": -0.14504455029964447,
+      "curvature": 0.18189437354080507
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.22705078125,
+     "real": {
+      "norm": 0.3907464220160195,
+      "cos_with_gradient": -0.26192978024482727,
+      "curvature": 1.8403580508096187
+     },
+     "permuted": {
+      "norm": 0.3907464029484597,
+      "cos_with_gradient": -0.11315295100212097,
+      "curvature": 0.10026498663038193
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.3265380859375,
+     "real": {
+      "norm": 0.32925003053423163,
+      "cos_with_gradient": -0.700886070728302,
+      "curvature": 2.760089570061095
+     },
+     "permuted": {
+      "norm": 0.32925001921975927,
+      "cos_with_gradient": -0.15076494216918945,
+      "curvature": 0.17636435176753185
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.8968505859375,
+     "real": {
+      "norm": 0.3212068910655858,
+      "cos_with_gradient": -0.7903870940208435,
+      "curvature": 1.7077569646272084
+     },
+     "permuted": {
+      "norm": 0.3212068910655858,
+      "cos_with_gradient": -0.15766200423240662,
+      "curvature": 0.15129603613926929
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "A_cont_w1",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.007911958937920386,
+      "cos_with_gradient": 0.002761714393272996,
+      "curvature": 0.016558616721066666
+     },
+     "permuted": {
+      "norm": 0.007911958937920386,
+      "cos_with_gradient": -0.05361582711338997,
+      "curvature": 0.0647984178979989
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.006704699694692236,
+      "cos_with_gradient": 0.18304608762264252,
+      "curvature": 0.1137681557025541
+     },
+     "permuted": {
+      "norm": 0.006704699694692236,
+      "cos_with_gradient": 0.18712498247623444,
+      "curvature": 0.10577557587508395
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.000732421875,
+     "real": {
+      "norm": 0.02833637242578971,
+      "cos_with_gradient": -0.010205266065895557,
+      "curvature": 0.45935677907026645
+     },
+     "permuted": {
+      "norm": 0.028336373452873542,
+      "cos_with_gradient": 0.09504515677690506,
+      "curvature": 0.06357395464174073
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.00146484375,
+     "real": {
+      "norm": 0.04532472716808,
+      "cos_with_gradient": -0.21287378668785095,
+      "curvature": -0.15346984184120108
+     },
+     "permuted": {
+      "norm": 0.04532472973655257,
+      "cos_with_gradient": 0.13137204945087433,
+      "curvature": 0.02078539554712332
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.002685546875,
+     "real": {
+      "norm": 0.25100381309910885,
+      "cos_with_gradient": -0.959901750087738,
+      "curvature": 3.735530340908607
+     },
+     "permuted": {
+      "norm": 0.25100381309910885,
+      "cos_with_gradient": -0.1457333117723465,
+      "curvature": 0.1233968097380024
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.00439453125,
+     "real": {
+      "norm": 0.030146229649892706,
+      "cos_with_gradient": -0.5382679104804993,
+      "curvature": 0.9767561379370066
+     },
+     "permuted": {
+      "norm": 0.030146229649892706,
+      "cos_with_gradient": -0.12474754452705383,
+      "curvature": 0.05535342319615817
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.0107421875,
+     "real": {
+      "norm": 0.0369838785403903,
+      "cos_with_gradient": -0.7664282321929932,
+      "curvature": 1.6305983935315709
+     },
+     "permuted": {
+      "norm": 0.0369838785403903,
+      "cos_with_gradient": -0.2006191611289978,
+      "curvature": 0.132311484653439
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.02392578125,
+     "real": {
+      "norm": 0.052242292283701676,
+      "cos_with_gradient": 0.6148684024810791,
+      "curvature": 0.9494672869211667
+     },
+     "permuted": {
+      "norm": 0.052242292283701676,
+      "cos_with_gradient": 0.2575799524784088,
+      "curvature": 0.14550340724803726
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.003662109375,
+     "real": {
+      "norm": 0.16623376651433472,
+      "cos_with_gradient": -0.8774723410606384,
+      "curvature": 0.9145745694291295
+     },
+     "permuted": {
+      "norm": 0.16623376091184727,
+      "cos_with_gradient": -0.2017473429441452,
+      "curvature": 0.12651546505020655
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.0140380859375,
+     "real": {
+      "norm": 0.29711850118450733,
+      "cos_with_gradient": -0.9772259593009949,
+      "curvature": 2.9989218190983773
+     },
+     "permuted": {
+      "norm": 0.29711850118450733,
+      "cos_with_gradient": -0.22650420665740967,
+      "curvature": 0.18124655604544682
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.00634765625,
+     "real": {
+      "norm": 0.2128541197669555,
+      "cos_with_gradient": -0.918857991695404,
+      "curvature": 1.9796236991829943
+     },
+     "permuted": {
+      "norm": 0.2128541022653424,
+      "cos_with_gradient": -0.1890968680381775,
+      "curvature": 0.10814435284744166
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.03466796875,
+     "real": {
+      "norm": 0.25404685602200355,
+      "cos_with_gradient": -0.8858081102371216,
+      "curvature": 2.9835179360513373
+     },
+     "permuted": {
+      "norm": 0.25404685602200355,
+      "cos_with_gradient": -0.11284159123897552,
+      "curvature": 0.12328051128176463
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.05029296875,
+     "real": {
+      "norm": 0.21281526264072384,
+      "cos_with_gradient": -0.6560235023498535,
+      "curvature": 1.7815484261114838
+     },
+     "permuted": {
+      "norm": 0.21281526264072384,
+      "cos_with_gradient": -0.14219346642494202,
+      "curvature": 0.13748067864431696
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.00830078125,
+     "real": {
+      "norm": 0.5107215016481216,
+      "cos_with_gradient": -0.9386335611343384,
+      "curvature": 5.220391308764097
+     },
+     "permuted": {
+      "norm": 0.5107215016481216,
+      "cos_with_gradient": -0.13862450420856476,
+      "curvature": 0.1901482355503216
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.010986328125,
+     "real": {
+      "norm": 0.4579052027302,
+      "cos_with_gradient": -0.9200697541236877,
+      "curvature": 3.444308824615276
+     },
+     "permuted": {
+      "norm": 0.45790521900121073,
+      "cos_with_gradient": -0.20957569777965546,
+      "curvature": 0.19059240727051102
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.01025390625,
+     "real": {
+      "norm": 0.35018294185440857,
+      "cos_with_gradient": -0.9151130318641663,
+      "curvature": 2.7879408931260383
+     },
+     "permuted": {
+      "norm": 0.35018294185440857,
+      "cos_with_gradient": -0.10887675732374191,
+      "curvature": 0.0885541751241155
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.05322265625,
+     "real": {
+      "norm": 0.28909871158088435,
+      "cos_with_gradient": -0.8152475357055664,
+      "curvature": 1.2606879261250432
+     },
+     "permuted": {
+      "norm": 0.28909871158088435,
+      "cos_with_gradient": -0.08788451552391052,
+      "curvature": 0.1604211079531931
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.0489501953125,
+     "real": {
+      "norm": 0.21509972841765737,
+      "cos_with_gradient": -0.8994321823120117,
+      "curvature": 1.4831314443230537
+     },
+     "permuted": {
+      "norm": 0.2150997370771063,
+      "cos_with_gradient": -0.20048454403877258,
+      "curvature": 0.12600157456426533
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.0780029296875,
+     "real": {
+      "norm": 0.12983691329492963,
+      "cos_with_gradient": -0.8811123967170715,
+      "curvature": 0.6414016535018244
+     },
+     "permuted": {
+      "norm": 0.12983691329492963,
+      "cos_with_gradient": -0.2635328471660614,
+      "curvature": 0.14348919292563572
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.105712890625,
+     "real": {
+      "norm": 0.3784408857728055,
+      "cos_with_gradient": -0.9778396487236023,
+      "curvature": 2.4930693098151275
+     },
+     "permuted": {
+      "norm": 0.3784408857728055,
+      "cos_with_gradient": -0.21368056535720825,
+      "curvature": 0.14358307693012
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.152099609375,
+     "real": {
+      "norm": 0.4064716321424058,
+      "cos_with_gradient": -0.8872674703598022,
+      "curvature": 2.231200562209993
+     },
+     "permuted": {
+      "norm": 0.4064716321424058,
+      "cos_with_gradient": -0.16498704254627228,
+      "curvature": 0.09387778832202107
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.0201416015625,
+     "real": {
+      "norm": 0.3952833127189556,
+      "cos_with_gradient": -0.9290608763694763,
+      "curvature": 2.7361729122920524
+     },
+     "permuted": {
+      "norm": 0.3952833315676653,
+      "cos_with_gradient": -0.19341985881328583,
+      "curvature": 0.14953347835005948
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.09375,
+     "real": {
+      "norm": 0.12530632780337989,
+      "cos_with_gradient": -0.78581303358078,
+      "curvature": 2.9562985859761586
+     },
+     "permuted": {
+      "norm": 0.12530632037101297,
+      "cos_with_gradient": -0.14783553779125214,
+      "curvature": 0.19654856916652075
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "A_cont_w1",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.000244140625,
+     "real": {
+      "norm": 0.008141711510786034,
+      "cos_with_gradient": 0.14201197028160095,
+      "curvature": 0.10582459705745471
+     },
+     "permuted": {
+      "norm": 0.008141711510786034,
+      "cos_with_gradient": 0.005150025710463524,
+      "curvature": 0.04246950695792099
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.000244140625,
+     "real": {
+      "norm": 0.010791351779172542,
+      "cos_with_gradient": 0.05912226065993309,
+      "curvature": 0.15530908798731613
+     },
+     "permuted": {
+      "norm": 0.010791351779172542,
+      "cos_with_gradient": 0.09169305115938187,
+      "curvature": 0.10573437434396386
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.000244140625,
+     "real": {
+      "norm": 0.018167216882042564,
+      "cos_with_gradient": -0.11545880138874054,
+      "curvature": -0.013165237662313041
+     },
+     "permuted": {
+      "norm": 0.01816721608104395,
+      "cos_with_gradient": 0.05866304412484169,
+      "curvature": 0.02707152043049097
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.00439453125,
+     "real": {
+      "norm": 0.03761373522872067,
+      "cos_with_gradient": -0.10790269821882248,
+      "curvature": 0.1071533483968541
+     },
+     "permuted": {
+      "norm": 0.03761373522872067,
+      "cos_with_gradient": 0.14462321996688843,
+      "curvature": 0.06103118329825277
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.01318359375,
+     "real": {
+      "norm": 0.15148261806498106,
+      "cos_with_gradient": -0.014367238618433475,
+      "curvature": 2.73191462557778
+     },
+     "permuted": {
+      "norm": 0.15148261806498106,
+      "cos_with_gradient": 0.08320606499910355,
+      "curvature": 0.10354989720418768
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.0166015625,
+     "real": {
+      "norm": 0.21292472706211,
+      "cos_with_gradient": -0.8258152604103088,
+      "curvature": 1.7397139631892806
+     },
+     "permuted": {
+      "norm": 0.21292472706211,
+      "cos_with_gradient": -0.06383642554283142,
+      "curvature": 0.09207330590970844
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.010986328125,
+     "real": {
+      "norm": 0.11150952250692163,
+      "cos_with_gradient": -0.7734661102294922,
+      "curvature": 2.6708078842018987
+     },
+     "permuted": {
+      "norm": 0.11150952668289932,
+      "cos_with_gradient": -0.07712657749652863,
+      "curvature": 0.09378199124759912
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.03515625,
+     "real": {
+      "norm": 0.08073791397552324,
+      "cos_with_gradient": -0.7968072295188904,
+      "curvature": 2.131357613363041
+     },
+     "permuted": {
+      "norm": 0.08073791397552324,
+      "cos_with_gradient": -0.03610024228692055,
+      "curvature": 0.08387011281834411
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.028076171875,
+     "real": {
+      "norm": 0.14651916090872627,
+      "cos_with_gradient": -0.8783230781555176,
+      "curvature": 0.8507281957736742
+     },
+     "permuted": {
+      "norm": 0.14651916090872627,
+      "cos_with_gradient": -0.060069117695093155,
+      "curvature": 0.10122340325845224
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.0303955078125,
+     "real": {
+      "norm": 0.11323389346016535,
+      "cos_with_gradient": -0.005700499285012484,
+      "curvature": 0.7270180351795608
+     },
+     "permuted": {
+      "norm": 0.11323390168493369,
+      "cos_with_gradient": 0.044535763561725616,
+      "curvature": 0.04129312043614828
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.005859375,
+     "real": {
+      "norm": 0.7914979570884149,
+      "cos_with_gradient": -0.986979067325592,
+      "curvature": 7.838515848008155
+     },
+     "permuted": {
+      "norm": 0.7914979194353511,
+      "cos_with_gradient": -0.03202655538916588,
+      "curvature": 0.10465851458625999
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.01904296875,
+     "real": {
+      "norm": 0.9221723691137864,
+      "cos_with_gradient": -0.981910228729248,
+      "curvature": 6.214220190173722
+     },
+     "permuted": {
+      "norm": 0.9221723691137864,
+      "cos_with_gradient": -0.005565108731389046,
+      "curvature": 0.08844098242031331
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.005859375,
+     "real": {
+      "norm": 0.42432553684257074,
+      "cos_with_gradient": -0.8530184626579285,
+      "curvature": 2.9724388517644815
+     },
+     "permuted": {
+      "norm": 0.42432553684257074,
+      "cos_with_gradient": -0.1548016518354416,
+      "curvature": 0.127606523609512
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.133056640625,
+     "real": {
+      "norm": 0.3710802979289828,
+      "cos_with_gradient": -0.6819230318069458,
+      "curvature": 2.1028586949581913
+     },
+     "permuted": {
+      "norm": 0.37108027785090036,
+      "cos_with_gradient": -0.1505429893732071,
+      "curvature": 0.1706958926965027
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.0,
+     "real": {
+      "norm": 1.6411454601362072,
+      "cos_with_gradient": -0.9920372366905212,
+      "curvature": 9.954338074159999
+     },
+     "permuted": {
+      "norm": 1.6411454601362072,
+      "cos_with_gradient": -0.09978978335857391,
+      "curvature": 0.14200849907106142
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.0126953125,
+     "real": {
+      "norm": 0.6167465759602888,
+      "cos_with_gradient": -0.8752282857894897,
+      "curvature": 4.164649426418472
+     },
+     "permuted": {
+      "norm": 0.6167465759602888,
+      "cos_with_gradient": -0.10234608501195908,
+      "curvature": 0.09015653617180243
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.0758056640625,
+     "real": {
+      "norm": 0.2630910339088399,
+      "cos_with_gradient": -0.7175611853599548,
+      "curvature": 3.02559683208014
+     },
+     "permuted": {
+      "norm": 0.2630910339088399,
+      "cos_with_gradient": 0.014760421589016914,
+      "curvature": 0.07302502983272362
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.13525390625,
+     "real": {
+      "norm": 0.08703127201412203,
+      "cos_with_gradient": -0.5911871790885925,
+      "curvature": 0.7285741151584308
+     },
+     "permuted": {
+      "norm": 0.08703127201412203,
+      "cos_with_gradient": 0.025402994826436043,
+      "curvature": 0.027800828812090207
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.146484375,
+     "real": {
+      "norm": 0.19172968105004123,
+      "cos_with_gradient": -0.19169938564300537,
+      "curvature": 1.2134747906313084
+     },
+     "permuted": {
+      "norm": 0.19172968105004123,
+      "cos_with_gradient": -0.013766218908131123,
+      "curvature": 0.1303741933326307
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.1171875,
+     "real": {
+      "norm": 0.4444310683813833,
+      "cos_with_gradient": -0.8995524644851685,
+      "curvature": 2.7999089268166015
+     },
+     "permuted": {
+      "norm": 0.4444310683813833,
+      "cos_with_gradient": -0.0743166133761406,
+      "curvature": 0.08923666911751503
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.040283203125,
+     "real": {
+      "norm": 0.47065560508599247,
+      "cos_with_gradient": -0.8636436462402344,
+      "curvature": 3.154577096563143
+     },
+     "permuted": {
+      "norm": 0.47065560508599247,
+      "cos_with_gradient": -0.031766507774591446,
+      "curvature": 0.11039043716240315
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.0413818359375,
+     "real": {
+      "norm": 1.763269253860251,
+      "cos_with_gradient": -0.9671608805656433,
+      "curvature": 11.513088213506936
+     },
+     "permuted": {
+      "norm": 1.7632693214672186,
+      "cos_with_gradient": 0.126517191529274,
+      "curvature": 0.34320083241638855
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.076904296875,
+     "real": {
+      "norm": 0.20559173029313274,
+      "cos_with_gradient": -0.5245521664619446,
+      "curvature": 1.1796946630414942
+     },
+     "permuted": {
+      "norm": 0.20559173029313274,
+      "cos_with_gradient": -0.09199587255716324,
+      "curvature": 0.06481477441956655
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "B_cont_w4",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.013864664021091403,
+      "cos_with_gradient": 0.12950779497623444,
+      "curvature": 0.04804222619147652
+     },
+     "permuted": {
+      "norm": 0.013864663496307121,
+      "cos_with_gradient": 0.007866316474974155,
+      "curvature": 0.006250729095042502
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.021224913195937254,
+      "cos_with_gradient": 0.12818163633346558,
+      "curvature": 0.02719208164348541
+     },
+     "permuted": {
+      "norm": 0.021224912510331838,
+      "cos_with_gradient": 0.07786837220191956,
+      "curvature": 0.03061688236596835
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0018310546875,
+     "real": {
+      "norm": 0.037454512197246506,
+      "cos_with_gradient": -0.04568607732653618,
+      "curvature": 0.141784757700799
+     },
+     "permuted": {
+      "norm": 0.037454512197246506,
+      "cos_with_gradient": 0.1314343363046646,
+      "curvature": 0.025007275747640643
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.005615234375,
+     "real": {
+      "norm": 0.09770629554154027,
+      "cos_with_gradient": -0.5775079131126404,
+      "curvature": 1.8182156613268936
+     },
+     "permuted": {
+      "norm": 0.09770629554154027,
+      "cos_with_gradient": -0.13528870046138763,
+      "curvature": 0.2968254322863143
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.01904296875,
+     "real": {
+      "norm": 0.08227591132386929,
+      "cos_with_gradient": -0.8794830441474915,
+      "curvature": 1.5692845079072624
+     },
+     "permuted": {
+      "norm": 0.08227591132386929,
+      "cos_with_gradient": -0.3500436246395111,
+      "curvature": 0.3722910534046327
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.028076171875,
+     "real": {
+      "norm": 0.06850503321480515,
+      "cos_with_gradient": -0.5531730651855469,
+      "curvature": 1.4575672719547537
+     },
+     "permuted": {
+      "norm": 0.06850503321480515,
+      "cos_with_gradient": -0.08794894814491272,
+      "curvature": 0.19185955939123306
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.01611328125,
+     "real": {
+      "norm": 0.11173518950211214,
+      "cos_with_gradient": -0.6805615425109863,
+      "curvature": 1.2465124318175935
+     },
+     "permuted": {
+      "norm": 0.11173518533456835,
+      "cos_with_gradient": -0.1468108892440796,
+      "curvature": 0.36775903740283766
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.0419921875,
+     "real": {
+      "norm": 0.19919420539897498,
+      "cos_with_gradient": -0.9566047191619873,
+      "curvature": 2.1964454091048684
+     },
+     "permuted": {
+      "norm": 0.19919420539897498,
+      "cos_with_gradient": 0.0038553092163056135,
+      "curvature": 0.3803607871921988
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.006103515625,
+     "real": {
+      "norm": 0.11574185690959744,
+      "cos_with_gradient": -0.829792320728302,
+      "curvature": 0.7106912135091986
+     },
+     "permuted": {
+      "norm": 0.11574185288632265,
+      "cos_with_gradient": -0.11882522702217102,
+      "curvature": 0.14183767802289135
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.0107421875,
+     "real": {
+      "norm": 0.2793342058535911,
+      "cos_with_gradient": -0.9430443644523621,
+      "curvature": 3.265322452585473
+     },
+     "permuted": {
+      "norm": 0.2793342058535911,
+      "cos_with_gradient": -0.3853134214878082,
+      "curvature": 1.0171530954758794
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.0203857421875,
+     "real": {
+      "norm": 0.30756106394490834,
+      "cos_with_gradient": -0.9393114447593689,
+      "curvature": 1.552302640025343
+     },
+     "permuted": {
+      "norm": 0.30756106394490834,
+      "cos_with_gradient": -0.1467588245868683,
+      "curvature": 0.06688739734499376
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.0296630859375,
+     "real": {
+      "norm": 0.5792413192315888,
+      "cos_with_gradient": -0.6994731426239014,
+      "curvature": 1.1569030573271037
+     },
+     "permuted": {
+      "norm": 0.5792412935062805,
+      "cos_with_gradient": -0.02638114057481289,
+      "curvature": 0.09344891665176641
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.03857421875,
+     "real": {
+      "norm": 0.41006159825597244,
+      "cos_with_gradient": -0.8878443241119385,
+      "curvature": 3.1491261822748062
+     },
+     "permuted": {
+      "norm": 0.410061580086554,
+      "cos_with_gradient": -0.03443770855665207,
+      "curvature": 0.05428035913154004
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.0263671875,
+     "real": {
+      "norm": 0.3805205574246978,
+      "cos_with_gradient": -0.9036211967468262,
+      "curvature": 7.287114822876977
+     },
+     "permuted": {
+      "norm": 0.3805205182647584,
+      "cos_with_gradient": -0.09888294339179993,
+      "curvature": 0.10419257892746858
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.0264892578125,
+     "real": {
+      "norm": 0.1706210146253404,
+      "cos_with_gradient": -0.8177824020385742,
+      "curvature": 1.4337043882277802
+     },
+     "permuted": {
+      "norm": 0.1706210146253404,
+      "cos_with_gradient": -0.12309723347425461,
+      "curvature": 0.11221663017285538
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.0499267578125,
+     "real": {
+      "norm": 0.40439575018258017,
+      "cos_with_gradient": -0.919783353805542,
+      "curvature": 3.8965188146201584
+     },
+     "permuted": {
+      "norm": 0.40439575018258017,
+      "cos_with_gradient": -0.04366892948746681,
+      "curvature": 0.0826629017987719
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.0367431640625,
+     "real": {
+      "norm": 0.23258922866902176,
+      "cos_with_gradient": -0.8670791387557983,
+      "curvature": 1.1572840305654537
+     },
+     "permuted": {
+      "norm": 0.23258922866902176,
+      "cos_with_gradient": -0.03742106631398201,
+      "curvature": 0.039400181961490324
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.08349609375,
+     "real": {
+      "norm": 0.2690328052629555,
+      "cos_with_gradient": -0.9572283625602722,
+      "curvature": 1.9946517051112678
+     },
+     "permuted": {
+      "norm": 0.2690328052629555,
+      "cos_with_gradient": -0.07050609588623047,
+      "curvature": 0.1451751804364981
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.041748046875,
+     "real": {
+      "norm": 0.2083352784224944,
+      "cos_with_gradient": -0.8521803021430969,
+      "curvature": 1.6054110775481238
+     },
+     "permuted": {
+      "norm": 0.2083352784224944,
+      "cos_with_gradient": 0.011712745763361454,
+      "curvature": 0.07024667579659262
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.1351318359375,
+     "real": {
+      "norm": 0.08504943513670046,
+      "cos_with_gradient": -0.03811667487025261,
+      "curvature": 0.27442627353749177
+     },
+     "permuted": {
+      "norm": 0.08504942966151652,
+      "cos_with_gradient": 0.024184463545680046,
+      "curvature": 0.0100285320646443
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.085693359375,
+     "real": {
+      "norm": 0.0995157353317768,
+      "cos_with_gradient": -0.10683156549930573,
+      "curvature": 0.7442017928890999
+     },
+     "permuted": {
+      "norm": 0.09951574001104962,
+      "cos_with_gradient": 0.019774354994297028,
+      "curvature": 0.06356619996697285
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.0791015625,
+     "real": {
+      "norm": 0.14715030617333724,
+      "cos_with_gradient": -0.6455225944519043,
+      "curvature": 0.8616937835591976
+     },
+     "permuted": {
+      "norm": 0.14715030617333724,
+      "cos_with_gradient": -0.12140808999538422,
+      "curvature": 0.04249106772656813
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.104248046875,
+     "real": {
+      "norm": 0.2662137742986405,
+      "cos_with_gradient": -0.8806837797164917,
+      "curvature": 0.9442669139337971
+     },
+     "permuted": {
+      "norm": 0.2662137742986405,
+      "cos_with_gradient": -0.07383187115192413,
+      "curvature": 0.10051056667486685
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "B_cont_w4",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0078125,
+     "real": {
+      "norm": 0.006886114745404178,
+      "cos_with_gradient": 0.027264194563031197,
+      "curvature": 0.00553352892851556
+     },
+     "permuted": {
+      "norm": 0.006886115009557396,
+      "cos_with_gradient": -0.06924638897180557,
+      "curvature": 0.02178482939654696
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.015625,
+     "real": {
+      "norm": 0.023942983778171726,
+      "cos_with_gradient": 0.029172267764806747,
+      "curvature": 0.015109223042199823
+     },
+     "permuted": {
+      "norm": 0.023942983778171726,
+      "cos_with_gradient": -0.0235129464417696,
+      "curvature": 0.010327536367192922
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.005859375,
+     "real": {
+      "norm": 0.05170546889850016,
+      "cos_with_gradient": -0.12559111416339874,
+      "curvature": 0.26336862907802233
+     },
+     "permuted": {
+      "norm": 0.05170546889850016,
+      "cos_with_gradient": 0.005097460001707077,
+      "curvature": 0.020375823520928194
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.01220703125,
+     "real": {
+      "norm": 0.030618237427230084,
+      "cos_with_gradient": -0.1214975044131279,
+      "curvature": 0.06380254552993368
+     },
+     "permuted": {
+      "norm": 0.030618237427230084,
+      "cos_with_gradient": 0.025111418217420578,
+      "curvature": 0.022466387025903773
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0064697265625,
+     "real": {
+      "norm": 0.07584294187321929,
+      "cos_with_gradient": 0.2038344293832779,
+      "curvature": 0.5686896222770624
+     },
+     "permuted": {
+      "norm": 0.075842938803314,
+      "cos_with_gradient": 0.18537922203540802,
+      "curvature": 0.10631092467519725
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.0155029296875,
+     "real": {
+      "norm": 0.29273499382122636,
+      "cos_with_gradient": -0.7971314191818237,
+      "curvature": 1.1473087626582124
+     },
+     "permuted": {
+      "norm": 0.2927350065470374,
+      "cos_with_gradient": -0.15544351935386658,
+      "curvature": 0.04108363763815982
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.013671875,
+     "real": {
+      "norm": 0.11479569844154021,
+      "cos_with_gradient": -0.3388806879520416,
+      "curvature": 1.4719412097364306
+     },
+     "permuted": {
+      "norm": 0.11479569438510516,
+      "cos_with_gradient": -0.06031274423003197,
+      "curvature": 0.09846516653032811
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.02880859375,
+     "real": {
+      "norm": 0.21502478514905524,
+      "cos_with_gradient": -0.8052387833595276,
+      "curvature": 1.910061242626673
+     },
+     "permuted": {
+      "norm": 0.21502477648658788,
+      "cos_with_gradient": -0.19473716616630554,
+      "curvature": 0.12472536091940169
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.0,
+     "real": {
+      "norm": 3.683929266268177,
+      "cos_with_gradient": -0.9985780119895935,
+      "curvature": 19.07200608042851
+     },
+     "permuted": {
+      "norm": 3.683929266268177,
+      "cos_with_gradient": -0.06746111810207367,
+      "curvature": 0.3205128871803924
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.0078125,
+     "real": {
+      "norm": 0.20528448712111752,
+      "cos_with_gradient": -0.18380270898342133,
+      "curvature": 1.3964642303638188
+     },
+     "permuted": {
+      "norm": 0.20528448712111752,
+      "cos_with_gradient": -0.0027157915756106377,
+      "curvature": 0.03898617566210044
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.0286865234375,
+     "real": {
+      "norm": 0.22980870273369183,
+      "cos_with_gradient": -0.8358513116836548,
+      "curvature": 2.2699789456220323
+     },
+     "permuted": {
+      "norm": 0.22980869462849318,
+      "cos_with_gradient": -0.11329099535942078,
+      "curvature": 0.05655655352477103
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.008056640625,
+     "real": {
+      "norm": 0.3928022741111102,
+      "cos_with_gradient": -0.6640604734420776,
+      "curvature": 2.9559674227652404
+     },
+     "permuted": {
+      "norm": 0.3928022741111102,
+      "cos_with_gradient": -0.12801773846149445,
+      "curvature": 0.1053463987051003
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.0205078125,
+     "real": {
+      "norm": 0.12832669542715383,
+      "cos_with_gradient": -0.3577447533607483,
+      "curvature": 0.7991367768379574
+     },
+     "permuted": {
+      "norm": 0.128326702684588,
+      "cos_with_gradient": -0.08775817602872849,
+      "curvature": 0.053586941633190256
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.055908203125,
+     "real": {
+      "norm": 0.18339726911828724,
+      "cos_with_gradient": -0.6111135482788086,
+      "curvature": 1.5282833379925456
+     },
+     "permuted": {
+      "norm": 0.18339726911828724,
+      "cos_with_gradient": -0.09322444349527359,
+      "curvature": 0.056166217248359344
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.0595703125,
+     "real": {
+      "norm": 0.17952274979670024,
+      "cos_with_gradient": -0.8552900552749634,
+      "curvature": 2.2830374801329287
+     },
+     "permuted": {
+      "norm": 0.17952274979670024,
+      "cos_with_gradient": -0.16331732273101807,
+      "curvature": 0.11679473342002601
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.0714111328125,
+     "real": {
+      "norm": 0.0955712373059333,
+      "cos_with_gradient": -0.0446791872382164,
+      "curvature": 1.9771330022027225
+     },
+     "permuted": {
+      "norm": 0.0955712373059333,
+      "cos_with_gradient": 0.0005013623740524054,
+      "curvature": 0.07646100769326537
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.054931640625,
+     "real": {
+      "norm": 0.2202182608802401,
+      "cos_with_gradient": -0.8861857056617737,
+      "curvature": 1.8639813526861282
+     },
+     "permuted": {
+      "norm": 0.2202182608802401,
+      "cos_with_gradient": -0.20060041546821594,
+      "curvature": 0.11987742728029996
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.0693359375,
+     "real": {
+      "norm": 0.17307680616008037,
+      "cos_with_gradient": -0.7470321655273438,
+      "curvature": 1.2124080665179315
+     },
+     "permuted": {
+      "norm": 0.17307680616008037,
+      "cos_with_gradient": -0.10769715905189514,
+      "curvature": 0.07927357004106383
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.078857421875,
+     "real": {
+      "norm": 0.5114934876811396,
+      "cos_with_gradient": -0.9394338726997375,
+      "curvature": 2.9850506305149125
+     },
+     "permuted": {
+      "norm": 0.5114934876811396,
+      "cos_with_gradient": -0.03770294785499573,
+      "curvature": 0.06812868918602735
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.1610107421875,
+     "real": {
+      "norm": 0.252309355148511,
+      "cos_with_gradient": -0.866232693195343,
+      "curvature": 0.9731849365811274
+     },
+     "permuted": {
+      "norm": 0.252309355148511,
+      "cos_with_gradient": -0.06305842101573944,
+      "curvature": 0.049295981111154547
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.058349609375,
+     "real": {
+      "norm": 0.25124617763477497,
+      "cos_with_gradient": -0.8785195350646973,
+      "curvature": 1.8144636153479172
+     },
+     "permuted": {
+      "norm": 0.25124617763477497,
+      "cos_with_gradient": -0.15038098394870758,
+      "curvature": 0.060026024361795875
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.0706787109375,
+     "real": {
+      "norm": 0.47653995523125703,
+      "cos_with_gradient": -0.953194797039032,
+      "curvature": 3.01300688579765
+     },
+     "permuted": {
+      "norm": 0.47653995523125703,
+      "cos_with_gradient": -0.14832770824432373,
+      "curvature": 0.10216511412833287
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.051513671875,
+     "real": {
+      "norm": 0.19805690017697483,
+      "cos_with_gradient": -0.8774570822715759,
+      "curvature": 5.601198807991762
+     },
+     "permuted": {
+      "norm": 0.19805690017697483,
+      "cos_with_gradient": -0.12591195106506348,
+      "curvature": 0.19345547676008445
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.0033333333333333335,
+   "delay": 16,
+   "arm": "B_cont_w4",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.009437078403476712,
+      "cos_with_gradient": 0.12380632013082504,
+      "curvature": 0.051611097948546174
+     },
+     "permuted": {
+      "norm": 0.009437078403476712,
+      "cos_with_gradient": 0.08100350946187973,
+      "curvature": 0.01594265467602389
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.013254801188322793,
+      "cos_with_gradient": 0.1188494935631752,
+      "curvature": 0.09208171240226788
+     },
+     "permuted": {
+      "norm": 0.013254800639392812,
+      "cos_with_gradient": 0.0643012523651123,
+      "curvature": 0.008829272346425051
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0107421875,
+     "real": {
+      "norm": 0.031357236613341444,
+      "cos_with_gradient": 0.08504863828420639,
+      "curvature": 0.737094524109374
+     },
+     "permuted": {
+      "norm": 0.0313572384696166,
+      "cos_with_gradient": 0.03542729839682579,
+      "curvature": 0.13143827815322248
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.0126953125,
+     "real": {
+      "norm": 0.047286344747249,
+      "cos_with_gradient": -0.21552425622940063,
+      "curvature": 1.3626547085762126
+     },
+     "permuted": {
+      "norm": 0.04728634228532631,
+      "cos_with_gradient": -0.1409815102815628,
+      "curvature": 0.17909771335337943
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0184326171875,
+     "real": {
+      "norm": 0.033190107598746674,
+      "cos_with_gradient": -0.41997987031936646,
+      "curvature": 0.4654487680247815
+     },
+     "permuted": {
+      "norm": 0.033190107598746674,
+      "cos_with_gradient": -0.214607834815979,
+      "curvature": 0.11355105105105105
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.019775390625,
+     "real": {
+      "norm": 0.07783511142546976,
+      "cos_with_gradient": -0.8573757410049438,
+      "curvature": 0.8767160308406309
+     },
+     "permuted": {
+      "norm": 0.07783511142546976,
+      "cos_with_gradient": -0.020044034346938133,
+      "curvature": 0.037906347448253705
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.021728515625,
+     "real": {
+      "norm": 0.10530562501477708,
+      "cos_with_gradient": -0.9006842374801636,
+      "curvature": 1.1574162397335757
+     },
+     "permuted": {
+      "norm": 0.10530562059277876,
+      "cos_with_gradient": -0.07593338191509247,
+      "curvature": 0.033449110301933725
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.037353515625,
+     "real": {
+      "norm": 0.2940728300674003,
+      "cos_with_gradient": -0.9585890769958496,
+      "curvature": 1.8734909096172376
+     },
+     "permuted": {
+      "norm": 0.2940728300674003,
+      "cos_with_gradient": -0.0796603187918663,
+      "curvature": 0.09438156974692495
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.010498046875,
+     "real": {
+      "norm": 0.24948225948564232,
+      "cos_with_gradient": -0.4807344973087311,
+      "curvature": 1.3491257196190665
+     },
+     "permuted": {
+      "norm": 0.24948225948564232,
+      "cos_with_gradient": -0.010350890457630157,
+      "curvature": 0.0648834604057339
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.00390625,
+     "real": {
+      "norm": 0.3531657009806144,
+      "cos_with_gradient": -0.8658624291419983,
+      "curvature": 3.477619766550967
+     },
+     "permuted": {
+      "norm": 0.3531657009806144,
+      "cos_with_gradient": -0.10106565058231354,
+      "curvature": 0.06644297384740498
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.0224609375,
+     "real": {
+      "norm": 0.6286035603045268,
+      "cos_with_gradient": -0.9636929631233215,
+      "curvature": 5.808757065129672
+     },
+     "permuted": {
+      "norm": 0.6286035365993453,
+      "cos_with_gradient": -0.21002601087093353,
+      "curvature": 0.46500722276161327
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.0162353515625,
+     "real": {
+      "norm": 0.4454766523074416,
+      "cos_with_gradient": -0.8146034479141235,
+      "curvature": 3.1070205201086645
+     },
+     "permuted": {
+      "norm": 0.4454766523074416,
+      "cos_with_gradient": -0.09463835507631302,
+      "curvature": 0.10384553899140521
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.0439453125,
+     "real": {
+      "norm": 0.5331014738895791,
+      "cos_with_gradient": -0.5436778664588928,
+      "curvature": 1.8949364387339656
+     },
+     "permuted": {
+      "norm": 0.5331014738895791,
+      "cos_with_gradient": -0.1875346451997757,
+      "curvature": 0.2979107756597971
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.0059814453125,
+     "real": {
+      "norm": 0.6210938939508235,
+      "cos_with_gradient": -0.7496213912963867,
+      "curvature": 2.961343115254949
+     },
+     "permuted": {
+      "norm": 0.6210938459672194,
+      "cos_with_gradient": -0.19343051314353943,
+      "curvature": 0.4194845500683103
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.0374755859375,
+     "real": {
+      "norm": 0.5690021616135418,
+      "cos_with_gradient": -0.8742926120758057,
+      "curvature": 2.5198400655246433
+     },
+     "permuted": {
+      "norm": 0.5690021616135418,
+      "cos_with_gradient": -0.2810484766960144,
+      "curvature": 0.380797967616739
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.01416015625,
+     "real": {
+      "norm": 0.7094412348405882,
+      "cos_with_gradient": -0.9157852530479431,
+      "curvature": 4.783929300594688
+     },
+     "permuted": {
+      "norm": 0.7094412348405882,
+      "cos_with_gradient": -0.2929040491580963,
+      "curvature": 0.6063031910610122
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.084716796875,
+     "real": {
+      "norm": 0.16128573819127792,
+      "cos_with_gradient": -0.23852364718914032,
+      "curvature": 1.0862640971565205
+     },
+     "permuted": {
+      "norm": 0.16128573819127792,
+      "cos_with_gradient": 0.04369688034057617,
+      "curvature": 0.14489322603976565
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.0587158203125,
+     "real": {
+      "norm": 0.2964249763746784,
+      "cos_with_gradient": -0.9149923324584961,
+      "curvature": 3.692959764315874
+     },
+     "permuted": {
+      "norm": 0.2964249763746784,
+      "cos_with_gradient": -0.30023422837257385,
+      "curvature": 0.5111223961309924
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.2178955078125,
+     "real": {
+      "norm": 0.1121732481654439,
+      "cos_with_gradient": -0.7446197867393494,
+      "curvature": 0.9625185010509063
+     },
+     "permuted": {
+      "norm": 0.11217325231671246,
+      "cos_with_gradient": -0.11036587506532669,
+      "curvature": 0.11575787596812014
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.576416015625,
+     "real": {
+      "norm": 0.4410325890953695,
+      "cos_with_gradient": -0.914722204208374,
+      "curvature": 4.3176700991501935
+     },
+     "permuted": {
+      "norm": 0.4410325890953695,
+      "cos_with_gradient": -0.24152444303035736,
+      "curvature": 0.2850702901206497
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.0430908203125,
+     "real": {
+      "norm": 1.1778748588217822,
+      "cos_with_gradient": -0.8934265375137329,
+      "curvature": 7.718136656807236
+     },
+     "permuted": {
+      "norm": 1.1778748588217822,
+      "cos_with_gradient": -0.04035555571317673,
+      "curvature": 0.04300021678490881
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.10107421875,
+     "real": {
+      "norm": 0.31461166744756314,
+      "cos_with_gradient": -0.6288684010505676,
+      "curvature": 3.7871923828323473
+     },
+     "permuted": {
+      "norm": 0.314611655606647,
+      "cos_with_gradient": -0.2108347862958908,
+      "curvature": 0.47642755099252637
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.36328125,
+     "real": {
+      "norm": 0.1678051040482982,
+      "cos_with_gradient": -0.7394557595252991,
+      "curvature": 1.1493773973858654
+     },
+     "permuted": {
+      "norm": 0.16780510959832343,
+      "cos_with_gradient": -0.1580820232629776,
+      "curvature": 0.10015490978044068
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "A_cont_w1",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0013427734375,
+     "real": {
+      "norm": 0.0009636788129496368,
+      "cos_with_gradient": -0.08239825814962387,
+      "curvature": 0.021232985646602507
+     },
+     "permuted": {
+      "norm": 0.0009636787834567087,
+      "cos_with_gradient": 0.0829882100224495,
+      "curvature": 0.19490899898423591
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.013671875,
+     "real": {
+      "norm": 0.0007833462925972447,
+      "cos_with_gradient": 0.04789537563920021,
+      "curvature": 0.007892730132732222
+     },
+     "permuted": {
+      "norm": 0.0007833462925972447,
+      "cos_with_gradient": -0.0021566995419561863,
+      "curvature": 0.04282638746978032
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.01171875,
+     "real": {
+      "norm": 0.0009719343559217758,
+      "cos_with_gradient": -0.05623411759734154,
+      "curvature": 0.009875885801191931
+     },
+     "permuted": {
+      "norm": 0.000971934385164192,
+      "cos_with_gradient": 0.14971405267715454,
+      "curvature": 0.0922869079846331
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.0146484375,
+     "real": {
+      "norm": 0.0011232556905018368,
+      "cos_with_gradient": -0.11928877234458923,
+      "curvature": 0.024326098435222012
+     },
+     "permuted": {
+      "norm": 0.0011232556905018368,
+      "cos_with_gradient": 0.1228383257985115,
+      "curvature": 0.05749593847933783
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0234375,
+     "real": {
+      "norm": 0.00365717650022417,
+      "cos_with_gradient": -0.1333748996257782,
+      "curvature": 0.10142628449448392
+     },
+     "permuted": {
+      "norm": 0.003657176375880333,
+      "cos_with_gradient": 0.10673879832029343,
+      "curvature": 0.11709716902078968
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.01953125,
+     "real": {
+      "norm": 0.008706083171319712,
+      "cos_with_gradient": 0.121254101395607,
+      "curvature": 0.08364737402862371
+     },
+     "permuted": {
+      "norm": 0.008706083171319712,
+      "cos_with_gradient": -0.023259969428181648,
+      "curvature": 0.08341737216729814
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.051025390625,
+     "real": {
+      "norm": 0.09619385091705561,
+      "cos_with_gradient": -0.659187912940979,
+      "curvature": 1.3159428878491495
+     },
+     "permuted": {
+      "norm": 0.09619385575791883,
+      "cos_with_gradient": -0.11348246037960052,
+      "curvature": 0.0851589132423676
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.047607421875,
+     "real": {
+      "norm": 0.08017710929727863,
+      "cos_with_gradient": -0.7125547528266907,
+      "curvature": 0.41579305252652027
+     },
+     "permuted": {
+      "norm": 0.0801771063933245,
+      "cos_with_gradient": -0.16270150244235992,
+      "curvature": 0.1171402157768709
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.0570068359375,
+     "real": {
+      "norm": 0.08336439956816541,
+      "cos_with_gradient": -0.7813804745674133,
+      "curvature": 0.5544714551572003
+     },
+     "permuted": {
+      "norm": 0.08336439956816541,
+      "cos_with_gradient": -0.15992920100688934,
+      "curvature": 0.0897741802208252
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.103271484375,
+     "real": {
+      "norm": 0.05853376496996927,
+      "cos_with_gradient": -0.7589886784553528,
+      "curvature": 0.6135672339444653
+     },
+     "permuted": {
+      "norm": 0.05853376298111165,
+      "cos_with_gradient": -0.17389003932476044,
+      "curvature": 0.10469366052202508
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.203125,
+     "real": {
+      "norm": 0.09572422028645183,
+      "cos_with_gradient": -0.48397982120513916,
+      "curvature": 0.8294453040767441
+     },
+     "permuted": {
+      "norm": 0.09572422028645183,
+      "cos_with_gradient": -0.06588859856128693,
+      "curvature": 0.08337537550188884
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.074951171875,
+     "real": {
+      "norm": 0.17863744256321168,
+      "cos_with_gradient": -0.31868818402290344,
+      "curvature": 1.1732559868897685
+     },
+     "permuted": {
+      "norm": 0.17863744256321168,
+      "cos_with_gradient": -0.06908445805311203,
+      "curvature": 0.03307681957228313
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.1484375,
+     "real": {
+      "norm": 0.04610787706566126,
+      "cos_with_gradient": -0.4373333752155304,
+      "curvature": 0.6154194466722456
+     },
+     "permuted": {
+      "norm": 0.04610787706566126,
+      "cos_with_gradient": -0.09034426510334015,
+      "curvature": 0.05264550858865248
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.390625,
+     "real": {
+      "norm": 0.04908883588400852,
+      "cos_with_gradient": -0.17704521119594574,
+      "curvature": 0.1778469970265638
+     },
+     "permuted": {
+      "norm": 0.04908883588400852,
+      "cos_with_gradient": -0.05804278329014778,
+      "curvature": 0.08730467440323057
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.1593017578125,
+     "real": {
+      "norm": 0.08749724409327393,
+      "cos_with_gradient": -0.40720415115356445,
+      "curvature": 0.5817842448430827
+     },
+     "permuted": {
+      "norm": 0.08749724409327393,
+      "cos_with_gradient": 0.005228846333920956,
+      "curvature": 0.05637651046468032
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.1744384765625,
+     "real": {
+      "norm": 0.5262518988278307,
+      "cos_with_gradient": -0.8785191178321838,
+      "curvature": 4.069187095107935
+     },
+     "permuted": {
+      "norm": 0.5262518705121865,
+      "cos_with_gradient": -0.035565320402383804,
+      "curvature": 0.029623376221227238
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.2109375,
+     "real": {
+      "norm": 0.13425998922386478,
+      "cos_with_gradient": 0.050395745784044266,
+      "curvature": 0.3014049964153958
+     },
+     "permuted": {
+      "norm": 0.13425998922386478,
+      "cos_with_gradient": 0.05720790848135948,
+      "curvature": 0.04428521323383379
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.35986328125,
+     "real": {
+      "norm": 0.024449797941366497,
+      "cos_with_gradient": 0.2520584166049957,
+      "curvature": 0.450479547271621
+     },
+     "permuted": {
+      "norm": 0.024449796751015915,
+      "cos_with_gradient": -0.008427080698311329,
+      "curvature": 0.06064234384466287
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.27880859375,
+     "real": {
+      "norm": 0.22274467318680785,
+      "cos_with_gradient": -0.028828276321291924,
+      "curvature": 0.18875087510012406
+     },
+     "permuted": {
+      "norm": 0.222744681549051,
+      "cos_with_gradient": -0.07420851290225983,
+      "curvature": 0.12065784623872534
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.389892578125,
+     "real": {
+      "norm": 0.11447675626995182,
+      "cos_with_gradient": -0.4085932970046997,
+      "curvature": 0.7065332017085262
+     },
+     "permuted": {
+      "norm": 0.11447675220221519,
+      "cos_with_gradient": 0.004807448014616966,
+      "curvature": 0.0928806334137523
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.697265625,
+     "real": {
+      "norm": 0.16185513057790796,
+      "cos_with_gradient": 0.24774789810180664,
+      "curvature": 0.2858244139195754
+     },
+     "permuted": {
+      "norm": 0.16185513057790796,
+      "cos_with_gradient": -0.08416786044836044,
+      "curvature": 0.02091354590281939
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.8173828125,
+     "real": {
+      "norm": 0.04091482890152256,
+      "cos_with_gradient": -0.24821259081363678,
+      "curvature": 0.2927570368052296
+     },
+     "permuted": {
+      "norm": 0.04091482890152256,
+      "cos_with_gradient": -0.06476730108261108,
+      "curvature": 0.11263017437716233
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.013096776297103934,
+      "cos_with_gradient": -0.2980470359325409,
+      "curvature": 0.29453107223750347
+     },
+     "permuted": {
+      "norm": 0.013096776297103934,
+      "cos_with_gradient": 0.021388113498687744,
+      "curvature": 0.025124513813606787
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "A_cont_w1",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.009521484375,
+     "real": {
+      "norm": 0.0015918528463884176,
+      "cos_with_gradient": -0.020348122343420982,
+      "curvature": 0.008433046902409501
+     },
+     "permuted": {
+      "norm": 0.0015918528463884176,
+      "cos_with_gradient": -0.14714930951595306,
+      "curvature": 0.07903366352225243
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.015625,
+     "real": {
+      "norm": 0.00031817488649867797,
+      "cos_with_gradient": -0.008189010433852673,
+      "curvature": 0.005054793542012281
+     },
+     "permuted": {
+      "norm": 0.00031817487533276293,
+      "cos_with_gradient": 0.3365385830402374,
+      "curvature": 0.17633002271611453
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0087890625,
+     "real": {
+      "norm": 0.005064520298368536,
+      "cos_with_gradient": -0.28110507130622864,
+      "curvature": 0.056038013350648556
+     },
+     "permuted": {
+      "norm": 0.005064520298368536,
+      "cos_with_gradient": 0.10385735332965851,
+      "curvature": 0.05256864408113872
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.014404296875,
+     "real": {
+      "norm": 0.002406020697287139,
+      "cos_with_gradient": -0.22059215605258942,
+      "curvature": 0.09552548058900845
+     },
+     "permuted": {
+      "norm": 0.002406020697287139,
+      "cos_with_gradient": -0.14716029167175293,
+      "curvature": 0.09389224268900466
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0244140625,
+     "real": {
+      "norm": 0.0038612554817663786,
+      "cos_with_gradient": -0.4639521837234497,
+      "curvature": 0.43029652639532306
+     },
+     "permuted": {
+      "norm": 0.0038612554817663786,
+      "cos_with_gradient": -0.0448840856552124,
+      "curvature": 0.12130286009674164
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.01318359375,
+     "real": {
+      "norm": 0.01528253329122368,
+      "cos_with_gradient": 0.6906224489212036,
+      "curvature": 0.6926216183918164
+     },
+     "permuted": {
+      "norm": 0.01528253329122368,
+      "cos_with_gradient": 0.08695858716964722,
+      "curvature": 0.10883213028869956
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.02734375,
+     "real": {
+      "norm": 0.047123029281569286,
+      "cos_with_gradient": -0.16967059671878815,
+      "curvature": 0.3851210581423415
+     },
+     "permuted": {
+      "norm": 0.047123029281569286,
+      "cos_with_gradient": -0.19265632331371307,
+      "curvature": 0.11010795959618837
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.0224609375,
+     "real": {
+      "norm": 0.04985930682852785,
+      "cos_with_gradient": 0.3583033084869385,
+      "curvature": 0.08447926192526868
+     },
+     "permuted": {
+      "norm": 0.04985930916340425,
+      "cos_with_gradient": 0.10524452477693558,
+      "curvature": 0.08608116130472787
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.03271484375,
+     "real": {
+      "norm": 0.055667025922227636,
+      "cos_with_gradient": -0.5589596033096313,
+      "curvature": 0.38077802766948066
+     },
+     "permuted": {
+      "norm": 0.05566702801350731,
+      "cos_with_gradient": -0.05969761312007904,
+      "curvature": 0.08762161213020468
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.081298828125,
+     "real": {
+      "norm": 0.012652572226066111,
+      "cos_with_gradient": -0.3318778872489929,
+      "curvature": 0.16837461543740714
+     },
+     "permuted": {
+      "norm": 0.012652572801123682,
+      "cos_with_gradient": -0.1767505258321762,
+      "curvature": 0.09696139562314292
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.02490234375,
+     "real": {
+      "norm": 0.08244818362475753,
+      "cos_with_gradient": -0.7219865918159485,
+      "curvature": 0.4535687050981658
+     },
+     "permuted": {
+      "norm": 0.08244818362475753,
+      "cos_with_gradient": -0.12685425579547882,
+      "curvature": 0.08262589981775531
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.104736328125,
+     "real": {
+      "norm": 0.04804443638125674,
+      "cos_with_gradient": -0.6916225552558899,
+      "curvature": 0.7731392227203426
+     },
+     "permuted": {
+      "norm": 0.04804443638125674,
+      "cos_with_gradient": -0.053547203540802,
+      "curvature": 0.060640294444133436
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.158203125,
+     "real": {
+      "norm": 0.04704066892341317,
+      "cos_with_gradient": -0.6383296251296997,
+      "curvature": 1.351987461291335
+     },
+     "permuted": {
+      "norm": 0.047040666448632786,
+      "cos_with_gradient": -0.03877692669630051,
+      "curvature": 0.05787151194527614
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.0859375,
+     "real": {
+      "norm": 0.052845129955908454,
+      "cos_with_gradient": 0.47856777906417847,
+      "curvature": 0.6652363037708605
+     },
+     "permuted": {
+      "norm": 0.052845132158861115,
+      "cos_with_gradient": 0.06748392432928085,
+      "curvature": 0.0875467936062217
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.25,
+     "real": {
+      "norm": 0.034353822516338714,
+      "cos_with_gradient": -0.5994260907173157,
+      "curvature": 0.3564747295568537
+     },
+     "permuted": {
+      "norm": 0.03435382082198105,
+      "cos_with_gradient": -0.22028936445713043,
+      "curvature": 0.04986605027347393
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.05078125,
+     "real": {
+      "norm": 0.0450757878133985,
+      "cos_with_gradient": -0.7107187509536743,
+      "curvature": 0.7642417822506262
+     },
+     "permuted": {
+      "norm": 0.045075790396055936,
+      "cos_with_gradient": -0.11626425385475159,
+      "curvature": 0.05853188387155179
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.1328125,
+     "real": {
+      "norm": 0.10869917948878374,
+      "cos_with_gradient": -0.8037653565406799,
+      "curvature": 1.1543394402800577
+     },
+     "permuted": {
+      "norm": 0.10869918377272848,
+      "cos_with_gradient": -0.13313579559326172,
+      "curvature": 0.06786948413352135
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.203125,
+     "real": {
+      "norm": 0.010289800636361781,
+      "cos_with_gradient": -0.21867336332798004,
+      "curvature": 0.2602453189368141
+     },
+     "permuted": {
+      "norm": 0.0102898009899137,
+      "cos_with_gradient": -0.1785309910774231,
+      "curvature": 0.09289051766429676
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.171875,
+     "real": {
+      "norm": 0.03400769899460201,
+      "cos_with_gradient": 0.11510659754276276,
+      "curvature": 0.7417829974084152
+     },
+     "permuted": {
+      "norm": 0.034007697282999516,
+      "cos_with_gradient": -0.04992479458451271,
+      "curvature": 0.04961432985644616
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.13037109375,
+     "real": {
+      "norm": 0.10537533685238938,
+      "cos_with_gradient": -0.7640359401702881,
+      "curvature": 2.029015864410237
+     },
+     "permuted": {
+      "norm": 0.10537533685238938,
+      "cos_with_gradient": -0.027655962854623795,
+      "curvature": 0.04708057272342677
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.432861328125,
+     "real": {
+      "norm": 0.2660695731289431,
+      "cos_with_gradient": 0.34210309386253357,
+      "curvature": 1.9976370489507222
+     },
+     "permuted": {
+      "norm": 0.2660695731289431,
+      "cos_with_gradient": -0.0005777858896180987,
+      "curvature": 0.051027881601544485
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.7371826171875,
+     "real": {
+      "norm": 0.24736702483575168,
+      "cos_with_gradient": 0.049473684281110764,
+      "curvature": 0.9480425930486308
+     },
+     "permuted": {
+      "norm": 0.24736701730586697,
+      "cos_with_gradient": 0.09177356958389282,
+      "curvature": 0.0426962622987268
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.541015625,
+     "real": {
+      "norm": 0.15755802069791855,
+      "cos_with_gradient": 0.21492961049079895,
+      "curvature": 0.1894027852643483
+     },
+     "permuted": {
+      "norm": 0.15755802660890011,
+      "cos_with_gradient": -0.02879774384200573,
+      "curvature": 0.01572119979270038
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "A_cont_w1",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.00048828125,
+     "real": {
+      "norm": 0.002500381836087859,
+      "cos_with_gradient": -0.005080853588879108,
+      "curvature": 0.024215693098985212
+     },
+     "permuted": {
+      "norm": 0.002500381745152276,
+      "cos_with_gradient": -0.04827698692679405,
+      "curvature": 0.17936282144730908
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0009765625,
+     "real": {
+      "norm": 0.0005611081347357061,
+      "cos_with_gradient": -0.01712151989340782,
+      "curvature": 0.12247383893340844
+     },
+     "permuted": {
+      "norm": 0.0005611081347357061,
+      "cos_with_gradient": -0.08025205880403519,
+      "curvature": 0.15912191165359066
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0194091796875,
+     "real": {
+      "norm": 0.0010261482465528226,
+      "cos_with_gradient": 0.07333590090274811,
+      "curvature": 0.05066616758143283
+     },
+     "permuted": {
+      "norm": 0.0010261482465528226,
+      "cos_with_gradient": 0.24448108673095703,
+      "curvature": 0.16983750574383036
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.0322265625,
+     "real": {
+      "norm": 0.0009526577538324692,
+      "cos_with_gradient": -0.013532917015254498,
+      "curvature": 0.023316024368924083
+     },
+     "permuted": {
+      "norm": 0.0009526578135007151,
+      "cos_with_gradient": -0.11989236623048782,
+      "curvature": 0.19215851147851892
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.03076171875,
+     "real": {
+      "norm": 0.0029163276392813278,
+      "cos_with_gradient": 0.026946954429149628,
+      "curvature": 0.005025431847917565
+     },
+     "permuted": {
+      "norm": 0.0029163276392813278,
+      "cos_with_gradient": -0.019603125751018524,
+      "curvature": 0.10388892037586178
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.009033203125,
+     "real": {
+      "norm": 0.002120137479421209,
+      "cos_with_gradient": -0.06321685761213303,
+      "curvature": 0.030789958583942734
+     },
+     "permuted": {
+      "norm": 0.002120137479421209,
+      "cos_with_gradient": -0.2302684336900711,
+      "curvature": 0.18461991829287094
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.023193359375,
+     "real": {
+      "norm": 0.001537350063937633,
+      "cos_with_gradient": -0.004243163391947746,
+      "curvature": 0.21787573709356314
+     },
+     "permuted": {
+      "norm": 0.001537350063937633,
+      "cos_with_gradient": 0.030330823734402657,
+      "curvature": 0.06437235883023995
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.033203125,
+     "real": {
+      "norm": 0.018073512303644505,
+      "cos_with_gradient": -0.7682988047599792,
+      "curvature": 0.9896456346906788
+     },
+     "permuted": {
+      "norm": 0.018073512303644505,
+      "cos_with_gradient": -0.2083253413438797,
+      "curvature": 0.1705822412664946
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.0926513671875,
+     "real": {
+      "norm": 0.10441364473772372,
+      "cos_with_gradient": -0.5717799663543701,
+      "curvature": 0.6818354066295705
+     },
+     "permuted": {
+      "norm": 0.10441364473772372,
+      "cos_with_gradient": -0.1544887274503708,
+      "curvature": 0.16619495269071202
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.077392578125,
+     "real": {
+      "norm": 0.04014566813655011,
+      "cos_with_gradient": -0.6501573920249939,
+      "curvature": 0.578810337629242
+     },
+     "permuted": {
+      "norm": 0.04014566813655011,
+      "cos_with_gradient": -0.29133471846580505,
+      "curvature": 0.0938169595454552
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.11279296875,
+     "real": {
+      "norm": 0.06388431313632119,
+      "cos_with_gradient": 0.11080675572156906,
+      "curvature": 0.48417379005472416
+     },
+     "permuted": {
+      "norm": 0.06388431313632119,
+      "cos_with_gradient": 0.013426844030618668,
+      "curvature": 0.1297809174514583
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.144775390625,
+     "real": {
+      "norm": 0.15207797489023633,
+      "cos_with_gradient": -0.7746310830116272,
+      "curvature": 1.981472376283514
+     },
+     "permuted": {
+      "norm": 0.15207797489023633,
+      "cos_with_gradient": -0.09112338721752167,
+      "curvature": 0.13474332133729094
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.201171875,
+     "real": {
+      "norm": 0.04423971900119358,
+      "cos_with_gradient": 0.09883429855108261,
+      "curvature": 0.594116672953912
+     },
+     "permuted": {
+      "norm": 0.04423971900119358,
+      "cos_with_gradient": -0.1142907366156578,
+      "curvature": 0.044216376650372174
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.10205078125,
+     "real": {
+      "norm": 0.09827924374593143,
+      "cos_with_gradient": -0.17516282200813293,
+      "curvature": 0.5627024622729309
+     },
+     "permuted": {
+      "norm": 0.09827924374593143,
+      "cos_with_gradient": 0.016957690939307213,
+      "curvature": 0.08959895692516913
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.21240234375,
+     "real": {
+      "norm": 0.03887032683072794,
+      "cos_with_gradient": 0.218549907207489,
+      "curvature": 0.5363917330685272
+     },
+     "permuted": {
+      "norm": 0.03887032683072794,
+      "cos_with_gradient": 0.09177378565073013,
+      "curvature": 0.09800424962661475
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.3251953125,
+     "real": {
+      "norm": 0.10281249781872362,
+      "cos_with_gradient": -0.49993106722831726,
+      "curvature": 0.754848923218734
+     },
+     "permuted": {
+      "norm": 0.1028124932894951,
+      "cos_with_gradient": -0.08196330070495605,
+      "curvature": 0.07812102694387346
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.134765625,
+     "real": {
+      "norm": 0.21500676646230593,
+      "cos_with_gradient": -0.6968857645988464,
+      "curvature": 1.8968022944248666
+     },
+     "permuted": {
+      "norm": 0.21500678378869156,
+      "cos_with_gradient": -0.10077120363712311,
+      "curvature": 0.028406462271738125
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.10546875,
+     "real": {
+      "norm": 0.03919176380285613,
+      "cos_with_gradient": -0.4775867164134979,
+      "curvature": 0.4078807702629912
+     },
+     "permuted": {
+      "norm": 0.03919176231765474,
+      "cos_with_gradient": -0.14704816043376923,
+      "curvature": 0.07050556347576832
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.404296875,
+     "real": {
+      "norm": 0.03671036171720376,
+      "cos_with_gradient": -0.7101684212684631,
+      "curvature": 0.535677803941542
+     },
+     "permuted": {
+      "norm": 0.03671036330279586,
+      "cos_with_gradient": -0.14225886762142181,
+      "curvature": 0.07709360869754511
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.551513671875,
+     "real": {
+      "norm": 0.029175601732866485,
+      "cos_with_gradient": -0.03169657289981842,
+      "curvature": 0.879225918068351
+     },
+     "permuted": {
+      "norm": 0.029175600735326445,
+      "cos_with_gradient": -0.08598864078521729,
+      "curvature": 0.08430792215470508
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.556640625,
+     "real": {
+      "norm": 0.05797585890088181,
+      "cos_with_gradient": -0.4484288990497589,
+      "curvature": 0.49310890747559355
+     },
+     "permuted": {
+      "norm": 0.05797585890088181,
+      "cos_with_gradient": -0.04544077441096306,
+      "curvature": 0.06697828105577316
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.7578125,
+     "real": {
+      "norm": 0.16212994088855048,
+      "cos_with_gradient": 0.16752848029136658,
+      "curvature": 0.2673203220860852
+     },
+     "permuted": {
+      "norm": 0.16212994088855048,
+      "cos_with_gradient": 0.03603827580809593,
+      "curvature": 0.05123932381592959
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.4599609375,
+     "real": {
+      "norm": 0.020601193382238793,
+      "cos_with_gradient": -0.3678005039691925,
+      "curvature": 0.22590516854758566
+     },
+     "permuted": {
+      "norm": 0.020601193382238793,
+      "cos_with_gradient": 0.04055243358016014,
+      "curvature": 0.04382772282944564
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "B_cont_w4",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0079345703125,
+     "real": {
+      "norm": 0.004190081605364985,
+      "cos_with_gradient": -0.1285266876220703,
+      "curvature": 0.01786758579411567
+     },
+     "permuted": {
+      "norm": 0.004190081605364985,
+      "cos_with_gradient": 0.0782323107123375,
+      "curvature": 0.017580341198622784
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.015625,
+     "real": {
+      "norm": 0.0006029818920626508,
+      "cos_with_gradient": -0.053605254739522934,
+      "curvature": 0.0033144869516609074
+     },
+     "permuted": {
+      "norm": 0.0006029819156302813,
+      "cos_with_gradient": -0.042080219835042953,
+      "curvature": 0.006851775148177613
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.042236328125,
+     "real": {
+      "norm": 0.004843980635643454,
+      "cos_with_gradient": 0.0522099994122982,
+      "curvature": 0.08015799695989442
+     },
+     "permuted": {
+      "norm": 0.004843980823401158,
+      "cos_with_gradient": 0.05616282671689987,
+      "curvature": 0.032887169132914916
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.03125,
+     "real": {
+      "norm": 0.0026772348268775978,
+      "cos_with_gradient": -0.48702889680862427,
+      "curvature": 0.4410851527396588
+     },
+     "permuted": {
+      "norm": 0.0026772348268775978,
+      "cos_with_gradient": 0.07334240525960922,
+      "curvature": 0.050782359047942136
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.029052734375,
+     "real": {
+      "norm": 0.014232035828499771,
+      "cos_with_gradient": 0.43094655871391296,
+      "curvature": 0.5673573774562137
+     },
+     "permuted": {
+      "norm": 0.014232035828499771,
+      "cos_with_gradient": 0.15329454839229584,
+      "curvature": 0.04165251054874753
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.01123046875,
+     "real": {
+      "norm": 0.026990860243583485,
+      "cos_with_gradient": -0.2667158842086792,
+      "curvature": 0.1947131458725226
+     },
+     "permuted": {
+      "norm": 0.02699086132186812,
+      "cos_with_gradient": 0.04746490344405174,
+      "curvature": 0.05897550710119045
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.0380859375,
+     "real": {
+      "norm": 0.05063126725754081,
+      "cos_with_gradient": 0.23800097405910492,
+      "curvature": 0.3065509279211194
+     },
+     "permuted": {
+      "norm": 0.05063126725754081,
+      "cos_with_gradient": 0.049496181309223175,
+      "curvature": 0.027520310152614965
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.0428466796875,
+     "real": {
+      "norm": 0.05618901920916811,
+      "cos_with_gradient": -0.6938207745552063,
+      "curvature": 0.3559841316757639
+     },
+     "permuted": {
+      "norm": 0.05618901920916811,
+      "cos_with_gradient": -0.07239792495965958,
+      "curvature": 0.04058544275792738
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.07666015625,
+     "real": {
+      "norm": 0.048743981339844436,
+      "cos_with_gradient": -0.8338490128517151,
+      "curvature": 0.7411052591453108
+     },
+     "permuted": {
+      "norm": 0.048743981339844436,
+      "cos_with_gradient": -0.02115962654352188,
+      "curvature": 0.0664086868276285
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.0750732421875,
+     "real": {
+      "norm": 0.03300088056311561,
+      "cos_with_gradient": -0.47514042258262634,
+      "curvature": 0.34572634260109475
+     },
+     "permuted": {
+      "norm": 0.03300088056311561,
+      "cos_with_gradient": 0.005067894700914621,
+      "curvature": 0.05161206038992455
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.123046875,
+     "real": {
+      "norm": 0.09581028524652169,
+      "cos_with_gradient": -0.6846833825111389,
+      "curvature": 1.5832073593430225
+     },
+     "permuted": {
+      "norm": 0.09581028524652169,
+      "cos_with_gradient": -0.11431785672903061,
+      "curvature": 0.0450966456812599
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.19140625,
+     "real": {
+      "norm": 0.04742770630885494,
+      "cos_with_gradient": 0.0943470150232315,
+      "curvature": 0.0933359434719536
+     },
+     "permuted": {
+      "norm": 0.04742770630885494,
+      "cos_with_gradient": 0.028242077678442,
+      "curvature": 0.045678378995232916
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.297607421875,
+     "real": {
+      "norm": 0.07807899551104809,
+      "cos_with_gradient": 0.664989709854126,
+      "curvature": 0.6932538065141393
+     },
+     "permuted": {
+      "norm": 0.07807899551104809,
+      "cos_with_gradient": 0.180477574467659,
+      "curvature": 0.08406513543472509
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.328125,
+     "real": {
+      "norm": 0.03234804800692552,
+      "cos_with_gradient": -0.08307474106550217,
+      "curvature": 0.6164119608721168
+     },
+     "permuted": {
+      "norm": 0.03234804800692552,
+      "cos_with_gradient": 0.009753742255270481,
+      "curvature": 0.04391661613900022
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.15625,
+     "real": {
+      "norm": 0.13377078829517366,
+      "cos_with_gradient": -0.5281934142112732,
+      "curvature": 3.759042866512413
+     },
+     "permuted": {
+      "norm": 0.13377078133309614,
+      "cos_with_gradient": -0.04714946448802948,
+      "curvature": 0.07971126464567567
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.169677734375,
+     "real": {
+      "norm": 0.11953124516929667,
+      "cos_with_gradient": -0.543304443359375,
+      "curvature": 0.4953074119236538
+     },
+     "permuted": {
+      "norm": 0.11953124127356803,
+      "cos_with_gradient": -0.21236552298069,
+      "curvature": 0.08635442549923997
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.6072998046875,
+     "real": {
+      "norm": 0.07190960097887272,
+      "cos_with_gradient": -0.06348033249378204,
+      "curvature": 0.26565067344054516
+     },
+     "permuted": {
+      "norm": 0.07190960097887272,
+      "cos_with_gradient": -0.00546702416613698,
+      "curvature": 0.014150241930879567
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.5078125,
+     "real": {
+      "norm": 0.09356671039043106,
+      "cos_with_gradient": -0.5193864107131958,
+      "curvature": 1.5494584811430336
+     },
+     "permuted": {
+      "norm": 0.09356671536721473,
+      "cos_with_gradient": -0.08862658590078354,
+      "curvature": 0.038973387342133035
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.08203125,
+     "real": {
+      "norm": 0.5654740126766249,
+      "cos_with_gradient": -0.8783068656921387,
+      "curvature": 4.191807291259879
+     },
+     "permuted": {
+      "norm": 0.565474039028253,
+      "cos_with_gradient": -0.1681082546710968,
+      "curvature": 0.16237742202612543
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.310302734375,
+     "real": {
+      "norm": 0.042821669003496356,
+      "cos_with_gradient": -0.14935864508152008,
+      "curvature": 0.18468994636196592
+     },
+     "permuted": {
+      "norm": 0.042821669003496356,
+      "cos_with_gradient": -0.016539564356207848,
+      "curvature": 0.05155573281050741
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.76708984375,
+     "real": {
+      "norm": 0.19151320680465822,
+      "cos_with_gradient": -0.6911271810531616,
+      "curvature": 1.2843307951153269
+     },
+     "permuted": {
+      "norm": 0.19151319707872222,
+      "cos_with_gradient": -0.1356676071882248,
+      "curvature": 0.07993399312111364
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.68359375,
+     "real": {
+      "norm": 0.2551293477945331,
+      "cos_with_gradient": -0.2833399176597595,
+      "curvature": 0.7700383134219224
+     },
+     "permuted": {
+      "norm": 0.2551293477945331,
+      "cos_with_gradient": 0.08013682067394257,
+      "curvature": 0.060538636267902755
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.276611328125,
+     "real": {
+      "norm": 0.12729945992303157,
+      "cos_with_gradient": 0.35537195205688477,
+      "curvature": 0.7044823176811694
+     },
+     "permuted": {
+      "norm": 0.12729945992303157,
+      "cos_with_gradient": -0.027981670573353767,
+      "curvature": 0.013708154994353497
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "B_cont_w4",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0010986328125,
+     "real": {
+      "norm": 0.002491156407222412,
+      "cos_with_gradient": -0.16248492896556854,
+      "curvature": 0.027482538803330972
+     },
+     "permuted": {
+      "norm": 0.00249115631595007,
+      "cos_with_gradient": 0.060394495725631714,
+      "curvature": 0.027449895873254082
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0089111328125,
+     "real": {
+      "norm": 0.004100582205756393,
+      "cos_with_gradient": -0.05326077714562416,
+      "curvature": 0.03971501305708988
+     },
+     "permuted": {
+      "norm": 0.004100582205756393,
+      "cos_with_gradient": -0.17954346537590027,
+      "curvature": 0.09380970751902311
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.013916015625,
+     "real": {
+      "norm": 0.0010613960281197206,
+      "cos_with_gradient": -0.19735604524612427,
+      "curvature": 0.4553244716600702
+     },
+     "permuted": {
+      "norm": 0.0010613960281197206,
+      "cos_with_gradient": -0.03278705105185509,
+      "curvature": 0.0723006779462608
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.022705078125,
+     "real": {
+      "norm": 0.0025838333868649648,
+      "cos_with_gradient": -0.40892452001571655,
+      "curvature": 0.374412067536047
+     },
+     "permuted": {
+      "norm": 0.002583833474863546,
+      "cos_with_gradient": 0.14006006717681885,
+      "curvature": 0.058022596419657395
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.03076171875,
+     "real": {
+      "norm": 0.003499587397667241,
+      "cos_with_gradient": 0.024057364091277122,
+      "curvature": 0.04553852815145165
+     },
+     "permuted": {
+      "norm": 0.003499587397667241,
+      "cos_with_gradient": -0.06964188814163208,
+      "curvature": 0.0285842689970668
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.0223388671875,
+     "real": {
+      "norm": 0.06160006217121263,
+      "cos_with_gradient": -0.8187718987464905,
+      "curvature": 1.3461660235431792
+     },
+     "permuted": {
+      "norm": 0.06160006217121263,
+      "cos_with_gradient": 0.051047563552856445,
+      "curvature": 0.054078838504746485
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.0260009765625,
+     "real": {
+      "norm": 0.07594091908092751,
+      "cos_with_gradient": -0.7273197770118713,
+      "curvature": 0.5736019639894359
+     },
+     "permuted": {
+      "norm": 0.07594092521281627,
+      "cos_with_gradient": 0.014771560207009315,
+      "curvature": 0.06775789509382224
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.0185546875,
+     "real": {
+      "norm": 0.12484060122967555,
+      "cos_with_gradient": -0.8239771723747253,
+      "curvature": 0.5017156519289095
+     },
+     "permuted": {
+      "norm": 0.12484059749962867,
+      "cos_with_gradient": 0.0660410076379776,
+      "curvature": 0.021178843062343116
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.04150390625,
+     "real": {
+      "norm": 0.08328911575528224,
+      "cos_with_gradient": -0.6726669073104858,
+      "curvature": 0.6894022584960092
+     },
+     "permuted": {
+      "norm": 0.08328911855073322,
+      "cos_with_gradient": 0.000992234912700951,
+      "curvature": 0.03351124636342522
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.052001953125,
+     "real": {
+      "norm": 0.04071022045065502,
+      "cos_with_gradient": -0.49846309423446655,
+      "curvature": 0.334605446307352
+     },
+     "permuted": {
+      "norm": 0.04071022045065502,
+      "cos_with_gradient": 0.16870129108428955,
+      "curvature": 0.03717542100862247
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.094482421875,
+     "real": {
+      "norm": 0.19724447306926515,
+      "cos_with_gradient": -0.8490149974822998,
+      "curvature": 1.5347034121619552
+     },
+     "permuted": {
+      "norm": 0.19724448251259746,
+      "cos_with_gradient": -0.09361838549375534,
+      "curvature": 0.03386553803124119
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.082763671875,
+     "real": {
+      "norm": 0.11161223348860654,
+      "cos_with_gradient": -0.7915864586830139,
+      "curvature": 0.7476043880066813
+     },
+     "permuted": {
+      "norm": 0.11161223348860654,
+      "cos_with_gradient": -0.02082514390349388,
+      "curvature": 0.06124434748907626
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.0791015625,
+     "real": {
+      "norm": 0.07186408867112588,
+      "cos_with_gradient": -0.6003968119621277,
+      "curvature": 0.7305190735982275
+     },
+     "permuted": {
+      "norm": 0.07186408867112588,
+      "cos_with_gradient": -0.18658021092414856,
+      "curvature": 0.06560680717287107
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.09765625,
+     "real": {
+      "norm": 0.05942845455832433,
+      "cos_with_gradient": -0.11362186074256897,
+      "curvature": 0.06321075987132198
+     },
+     "permuted": {
+      "norm": 0.05942845455832433,
+      "cos_with_gradient": -0.024977225810289383,
+      "curvature": 0.0353117878227375
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.20166015625,
+     "real": {
+      "norm": 0.12015411925689894,
+      "cos_with_gradient": 0.11677908897399902,
+      "curvature": 0.11015759542355046
+     },
+     "permuted": {
+      "norm": 0.12015411925689894,
+      "cos_with_gradient": 0.018262233585119247,
+      "curvature": 0.02898791845938206
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.14453125,
+     "real": {
+      "norm": 0.030640999129718585,
+      "cos_with_gradient": -0.22589585185050964,
+      "curvature": 0.3808851918804579
+     },
+     "permuted": {
+      "norm": 0.030640999129718585,
+      "cos_with_gradient": -0.04839416220784187,
+      "curvature": 0.03539844378790451
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.216796875,
+     "real": {
+      "norm": 0.07068230153715885,
+      "cos_with_gradient": -0.5335052609443665,
+      "curvature": 1.6128477345373695
+     },
+     "permuted": {
+      "norm": 0.07068230483120323,
+      "cos_with_gradient": -0.05714665353298187,
+      "curvature": 0.04593552980700643
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.23046875,
+     "real": {
+      "norm": 0.021488653916461372,
+      "cos_with_gradient": -0.0932764932513237,
+      "curvature": 0.7355635908919874
+     },
+     "permuted": {
+      "norm": 0.021488653916461372,
+      "cos_with_gradient": 0.012193001806735992,
+      "curvature": 0.04269805521608115
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.1328125,
+     "real": {
+      "norm": 0.03944493187444757,
+      "cos_with_gradient": 0.1602672040462494,
+      "curvature": 1.0933260367186124
+     },
+     "permuted": {
+      "norm": 0.03944493187444757,
+      "cos_with_gradient": -0.008393076248466969,
+      "curvature": 0.021939551508847445
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.2421875,
+     "real": {
+      "norm": 0.08934855825248825,
+      "cos_with_gradient": -0.2085493505001068,
+      "curvature": 0.46780677538055343
+     },
+     "permuted": {
+      "norm": 0.08934855304074997,
+      "cos_with_gradient": -0.05451042205095291,
+      "curvature": 0.0351653126329569
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.203125,
+     "real": {
+      "norm": 0.16384675963680884,
+      "cos_with_gradient": -0.1868005245923996,
+      "curvature": 2.4889102034121553
+     },
+     "permuted": {
+      "norm": 0.16384675963680884,
+      "cos_with_gradient": 0.01243983581662178,
+      "curvature": 0.03365092588776516
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.171875,
+     "real": {
+      "norm": 0.06257830125686265,
+      "cos_with_gradient": -0.42118194699287415,
+      "curvature": 1.370863913318525
+     },
+     "permuted": {
+      "norm": 0.06257830125686265,
+      "cos_with_gradient": -0.0745190903544426,
+      "curvature": 0.04066595746072364
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.09619140625,
+     "real": {
+      "norm": 0.08769584901981163,
+      "cos_with_gradient": -0.45578357577323914,
+      "curvature": 1.4917004513859706
+     },
+     "permuted": {
+      "norm": 0.08769585167479066,
+      "cos_with_gradient": 0.047159746289253235,
+      "curvature": 0.02515483013779236
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.3,
+   "delay": 2,
+   "arm": "B_cont_w4",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0098876953125,
+     "real": {
+      "norm": 0.0034746771339900645,
+      "cos_with_gradient": -0.05354037508368492,
+      "curvature": 0.003999023718150517
+     },
+     "permuted": {
+      "norm": 0.003474677264864769,
+      "cos_with_gradient": -0.08261556923389435,
+      "curvature": 0.021939900107150197
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0166015625,
+     "real": {
+      "norm": 0.0013244385335260322,
+      "cos_with_gradient": -0.03787405416369438,
+      "curvature": 0.013469060613280123
+     },
+     "permuted": {
+      "norm": 0.0013244384906071513,
+      "cos_with_gradient": -0.030696626752614975,
+      "curvature": 0.01229718205580135
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.006591796875,
+     "real": {
+      "norm": 0.0012326052385735107,
+      "cos_with_gradient": -0.02324226126074791,
+      "curvature": 0.10849614211029866
+     },
+     "permuted": {
+      "norm": 0.0012326052385735107,
+      "cos_with_gradient": -0.09325748682022095,
+      "curvature": 0.04138627183302776
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.03369140625,
+     "real": {
+      "norm": 0.006259569510558314,
+      "cos_with_gradient": 0.3043556809425354,
+      "curvature": 0.2524549168622968
+     },
+     "permuted": {
+      "norm": 0.0062595698011516775,
+      "cos_with_gradient": 0.018292594701051712,
+      "curvature": 0.01251527780034493
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0054931640625,
+     "real": {
+      "norm": 0.03159955222852451,
+      "cos_with_gradient": -0.4828779995441437,
+      "curvature": 0.556256952927732
+     },
+     "permuted": {
+      "norm": 0.03159955222852451,
+      "cos_with_gradient": -0.10053280740976334,
+      "curvature": 0.02400575720195651
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.064453125,
+     "real": {
+      "norm": 0.028306161082525136,
+      "cos_with_gradient": 0.8506998419761658,
+      "curvature": 1.0687757956181747
+     },
+     "permuted": {
+      "norm": 0.028306161082525136,
+      "cos_with_gradient": 0.07879903167486191,
+      "curvature": 0.02491972133740089
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.016845703125,
+     "real": {
+      "norm": 0.0655874229885454,
+      "cos_with_gradient": -0.4149785041809082,
+      "curvature": 0.40715885575997535
+     },
+     "permuted": {
+      "norm": 0.06558742653847352,
+      "cos_with_gradient": -0.05674110725522041,
+      "curvature": 0.010128357036802815
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.03955078125,
+     "real": {
+      "norm": 0.04434646983387983,
+      "cos_with_gradient": -0.6905911564826965,
+      "curvature": 0.45315140324604575
+     },
+     "permuted": {
+      "norm": 0.044346467208748096,
+      "cos_with_gradient": -0.01974528841674328,
+      "curvature": 0.016218176842492094
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.0751953125,
+     "real": {
+      "norm": 0.025596838095984984,
+      "cos_with_gradient": 0.5505414605140686,
+      "curvature": 0.33514693834110176
+     },
+     "permuted": {
+      "norm": 0.025596838095984984,
+      "cos_with_gradient": 0.055984463542699814,
+      "curvature": 0.008616511169648634
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.073974609375,
+     "real": {
+      "norm": 0.046837965918960396,
+      "cos_with_gradient": -0.4466190040111542,
+      "curvature": 0.27285877682658055
+     },
+     "permuted": {
+      "norm": 0.046837965918960396,
+      "cos_with_gradient": 0.09503556042909622,
+      "curvature": 0.03343163802851073
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.2772216796875,
+     "real": {
+      "norm": 0.05600746164133516,
+      "cos_with_gradient": 0.19999583065509796,
+      "curvature": 0.31406037450658214
+     },
+     "permuted": {
+      "norm": 0.0560074637199032,
+      "cos_with_gradient": 0.07903119176626205,
+      "curvature": 0.017324776455679553
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.2364501953125,
+     "real": {
+      "norm": 0.12614614324691759,
+      "cos_with_gradient": 0.02426549419760704,
+      "curvature": 0.8424931518201842
+     },
+     "permuted": {
+      "norm": 0.12614614324691759,
+      "cos_with_gradient": 0.04015394672751427,
+      "curvature": 0.02352184210008819
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.267578125,
+     "real": {
+      "norm": 0.19571869573115777,
+      "cos_with_gradient": -0.6581811308860779,
+      "curvature": 1.540857466815176
+     },
+     "permuted": {
+      "norm": 0.19571869573115777,
+      "cos_with_gradient": -0.07068729400634766,
+      "curvature": 0.04604103499909605
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.115234375,
+     "real": {
+      "norm": 0.09099547609282127,
+      "cos_with_gradient": 0.04544445499777794,
+      "curvature": 0.5915423317570173
+     },
+     "permuted": {
+      "norm": 0.09099547609282127,
+      "cos_with_gradient": 0.0134307025000453,
+      "curvature": 0.028224289043741083
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.318115234375,
+     "real": {
+      "norm": 0.1389487216307093,
+      "cos_with_gradient": -0.28383758664131165,
+      "curvature": 0.44516866049584425
+     },
+     "permuted": {
+      "norm": 0.1389487216307093,
+      "cos_with_gradient": -0.038470856845378876,
+      "curvature": 0.013755367584186017
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.46484375,
+     "real": {
+      "norm": 0.1895146614104935,
+      "cos_with_gradient": -0.6846957802772522,
+      "curvature": 2.5316095423373906
+     },
+     "permuted": {
+      "norm": 0.1895146614104935,
+      "cos_with_gradient": -0.01086933072656393,
+      "curvature": 0.015301412220482443
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.79931640625,
+     "real": {
+      "norm": 0.09633726592521151,
+      "cos_with_gradient": -0.6831753253936768,
+      "curvature": 1.1415207856656382
+     },
+     "permuted": {
+      "norm": 0.09633726592521151,
+      "cos_with_gradient": -0.1250639259815216,
+      "curvature": 0.04053467963746444
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.435546875,
+     "real": {
+      "norm": 0.2703900683468101,
+      "cos_with_gradient": -0.6201441287994385,
+      "curvature": 1.8043368820446513
+     },
+     "permuted": {
+      "norm": 0.2703900683468101,
+      "cos_with_gradient": -0.007214701268821955,
+      "curvature": 0.025544573883566343
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.689453125,
+     "real": {
+      "norm": 0.11737903201700656,
+      "cos_with_gradient": -0.3066859543323517,
+      "curvature": 0.8098355802144677
+     },
+     "permuted": {
+      "norm": 0.11737903201700656,
+      "cos_with_gradient": -0.05615241080522537,
+      "curvature": 0.014307366486659312
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.650390625,
+     "real": {
+      "norm": 0.2433514772851175,
+      "cos_with_gradient": -0.7644643783569336,
+      "curvature": 8.002377847220423
+     },
+     "permuted": {
+      "norm": 0.2433514772851175,
+      "cos_with_gradient": 0.027247250080108643,
+      "curvature": 0.021393913698740094
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.012048832879418771,
+      "cos_with_gradient": -0.12020057439804077,
+      "curvature": 0.2791842712939768
+     },
+     "permuted": {
+      "norm": 0.012048832879418771,
+      "cos_with_gradient": 0.009110486134886742,
+      "curvature": 0.005348036728420647
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.001580610674572405,
+      "cos_with_gradient": 0.10280399024486542,
+      "curvature": 0.11018508802330446
+     },
+     "permuted": {
+      "norm": 0.001580610674572405,
+      "cos_with_gradient": 0.04295959696173668,
+      "curvature": 0.00715172284244704
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.0005880084214787475,
+      "cos_with_gradient": -0.022384408861398697,
+      "curvature": 0.09240303066123234
+     },
+     "permuted": {
+      "norm": 0.0005880084214787475,
+      "cos_with_gradient": -0.026377853006124496,
+      "curvature": 0.010377249029891492
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "A_cont_w1",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0009765625,
+     "real": {
+      "norm": 0.0013545072524337864,
+      "cos_with_gradient": 0.01528418343514204,
+      "curvature": 0.03629232320552174
+     },
+     "permuted": {
+      "norm": 0.0013545072943999092,
+      "cos_with_gradient": 0.027017809450626373,
+      "curvature": 0.11954204781429095
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.002197265625,
+     "real": {
+      "norm": 0.00248799921303695,
+      "cos_with_gradient": 0.057393986731767654,
+      "curvature": 0.07070689280003574
+     },
+     "permuted": {
+      "norm": 0.00248799921303695,
+      "cos_with_gradient": 0.04389481619000435,
+      "curvature": 0.05665061857463513
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0216064453125,
+     "real": {
+      "norm": 0.008339633632604915,
+      "cos_with_gradient": 0.13650251924991608,
+      "curvature": 0.31816997284912796
+     },
+     "permuted": {
+      "norm": 0.008339633632604915,
+      "cos_with_gradient": 0.1367659866809845,
+      "curvature": 0.1242343842208794
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.03662109375,
+     "real": {
+      "norm": 0.009902558076342974,
+      "cos_with_gradient": -0.28754928708076477,
+      "curvature": 0.1387818873793773
+     },
+     "permuted": {
+      "norm": 0.009902558443720646,
+      "cos_with_gradient": -0.10533592849969864,
+      "curvature": 0.07889987501256737
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.133056640625,
+     "real": {
+      "norm": 0.02476765988102308,
+      "cos_with_gradient": -0.43574127554893494,
+      "curvature": 0.46315641099191207
+     },
+     "permuted": {
+      "norm": 0.02476765988102308,
+      "cos_with_gradient": -0.05810018256306648,
+      "curvature": 0.048156881753814273
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.5819091796875,
+     "real": {
+      "norm": 0.38785105923164626,
+      "cos_with_gradient": -0.8980087637901306,
+      "curvature": 3.327711453953519
+     },
+     "permuted": {
+      "norm": 0.38785105923164626,
+      "cos_with_gradient": -0.11765599995851517,
+      "curvature": 0.10002118482048981
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.6201171875,
+     "real": {
+      "norm": 0.23000439237982256,
+      "cos_with_gradient": -0.330217182636261,
+      "curvature": 1.7610108403919842
+     },
+     "permuted": {
+      "norm": 0.23000439237982256,
+      "cos_with_gradient": -0.043015338480472565,
+      "curvature": 0.10966143897186478
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.8497314453125,
+     "real": {
+      "norm": 0.2871704036700484,
+      "cos_with_gradient": -0.6723836064338684,
+      "curvature": 11.078377292268373
+     },
+     "permuted": {
+      "norm": 0.2871704036700484,
+      "cos_with_gradient": -0.01872722990810871,
+      "curvature": 0.05494973601690995
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.8702392578125,
+     "real": {
+      "norm": 0.29401595828721694,
+      "cos_with_gradient": -0.3828297257423401,
+      "curvature": 3.241219243813167
+     },
+     "permuted": {
+      "norm": 0.29401597095758436,
+      "cos_with_gradient": -0.004018585663288832,
+      "curvature": 0.15991654689367055
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.3587203697768189,
+      "cos_with_gradient": -0.7477096319198608,
+      "curvature": 8.927023275424526
+     },
+     "permuted": {
+      "norm": 0.3587203697768189,
+      "cos_with_gradient": -0.030529789626598358,
+      "curvature": 0.18406192385950745
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.14787570146570034,
+      "cos_with_gradient": -0.37482863664627075,
+      "curvature": 0.9553702270790594
+     },
+     "permuted": {
+      "norm": 0.14787570146570034,
+      "cos_with_gradient": -0.09454983472824097,
+      "curvature": 0.0391727066580601
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.9598388671875,
+     "real": {
+      "norm": 0.17538248502027923,
+      "cos_with_gradient": -0.01268752384930849,
+      "curvature": 5.56576416523063
+     },
+     "permuted": {
+      "norm": 0.17538248502027923,
+      "cos_with_gradient": -0.11121363937854767,
+      "curvature": 0.18323325332463425
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.8780517578125,
+     "real": {
+      "norm": 0.43040558893375513,
+      "cos_with_gradient": -0.5989587306976318,
+      "curvature": 8.581046357709651
+     },
+     "permuted": {
+      "norm": 0.43040558893375513,
+      "cos_with_gradient": -0.15721046924591064,
+      "curvature": 0.6944788900250389
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.7178955078125,
+     "real": {
+      "norm": 0.21725678848079594,
+      "cos_with_gradient": -0.5670241713523865,
+      "curvature": 2.232742878596869
+     },
+     "permuted": {
+      "norm": 0.21725678848079594,
+      "cos_with_gradient": -0.042460307478904724,
+      "curvature": 0.06891085808526418
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.9715576171875,
+     "real": {
+      "norm": 0.353548153808563,
+      "cos_with_gradient": -0.5290859341621399,
+      "curvature": 2.733170889969606
+     },
+     "permuted": {
+      "norm": 0.353548153808563,
+      "cos_with_gradient": -0.1981365978717804,
+      "curvature": 0.5036747650121576
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.9638671875,
+     "real": {
+      "norm": 0.16795077338609873,
+      "cos_with_gradient": -0.25494229793548584,
+      "curvature": 0.9257199299038298
+     },
+     "permuted": {
+      "norm": 0.16795077893131025,
+      "cos_with_gradient": -0.12623903155326843,
+      "curvature": 0.11182032845592513
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.9796142578125,
+     "real": {
+      "norm": 0.07912606283746364,
+      "cos_with_gradient": -0.46532949805259705,
+      "curvature": 0.9780104546935636
+     },
+     "permuted": {
+      "norm": 0.07912605989493572,
+      "cos_with_gradient": -0.028105171397328377,
+      "curvature": 0.08938826509164723
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.9464111328125,
+     "real": {
+      "norm": 0.24480973677528053,
+      "cos_with_gradient": -0.9176024198532104,
+      "curvature": 38.69204022769521
+     },
+     "permuted": {
+      "norm": 0.2448097291667385,
+      "cos_with_gradient": -0.1397690325975418,
+      "curvature": 1.3932898681555446
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.9910888671875,
+     "real": {
+      "norm": 0.14334686313048717,
+      "cos_with_gradient": -0.7734783291816711,
+      "curvature": 2.742798113489579
+     },
+     "permuted": {
+      "norm": 0.14334686962747312,
+      "cos_with_gradient": -0.06421343982219696,
+      "curvature": 0.09256611546911936
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.9410400390625,
+     "real": {
+      "norm": 0.39334835578765864,
+      "cos_with_gradient": -0.8662250638008118,
+      "curvature": 73.2895439591343
+     },
+     "permuted": {
+      "norm": 0.39334835578765864,
+      "cos_with_gradient": 0.056201960891485214,
+      "curvature": 1.7494797405058902
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.884521484375,
+     "real": {
+      "norm": 0.418017874709698,
+      "cos_with_gradient": -0.9544188380241394,
+      "curvature": 9.385559515805696
+     },
+     "permuted": {
+      "norm": 0.418017874709698,
+      "cos_with_gradient": -0.004705803003162146,
+      "curvature": 0.23850039380781973
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.92919921875,
+     "real": {
+      "norm": 0.14883110914467576,
+      "cos_with_gradient": -0.8898261785507202,
+      "curvature": 1.7040561328872543
+     },
+     "permuted": {
+      "norm": 0.14883110914467576,
+      "cos_with_gradient": -0.1304238885641098,
+      "curvature": 0.1902733091121425
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.9375,
+     "real": {
+      "norm": 0.32451355411585653,
+      "cos_with_gradient": -0.5950421094894409,
+      "curvature": 1.431578309876633
+     },
+     "permuted": {
+      "norm": 0.3245135655954702,
+      "cos_with_gradient": -0.10952562093734741,
+      "curvature": 0.14203862479059867
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "A_cont_w1",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.003957037114948542,
+      "cos_with_gradient": -0.022731522098183632,
+      "curvature": 0.002383423952345189
+     },
+     "permuted": {
+      "norm": 0.003957037114948542,
+      "cos_with_gradient": -0.11526202410459518,
+      "curvature": 0.09245616511319789
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.004913510739813813,
+      "cos_with_gradient": -0.01397602166980505,
+      "curvature": 0.00770518540721858
+     },
+     "permuted": {
+      "norm": 0.004913510554713022,
+      "cos_with_gradient": 0.07147606462240219,
+      "curvature": 0.018357760733882855
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.002197265625,
+     "real": {
+      "norm": 0.0057622738420277115,
+      "cos_with_gradient": -0.0013383714249357581,
+      "curvature": 0.11753228692786045
+     },
+     "permuted": {
+      "norm": 0.0057622738420277115,
+      "cos_with_gradient": 0.031033672392368317,
+      "curvature": 0.060488849775353126
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.029296875,
+     "real": {
+      "norm": 0.016775060851972567,
+      "cos_with_gradient": -0.0407605841755867,
+      "curvature": 0.23672876872933715
+     },
+     "permuted": {
+      "norm": 0.016775060851972567,
+      "cos_with_gradient": 0.1508832424879074,
+      "curvature": 0.05315841117034557
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.04248046875,
+     "real": {
+      "norm": 0.0297111134197906,
+      "cos_with_gradient": 0.42959028482437134,
+      "curvature": 1.069453670408177
+     },
+     "permuted": {
+      "norm": 0.029711112440230173,
+      "cos_with_gradient": 0.3242037296295166,
+      "curvature": 0.20132592768088006
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.1527099609375,
+     "real": {
+      "norm": 0.0421643760563294,
+      "cos_with_gradient": 0.36982157826423645,
+      "curvature": 0.7931200263916739
+     },
+     "permuted": {
+      "norm": 0.04216437467583555,
+      "cos_with_gradient": -0.030349601060152054,
+      "curvature": 0.08725605347274089
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.2657470703125,
+     "real": {
+      "norm": 0.10792104743782717,
+      "cos_with_gradient": -0.33767759799957275,
+      "curvature": 2.162342653260642
+     },
+     "permuted": {
+      "norm": 0.10792105175266,
+      "cos_with_gradient": 0.07519348710775375,
+      "curvature": 0.10576207871518391
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.2900390625,
+     "real": {
+      "norm": 0.05024191895031891,
+      "cos_with_gradient": -0.45022332668304443,
+      "curvature": 1.4584435302884553
+     },
+     "permuted": {
+      "norm": 0.05024191895031891,
+      "cos_with_gradient": 0.019873041659593582,
+      "curvature": 0.0848677009323278
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.3060302734375,
+     "real": {
+      "norm": 0.2609432031385122,
+      "cos_with_gradient": 0.19178631901741028,
+      "curvature": 3.0252173443963155
+     },
+     "permuted": {
+      "norm": 0.26094318886226225,
+      "cos_with_gradient": 0.04253470525145531,
+      "curvature": 0.21276354990761637
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.5047607421875,
+     "real": {
+      "norm": 0.13325186589994054,
+      "cos_with_gradient": -0.26070278882980347,
+      "curvature": 1.1423439625575598
+     },
+     "permuted": {
+      "norm": 0.13325186589994054,
+      "cos_with_gradient": -0.040327370166778564,
+      "curvature": 0.09837653623648758
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.3944091796875,
+     "real": {
+      "norm": 0.6736480914667389,
+      "cos_with_gradient": -0.5994932651519775,
+      "curvature": 12.542484760682626
+     },
+     "permuted": {
+      "norm": 0.6736480914667389,
+      "cos_with_gradient": -0.17238308489322662,
+      "curvature": 0.42579834846648007
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.283203125,
+     "real": {
+      "norm": 0.2928716117037689,
+      "cos_with_gradient": -0.548294723033905,
+      "curvature": 11.224850643160805
+     },
+     "permuted": {
+      "norm": 0.2928716117037689,
+      "cos_with_gradient": -0.08175188302993774,
+      "curvature": 0.2615746447166967
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.6329345703125,
+     "real": {
+      "norm": 0.1378378367218301,
+      "cos_with_gradient": -0.6465139985084534,
+      "curvature": 2.752659150767807
+     },
+     "permuted": {
+      "norm": 0.13783784347848396,
+      "cos_with_gradient": -0.011560546234250069,
+      "curvature": 0.1281863973452955
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.78125,
+     "real": {
+      "norm": 0.29821689900704534,
+      "cos_with_gradient": 0.11307335644960403,
+      "curvature": 0.6359897617612237
+     },
+     "permuted": {
+      "norm": 0.29821689900704534,
+      "cos_with_gradient": 0.04596823453903198,
+      "curvature": 0.05534839442754566
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.6962890625,
+     "real": {
+      "norm": 0.2954897434436214,
+      "cos_with_gradient": -0.7651018500328064,
+      "curvature": 9.358048288982987
+     },
+     "permuted": {
+      "norm": 0.2954897560507941,
+      "cos_with_gradient": 0.032086774706840515,
+      "curvature": 0.17872195190881768
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.4915771484375,
+     "real": {
+      "norm": 0.5102958406437706,
+      "cos_with_gradient": 0.48810216784477234,
+      "curvature": 26.373207581547227
+     },
+     "permuted": {
+      "norm": 0.5102958406437706,
+      "cos_with_gradient": 0.07806158065795898,
+      "curvature": 0.16592110840964305
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.7607421875,
+     "real": {
+      "norm": 0.5217758107292249,
+      "cos_with_gradient": -0.7642662525177002,
+      "curvature": 350.6966345761239
+     },
+     "permuted": {
+      "norm": 0.5217757821706729,
+      "cos_with_gradient": -0.09433472156524658,
+      "curvature": 5.503222099412678
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.7529296875,
+     "real": {
+      "norm": 0.3352503513288826,
+      "cos_with_gradient": -0.32602620124816895,
+      "curvature": 3.1655340042025557
+     },
+     "permuted": {
+      "norm": 0.3352503513288826,
+      "cos_with_gradient": -0.09680624306201935,
+      "curvature": 0.1444582656562042
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.874267578125,
+     "real": {
+      "norm": 2.809976420456319,
+      "cos_with_gradient": 0.1271246075630188,
+      "curvature": 0.584356137950959
+     },
+     "permuted": {
+      "norm": 2.8099763356091363,
+      "cos_with_gradient": 0.02134067378938198,
+      "curvature": 0.0715057476449575
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.65771484375,
+     "real": {
+      "norm": 0.19916062348533473,
+      "cos_with_gradient": -0.652526319026947,
+      "curvature": 35.454389583262895
+     },
+     "permuted": {
+      "norm": 0.19916062348533473,
+      "cos_with_gradient": -0.06346993893384933,
+      "curvature": 0.17695257469373035
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.8671875,
+     "real": {
+      "norm": 0.05744734072908108,
+      "cos_with_gradient": -0.4149770736694336,
+      "curvature": 8.619754232996511
+     },
+     "permuted": {
+      "norm": 0.05744734072908108,
+      "cos_with_gradient": 0.03424159809947014,
+      "curvature": 0.14193307957718784
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.03376819491293356,
+      "cos_with_gradient": -0.23603232204914093,
+      "curvature": 0.4745150727027241
+     },
+     "permuted": {
+      "norm": 0.03376819491293356,
+      "cos_with_gradient": -0.02803044766187668,
+      "curvature": 0.041122310815949935
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.015758375427179932,
+      "cos_with_gradient": 0.004772529471665621,
+      "curvature": 0.6427249915909067
+     },
+     "permuted": {
+      "norm": 0.015758375427179932,
+      "cos_with_gradient": 0.055069733411073685,
+      "curvature": 0.09813005351347741
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "A_cont_w1",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.000244140625,
+     "real": {
+      "norm": 0.0038546876463194943,
+      "cos_with_gradient": 0.09081728011369705,
+      "curvature": 0.06821188755346533
+     },
+     "permuted": {
+      "norm": 0.0038546875283469373,
+      "cos_with_gradient": -0.11827974021434784,
+      "curvature": 0.0721253326988721
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0003662109375,
+     "real": {
+      "norm": 0.0069214743801230515,
+      "cos_with_gradient": -0.14144982397556305,
+      "curvature": 0.7839525359070262
+     },
+     "permuted": {
+      "norm": 0.0069214743801230515,
+      "cos_with_gradient": -0.04491768777370453,
+      "curvature": 0.11303088053231179
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0076904296875,
+     "real": {
+      "norm": 0.01927462381931142,
+      "cos_with_gradient": -0.014065423980355263,
+      "curvature": 0.5424003478254057
+     },
+     "permuted": {
+      "norm": 0.019274623064333495,
+      "cos_with_gradient": -0.02307102456688881,
+      "curvature": 0.08296334773831995
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.0146484375,
+     "real": {
+      "norm": 0.06461232925865903,
+      "cos_with_gradient": -0.7440569996833801,
+      "curvature": 2.9370040692837898
+     },
+     "permuted": {
+      "norm": 0.06461232925865903,
+      "cos_with_gradient": -0.24585746228694916,
+      "curvature": 0.22869925358167692
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.043701171875,
+     "real": {
+      "norm": 0.07865644537568409,
+      "cos_with_gradient": 0.18099913001060486,
+      "curvature": 1.3948758592607478
+     },
+     "permuted": {
+      "norm": 0.07865644241558785,
+      "cos_with_gradient": 0.1399979144334793,
+      "curvature": 0.17141764918886457
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.2008056640625,
+     "real": {
+      "norm": 0.12042738241339965,
+      "cos_with_gradient": -0.8684343695640564,
+      "curvature": 2.2171087553767244
+     },
+     "permuted": {
+      "norm": 0.12042737467992089,
+      "cos_with_gradient": -0.12586325407028198,
+      "curvature": 0.15020207148477044
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.1864013671875,
+     "real": {
+      "norm": 0.29038515859102226,
+      "cos_with_gradient": -0.9003202319145203,
+      "curvature": 2.4241837176659526
+     },
+     "permuted": {
+      "norm": 0.2903851714198123,
+      "cos_with_gradient": -0.17591828107833862,
+      "curvature": 0.1563919483747382
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.323974609375,
+     "real": {
+      "norm": 0.18312984050042838,
+      "cos_with_gradient": -0.560954749584198,
+      "curvature": 1.7124567726192006
+     },
+     "permuted": {
+      "norm": 0.18312983032925587,
+      "cos_with_gradient": -0.09038470685482025,
+      "curvature": 0.0874043518419265
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.6043701171875,
+     "real": {
+      "norm": 0.18471696870267953,
+      "cos_with_gradient": -0.7203944325447083,
+      "curvature": 1.760573893937776
+     },
+     "permuted": {
+      "norm": 0.18471696870267953,
+      "cos_with_gradient": -0.12035820633172989,
+      "curvature": 0.1185627916630364
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.588134765625,
+     "real": {
+      "norm": 0.36451789632015447,
+      "cos_with_gradient": -0.48088833689689636,
+      "curvature": 1.880633748481548
+     },
+     "permuted": {
+      "norm": 0.3645179167597007,
+      "cos_with_gradient": -0.09538406133651733,
+      "curvature": 0.0927401321097946
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.795654296875,
+     "real": {
+      "norm": 0.1944034305859235,
+      "cos_with_gradient": -0.8144360184669495,
+      "curvature": 3.359362375120738
+     },
+     "permuted": {
+      "norm": 0.19440342100458438,
+      "cos_with_gradient": -0.08510585129261017,
+      "curvature": 0.1426475160223395
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.955078125,
+     "real": {
+      "norm": 0.08643853906984743,
+      "cos_with_gradient": -0.1496742069721222,
+      "curvature": 1.7946237325791963
+     },
+     "permuted": {
+      "norm": 0.08643854176344502,
+      "cos_with_gradient": 0.05706201121211052,
+      "curvature": 0.12770694915639802
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.9852294921875,
+     "real": {
+      "norm": 0.3489956290209074,
+      "cos_with_gradient": -0.9291814565658569,
+      "curvature": 16.059417729156927
+     },
+     "permuted": {
+      "norm": 0.3489956396952252,
+      "cos_with_gradient": 0.06776926666498184,
+      "curvature": 0.144148183401137
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.9453125,
+     "real": {
+      "norm": 0.20635597295289893,
+      "cos_with_gradient": -0.43542659282684326,
+      "curvature": 7.591302392760567
+     },
+     "permuted": {
+      "norm": 0.20635597295289893,
+      "cos_with_gradient": -0.05635679140686989,
+      "curvature": 0.35877240561189006
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.953125,
+     "real": {
+      "norm": 0.791358176576023,
+      "cos_with_gradient": -0.8528855443000793,
+      "curvature": 47.00797415438196
+     },
+     "permuted": {
+      "norm": 0.791358176576023,
+      "cos_with_gradient": -0.10305196046829224,
+      "curvature": 1.1369643962220657
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.97705078125,
+     "real": {
+      "norm": 0.9070232972577612,
+      "cos_with_gradient": -0.7285518050193787,
+      "curvature": 30.77675450674803
+     },
+     "permuted": {
+      "norm": 0.9070232972577612,
+      "cos_with_gradient": -0.00826145987957716,
+      "curvature": 0.09602019392327561
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.955078125,
+     "real": {
+      "norm": 0.2063467207172957,
+      "cos_with_gradient": -0.2560739815235138,
+      "curvature": 2.2302950076139325
+     },
+     "permuted": {
+      "norm": 0.2063467297440692,
+      "cos_with_gradient": 0.09415974467992783,
+      "curvature": 0.14904489888016367
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.87890625,
+     "real": {
+      "norm": 0.173393037182991,
+      "cos_with_gradient": -0.8493459224700928,
+      "curvature": 4.153888377633695
+     },
+     "permuted": {
+      "norm": 0.17339304792532023,
+      "cos_with_gradient": -0.08765968680381775,
+      "curvature": 0.21832721293413387
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.11110407050330245,
+      "cos_with_gradient": -0.10376426577568054,
+      "curvature": 1.147178686129096
+     },
+     "permuted": {
+      "norm": 0.11110407050330245,
+      "cos_with_gradient": 0.02015000209212303,
+      "curvature": 0.05827468830709096
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.9996337890625,
+     "real": {
+      "norm": 0.10567245414819981,
+      "cos_with_gradient": -0.16889414191246033,
+      "curvature": 0.5646562444172776
+     },
+     "permuted": {
+      "norm": 0.10567245414819981,
+      "cos_with_gradient": -0.07599347084760666,
+      "curvature": 0.051696389685239125
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.9609375,
+     "real": {
+      "norm": 0.07641586328070814,
+      "cos_with_gradient": -0.33911144733428955,
+      "curvature": 2.8288206474299566
+     },
+     "permuted": {
+      "norm": 0.07641586632759695,
+      "cos_with_gradient": -0.019422877579927444,
+      "curvature": 0.10283987227095921
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.2667985405039151,
+      "cos_with_gradient": -0.2300698459148407,
+      "curvature": 0.8360657848268764
+     },
+     "permuted": {
+      "norm": 0.2667985405039151,
+      "cos_with_gradient": -0.09604441374540329,
+      "curvature": 0.045922517174816255
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.96875,
+     "real": {
+      "norm": 0.03966589353139616,
+      "cos_with_gradient": -0.1704263985157013,
+      "curvature": 1.5665932533437394
+     },
+     "permuted": {
+      "norm": 0.03966589353139616,
+      "cos_with_gradient": 0.058226943016052246,
+      "curvature": 0.14437057916319465
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "B_cont_w4",
+   "seed": 400,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.0048592752655046475,
+      "cos_with_gradient": 0.08677182346582413,
+      "curvature": 0.031621279024800594
+     },
+     "permuted": {
+      "norm": 0.004859275078337905,
+      "cos_with_gradient": 0.02950567565858364,
+      "curvature": 0.004192939078766509
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.005491363375953857,
+      "cos_with_gradient": 0.0033429109025746584,
+      "curvature": 0.009649775588635152
+     },
+     "permuted": {
+      "norm": 0.005491363210331105,
+      "cos_with_gradient": 0.005987218581140041,
+      "curvature": 0.003619039183507586
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.00830078125,
+     "real": {
+      "norm": 0.01168022055470023,
+      "cos_with_gradient": 0.009648021310567856,
+      "curvature": 0.2942078221014311
+     },
+     "permuted": {
+      "norm": 0.011680221177630028,
+      "cos_with_gradient": 0.12835489213466644,
+      "curvature": 0.051915730796393174
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.027587890625,
+     "real": {
+      "norm": 0.02666495763769398,
+      "cos_with_gradient": -0.6771310567855835,
+      "curvature": 0.7867180560660749
+     },
+     "permuted": {
+      "norm": 0.02666495763769398,
+      "cos_with_gradient": -0.13920858502388,
+      "curvature": 0.08176404066890268
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0535888671875,
+     "real": {
+      "norm": 0.12805355423502704,
+      "cos_with_gradient": -0.806736171245575,
+      "curvature": 1.820257160398957
+     },
+     "permuted": {
+      "norm": 0.12805355423502704,
+      "cos_with_gradient": -0.0854455903172493,
+      "curvature": 0.06566443231663023
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.191162109375,
+     "real": {
+      "norm": 0.12850577105047972,
+      "cos_with_gradient": 0.17569872736930847,
+      "curvature": 0.9573792066835233
+     },
+     "permuted": {
+      "norm": 0.12850577105047972,
+      "cos_with_gradient": 0.02294732630252838,
+      "curvature": 0.048961406844299456
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.2252197265625,
+     "real": {
+      "norm": 0.10309496463859115,
+      "cos_with_gradient": -0.33726048469543457,
+      "curvature": 1.0738428624028267
+     },
+     "permuted": {
+      "norm": 0.10309496463859115,
+      "cos_with_gradient": -0.10384297370910645,
+      "curvature": 0.06835744692018518
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.29443359375,
+     "real": {
+      "norm": 0.764529008174052,
+      "cos_with_gradient": -0.8600044250488281,
+      "curvature": 11.244844366309211
+     },
+     "permuted": {
+      "norm": 0.764529008174052,
+      "cos_with_gradient": -0.15021397173404694,
+      "curvature": 0.5662731125514462
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.3046875,
+     "real": {
+      "norm": 0.29587680750183154,
+      "cos_with_gradient": -0.8620340824127197,
+      "curvature": 2.363272876876388
+     },
+     "permuted": {
+      "norm": 0.29587680750183154,
+      "cos_with_gradient": -0.09559862315654755,
+      "curvature": 0.11363375431516734
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.7235107421875,
+     "real": {
+      "norm": 0.5042843250512563,
+      "cos_with_gradient": -0.909990668296814,
+      "curvature": 14.413056537562133
+     },
+     "permuted": {
+      "norm": 0.5042842955021292,
+      "cos_with_gradient": -0.10330259799957275,
+      "curvature": 0.3241725547027469
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.79150390625,
+     "real": {
+      "norm": 0.45475649621527214,
+      "cos_with_gradient": -0.8419033885002136,
+      "curvature": 45.1907130720044
+     },
+     "permuted": {
+      "norm": 0.45475649621527214,
+      "cos_with_gradient": -0.13946297764778137,
+      "curvature": 0.9473592170133243
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.738525390625,
+     "real": {
+      "norm": 0.4684900198639862,
+      "cos_with_gradient": -0.7157705426216125,
+      "curvature": 9.983017191373246
+     },
+     "permuted": {
+      "norm": 0.4684900039605936,
+      "cos_with_gradient": -0.04571070149540901,
+      "curvature": 0.18630451712840446
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.6527099609375,
+     "real": {
+      "norm": 1.7299714417939411,
+      "cos_with_gradient": -0.9916852116584778,
+      "curvature": 217.5104846615689
+     },
+     "permuted": {
+      "norm": 1.7299715107021811,
+      "cos_with_gradient": -0.37264788150787354,
+      "curvature": 31.69401370332595
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.776123046875,
+     "real": {
+      "norm": 1.562296129277878,
+      "cos_with_gradient": -0.07789406925439835,
+      "curvature": 4.857764838637582
+     },
+     "permuted": {
+      "norm": 1.562296129277878,
+      "cos_with_gradient": 0.01440601609647274,
+      "curvature": 0.11041644606873981
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.717041015625,
+     "real": {
+      "norm": 6.424425792639893,
+      "cos_with_gradient": -0.9976084232330322,
+      "curvature": 1159.7231333623056
+     },
+     "permuted": {
+      "norm": 6.424426386420133,
+      "cos_with_gradient": -0.2962854206562042,
+      "curvature": 103.9191625223115
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.08377916193092044,
+      "cos_with_gradient": -0.6033420562744141,
+      "curvature": 1.7614382094271932
+     },
+     "permuted": {
+      "norm": 0.08377916193092044,
+      "cos_with_gradient": -0.022841734811663628,
+      "curvature": 0.13805291799762703
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.22190541273871559,
+      "cos_with_gradient": -0.9383543729782104,
+      "curvature": 8.73930040333471
+     },
+     "permuted": {
+      "norm": 0.22190542952645462,
+      "cos_with_gradient": 0.011792519129812717,
+      "curvature": 1.3666530895340279
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.873046875,
+     "real": {
+      "norm": 0.23099249795295543,
+      "cos_with_gradient": -0.8214297890663147,
+      "curvature": 6.157080186948956
+     },
+     "permuted": {
+      "norm": 0.23099249795295543,
+      "cos_with_gradient": 0.0023493131157010794,
+      "curvature": 0.1687442845638926
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.728515625,
+     "real": {
+      "norm": 1.5221863132535616,
+      "cos_with_gradient": -0.7919027805328369,
+      "curvature": 1033.4068455798922
+     },
+     "permuted": {
+      "norm": 1.52218623493904,
+      "cos_with_gradient": 0.3139050602912903,
+      "curvature": 130.1935294805244
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 0.78125,
+     "real": {
+      "norm": 0.06172106993516046,
+      "cos_with_gradient": -0.34884971380233765,
+      "curvature": 0.7786155505100132
+     },
+     "permuted": {
+      "norm": 0.06172107182131247,
+      "cos_with_gradient": -0.046127062290906906,
+      "curvature": 0.19303725886124604
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.875,
+     "real": {
+      "norm": 0.06628458714930731,
+      "cos_with_gradient": -0.6854671835899353,
+      "curvature": 2.3282803146148012
+     },
+     "permuted": {
+      "norm": 0.06628459066189821,
+      "cos_with_gradient": -0.1075713112950325,
+      "curvature": 0.22462776694079722
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 0.8525390625,
+     "real": {
+      "norm": 0.18133044677326118,
+      "cos_with_gradient": -0.8873799443244934,
+      "curvature": 7.719525412191716
+     },
+     "permuted": {
+      "norm": 0.18133044677326118,
+      "cos_with_gradient": -0.04800700023770332,
+      "curvature": 0.12161765775539934
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 0.740478515625,
+     "real": {
+      "norm": 0.734070450961793,
+      "cos_with_gradient": -0.967413604259491,
+      "curvature": 23.51887675997098
+     },
+     "permuted": {
+      "norm": 0.7340704103630696,
+      "cos_with_gradient": -0.05561264231801033,
+      "curvature": 0.20021574990929766
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "B_cont_w4",
+   "seed": 401,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0079345703125,
+     "real": {
+      "norm": 0.0023457674319221355,
+      "cos_with_gradient": 0.04137909412384033,
+      "curvature": 0.02594598628970943
+     },
+     "permuted": {
+      "norm": 0.002345767334992799,
+      "cos_with_gradient": -0.1294935941696167,
+      "curvature": 0.05349950650387644
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.015625,
+     "real": {
+      "norm": 0.005823168175033626,
+      "cos_with_gradient": 0.06034258380532265,
+      "curvature": 0.057935412771751786
+     },
+     "permuted": {
+      "norm": 0.005823168175033626,
+      "cos_with_gradient": 0.011828805319964886,
+      "curvature": 0.02082786288447678
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.009521484375,
+     "real": {
+      "norm": 0.015178193388682584,
+      "cos_with_gradient": -0.09275569021701813,
+      "curvature": 0.4260060291477236
+     },
+     "permuted": {
+      "norm": 0.015178193868051722,
+      "cos_with_gradient": -0.012317357584834099,
+      "curvature": 0.03971114951994849
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.0167236328125,
+     "real": {
+      "norm": 0.020460618017611138,
+      "cos_with_gradient": 0.04593734070658684,
+      "curvature": 0.22638226494053845
+     },
+     "permuted": {
+      "norm": 0.02046061944004273,
+      "cos_with_gradient": 0.13071121275424957,
+      "curvature": 0.049783900884411404
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.0587158203125,
+     "real": {
+      "norm": 0.12871534487597897,
+      "cos_with_gradient": -0.8215838074684143,
+      "curvature": 1.7131187572262263
+     },
+     "permuted": {
+      "norm": 0.12871534487597897,
+      "cos_with_gradient": -0.09912227094173431,
+      "curvature": 0.03317578862273241
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.1552734375,
+     "real": {
+      "norm": 0.1379722893715616,
+      "cos_with_gradient": -0.8177627325057983,
+      "curvature": 1.9581873459892227
+     },
+     "permuted": {
+      "norm": 0.1379722893715616,
+      "cos_with_gradient": -0.11482472717761993,
+      "curvature": 0.06339072338490248
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.259033203125,
+     "real": {
+      "norm": 0.35427597640373193,
+      "cos_with_gradient": -0.810881495475769,
+      "curvature": 2.557835680022111
+     },
+     "permuted": {
+      "norm": 0.35427597640373193,
+      "cos_with_gradient": -0.05977437272667885,
+      "curvature": 0.04200149662848994
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.403564453125,
+     "real": {
+      "norm": 0.439802920680737,
+      "cos_with_gradient": -0.8626121878623962,
+      "curvature": 3.9342054012745136
+     },
+     "permuted": {
+      "norm": 0.439802920680737,
+      "cos_with_gradient": -0.01426201406866312,
+      "curvature": 0.0378882344206449
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.6751708984375,
+     "real": {
+      "norm": 0.41996846495041823,
+      "cos_with_gradient": -0.7218449115753174,
+      "curvature": 4.2476931413780035
+     },
+     "permuted": {
+      "norm": 0.4199684826912275,
+      "cos_with_gradient": -0.04720495641231537,
+      "curvature": 0.07691884204316123
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.5499267578125,
+     "real": {
+      "norm": 0.8139599008759075,
+      "cos_with_gradient": -0.9574736952781677,
+      "curvature": 65.00711974832082
+     },
+     "permuted": {
+      "norm": 0.8139599374899,
+      "cos_with_gradient": -0.029265286400914192,
+      "curvature": 0.22365082045468
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.74609375,
+     "real": {
+      "norm": 0.11756188670215918,
+      "cos_with_gradient": -0.51163649559021,
+      "curvature": 3.147309212526604
+     },
+     "permuted": {
+      "norm": 0.11756188274117058,
+      "cos_with_gradient": 0.07109276205301285,
+      "curvature": 0.13911534473088788
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.83984375,
+     "real": {
+      "norm": 1.037406634530422,
+      "cos_with_gradient": -0.8439657092094421,
+      "curvature": 21.848638751429593
+     },
+     "permuted": {
+      "norm": 1.037406634530422,
+      "cos_with_gradient": -0.10789664089679718,
+      "curvature": 0.43950639266498115
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.9053955078125,
+     "real": {
+      "norm": 0.2414905919262363,
+      "cos_with_gradient": -0.7193349003791809,
+      "curvature": 18.751300006260166
+     },
+     "permuted": {
+      "norm": 0.2414905765000021,
+      "cos_with_gradient": 0.033980805426836014,
+      "curvature": 0.15397586310116593
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.966796875,
+     "real": {
+      "norm": 0.13742229097269762,
+      "cos_with_gradient": -0.6471417546272278,
+      "curvature": 3.387670230618264
+     },
+     "permuted": {
+      "norm": 0.13742229774978265,
+      "cos_with_gradient": -0.0056562707759439945,
+      "curvature": 0.12446764871438255
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.9996337890625,
+     "real": {
+      "norm": 0.10574187130382261,
+      "cos_with_gradient": -0.3696776330471039,
+      "curvature": 4.268276633874946
+     },
+     "permuted": {
+      "norm": 0.10574187130382261,
+      "cos_with_gradient": 0.042557213455438614,
+      "curvature": 0.15215695214576597
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.9921875,
+     "real": {
+      "norm": 0.09558640388340695,
+      "cos_with_gradient": 0.13773271441459656,
+      "curvature": 0.9142698013418654
+     },
+     "permuted": {
+      "norm": 0.09558640388340695,
+      "cos_with_gradient": -0.06719665229320526,
+      "curvature": 0.12856437455621628
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 0.8759765625,
+     "real": {
+      "norm": 0.8765998927553892,
+      "cos_with_gradient": 0.725525438785553,
+      "curvature": 7.9470459054215645
+     },
+     "permuted": {
+      "norm": 0.876599790762481,
+      "cos_with_gradient": -0.36660289764404297,
+      "curvature": 1.6215656307765651
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 0.9072265625,
+     "real": {
+      "norm": 0.4557909968984674,
+      "cos_with_gradient": -0.9867510795593262,
+      "curvature": 95.93694364188799
+     },
+     "permuted": {
+      "norm": 0.4557910132449519,
+      "cos_with_gradient": 0.5164974927902222,
+      "curvature": 27.32954222271093
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.1103973631209615,
+      "cos_with_gradient": -0.7226038575172424,
+      "curvature": 1.827520236411909
+     },
+     "permuted": {
+      "norm": 0.11039735890291423,
+      "cos_with_gradient": 0.38232704997062683,
+      "curvature": 0.694161555536927
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.09207807750917534,
+      "cos_with_gradient": -0.6373762488365173,
+      "curvature": 1.4514566407534264
+     },
+     "permuted": {
+      "norm": 0.09207807750917534,
+      "cos_with_gradient": 0.2546897232532501,
+      "curvature": 0.3950571989072874
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 0.9752197265625,
+     "real": {
+      "norm": 0.1052634395459134,
+      "cos_with_gradient": -0.48860809206962585,
+      "curvature": 1.6031220056684272
+     },
+     "permuted": {
+      "norm": 0.1052634395459134,
+      "cos_with_gradient": 0.10533379018306732,
+      "curvature": 0.2605772819117998
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.05693798277280712,
+      "cos_with_gradient": -0.2709675431251526,
+      "curvature": 1.259822177535191
+     },
+     "permuted": {
+      "norm": 0.05693798072820845,
+      "cos_with_gradient": -0.13813968002796173,
+      "curvature": 0.34521533648487046
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.09055055014267022,
+      "cos_with_gradient": -0.4495650827884674,
+      "curvature": 1.2793420657627559
+     },
+     "permuted": {
+      "norm": 0.09055054500011393,
+      "cos_with_gradient": 0.13211661577224731,
+      "curvature": 0.44859987573886534
+     }
+    }
+   ]
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.03,
+   "delay": 4,
+   "arm": "B_cont_w4",
+   "seed": 402,
+   "records": [
+    {
+     "step": 32,
+     "epoch": 0.5,
+     "accuracy": 0.0001220703125,
+     "real": {
+      "norm": 0.004783579987316883,
+      "cos_with_gradient": 0.03958415985107422,
+      "curvature": 0.015310577607244212
+     },
+     "permuted": {
+      "norm": 0.004783579797188418,
+      "cos_with_gradient": 0.0030194255523383617,
+      "curvature": 0.0007714347716016281
+     }
+    },
+    {
+     "step": 64,
+     "epoch": 1.0,
+     "accuracy": 0.007568359375,
+     "real": {
+      "norm": 0.00652829072231557,
+      "cos_with_gradient": 0.03334604948759079,
+      "curvature": 0.057701775413306775
+     },
+     "permuted": {
+      "norm": 0.006528290443683763,
+      "cos_with_gradient": -0.0068124523386359215,
+      "curvature": 0.00641789842192489
+     }
+    },
+    {
+     "step": 96,
+     "epoch": 1.5,
+     "accuracy": 0.0069580078125,
+     "real": {
+      "norm": 0.013403329562616544,
+      "cos_with_gradient": -0.17566783726215363,
+      "curvature": 0.23352562759803205
+     },
+     "permuted": {
+      "norm": 0.013403329562616544,
+      "cos_with_gradient": -0.09309215843677521,
+      "curvature": 0.05030151610291832
+     }
+    },
+    {
+     "step": 128,
+     "epoch": 2.0,
+     "accuracy": 0.016845703125,
+     "real": {
+      "norm": 0.026165250751215792,
+      "cos_with_gradient": -0.5236441493034363,
+      "curvature": 0.855912348635672
+     },
+     "permuted": {
+      "norm": 0.026165250751215792,
+      "cos_with_gradient": -0.053981050848960876,
+      "curvature": 0.08249463214803862
+     }
+    },
+    {
+     "step": 160,
+     "epoch": 2.5,
+     "accuracy": 0.073486328125,
+     "real": {
+      "norm": 0.03716704943768354,
+      "cos_with_gradient": -0.1838150918483734,
+      "curvature": 0.5296530116266194
+     },
+     "permuted": {
+      "norm": 0.037167052569901965,
+      "cos_with_gradient": -0.0473034530878067,
+      "curvature": 0.07384558974479119
+     }
+    },
+    {
+     "step": 192,
+     "epoch": 3.0,
+     "accuracy": 0.14501953125,
+     "real": {
+      "norm": 0.19358879504817156,
+      "cos_with_gradient": -0.8774427771568298,
+      "curvature": 2.07122705305558
+     },
+     "permuted": {
+      "norm": 0.19358879504817156,
+      "cos_with_gradient": -0.12897254526615143,
+      "curvature": 0.07229571034111745
+     }
+    },
+    {
+     "step": 224,
+     "epoch": 3.5,
+     "accuracy": 0.2249755859375,
+     "real": {
+      "norm": 0.22945408606271142,
+      "cos_with_gradient": -0.7881923913955688,
+      "curvature": 2.2142711484814233
+     },
+     "permuted": {
+      "norm": 0.22945408606271142,
+      "cos_with_gradient": -0.1855250895023346,
+      "curvature": 0.140670830542565
+     }
+    },
+    {
+     "step": 256,
+     "epoch": 4.0,
+     "accuracy": 0.5626220703125,
+     "real": {
+      "norm": 0.19482802384946227,
+      "cos_with_gradient": -0.10839883238077164,
+      "curvature": 3.115551842714418
+     },
+     "permuted": {
+      "norm": 0.19482802384946227,
+      "cos_with_gradient": 0.07270919531583786,
+      "curvature": 0.10518618767482865
+     }
+    },
+    {
+     "step": 288,
+     "epoch": 4.5,
+     "accuracy": 0.712890625,
+     "real": {
+      "norm": 0.8383070615579087,
+      "cos_with_gradient": -0.8857659101486206,
+      "curvature": 21.26881314228985
+     },
+     "permuted": {
+      "norm": 0.8383070971085119,
+      "cos_with_gradient": -0.1485975831747055,
+      "curvature": 0.7113147581205489
+     }
+    },
+    {
+     "step": 320,
+     "epoch": 5.0,
+     "accuracy": 0.6483154296875,
+     "real": {
+      "norm": 0.6696786466752923,
+      "cos_with_gradient": -0.7658945918083191,
+      "curvature": 9.108643135207616
+     },
+     "permuted": {
+      "norm": 0.6696786466752923,
+      "cos_with_gradient": -0.1789226084947586,
+      "curvature": 0.6593637924264256
+     }
+    },
+    {
+     "step": 352,
+     "epoch": 5.5,
+     "accuracy": 0.7310791015625,
+     "real": {
+      "norm": 0.19692039496212121,
+      "cos_with_gradient": -0.6832049489021301,
+      "curvature": 1.7897204171579744
+     },
+     "permuted": {
+      "norm": 0.19692039496212121,
+      "cos_with_gradient": -0.11981523036956787,
+      "curvature": 0.11415271054886143
+     }
+    },
+    {
+     "step": 384,
+     "epoch": 6.0,
+     "accuracy": 0.8167724609375,
+     "real": {
+      "norm": 0.4063084083530667,
+      "cos_with_gradient": -0.8276098966598511,
+      "curvature": 10.565903847259564
+     },
+     "permuted": {
+      "norm": 0.4063084083530667,
+      "cos_with_gradient": -0.10867294669151306,
+      "curvature": 0.21669314072709703
+     }
+    },
+    {
+     "step": 416,
+     "epoch": 6.5,
+     "accuracy": 0.7867431640625,
+     "real": {
+      "norm": 0.22812020087746324,
+      "cos_with_gradient": -0.7305419445037842,
+      "curvature": 3.9579247460066407
+     },
+     "permuted": {
+      "norm": 0.2281201927122715,
+      "cos_with_gradient": -0.06612761318683624,
+      "curvature": 0.117654456472212
+     }
+    },
+    {
+     "step": 448,
+     "epoch": 7.0,
+     "accuracy": 0.8876953125,
+     "real": {
+      "norm": 0.6040659990520147,
+      "cos_with_gradient": -0.9593546390533447,
+      "curvature": 24.785159004886445
+     },
+     "permuted": {
+      "norm": 0.6040659990520147,
+      "cos_with_gradient": -0.04501744359731674,
+      "curvature": 0.22872549518456953
+     }
+    },
+    {
+     "step": 480,
+     "epoch": 7.5,
+     "accuracy": 0.90576171875,
+     "real": {
+      "norm": 0.3191822627160576,
+      "cos_with_gradient": -0.7792314887046814,
+      "curvature": 7.064967000254941
+     },
+     "permuted": {
+      "norm": 0.3191822627160576,
+      "cos_with_gradient": -0.20753544569015503,
+      "curvature": 0.6206530004734622
+     }
+    },
+    {
+     "step": 512,
+     "epoch": 8.0,
+     "accuracy": 0.9808349609375,
+     "real": {
+      "norm": 0.16557935724594552,
+      "cos_with_gradient": -0.7749829888343811,
+      "curvature": 4.603171355053905
+     },
+     "permuted": {
+      "norm": 0.16557935724594552,
+      "cos_with_gradient": 0.07300658524036407,
+      "curvature": 0.10863246947816359
+     }
+    },
+    {
+     "step": 544,
+     "epoch": 8.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.0697119951391313,
+      "cos_with_gradient": -0.15962673723697662,
+      "curvature": 0.37927463957394697
+     },
+     "permuted": {
+      "norm": 0.0697119951391313,
+      "cos_with_gradient": -0.015995653346180916,
+      "curvature": 0.04824830087598431
+     }
+    },
+    {
+     "step": 576,
+     "epoch": 9.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.12259201338858267,
+      "cos_with_gradient": -0.7107706069946289,
+      "curvature": 2.5497114002166317
+     },
+     "permuted": {
+      "norm": 0.12259200579165544,
+      "cos_with_gradient": 0.027325738221406937,
+      "curvature": 0.08335504578872559
+     }
+    },
+    {
+     "step": 608,
+     "epoch": 9.5,
+     "accuracy": 0.9921875,
+     "real": {
+      "norm": 0.12273139094653358,
+      "cos_with_gradient": -0.6374678015708923,
+      "curvature": 11.849424070471647
+     },
+     "permuted": {
+      "norm": 0.12273139094653358,
+      "cos_with_gradient": -0.08486607670783997,
+      "curvature": 0.20875472300299613
+     }
+    },
+    {
+     "step": 640,
+     "epoch": 10.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.04026667226825372,
+      "cos_with_gradient": -0.45332881808280945,
+      "curvature": 1.207685340975815
+     },
+     "permuted": {
+      "norm": 0.04026667226825372,
+      "cos_with_gradient": -0.027012137696146965,
+      "curvature": 0.04347042618907474
+     }
+    },
+    {
+     "step": 672,
+     "epoch": 10.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.03873325712022729,
+      "cos_with_gradient": -0.31068626046180725,
+      "curvature": 0.42883858221891835
+     },
+     "permuted": {
+      "norm": 0.038733255617444756,
+      "cos_with_gradient": 0.07118003815412521,
+      "curvature": 0.05657249542355235
+     }
+    },
+    {
+     "step": 704,
+     "epoch": 11.0,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.25857454441815636,
+      "cos_with_gradient": -0.5353729128837585,
+      "curvature": 2.5064186111195306
+     },
+     "permuted": {
+      "norm": 0.25857454441815636,
+      "cos_with_gradient": 0.026848681271076202,
+      "curvature": 0.08125943569264837
+     }
+    },
+    {
+     "step": 736,
+     "epoch": 11.5,
+     "accuracy": 1.0,
+     "real": {
+      "norm": 0.23491596733355435,
+      "cos_with_gradient": -0.05676441639661789,
+      "curvature": 0.3209719106872886
+     },
+     "permuted": {
+      "norm": 0.23491596733355435,
+      "cos_with_gradient": -0.08100897073745728,
+      "curvature": 0.06604118687586694
+     }
+    }
+   ]
+  }
+ ]
+}
