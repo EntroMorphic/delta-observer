@@ -123,6 +123,43 @@ at the edge of stability (Damian et al.).
 - the floor moves with learning rate × delay;
 - momentum costs tolerance (2× here).
 
+## F1c. A gradient-based predictor: also killed
+
+This is a follow-up. The question: can a signal measured directly from
+gradients predict the floor, since it already includes the nonlinear
+dynamics?
+
+- **The signal:** the descent ratio r(d) = g_stale(d)·g / ‖g‖². It is the
+  share of the true gradient that the d-step-stale gradient (all-interface
+  staleness) still points along.
+- **Where it is measured:** on a 1024-example probe batch, every epoch from 2
+  to 16 of a fresh trajectory, on seeds 500–502, for the same eight settings.
+- **The rule,** committed at `a64c2f1` before running:
+  - the predicted floor is the largest delay at which r > 0 at every
+    checkpoint;
+  - r > 0.5 is the secondary.
+- **Harness and raw results:** `research/experiments/gradient_floor.py` and
+  `research/results/gradient_floor_v0.json`.
+
+**Result.**
+- **Primary: 1 of 8 within 2×,** and that one is SGD 0.1, predicted 8–16
+  against a measured 4.
+- **The rule is far too optimistic.** It predicts 16–64 where the measured
+  floors are 0–8.
+- **It does not even order the settings.** SGD 0.3 (measured floor 1) gets
+  32–64.
+- **Secondary: 3 of 8,** but individual seeds disagree by up to 16×; for
+  example 2, 4 and 32 for SGD 1.0 without momentum.
+
+**Why it fails.** The stale gradient still points downhill at every probe,
+long after training under that delay would fail. Failure is a *closed-loop*
+instability: the stale trajectory feeds its own error back and the
+oscillation grows. A probe of the fresh trajectory is open-loop. It measures
+one step's misdirection, not the growth of a feedback loop. With linear
+theory also failing (F1, F1b), the evidence so far says the floor has to be
+measured with short closed-loop stale runs. It cannot be read off a fresh
+run.
+
 ## The permutation bound applied to compensation
 
 The permuted error removes all directional harm and keeps the error's
