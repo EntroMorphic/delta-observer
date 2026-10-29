@@ -122,7 +122,7 @@ Source: [`interface_confirm_v2_results.md`](interface_confirm_v2_results.md).
 | Claim | Report |
 |---|---|
 | Local curvature tells you which interface to keep fresh (killed twice, with a repeatable target) | [`second_star_slip_results.md`](second_star_slip_results.md), [`second_star_slip_v2_results.md`](second_star_slip_v2_results.md) |
-| Linear delayed-stability theory predicts the floor from sharpness. Both a pre-registered and a post-hoc model failed, because training sits at the edge of stability | [`stability_margin_v0.md`](stability_margin_v0.md) |
+| The floor can be predicted without running to it. Four predictors failed under rules fixed in advance: linear sharpness theory, a block-structured model, a gradient descent ratio (too optimistic) and a closed-loop stress burst (too pessimistic) | [`stability_margin_v0.md`](stability_margin_v0.md) |
 | Per-interface "decouple when settled" triggers beat a global switch | [`contract_experiments_v0.md`](contract_experiments_v0.md) |
 | Discretized interfaces absorb staleness | [`contract_experiments_v0.md`](contract_experiments_v0.md) |
 | Staleness induces modular structure | [`contract_experiments_v0.md`](contract_experiments_v0.md) |

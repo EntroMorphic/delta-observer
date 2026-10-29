@@ -160,6 +160,52 @@ theory also failing (F1, F1b), the evidence so far says the floor has to be
 measured with short closed-loop stale runs. It cannot be read off a fresh
 run.
 
+## F1d. A closed-loop stress test: also killed, from the other side
+
+This is a follow-up to F1c, which suggested that the floor must be measured
+in closed loop.
+
+- **The rule,** committed at `4e090fb` before running:
+  - train fresh (seeds 500–502, same eight settings) to the first epoch with
+    at least 25% accuracy, the start of the learning transition;
+  - from there, for each grid delay, branch a 256-step all-interface stale
+    run and a fresh run on identical batches;
+  - a delay passes if the stale run's final full-batch loss is at most 2×
+    the fresh run's, with 1.25× and 4× as secondaries;
+  - the predicted floor is the largest delay up to which every delay passes.
+- **Harness and raw results:** `research/experiments/stress_floor.py` and
+  `research/results/stress_floor_v0.json`.
+
+**Result.**
+
+| Threshold | Within 2× | Rank correlation with the measured floor |
+|---|---|---|
+| 2× (primary) | **0 of 8** | 0.18 |
+| 1.25× | 0 of 8 | 0.30 |
+| 4× | 2 of 8 | 0.46 |
+
+- **It is consistently pessimistic.** It predicts 0–2 where the measured
+  floors are 1–8.
+- **Why:** a short stale burst at the transition costs more than 2× in loss
+  even at delays training survives. A stale run falls behind at the
+  transition, then catches up and fits. The burst measures *slowdown at the
+  most sensitive moment*; the floor measures *eventual failure*.
+
+**The two gradient-era predictors bracket the floor.**
+
+| Predictor | Kind | Direction of error | Typical prediction |
+|---|---|---|---|
+| Descent ratio (F1c) | open loop | too optimistic | 16–64 |
+| Stress burst (F1d) | short closed loop | too pessimistic | 0–2 |
+
+The measured floor, 1–8, lies between them. A calibrated threshold could
+probably map one onto the floor. With 8 settings, though, that would be
+fitting, not predicting, and I have not done it.
+
+**Status.** Four predictors failed under rules fixed in advance: linear,
+block, descent ratio and stress burst. As of now, the floor in this regime is
+known only by running to it.
+
 ## The permutation bound applied to compensation
 
 The permuted error removes all directional harm and keeps the error's
