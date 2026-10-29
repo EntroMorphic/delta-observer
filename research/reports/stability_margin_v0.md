@@ -199,12 +199,17 @@ in closed loop.
 | Stress burst (F1d) | short closed loop | too pessimistic | 0–2 |
 
 The measured floor, 1–8, lies between them. A calibrated threshold could
-probably map one onto the floor. With 8 settings, though, that would be
-fitting, not predicting, and I have not done it.
+probably map one onto the floor. That was then tested properly: a threshold
+fitted on these 8 settings and frozen, then scored on 8 new learning rates
+([`calibrated_floor_v0.md`](calibrated_floor_v0.md)). It passed its frozen
+rule only just (3/8 within 2×, Spearman 0.52). A free rule that scales the
+nearest known floor by lr_cal / lr did better on every measure (6/8, 0.83).
 
 **Status.** Four predictors failed under rules fixed in advance: linear,
-block, descent ratio and stress burst. As of now, the floor in this regime is
-known only by running to it.
+block, descent ratio and stress burst. A fifth, the calibrated burst, held on
+paper but loses to learning-rate scaling. In this regime the floor is known
+only by running to it, or by interpolating from known floors with
+learning-rate scaling.
 
 ## The permutation bound applied to compensation
 

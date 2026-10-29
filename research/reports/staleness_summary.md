@@ -108,6 +108,10 @@ Source: [`interface_confirm_v2_results.md`](interface_confirm_v2_results.md).
   tolerance:** removing it doubled the floor
   ([`staleness_floor_v0.md`](staleness_floor_v0.md),
   [`stability_margin_v0.md`](stability_margin_v0.md)).
+- **To estimate the floor at a new learning rate, scale a known one:**
+  floor ≈ floor_known × lr_known / lr. On 8 held-out settings this got 6
+  within 2×. That beats every sensitivity probe we tried
+  ([`calibrated_floor_v0.md`](calibrated_floor_v0.md)).
 - **Diagonal DC-ASGD cannot correct cross-stage staleness,** because it has
   no cross-block terms. Exact first-order correction made ReLU networks
   worse.
@@ -122,7 +126,7 @@ Source: [`interface_confirm_v2_results.md`](interface_confirm_v2_results.md).
 | Claim | Report |
 |---|---|
 | Local curvature tells you which interface to keep fresh (killed twice, with a repeatable target) | [`second_star_slip_results.md`](second_star_slip_results.md), [`second_star_slip_v2_results.md`](second_star_slip_v2_results.md) |
-| The floor can be predicted without running to it. Four predictors failed under rules fixed in advance: linear sharpness theory, a block-structured model, a gradient descent ratio (too optimistic) and a closed-loop stress burst (too pessimistic) | [`stability_margin_v0.md`](stability_margin_v0.md) |
+| The floor can be predicted without running to it. Four predictors failed under rules fixed in advance: linear sharpness theory, a block-structured model, a gradient descent ratio (too optimistic) and a closed-loop stress burst (too pessimistic). A calibrated burst passed its frozen held-out rule only just, and a free learning-rate-scaling rule beats it (6/8 within 2× against 3/8) | [`stability_margin_v0.md`](stability_margin_v0.md), [`calibrated_floor_v0.md`](calibrated_floor_v0.md) |
 | Per-interface "decouple when settled" triggers beat a global switch | [`contract_experiments_v0.md`](contract_experiments_v0.md) |
 | Discretized interfaces absorb staleness | [`contract_experiments_v0.md`](contract_experiments_v0.md) |
 | Staleness induces modular structure | [`contract_experiments_v0.md`](contract_experiments_v0.md) |

@@ -1,0 +1,89 @@
+{
+ "status": "exploratory",
+ "script_sha256": "d092748d70617e0c7363f5a3562d032e9507dd7d949d75599d647b00e76d202c",
+ "frozen_ratio": 32,
+ "per_setting": [
+  {
+   "optimizer": "adam",
+   "lr": 0.005,
+   "measured": 1,
+   "calibrated": 64.0,
+   "constant": 4.0,
+   "lr_scaling": 2.0
+  },
+  {
+   "optimizer": "adam",
+   "lr": 0.02,
+   "measured": 0,
+   "calibrated": 2.0,
+   "constant": 4.0,
+   "lr_scaling": 2.0
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.05,
+   "measured": 16,
+   "calibrated": 64.0,
+   "constant": 4.0,
+   "lr_scaling": 8.0
+  },
+  {
+   "optimizer": "sgd",
+   "lr": 0.2,
+   "measured": 1,
+   "calibrated": 1.0,
+   "constant": 4.0,
+   "lr_scaling": 2.0
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.005,
+   "measured": 32,
+   "calibrated": 16.0,
+   "constant": 4.0,
+   "lr_scaling": 16.0
+  },
+  {
+   "optimizer": "muon",
+   "lr": 0.02,
+   "measured": 4,
+   "calibrated": 4.0,
+   "constant": 4.0,
+   "lr_scaling": 8.0
+  },
+  {
+   "optimizer": "sgd0",
+   "lr": 0.5,
+   "measured": 16,
+   "calibrated": 64.0,
+   "constant": 4.0,
+   "lr_scaling": 16.0
+  },
+  {
+   "optimizer": "sgd0",
+   "lr": 2.0,
+   "measured": 0,
+   "calibrated": 8.0,
+   "constant": 4.0,
+   "lr_scaling": 4.0
+  }
+ ],
+ "scores": {
+  "calibrated": {
+   "within_2x": 3,
+   "spearman": 0.521749194749951,
+   "mean_log2_error": 2.0934119570799252
+  },
+  "constant": {
+   "within_2x": 1,
+   "spearman": NaN,
+   "mean_log2_error": 2.01389450646817
+  },
+  "lr_scaling": {
+   "within_2x": 6,
+   "spearman": 0.830336491706037,
+   "mean_log2_error": 1.2272783870310287
+  }
+ },
+ "verdict": "held"
+}
