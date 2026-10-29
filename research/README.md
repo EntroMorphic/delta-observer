@@ -81,6 +81,8 @@ Muon/Adam hybrids at the optimizer crossover.
 [`reports/stability_margin_v0.md`](reports/stability_margin_v0.md) tests a
 stability-margin theory of the floor (killed quantitatively) and scores delay
 compensation against the permutation bound.
+[`reports/basis_rotation_bound_v0.md`](reports/basis_rotation_bound_v0.md) scores
+Basis Rotation (ICML 2026) against that bound.
 
 ## Run
 
