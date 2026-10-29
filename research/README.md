@@ -69,6 +69,9 @@ staleness a modular network absorbs.
 [`reports/contract_experiments_v0.md`](reports/contract_experiments_v0.md)
 tests the follow-up idea that interfaces have a lifecycle and tolerate
 asynchrony once settled.
+[`reports/interface_confirm_results.md`](reports/interface_confirm_results.md)
+is the pre-registered confirmation of the two candidates that survived a
+[prior-art check](reports/prior_art_check_v0.md).
 
 ## Run
 
