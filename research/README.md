@@ -78,6 +78,9 @@ reruns the underpowered tests at power-checked delays.
 staleness becomes lethal and how far the directional effect moves that floor.
 [`reports/hybrid_staleness_v0.md`](reports/hybrid_staleness_v0.md) tests
 Muon/Adam hybrids at the optimizer crossover.
+[`reports/stability_margin_v0.md`](reports/stability_margin_v0.md) tests a
+stability-margin theory of the floor (killed quantitatively) and scores delay
+compensation against the permutation bound.
 
 ## Run
 
