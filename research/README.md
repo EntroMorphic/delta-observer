@@ -83,6 +83,8 @@ stability-margin theory of the floor (killed quantitatively) and scores delay
 compensation against the permutation bound.
 [`reports/basis_rotation_bound_v0.md`](reports/basis_rotation_bound_v0.md) scores
 Basis Rotation (ICML 2026) against that bound.
+[`reports/pipeline_bound_v0.md`](reports/pipeline_bound_v0.md) repeats it
+under pipeline staleness, the delay model Basis Rotation targets.
 
 ## Run
 
