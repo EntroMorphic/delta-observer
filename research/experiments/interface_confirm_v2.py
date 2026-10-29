@@ -30,8 +30,8 @@ SEEDS, CALIBRATION_SEEDS = list(range(10, 20)), [310, 311, 312, 313, 314]
 H1_CAL_DELAYS, H2_CAL_DELAYS = [2, 4, 8], [1, 2, 4, 8, 16]
 H1_MIN_FITS, H2_MIN_FITS = 4, 8  # of 5 per task, of 10 per optimizer
 # Filled in from calibration before freezing.
-H1_DELAY = None
-H2_DELAYS = {"adam": None, "sgd": None, "muon": None}
+H1_DELAY = 4
+H2_DELAYS = {"adam": 16, "sgd": 2, "muon": 4}
 
 
 def calibration_jobs():
