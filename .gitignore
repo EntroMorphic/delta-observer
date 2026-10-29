@@ -11,3 +11,4 @@ logs/
 .venv-lfm/
 research/observers/build/
 notebooks/outputs/
+research/data/
