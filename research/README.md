@@ -72,6 +72,8 @@ asynchrony once settled.
 [`reports/interface_confirm_results.md`](reports/interface_confirm_results.md)
 is the pre-registered confirmation of the two candidates that survived a
 [prior-art check](reports/prior_art_check_v0.md).
+[`reports/interface_confirm_v2_results.md`](reports/interface_confirm_v2_results.md)
+reruns the underpowered tests at power-checked delays.
 
 ## Run
 
