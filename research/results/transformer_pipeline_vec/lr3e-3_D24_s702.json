@@ -1,0 +1,37 @@
+{
+ "status": "exploratory",
+ "chunk": "lr3e-3_D24_s702",
+ "script_sha256": "5ca33371d7dd67c1d19417b9e3f23ca3323eef0d7081f1b697e8cccacc8faac7",
+ "reference_sha256": "d6cc84b43c481ac3c675d42009ef07d94de95ed478f5eabbbc455c1e2d0a032d",
+ "git_commit": "744fb326b368c390fd205c5e80eaa843912e0d11",
+ "started": "2026-10-30T10:56:59",
+ "finished": "2026-10-30T11:00:09",
+ "environment": {
+  "python": "3.9.6",
+  "torch": "2.8.0",
+  "numpy": "2.0.2",
+  "device": "mps"
+ },
+ "rows": [
+  {
+   "method": "permuted",
+   "delay": 24,
+   "lr": 0.003,
+   "seed": 702,
+   "val_curve": [
+    2.3555009365081787,
+    1.9903076887130737,
+    1.857429027557373,
+    1.7960230112075806,
+    1.7261337041854858,
+    1.6987245082855225,
+    1.6599758863449097,
+    1.6461632251739502
+   ],
+   "final_val_loss": 1.6461632251739502,
+   "engine": "vec",
+   "device": "mps",
+   "group_seconds": 190.6107280254364
+  }
+ ]
+}

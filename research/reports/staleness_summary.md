@@ -1,6 +1,6 @@
 # Staleness in modular training: what we found
 
-*Last updated 2026-10-29.* This is the single entry point to the
+*Last updated 2026-10-30.* This is the single entry point to the
 asynchronous-training work in this repository. Each finding is labelled:
 - **Confirmed:** pre-registered, with a frozen protocol, run on fresh seeds.
 - **Exploratory:** not pre-registered; seeds held apart from confirmation.
@@ -82,22 +82,24 @@ Sources: [`pipeline_bound_v0.md`](pipeline_bound_v0.md),
 ### 3b. The result transfers to a transformer on real text (exploratory, predictions fixed in advance)
 
 The setting is a character GPT on Tiny Shakespeare, in a 4-stage pipeline,
-at delays 24 and 48.
-- **Real error:** stale Adam ends about 0.7 nats/char behind synchronous
-  training.
-- **Permutation twin:** about 0.06 behind.
+at delays 3 to 48 (D = 6 is plain 1F1B).
+- **Real error:** stale Adam ends 0.11 nats/char behind synchronous
+  training at D = 3, 0.30 at D = 6 and about 0.7 at D = 24–48. No tested
+  delay is harmless.
+- **Permutation twin:** 0.03–0.06 behind at every delay.
 - **Mechanism:** the real error sees about 1,000× its twin's curvature and
   points against the gradient.
-- **Methods used in practice, at D = 48:**
+- **Methods used in practice** (share of the stale-to-bound gap recovered;
+  Basis Rotation measured against its own synchronous run):
 
-  | Method | Recovers |
-  |---|---|
-  | Basis Rotation | 46% of the gap |
-  | PipeMare learning-rate rescheduling | 29% |
-  | SpecTrain-style weight prediction | makes it worse |
+  | Method | D = 6 | D = 48 |
+  |---|---|---|
+  | Basis Rotation | 85% | 31% (46% against synchronous Adam) |
+  | PipeMare learning-rate rescheduling | 45% | 29% |
+  | SpecTrain-style weight prediction | makes it worse | makes it worse |
 
-The grid was stopped early, so small delays and the learning-rate floor
-prediction are untested.
+The floor prediction is untestable: both learning rates are harmed even at
+D = 3. The higher learning rate is harmed more at every delay.
 
 Source: [`transformer_pipeline_v0.md`](transformer_pipeline_v0.md).
 
@@ -173,9 +175,9 @@ Full list: [`prior_art_check_v0.md`](prior_art_check_v0.md) and
 
 - **How does delay interact with edge-of-stability self-stabilization?** This
   is what actually sets the floor, and we found no work on it.
-- **Does the transformer result hold at small delays (D = 6, plain 1F1B),
-  at larger scale, and against tuned baselines?** The D = 24–48 result is
-  in [`transformer_pipeline_v0.md`](transformer_pipeline_v0.md).
+- **Does the transformer result hold at larger scale and against tuned
+  baselines?** It holds at every delay from 3 to 48 on the 0.82M-parameter
+  model ([`transformer_pipeline_v0.md`](transformer_pipeline_v0.md)).
 - **Does the pipeline result survive pre-registration?** Fresh seeds, more
   runs per cell.
 

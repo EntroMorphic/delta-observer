@@ -72,7 +72,13 @@ def evaluate(rows):
 
 def main():
     data = json.load(open(ROOT / "research/results/transformer_pipeline_v0.json"))
-    result = evaluate(data["rows"])
+    rows = list(data["rows"])
+    chunks = sorted((ROOT / "research/results/transformer_pipeline_vec").glob("*.json"))
+    for c in chunks:  # amendment 2: vectorized-engine rows, pooled with the original grid
+        rows += json.load(open(c))["rows"]
+    result = evaluate(rows)
+    result["sources"] = {"original_rows": len(data["rows"]), "vectorized_chunks": [c.stem for c in chunks],
+                         "rows": len(rows)}
     print(json.dumps(result, indent=1))
     out = ROOT / "research/results/transformer_pipeline_eval_v0.json"
     out.write_text(json.dumps({"status": "exploratory", "script_sha256": sha256(__file__),
