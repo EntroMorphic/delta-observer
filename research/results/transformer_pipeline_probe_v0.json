@@ -1,0 +1,57 @@
+{
+ "status": "exploratory",
+ "script_sha256": "a2665f8699774f1b32fd377ad986410b4fa9200a9e51ff6492f47f780249177c",
+ "method": "stale",
+ "delay": 24,
+ "seed": 700,
+ "records": [
+  {
+   "step": 250,
+   "val_loss": 2.9914551340043545,
+   "error_norm": 0.6144565343856812,
+   "gradient_norm": 0.7500478625297546,
+   "curvature_real": 0.2034727931022644,
+   "curvature_twin": 0.0002129839122062549,
+   "cos_real": -0.4285563826560974,
+   "cos_twin": -0.0006797608803026378,
+   "curvature_ratio": 955.3434857803726
+  },
+  {
+   "step": 500,
+   "val_loss": 2.765624087303877,
+   "error_norm": 0.43291541934013367,
+   "gradient_norm": 0.8074111342430115,
+   "curvature_real": 0.13610820472240448,
+   "curvature_twin": 6.76985873724334e-05,
+   "cos_real": -0.23784710466861725,
+   "cos_twin": -0.00014049965830054134,
+   "curvature_ratio": 2010.5028776099282
+  },
+  {
+   "step": 1000,
+   "val_loss": 2.5434849932789803,
+   "error_norm": 0.11427303403615952,
+   "gradient_norm": 0.3111911416053772,
+   "curvature_real": 0.0710788294672966,
+   "curvature_twin": 5.718790635000914e-05,
+   "cos_real": -0.17730538547039032,
+   "cos_twin": 0.0002168549835914746,
+   "curvature_ratio": 1242.8996619017726
+  },
+  {
+   "step": 2000,
+   "val_loss": 2.4359650388360023,
+   "error_norm": 0.1004951000213623,
+   "gradient_norm": 0.21709971129894257,
+   "curvature_real": 0.28260689973831177,
+   "curvature_twin": 0.00018721329979598522,
+   "cos_real": -0.09717795252799988,
+   "cos_twin": -0.0010647210292518139,
+   "curvature_ratio": 1509.5449951807977
+  }
+ ],
+ "verdicts": {
+  "M1": "held",
+  "M2": "held"
+ }
+}

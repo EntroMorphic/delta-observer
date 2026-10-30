@@ -6,9 +6,10 @@ asynchronous-training work in this repository. Each finding is labelled:
 - **Exploratory:** not pre-registered; seeds held apart from confirmation.
 - **Killed:** failed its own criteria.
 
-Everything here was measured on small networks of about 3k–18k parameters,
-on 6-bit addition and random-automaton tasks. **Nothing has yet been tested
-on a standard large architecture.**
+Most results here come from small networks of about 3k–18k parameters, on
+6-bit addition and random-automaton tasks. Finding 3 has since been checked
+on a 0.82M-parameter character GPT trained on real text (finding 3b).
+Nothing has been tested at production scale.
 
 ![Pipeline staleness: almost all harm is directional](figures/pipeline_bound.png)
 
@@ -77,6 +78,28 @@ At least 4× of tolerable delay is still unclaimed by any method tested.
 Sources: [`pipeline_bound_v0.md`](pipeline_bound_v0.md),
 [`basis_rotation_bound_v0.md`](basis_rotation_bound_v0.md) and
 [`stability_margin_v0.md`](stability_margin_v0.md).
+
+### 3b. The result transfers to a transformer on real text (exploratory, predictions fixed in advance)
+
+The setting is a character GPT on Tiny Shakespeare, in a 4-stage pipeline,
+at delays 24 and 48.
+- **Real error:** stale Adam ends about 0.7 nats/char behind synchronous
+  training.
+- **Permutation twin:** about 0.06 behind.
+- **Mechanism:** the real error sees about 1,000× its twin's curvature and
+  points against the gradient.
+- **Methods used in practice, at D = 48:**
+
+  | Method | Recovers |
+  |---|---|
+  | Basis Rotation | 46% of the gap |
+  | PipeMare learning-rate rescheduling | 29% |
+  | SpecTrain-style weight prediction | makes it worse |
+
+The grid was stopped early, so small delays and the learning-rate floor
+prediction are untested.
+
+Source: [`transformer_pipeline_v0.md`](transformer_pipeline_v0.md).
 
 ### 4. Excess interface width costs staleness tolerance (confirmed)
 
@@ -150,8 +173,9 @@ Full list: [`prior_art_check_v0.md`](prior_art_check_v0.md) and
 
 - **How does delay interact with edge-of-stability self-stabilization?** This
   is what actually sets the floor, and we found no work on it.
-- **Does the permutation bound hold up on a standard architecture?** For
-  example, a small transformer pipeline with weight stashing.
+- **Does the transformer result hold at small delays (D = 6, plain 1F1B),
+  at larger scale, and against tuned baselines?** The D = 24–48 result is
+  in [`transformer_pipeline_v0.md`](transformer_pipeline_v0.md).
 - **Does the pipeline result survive pre-registration?** Fresh seeds, more
   runs per cell.
 
@@ -159,7 +183,9 @@ Full list: [`prior_art_check_v0.md`](prior_art_check_v0.md) and
 
 1. This page.
 2. [`pipeline_bound_v0.md`](pipeline_bound_v0.md): the bound in the
-   pipeline setting.
+   pipeline setting, then
+   [`transformer_pipeline_v0.md`](transformer_pipeline_v0.md): the same on a
+   transformer with real text.
 3. [`interface_confirm_v2_results.md`](interface_confirm_v2_results.md): the
    confirmed directional result.
 4. [`staleness_floor_v0.md`](staleness_floor_v0.md): the floor and its
