@@ -88,3 +88,33 @@ permutation twin on one fixed training batch:
 - **M1:** the real error's curvature eᵀHe/|e|² is at least 3× its twin's
   at every checkpoint.
 - **M2:** cos(e, g_fresh) < 0 at every checkpoint after step 250.
+
+## Amendment 2, 2026-10-30, before any run of the remaining cells
+
+**Remaining cells:**
+- at lr 1e-3, every arm at D ∈ {3, 6, 12};
+- at lr 3e-3, stale and permuted at D ∈ {3, 6, 12};
+- the unfinished permuted D = 24 cell at lr 3e-3, seed 702.
+
+These run on a vectorized engine, `transformer_pipeline_vec.py`.
+- **Batching:** each chunk's runs and pipeline-stage snapshots are batched
+  into one tensor program. There is one chunk per delay at each learning
+  rate, plus the single unfinished cell. A GPU (MPS) worker and a CPU
+  worker pull chunks from one queue.
+- **Stages:** each stage copy differentiates only its own stage's weights.
+- **Attention:** written out with an explicit causal mask.
+
+**Equivalence:**
+- **Every Adam-family arm** matches `transformer_pipeline.PipelineRun`
+  parameter for parameter over 12 steps: rtol 1e-4, atol 2e-5
+  (`research/tests/test_transformer_pipeline_vec.py`).
+- **GPU against CPU:** they agree to 1.5e-6 after 10 steps.
+- **Basis Rotation amplifies rounding,** so it can't match exactly. The
+  reference differs from *itself* by 1.3e-4 after 3 steps when only the
+  thread count changes. It is held to that noise level: parameters within
+  1e-2 and validation loss within 5e-3 after 12 steps.
+
+Given that equivalence, the new rows are pooled with the existing rows and
+the synchronous references, and scored with the unchanged rules: P1 over
+every harmful D, P2 at the largest harmful D, and P3 floors over the full
+grid. No existing cell is rerun.
