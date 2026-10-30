@@ -66,3 +66,25 @@ them against methods used in practice. Harness:
 - **P3, the floor falls with the learning rate.** The floor at 3e-3 is
   strictly below the floor at 1e-3. It's untestable if both floors are 0 or
   both are 48. Killed otherwise if this fails.
+
+## Amendment, 2026-10-30, before any synchronous baseline was run
+
+The full grid was too slow on this machine. It was stopped at the user's
+request after 41 of 114 runs, with every arm at D ∈ {24, 48} at lr 1e-3
+complete.
+- **What will be scored:** the 9 synchronous references (fresh at both
+  learning rates, and Basis Rotation fresh) are run now, on the same seeds
+  and with the same code. P1 and P2 are then scored on the delays that
+  finished, using the rules above unchanged.
+- **P3 is untestable**, since there are no floors without the small delays.
+- **P1 now covers only D ∈ {24, 48},** not every harmful delay.
+- **Rows recovered from the log** carry the final loss but no learning
+  curve.
+
+**Follow-up, mechanism probe (exploratory),** with predictions fixed before
+it runs. At stale-Adam checkpoints (D = 24, seed 700, steps 250, 500, 1000
+and 2000), compare the real pipeline error e = g_stale − g_fresh with its
+permutation twin on one fixed training batch:
+- **M1:** the real error's curvature eᵀHe/|e|² is at least 3× its twin's
+  at every checkpoint.
+- **M2:** cos(e, g_fresh) < 0 at every checkpoint after step 250.
