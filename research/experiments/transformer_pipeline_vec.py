@@ -305,7 +305,7 @@ def worker(device, threads, queue, chunks):
     torch.set_num_threads(threads)
     while True:
         try:
-            name = queue.get_nowait()
+            name = queue.get(timeout=10)  # get_nowait can miss items the feeder thread has not flushed yet
         except Empty:
             return
         started = time.strftime("%Y-%m-%dT%H:%M:%S")
